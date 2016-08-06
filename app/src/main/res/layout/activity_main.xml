@@ -30,7 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#c3c2c2"
-            />
+            android:fillViewport="false"
+            style="@style/AppTheme" />
 
     </android.support.design.widget.AppBarLayout>
 

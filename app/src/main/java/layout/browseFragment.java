@@ -13,12 +13,12 @@ import com.draw.aidansliney.draw3.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link browseFragment.OnFragmentInteractionListener} interface
+ * {@link BrowseFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link browseFragment#newInstance} factory method to
+ * Use the {@link BrowseFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class browseFragment extends Fragment {
+public class BrowseFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +30,7 @@ public class browseFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public browseFragment() {
+    public BrowseFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class browseFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment browseFragment.
+     * @return A new instance of fragment BrowseFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static browseFragment newInstance(String param1, String param2) {
-        browseFragment fragment = new browseFragment();
+    public static BrowseFragment newInstance(String param1, String param2) {
+        BrowseFragment fragment = new BrowseFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

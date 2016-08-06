@@ -1,5 +1,7 @@
 package com.draw.aidansliney.draw3;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,15 +13,19 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import layout.BrowseFragment;
+
+public class MainActivity extends AppCompatActivity implements BrowseFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -35,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+    public void onFragmentInteraction(Uri uri){
+
+
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
     @Override
@@ -113,10 +128,24 @@ public class MainActivity extends AppCompatActivity {
             return fragment;
         }
 
+
+
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            View layout1 = rootView.findViewById(R.id.layout_1);
+            layout1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(),BookActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            
             return rootView;
         }
     }
@@ -135,12 +164,21 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position) {
+                case 0:
+                    Log.d("case 0","BF");
+                    return PlaceholderFragment.newInstance(0);
+                case 1:
+                    Log.d("case 1","BF");
+                    return BrowseFragment.newInstance("hello1","hello2");
+
+            }
+            return null;
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 2 total pages.
             return 2;
         }
 
@@ -155,4 +193,5 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }
+
 }

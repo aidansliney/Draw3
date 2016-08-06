@@ -21,7 +21,11 @@
         <item name="windowNoTitle">true</item>
         <item name="android:textColorSecondaryInverse">@android:color/holo_purple</item>
         <item name="android:colorBackground">@android:color/darker_gray</item>
-        <item name="android:textColorPrimary">@android:color/secondary_text_light_nodisable</item>
+        <item name="android:textColorPrimary">@android:color/holo_red_light</item>
+        <item name="android:colorForeground">@color/material_grey_600</item>
+        <item name="android:textColorSecondary">@android:color/holo_red_light</item>
+        <item name="android:textColorPrimaryInverse">@android:color/holo_red_light</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
