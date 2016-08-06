@@ -20,9 +20,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import layout.BrowseFragment;
 
 public class MainActivity extends AppCompatActivity implements BrowseFragment.OnFragmentInteractionListener {
@@ -140,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             layout1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(),BookActivity2.class);
+                    Intent intent = new Intent(getActivity(),BookActivity.class);
                     startActivity(intent);
                 }
             });

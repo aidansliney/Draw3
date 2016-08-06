@@ -18,10 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BookActivity" />
         <activity android:name=".PageActivity" />
         <activity
-            android:name=".BookActivity2"
+            android:name=".BookActivity"
             android:label="@string/title_activity_book2"
             android:theme="@style/AppTheme"></activity>
     </application>
