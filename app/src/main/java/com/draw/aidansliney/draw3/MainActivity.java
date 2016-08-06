@@ -140,12 +140,12 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             layout1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(),BookActivity.class);
+                    Intent intent = new Intent(getActivity(),BookActivity2.class);
                     startActivity(intent);
                 }
             });
 
-            
+
             return rootView;
         }
     }
