@@ -9,15 +9,24 @@
     tools:showIn="@layout/activity_book2">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Go to Slideshow"
-        android:id="@+id/textView1"
-        android:layout_marginLeft="59dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="84dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Go to Page Slideshow"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="59dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="84dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+    </LinearLayout>
+
 
 
 </android.support.v4.widget.NestedScrollView>
