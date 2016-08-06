@@ -26,6 +26,8 @@ public class BookActivity extends AppCompatActivity {
         });
 
 
+
+
         View textView1 = findViewById(R.id.card_view);
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,10 @@ public class BookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
 
     }
 }

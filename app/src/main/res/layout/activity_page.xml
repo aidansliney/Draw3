@@ -7,46 +7,56 @@ tools:context="com.draw.aidansliney.draw3.PageActivity">
 
 
 <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ViewFlipper
         android:id="@+id/bckgrndViewFlipper1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <ImageView
-            android:id="@+id/bckgrndImageView8"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head1_0" />
+            android:src="@drawable/head2_0" />
         <ImageView
-            android:id="@+id/bckgrndImageView7"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head1_01" />
+            android:src="@drawable/head2_01" />
         <ImageView
-            android:id="@+id/bckgrndImageView6"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head1_02" />
+            android:src="@drawable/head2_02" />
         <ImageView
-            android:id="@+id/bckgrndImageView5"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head1_03" />
+            android:src="@drawable/head2_03" />
         <ImageView
-            android:id="@+id/bckgrndImageView4"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/head1_04" />
+            android:src="@drawable/head2_04" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/head2_05" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/head2_06" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/head2_07" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/head2_08" />
 
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/head2_17" />
 
 
     </ViewFlipper>

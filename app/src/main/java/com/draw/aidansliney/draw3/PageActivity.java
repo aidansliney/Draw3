@@ -1,6 +1,6 @@
 package com.draw.aidansliney.draw3;
 
-        import android.content.Intent;
+
         import android.support.design.widget.FloatingActionButton;
         import android.support.design.widget.Snackbar;
         import android.support.v7.app.AppCompatActivity;
@@ -12,8 +12,7 @@ package com.draw.aidansliney.draw3;
 
 public class PageActivity extends AppCompatActivity {
 
-
-    Animation fade_in, fade_out;
+    // Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +20,18 @@ public class PageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
         viewFlipper = (ViewFlipper) this.findViewById(R.id.bckgrndViewFlipper1);
-        fade_in = AnimationUtils.loadAnimation(this,
-                android.R.anim.fade_in);
-        fade_out = AnimationUtils.loadAnimation(this,
-                android.R.anim.fade_out);
-        viewFlipper.setInAnimation(fade_in);
-        viewFlipper.setOutAnimation(fade_out);
+      //  fade_in = AnimationUtils.loadAnimation(this,
+      //          android.R.anim.fade_in);
+      //  fade_out = AnimationUtils.loadAnimation(this,
+      //          android.R.anim.fade_out);
+     //   viewFlipper.setInAnimation(fade_in);
+     //   viewFlipper.setOutAnimation(fade_out);
 //sets auto flipping
-        viewFlipper.setAutoStart(false);
+     //   viewFlipper.setAutoStart(false);
        // viewFlipper.setFlipInterval(5000);
         //viewFlipper.startFlipping();
 
-        View nextImage = findViewById(R.id.nextImage);
+      View nextImage = findViewById(R.id.nextImage);
         nextImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
