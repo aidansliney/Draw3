@@ -6,6 +6,9 @@
     android:paddingBottom="70dp"
     tools:context="com.draw.aidansliney.draw3.MainActivity$PlaceholderFragment">
 
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,19 +33,21 @@
                 android:id="@+id/primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="Learn to draw your very own superhero"
                 android:paddingLeft="15dp"
-                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
                 android:textColor="#3c3c3c"/>
 
             <TextView
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="This tutorial will take you through every part of the human body"
                 android:paddingLeft="15dp"
-                android:paddingTop="5dp"
-                android:textColor="#3c3c3c"/>
+                android:paddingRight="15dp"
+                android:paddingTop="1dp"
+                android:textColor="#c0b9b9"/>
         </LinearLayout>
         <View
             android:layout_width="fill_parent"
@@ -80,7 +85,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="How to draw a head"
+                        android:text="The advanced head"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c"/>
@@ -120,7 +125,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="How to draw a head"
+                        android:text="A head for Beginners"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c"/>

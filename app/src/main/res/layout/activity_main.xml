@@ -18,21 +18,31 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:gravity="center"
+            android:titleTextColor="@color/cardview_dark_background"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay">
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DRAW"
+                android:textSize="28dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                />
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#c3c2c2"
+            app:tabTextColor="#c3c2c2"
+            app:tabSelectedTextColor="@color/colorAccent"
+            android:background="#ffffff"
             android:fillViewport="false"
             style="@style/AppTheme" />
-
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

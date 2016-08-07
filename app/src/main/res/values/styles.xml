@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
 
 
+
         <item name="android:textColorPrimary">@android:color/darker_gray</item>
         <item name="android:textColorSecondary">@android:color/holo_purple</item>
         <item name="android:textColorSecondaryInverse">@android:color/holo_red_light</item>
@@ -16,16 +17,21 @@
         <item name="android:windowBackground">@android:color/darker_gray</item>
     </style>
 
+
+
+
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:textColorSecondaryInverse">@android:color/holo_purple</item>
-        <item name="android:colorBackground">@android:color/darker_gray</item>
+        <item name="android:colorBackground">@color/button_material_light</item>
         <item name="android:textColorPrimary">@android:color/holo_red_light</item>
-        <item name="android:colorForeground">@color/material_grey_600</item>
+        <item name="android:colorForeground">@android:color/holo_red_light</item>
         <item name="android:textColorSecondary">@android:color/holo_red_light</item>
         <item name="android:textColorPrimaryInverse">@android:color/holo_red_light</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/cardview_dark_background</item>
+        <item name="android:windowBackground">@color/button_material_light</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
