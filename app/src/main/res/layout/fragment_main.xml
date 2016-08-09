@@ -7,8 +7,6 @@
     tools:context="com.draw.aidansliney.draw3.MainActivity$PlaceholderFragment">
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,8 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/head1_cover"
-                android:adjustViewBounds="true"
-                />
+                android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary"
@@ -37,50 +34,55 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
-                android:textColor="#3c3c3c"/>
+                android:textColor="#3c3c3c" />
 
             <TextView
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="This tutorial will take you through every part of the human body"
+                android:text="This tutorial will take you thro"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="1dp"
-                android:textColor="#c0b9b9"/>
+                android:textColor="#c0b9b9" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="#bababa"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="20dp" />
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="horizontal">
-            <!-- A Card -->
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+            <!-- Home Card 1 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_1"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius="4dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="#ffffff">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb"/>
+                        android:src="@drawable/head1_thumb" />
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
                         android:background="#bababa" />
+
                     <TextView
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
@@ -88,7 +90,8 @@
                         android:text="The advanced head"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
-                        android:textColor="#3c3c3c"/>
+                        android:textColor="#3c3c3c" />
+
                     <TextView
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
@@ -97,38 +100,42 @@
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9"/>
+                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <!-- A Card -->
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+            <!-- Home Card 2 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_2"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius="4dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="#ffffff">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb"/>
+                        android:src="@drawable/head1_thumb" />
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
                         android:background="#bababa" />
+
                     <TextView
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="A head for Beginners"
+                        android:text="The male eye"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
-                        android:textColor="#3c3c3c"/>
+                        android:textColor="#3c3c3c" />
+
                     <TextView
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
@@ -137,99 +144,112 @@
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9"/>
+                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-        </LinearLayout>// vertical
+        </LinearLayout>
+        // vertical
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="horizontal">
-            <!-- A Card -->
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+            <!-- Home Card 3 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_3"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius="4dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="#ffffff">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb"/>
+                        android:src="@drawable/head1_thumb" />
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
                         android:background="#bababa" />
+
                     <TextView
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="How to draw a head"
+                        android:text="10 fingers, nails and all"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
-                        android:textColor="#3c3c3c"/>
+                        android:textColor="#3c3c3c" />
+
                     <TextView
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Let's start with the head"
+                        android:text="Draw fingers and a fist"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9"/>
+                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <!-- A Card -->
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+            <!-- Home Card 4 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_4"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius="4dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="#ffffff">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb"/>
+                        android:src="@drawable/head1_thumb" />
+
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
                         android:background="#bababa" />
+
                     <TextView
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="How to draw a head"
+                        android:text="Drawing hair"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
-                        android:textColor="#3c3c3c"/>
+                        android:textColor="#3c3c3c" />
+
                     <TextView
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Let's start with the head"
+                        android:text="Different types of hair"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9"/>
+                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-        </LinearLayout>// vertical
+        </LinearLayout>
+        // vertical
 
         <LinearLayout
+            android:id="@+id/layout_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
@@ -239,35 +259,36 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/head1_cover"
-                android:adjustViewBounds="true"
-                />
+                android:src="@drawable/head3_cover"
+                android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="The blue Superhero"
                 android:paddingLeft="15dp"
                 android:paddingTop="15dp"
-                android:textColor="#3c3c3c"/>
+                android:textColor="#3c3c3c" />
 
             <TextView
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="Now is the time to learn how to draw the blue superhero. We will go into details on how do draw the perfect blue hero"
                 android:paddingLeft="15dp"
-                android:paddingTop="5dp" />
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="#bababa"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="20dp" />
 
         <LinearLayout
+            android:id="@+id/layout_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
@@ -277,37 +298,34 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/head1_cover"
-                android:adjustViewBounds="true"
-                />
+                android:src="@drawable/head4_cover"
+                android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="Mint Man"
                 android:paddingLeft="15dp"
                 android:paddingTop="15dp"
-                android:textColor="#3c3c3c"/>
+                android:textColor="#3c3c3c" />
 
             <TextView
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Helllllo"
+                android:text="Let's talk about the amazing mint man. The tutorial is for advanced users. We will focus on shading and coloring in this tutorial. Let's get going!"
                 android:paddingLeft="15dp"
-                android:paddingTop="5dp" />
+                android:paddingTop="5dp"
+                android:textColor="#c0b9b9" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="#bababa"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="20dp" />
     </LinearLayout>
-
-
-
 
 
 </ScrollView>

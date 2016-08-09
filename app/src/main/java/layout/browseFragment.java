@@ -1,6 +1,7 @@
 package layout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.draw.aidansliney.draw3.BookActivity;
 import com.draw.aidansliney.draw3.R;
 
 /**
@@ -61,19 +63,61 @@ public class BrowseFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_browse, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
+        // book3
+        View layout4 = rootView.findViewById(R.id.layout_4);
+        layout4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BookActivity.class);
+                intent.putExtra("bookCoverH1Id", R.string.book3heading1);
+                intent.putExtra("bookCoverH2Id", R.string.book3heading2);
+                intent.putExtra("bookCoverImageId", R.drawable.book3cover);
+                intent.putExtra("cardText1Id", R.array.book3cardtext1);
+                intent.putExtra("cardText2Id", R.array.book3cardtext2);
+                intent.putExtra("cardImageId", R.array.book3cardimages);
+                startActivity(intent);
+            }
+        });
+        // book2
+        View layout5 = rootView.findViewById(R.id.layout_5);
+        layout5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BookActivity.class);
+                intent.putExtra("bookCoverH1Id", R.string.book2heading1);
+                intent.putExtra("bookCoverH2Id", R.string.book2heading2);
+                intent.putExtra("bookCoverImageId", R.drawable.book2cover);
+                intent.putExtra("cardText1Id", R.array.book2cardtext1);
+                intent.putExtra("cardText2Id", R.array.book2cardtext2);
+                intent.putExtra("cardImageId", R.array.book2cardimages);
+                startActivity(intent);
+            }
+        });
+        // book1
+        View layout6 = rootView.findViewById(R.id.layout_6);
+        layout6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BookActivity.class);
+                intent.putExtra("bookCoverH1Id", R.string.book1heading1);
+                intent.putExtra("bookCoverH2Id", R.string.book1heading2);
+                intent.putExtra("bookCoverImageId", R.drawable.book1cover);
+                intent.putExtra("cardText1Id", R.array.book1cardtext1);
+                intent.putExtra("cardText2Id", R.array.book1cardtext2);
+                intent.putExtra("cardImageId", R.array.book1cardimages);
+                startActivity(intent);
+            }
+        });
+
+        return rootView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
+
 
     @Override
     public void onAttach(Context context) {
@@ -97,7 +141,7 @@ public class BrowseFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
+     * <p>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
