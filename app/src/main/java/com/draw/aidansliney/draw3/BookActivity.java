@@ -1,12 +1,9 @@
 package com.draw.aidansliney.draw3;
 
-import android.content.ClipData;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -17,8 +14,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity {
 
@@ -56,7 +51,7 @@ public class BookActivity extends AppCompatActivity {
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] cardText2 = getResources().getStringArray(getIntent().getIntExtra("cardText2Id", 0));
-        final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));
+        final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++)
@@ -76,8 +71,8 @@ public class BookActivity extends AppCompatActivity {
 
                 int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
                 Toast.makeText(BookActivity.this, "You Clicked at " + cardText1[+position], Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(BookActivity.this,PageActivity2.class);
-                Log.d("" + slidesID, "hello");
+                Intent intent = new Intent(BookActivity.this,PageActivity.class);
+                Log.d("hellooooooooooooooo" + slidesID, "" );
                 intent.putExtra("bookSlides", slidesID);
                 startActivity(intent);
 

@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -21,8 +19,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
+import io.intercom.android.sdk.Intercom;
 import layout.BrowseFragment;
 
 public class MainActivity extends AppCompatActivity implements BrowseFragment.OnFragmentInteractionListener {
@@ -34,7 +32,11 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     *
+     *
      */
+
+
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Intercom.initialize(getApplication(),"android_sdk-ad7826e27cf0b638b6e8fb24ba105d31c2ec4c6f", "wrjby7lx");
+        Intercom.client().registerUnidentifiedUser();
 
         // Change the title on the main screen
         setTitle("");
@@ -81,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
             }
         });
+
+
 
 
     }
@@ -135,6 +142,14 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
+
+
+
+
+
+
+
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             // image 1
             View layout1 = rootView.findViewById(R.id.layout_1);
@@ -142,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), BookActivity.class);
+                    Intercom.client().openGCMMessage(intent);
                     intent.putExtra("bookId", R.string.book1);
                     intent.putExtra("bookCoverH1Id", R.string.book1heading1);
                     intent.putExtra("bookCoverH2Id", R.string.book1heading2);
@@ -165,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                     intent.putExtra("cardText1Id", R.array.book2cardtext1);
                     intent.putExtra("cardText2Id", R.array.book2cardtext2);
                     intent.putExtra("cardImageId", R.array.book2cardimages);
+                    intent.putExtra("bookPageIds", R.array.book1PageIds);
                     startActivity(intent);
                 }
             });
@@ -180,6 +197,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                     intent.putExtra("cardText1Id", R.array.book3cardtext1);
                     intent.putExtra("cardText2Id", R.array.book3cardtext2);
                     intent.putExtra("cardImageId", R.array.book3cardimages);
+                    intent.putExtra("bookPageIds", R.array.book1PageIds);
                     startActivity(intent);
                 }
             });
@@ -188,8 +206,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             homeCard1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity2.class);
-                    intent.putExtra("bookSlides", R.array.book1Slides1);
+                    Intent intent = new Intent(getActivity(), PageActivity.class);
+                    intent.putExtra("bookSlides", R.array.book1Page1Slides);
                     startActivity(intent);
                 }
             });
@@ -198,8 +216,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             homeCard2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity2.class);
-                    intent.putExtra("bookSlides", R.array.book1Slides1);
+                    Intent intent = new Intent(getActivity(), PageActivity.class);
+                    intent.putExtra("bookSlides", R.array.book1Page1Slides);
                     startActivity(intent);
                 }
             });
@@ -208,8 +226,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             homeCard3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity2.class);
-                    intent.putExtra("bookSlides", R.array.book1Slides2);
+                    Intent intent = new Intent(getActivity(), PageActivity.class);
+                    intent.putExtra("bookSlides", R.array.book1Page1Slides);
                     startActivity(intent);
                 }
             });
@@ -218,8 +236,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             homeCard4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity2.class);
-                    intent.putExtra("bookSlides", R.array.book1Slides2);
+                    Intent intent = new Intent(getActivity(), PageActivity.class);
+                    intent.putExtra("bookSlides", R.array.book1Page1Slides);
                     startActivity(intent);
                 }
             });

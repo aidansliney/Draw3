@@ -80,6 +80,7 @@ public class BrowseFragment extends Fragment {
                 intent.putExtra("cardText1Id", R.array.book3cardtext1);
                 intent.putExtra("cardText2Id", R.array.book3cardtext2);
                 intent.putExtra("cardImageId", R.array.book3cardimages);
+                intent.putExtra("bookPageIds", R.array.book1PageIds);
                 startActivity(intent);
             }
         });
@@ -95,6 +96,7 @@ public class BrowseFragment extends Fragment {
                 intent.putExtra("cardText1Id", R.array.book2cardtext1);
                 intent.putExtra("cardText2Id", R.array.book2cardtext2);
                 intent.putExtra("cardImageId", R.array.book2cardimages);
+                intent.putExtra("bookPageIds", R.array.book1PageIds);
                 startActivity(intent);
             }
         });
@@ -110,6 +112,7 @@ public class BrowseFragment extends Fragment {
                 intent.putExtra("cardText1Id", R.array.book1cardtext1);
                 intent.putExtra("cardText2Id", R.array.book1cardtext2);
                 intent.putExtra("cardImageId", R.array.book1cardimages);
+                intent.putExtra("bookPageIds", R.array.book1PageIds);
                 startActivity(intent);
             }
         });

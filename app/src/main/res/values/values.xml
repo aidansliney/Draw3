@@ -46,6 +46,29 @@
         <item>book1Page8</item>
     </string-array>
 
+
+    <string-array name="book2PageIds">
+        <item>book2Page1</item>
+        <item>book2Page2</item>
+        <item>book2Page3</item>
+        <item>book2Page4</item>
+        <item>book2Page5</item>
+        <item>book2Page6</item>
+        <item>book2Page7</item>
+        <item>book2Page8</item>
+    </string-array>
+
+    <string-array name="book3PageIds">
+        <item>book3Page1</item>
+        <item>book3Page2</item>
+        <item>book3Page3</item>
+        <item>book3Page4</item>
+        <item>book3Page5</item>
+        <item>book3Page6</item>
+        <item>book3Page7</item>
+        <item>book3Page8</item>
+    </string-array>
+
     <integer-array name="book1Page1Slides">
         <item>@drawable/head2_19</item>
         <item>@drawable/head2_18</item>
@@ -58,6 +81,72 @@
     </integer-array>
 
     <integer-array name="book1Page2Slides">
+        <item>@drawable/head2_12</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_07</item>
+        <item>@drawable/head2_01</item>
+        <item>@drawable/head2_10</item>
+        <item>@drawable/head2_19</item>
+    </integer-array>
+
+    <integer-array name="book1Page3Slides">
+        <item>@drawable/head2_12</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_07</item>
+        <item>@drawable/head2_01</item>
+        <item>@drawable/head2_10</item>
+        <item>@drawable/head2_19</item>
+    </integer-array>
+
+    <integer-array name="book1Page4Slides">
+        <item>@drawable/head2_12</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_07</item>
+        <item>@drawable/head2_01</item>
+        <item>@drawable/head2_10</item>
+        <item>@drawable/head2_19</item>
+    </integer-array>
+
+    <integer-array name="book1Page5Slides">
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_18</item>
+        <item>@drawable/head2_17</item>
+        <item>@drawable/head2_16</item>
+        <item>@drawable/head2_15</item>
+        <item>@drawable/head2_14</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_12</item>
+    </integer-array>
+
+    <integer-array name="book1Page6Slides">
+        <item>@drawable/head2_12</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_07</item>
+        <item>@drawable/head2_01</item>
+        <item>@drawable/head2_10</item>
+        <item>@drawable/head2_19</item>
+    </integer-array>
+
+    <integer-array name="book1Page7Slides">
+        <item>@drawable/head2_12</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_13</item>
+        <item>@drawable/head2_19</item>
+        <item>@drawable/head2_07</item>
+        <item>@drawable/head2_01</item>
+        <item>@drawable/head2_10</item>
+        <item>@drawable/head2_19</item>
+    </integer-array>
+
+    <integer-array name="book1Page8Slides">
         <item>@drawable/head2_12</item>
         <item>@drawable/head2_19</item>
         <item>@drawable/head2_13</item>
@@ -138,50 +227,5 @@
         <item>@drawable/head2_19</item>
     </integer-array>
 
-    <!--Slides-->
-
-    <integer-array name="book1Slides1">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_02</item>
-        <item>@drawable/head2_03</item>
-        <item>@drawable/head2_04</item>
-        <item>@drawable/head2_05</item>
-        <item>@drawable/head2_06</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_08</item>
-        <item>@drawable/head2_09</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_11</item>
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-    <integer-array name="book1Slides2">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_02</item>
-        <item>@drawable/head2_03</item>
-        <item>@drawable/head2_04</item>
-        <item>@drawable/head2_05</item>
-        <item>@drawable/head2_06</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_08</item>
-        <item>@drawable/head2_09</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_11</item>
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
+  
 </resources>

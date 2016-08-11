@@ -23,7 +23,7 @@
             android:name=".BookActivity"
             android:label="@string/title_activity_book2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PageActivity2"></activity>
+        <activity android:name=".PageActivity"></activity>
     </application>
 
 </manifest>
