@@ -20,6 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import io.intercom.android.sdk.Intercom;
 import layout.BrowseFragment;
 
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
      */
 
 
-
+    //Fire Analytics
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
@@ -55,6 +58,13 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
 
         Intercom.initialize(getApplication(),"android_sdk-ad7826e27cf0b638b6e8fb24ba105d31c2ec4c6f", "wrjby7lx");
         Intercom.client().registerUnidentifiedUser();
+
+
+
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        String mFavoriteFood = "Potatoes";
+        mFirebaseAnalytics.setUserProperty("favorite_food", mFavoriteFood);
 
         // Change the title on the main screen
         setTitle("");
@@ -84,6 +94,15 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                 sharingIntent.setType("text/html");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is where we will share the app</p>"));
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
+
+                String id1 =  "Share";
+                String name = "from Home";
+                Bundle bundle = new Bundle();
+                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id1);
+                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
             }
         });
 
