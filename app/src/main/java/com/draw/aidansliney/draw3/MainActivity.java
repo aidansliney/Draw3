@@ -6,7 +6,6 @@ import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,47 +18,41 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
-
-import io.intercom.android.sdk.Intercom;
 import layout.BrowseFragment;
 
 public class MainActivity extends AppCompatActivity implements BrowseFragment.OnFragmentInteractionListener {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     *
-     *
-     */
-
-
     //Fire Analytics
     private FirebaseAnalytics mFirebaseAnalytics;
-
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
+    //full page adverts
+    private static InterstitialAd mInterstitialAd;
+    //The {@link ViewPager} that will host the section contents.
     private ViewPager mViewPager;
-
-    public void onFragmentInteraction(Uri uri) {
-
-    }
+    public void onFragmentInteraction(Uri uri) {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Intercom.initialize(getApplication(),"android_sdk-ad7826e27cf0b638b6e8fb24ba105d31c2ec4c6f", "wrjby7lx");
-        Intercom.client().registerUnidentifiedUser();
 
+        //play full screen advert
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+                //  We need to continue opening the page here once the add is X'ed
+            }
+        });
 
+        requestNewInterstitial(); // preload interstitial advert
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -85,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+/*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,8 +99,13 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
 
             }
         });
+*/
 
-
+        //attempting to add mobile ads
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
     }
@@ -164,28 +163,30 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
 
 
 
-
-
-
-
-
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             // image 1
             View layout1 = rootView.findViewById(R.id.layout_1);
             layout1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), BookActivity.class);
-                    Intercom.client().openGCMMessage(intent);
-                    intent.putExtra("bookId", R.string.book1);
-                    intent.putExtra("bookCoverH1Id", R.string.book1heading1);
-                    intent.putExtra("bookCoverH2Id", R.string.book1heading2);
-                    intent.putExtra("bookCoverImageId", R.drawable.book1cover);
-                    intent.putExtra("cardText1Id", R.array.book1cardtext1);
-                    intent.putExtra("cardText2Id", R.array.book1cardtext2);
-                    intent.putExtra("cardImageId", R.array.book1cardimages);
-                    intent.putExtra("bookPageIds", R.array.book1PageIds);
-                    startActivity(intent);
+
+
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    } else {
+
+
+                        Intent intent = new Intent(getActivity(), BookActivity.class);
+                        intent.putExtra("bookId", R.string.book1);
+                        intent.putExtra("bookCoverH1Id", R.string.book1heading1);
+                        intent.putExtra("bookCoverH2Id", R.string.book1heading2);
+                        intent.putExtra("bookCoverImageId", R.drawable.book1cover);
+                        intent.putExtra("cardText1Id", R.array.book1cardtext1);
+                        intent.putExtra("cardText2Id", R.array.book1cardtext2);
+                        intent.putExtra("cardImageId", R.array.book1cardimages);
+                        intent.putExtra("bookPageIds", R.array.book1PageIds);
+                        startActivity(intent);
+                    }
                 }
             });
 
@@ -262,6 +263,15 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             });
             return rootView;
         }
+    }
+
+    // attempt to add full screen pages
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("DBFB9795D39C49D52EAFBA8E58ACA288")
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
     }
 
     /**

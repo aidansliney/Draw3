@@ -6,6 +6,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_book2">BookActivity2</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_correct">ca-app-pub-7832891006427470/5345932942</string>
+
 
     <string name="intercom_gcm_sender_id">YOUR_SENDER_ID</string>
 
