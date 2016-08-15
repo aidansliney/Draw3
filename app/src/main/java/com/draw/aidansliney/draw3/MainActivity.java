@@ -2,6 +2,7 @@ package com.draw.aidansliney.draw3;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -19,12 +20,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
 import layout.BrowseFragment;
 
 public class MainActivity extends AppCompatActivity implements BrowseFragment.OnFragmentInteractionListener {
@@ -36,13 +39,12 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
     private static InterstitialAd mInterstitialAd;
     //The {@link ViewPager} that will host the section contents.
     private ViewPager mViewPager;
-    public void onFragmentInteraction(Uri uri) {}
 
-
+    public void onFragmentInteraction(Uri uri) {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         //play full screen advert
         mInterstitialAd = new InterstitialAd(this);
@@ -51,10 +53,10 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             @Override
             public void onAdClosed() {
                 requestNewInterstitial();
+
                 //  We need to continue opening the page here once the add is X'ed
             }
         });
-
         requestNewInterstitial(); // preload interstitial advert
 
         // Obtain the FirebaseAnalytics instance.
@@ -109,8 +111,6 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
     }
 
     @Override
@@ -140,16 +140,14 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
      */
     public static class PlaceholderFragment extends Fragment {
 
-         //The fragment argument representing the section number for this fragment.
+        //The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
+        // Returns a new instance of this fragment for the given section number
+
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -158,30 +156,34 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             return fragment;
         }
 
+        int[] bookContent3 = {R.string.book3heading1, R.string.book3heading2, R.drawable.book3cover, R.array.book3cardtext1, R.array.book3cardtext2, R.array.book3cardimages, R.array.book1PageIds};
 
 
-
-
-
-        int[] bookContent3 = {R.string.book3heading1, R.string.book3heading2,R.drawable.book3cover,R.array.book3cardtext1,R.array.book3cardtext2,R.array.book3cardimages,R.array.book1PageIds};
-        int layout3 = R.id.layout_3;
-
-
-        public void linkBook(int layout, final int[]bookContent, View rootView)
-        {
-            View layout2 = rootView.findViewById(layout);
-            layout2.setOnClickListener(new View.OnClickListener() {
+        public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
+            View Layout = rootView.findViewById(layout);
+            Layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), BookActivity.class);
-                    intent.putExtra("bookCoverH1Id", bookContent[0]);
-                    intent.putExtra("bookCoverH2Id", bookContent[1]);
-                    intent.putExtra("bookCoverImageId", bookContent[2]);
-                    intent.putExtra("cardText1Id", bookContent[3]);
-                    intent.putExtra("cardText2Id", bookContent[4]);
-                    intent.putExtra("cardImageId", bookContent[5]);
-                    intent.putExtra("bookPageIds", bookContent[6]);
-                    startActivity(intent);
+
+                    if (advert == true && mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    } else {
+
+                        TypedArray bookBuild = getResources().obtainTypedArray(bookContent); // todo needs to be recycled
+                        final int[] bookCollected = new int[bookBuild.length()];
+                        for (int i = 0; i < bookBuild.length(); i++)
+                            bookCollected[i] = bookBuild.getResourceId(i, 0);
+
+                        Intent intent = new Intent(getActivity(), BookActivity.class);
+                        intent.putExtra("bookCoverH1Id", bookCollected[0]);
+                        intent.putExtra("bookCoverH2Id", bookCollected[1]);
+                        intent.putExtra("bookCoverImageId", bookCollected[2]);
+                        intent.putExtra("cardText1Id", bookCollected[3]);
+                        intent.putExtra("cardText2Id", bookCollected[4]);
+                        intent.putExtra("cardImageId", bookCollected[5]);
+                        intent.putExtra("bookPageIds", bookCollected[6]);
+                        startActivity(intent);
+                    }
                 }
             });
         }
@@ -191,38 +193,10 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            // image 1
-            View layout1 = rootView.findViewById(R.id.layout_1);
-            layout1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    } else {
-                        // If advert cannot be displayed
-                        Intent intent = new Intent(getActivity(), BookActivity.class);
-                        intent.putExtra("bookId", R.string.book1);
-                        intent.putExtra("bookCoverH1Id", R.string.book1heading1);
-                        intent.putExtra("bookCoverH2Id", R.string.book1heading2);
-                        intent.putExtra("bookCoverImageId", R.drawable.book1cover);
-                        intent.putExtra("cardText1Id", R.array.book1cardtext1);
-                        intent.putExtra("cardText2Id", R.array.book1cardtext2);
-                        intent.putExtra("cardImageId", R.array.book1cardimages);
-                        intent.putExtra("bookPageIds", R.array.book1PageIds);
-                        startActivity(intent);
-                    }
-                }
-            });
 
-            Resources r = getResources();
-            //int [] book2Build = r.getIntArray(R.array.book2Build);
-
-            int[] book2Build = {R.string.book2heading1, R.string.book2heading2,R.drawable.book2cover,R.array.book2cardtext1,R.array.book2cardtext2,R.array.book2cardimages,R.array.book1PageIds};
-            //int layout2 = R.id.layout_2;
-
-
-            linkBook(R.id.layout_2,book2Build, rootView);
-            linkBook(layout3,bookContent3, rootView);
+            linkBook(R.id.layout_1, R.array.book1Build, rootView, false);
+            linkBook(R.id.layout_2, R.array.book2Build, rootView, false);
+            linkBook(R.id.layout_3, R.array.book3Build, rootView, true);
 
 
             View homeCard1 = rootView.findViewById(R.id.home_card_1);

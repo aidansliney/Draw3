@@ -26,7 +26,7 @@
                 android:adjustViewBounds="true" />
 
             <TextView
-                android:id="@+id/primary"
+                android:id="@+id/primary1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mint Man"
@@ -35,7 +35,7 @@
                 android:textColor="#3c3c3c" />
 
             <TextView
-                android:id="@+id/secondary"
+                android:id="@+id/secondary1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Let's talk about the amazing mint man. The tutorial is for advanced users. We will focus on shading and coloring in this tutorial. Let's get going!"
@@ -65,7 +65,7 @@
                 android:adjustViewBounds="true" />
 
             <TextView
-                android:id="@+id/primary"
+                android:id="@+id/primary2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="The blue Superhero"
@@ -74,7 +74,7 @@
                 android:textColor="#3c3c3c" />
 
             <TextView
-                android:id="@+id/secondary"
+                android:id="@+id/secondary2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Now is the time to learn how to draw the blue superhero. We will go into details on how do draw the perfect blue hero"

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- BOOK 1 -->
+    <array  name="book1Build">
+        <item>@string/book1heading1</item>
+        <item>@string/book1heading2</item>
+        <item>@drawable/book1cover</item>
+        <item>@array/book1cardtext1</item>
+        <item>@array/book1cardtext2</item>
+        <item>@array/book1cardimages</item>
+        <item>@array/book1PageIds</item>
+    </array>
+
+
     <string name="book1">book1</string>
     <drawable name="book1cover">@drawable/head1_cover</drawable>
     <string name="book1heading1">How to draw a full superhero</string>
@@ -47,27 +58,7 @@
     </string-array>
 
 
-    <string-array name="book2PageIds">
-        <item>book2Page1</item>
-        <item>book2Page2</item>
-        <item>book2Page3</item>
-        <item>book2Page4</item>
-        <item>book2Page5</item>
-        <item>book2Page6</item>
-        <item>book2Page7</item>
-        <item>book2Page8</item>
-    </string-array>
 
-    <string-array name="book3PageIds">
-        <item>book3Page1</item>
-        <item>book3Page2</item>
-        <item>book3Page3</item>
-        <item>book3Page4</item>
-        <item>book3Page5</item>
-        <item>book3Page6</item>
-        <item>book3Page7</item>
-        <item>book3Page8</item>
-    </string-array>
 
     <integer-array name="book1Page1Slides">
         <item>@drawable/head2_19</item>
@@ -160,7 +151,7 @@
     <!-- BOOK 2 -->
 
 
-    <array name="book2Build">
+    <array  name="book2Build">
         <item>@string/book2heading1</item>
         <item>@string/book2heading2</item>
         <item>@drawable/book2cover</item>
@@ -169,8 +160,6 @@
         <item>@array/book2cardimages</item>
         <item>@array/book2PageIds</item>
     </array>
-
-
 
     <drawable name="book2cover">@drawable/head3_cover</drawable>
     <string name="book2heading1">How to draw a full superhero</string>
@@ -206,7 +195,30 @@
         <item>@drawable/head2_19</item>
     </integer-array>
 
+    <string-array name="book2PageIds">
+        <item>book2Page1</item>
+        <item>book2Page2</item>
+        <item>book2Page3</item>
+        <item>book2Page4</item>
+        <item>book2Page5</item>
+        <item>book2Page6</item>
+        <item>book2Page7</item>
+        <item>book2Page8</item>
+    </string-array>
+
+
     <!-- BOOK 3 -->
+
+    <array name="book3Build">
+        <item>@string/book3heading1</item>
+        <item>@string/book3heading2</item>
+        <item>@drawable/book3cover</item>
+        <item>@array/book3cardtext1</item>
+        <item>@array/book3cardtext2</item>
+        <item>@array/book3cardimages</item>
+        <item>@array/book2PageIds</item>
+    </array>
+
     <drawable name="book3cover">@drawable/head4_cover</drawable>
     <string name="book3heading1">How to draw a full superhero</string>
     <string name="book3heading2">How to draw a full superhero</string>
@@ -240,6 +252,16 @@
         <item>@drawable/head2_19</item>
         <item>@drawable/head2_19</item>
     </integer-array>
+    <string-array name="book3PageIds">
+        <item>book3Page1</item>
+        <item>book3Page2</item>
+        <item>book3Page3</item>
+        <item>book3Page4</item>
+        <item>book3Page5</item>
+        <item>book3Page6</item>
+        <item>book3Page7</item>
+        <item>book3Page8</item>
+    </string-array>
 
   
 </resources>

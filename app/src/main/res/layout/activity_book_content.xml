@@ -37,8 +37,6 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:textColor="#c0b9b9" />
-
-
         <com.draw.aidansliney.draw3.ExpandableGridView
             android:numColumns="auto_fit"
             android:gravity="center"
@@ -47,7 +45,6 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/grid" />
-
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
