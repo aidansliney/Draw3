@@ -1,6 +1,7 @@
 package com.draw.aidansliney.draw3;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
     private ViewPager mViewPager;
     public void onFragmentInteraction(Uri uri) {}
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
 
         // Change the title on the main screen
         setTitle("");
-        setContentView(R.layout.fragment_main);
+        setContentView(R.layout.fragment_main); // this is needed but could be a better way
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         });
 */
 
-        //attempting to add mobile ads
+        //Add mobile ads
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -136,15 +139,13 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
+
+         //The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
- //test
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -157,11 +158,37 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             return fragment;
         }
 
+
+
+
+
+
+        int[] bookContent3 = {R.string.book3heading1, R.string.book3heading2,R.drawable.book3cover,R.array.book3cardtext1,R.array.book3cardtext2,R.array.book3cardimages,R.array.book1PageIds};
+        int layout3 = R.id.layout_3;
+
+
+        public void linkBook(int layout, final int[]bookContent, View rootView)
+        {
+            View layout2 = rootView.findViewById(layout);
+            layout2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), BookActivity.class);
+                    intent.putExtra("bookCoverH1Id", bookContent[0]);
+                    intent.putExtra("bookCoverH2Id", bookContent[1]);
+                    intent.putExtra("bookCoverImageId", bookContent[2]);
+                    intent.putExtra("cardText1Id", bookContent[3]);
+                    intent.putExtra("cardText2Id", bookContent[4]);
+                    intent.putExtra("cardImageId", bookContent[5]);
+                    intent.putExtra("bookPageIds", bookContent[6]);
+                    startActivity(intent);
+                }
+            });
+        }
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-
-
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             // image 1
@@ -169,13 +196,10 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             layout1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-
                     if (mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
                     } else {
-
-
+                        // If advert cannot be displayed
                         Intent intent = new Intent(getActivity(), BookActivity.class);
                         intent.putExtra("bookId", R.string.book1);
                         intent.putExtra("bookCoverH1Id", R.string.book1heading1);
@@ -190,37 +214,16 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
                 }
             });
 
-            View layout2 = rootView.findViewById(R.id.layout_2);
-            layout2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), BookActivity.class);
-                    intent.putExtra("bookCoverH1Id", R.string.book2heading1);
-                    intent.putExtra("bookCoverH2Id", R.string.book2heading2);
-                    intent.putExtra("bookCoverImageId", R.drawable.book2cover);
-                    intent.putExtra("cardText1Id", R.array.book2cardtext1);
-                    intent.putExtra("cardText2Id", R.array.book2cardtext2);
-                    intent.putExtra("cardImageId", R.array.book2cardimages);
-                    intent.putExtra("bookPageIds", R.array.book1PageIds);
-                    startActivity(intent);
-                }
-            });
+            Resources r = getResources();
+            //int [] book2Build = r.getIntArray(R.array.book2Build);
 
-            View layout3 = rootView.findViewById(R.id.layout_3);
-            layout3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), BookActivity.class);
-                    intent.putExtra("bookCoverH1Id", R.string.book3heading1);
-                    intent.putExtra("bookCoverH2Id", R.string.book3heading2);
-                    intent.putExtra("bookCoverImageId", R.drawable.book3cover);
-                    intent.putExtra("cardText1Id", R.array.book3cardtext1);
-                    intent.putExtra("cardText2Id", R.array.book3cardtext2);
-                    intent.putExtra("cardImageId", R.array.book3cardimages);
-                    intent.putExtra("bookPageIds", R.array.book1PageIds);
-                    startActivity(intent);
-                }
-            });
+            int[] book2Build = {R.string.book2heading1, R.string.book2heading2,R.drawable.book2cover,R.array.book2cardtext1,R.array.book2cardtext2,R.array.book2cardimages,R.array.book1PageIds};
+            //int layout2 = R.id.layout_2;
+
+
+            linkBook(R.id.layout_2,book2Build, rootView);
+            linkBook(layout3,bookContent3, rootView);
+
 
             View homeCard1 = rootView.findViewById(R.id.home_card_1);
             homeCard1.setOnClickListener(new View.OnClickListener() {

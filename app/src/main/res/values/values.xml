@@ -158,6 +158,20 @@
     </integer-array>
 
     <!-- BOOK 2 -->
+
+
+    <array name="book2Build">
+        <item>@string/book2heading1</item>
+        <item>@string/book2heading2</item>
+        <item>@drawable/book2cover</item>
+        <item>@array/book2cardtext1</item>
+        <item>@array/book2cardtext2</item>
+        <item>@array/book2cardimages</item>
+        <item>@array/book2PageIds</item>
+    </array>
+
+
+
     <drawable name="book2cover">@drawable/head3_cover</drawable>
     <string name="book2heading1">How to draw a full superhero</string>
     <string name="book2heading2">How to draw a full superhero</string>

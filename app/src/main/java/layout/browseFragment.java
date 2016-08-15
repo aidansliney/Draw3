@@ -68,9 +68,10 @@ public class BrowseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
-        // book3
-        View layout4 = rootView.findViewById(R.id.layout_4);
-        layout4.setOnClickListener(new View.OnClickListener() {
+
+        // book3b
+        View layout3b = rootView.findViewById(R.id.layout_3b);
+        layout3b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), BookActivity.class);
@@ -84,9 +85,9 @@ public class BrowseFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        // book2
-        View layout5 = rootView.findViewById(R.id.layout_5);
-        layout5.setOnClickListener(new View.OnClickListener() {
+        // book2b
+        View layout2b = rootView.findViewById(R.id.layout_2b);
+        layout2b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), BookActivity.class);
@@ -101,8 +102,8 @@ public class BrowseFragment extends Fragment {
             }
         });
         // book1
-        View layout6 = rootView.findViewById(R.id.layout_6);
-        layout6.setOnClickListener(new View.OnClickListener() {
+        View layout1b = rootView.findViewById(R.id.layout_1b);
+        layout1b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), BookActivity.class);
