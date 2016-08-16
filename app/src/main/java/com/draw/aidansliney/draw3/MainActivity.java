@@ -46,6 +46,25 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
+
+        // Start setup of in-app billing.
+        // (Note that the work is done using methods in superclass
+        // IabActivity. The original code had all the code here.)
+      //  setupIabHelper (true, true);
+
+        // Set a variable for convenient access
+        // to the iab helper object.
+      //  mHelper = getIabHelper ();
+
+        // load game data
+
+        // enable debug logging
+        // (For a production application, you would set this to false).
+       // mHelper.enableDebugLogging(true);
+
+
+
         //play full screen advert
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
