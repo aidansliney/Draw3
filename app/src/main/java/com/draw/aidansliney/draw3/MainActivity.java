@@ -72,8 +72,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the Two
-        // primary sections of the activity.
+        // Create the adapter that will return a fragment for each of the Two primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-/*
+/* hiding the FAB as it covers the adverts
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             }
         });
 */
-
         //Add mobile ads
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -126,28 +124,21 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
 
+    //A placeholder fragment containing a simple view.
+    public static class PlaceholderFragment extends Fragment {
         //The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
-
         public PlaceholderFragment() {
         }
-
         // Returns a new instance of this fragment for the given section number
-
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -156,24 +147,21 @@ public class MainActivity extends AppCompatActivity implements BrowseFragment.On
             return fragment;
         }
 
-        int[] bookContent3 = {R.string.book3heading1, R.string.book3heading2, R.drawable.book3cover, R.array.book3cardtext1, R.array.book3cardtext2, R.array.book3cardimages, R.array.book1PageIds};
-
-
+        // a method to setup the right content for = book thumbnails
         public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
+
             View Layout = rootView.findViewById(layout);
             Layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    if (advert == true && mInterstitialAd.isLoaded()) {
+                    if (advert && mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
                     } else {
-
-                        TypedArray bookBuild = getResources().obtainTypedArray(bookContent); // todo needs to be recycled
+                        TypedArray bookBuild = getResources().obtainTypedArray(bookContent);
                         final int[] bookCollected = new int[bookBuild.length()];
                         for (int i = 0; i < bookBuild.length(); i++)
                             bookCollected[i] = bookBuild.getResourceId(i, 0);
-
+                        bookBuild.recycle();
                         Intent intent = new Intent(getActivity(), BookActivity.class);
                         intent.putExtra("bookCoverH1Id", bookCollected[0]);
                         intent.putExtra("bookCoverH2Id", bookCollected[1]);

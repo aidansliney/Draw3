@@ -3,6 +3,7 @@ package com.draw.aidansliney.draw3;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,6 +17,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class BookActivity extends AppCompatActivity {
+
+
+    private void showToast(int duration, String message) {
+        final Toast toast = Toast.makeText(getBaseContext(),
+                message,
+                Toast.LENGTH_SHORT);
+        toast.show();
+        new CountDownTimer(duration, 500) {
+            public void onTick(long millisUntilFinished) {
+                toast.show();
+            }
+            public void onFinish() {
+                toast.cancel();
+            }
+
+        }.start();
+    }
+
 
     GridView grid;
     @Override
@@ -40,7 +59,7 @@ public class BookActivity extends AppCompatActivity {
             }
         });
 
-        //set all content but grid
+        //set the top of the page (not the grid)
         TextView textView = (TextView)findViewById(R.id.primary);
         TextView textView2 = (TextView)findViewById(R.id.secondary);
         ImageView imageView = (ImageView)findViewById(R.id.background);
@@ -70,12 +89,12 @@ public class BookActivity extends AppCompatActivity {
                 String pageId = (String) adapter.getItem(position);
 
                 int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
-                Toast.makeText(BookActivity.this, "You Clicked at " + cardText1[+position], Toast.LENGTH_SHORT).show();
+                showToast(20000, cardText1[+position] );
+                //Toast.makeText(BookActivity.this, "You Clicked at " + cardText1[+position], Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(BookActivity.this,PageActivity.class);
-                Log.d("hellooooooooooooooo" + slidesID, "" );
+                Log.d("hello" + slidesID, "" );
                 intent.putExtra("bookSlides", slidesID);
                 startActivity(intent);
-
             }
         });
 

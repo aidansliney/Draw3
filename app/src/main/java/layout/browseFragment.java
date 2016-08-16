@@ -2,6 +2,7 @@ package layout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.draw.aidansliney.draw3.BookActivity;
+import com.draw.aidansliney.draw3.MainActivity;
 import com.draw.aidansliney.draw3.R;
 
 /**
@@ -20,7 +22,7 @@ import com.draw.aidansliney.draw3.R;
  * Use the {@link BrowseFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BrowseFragment extends Fragment {
+public class BrowseFragment extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,66 +63,49 @@ public class BrowseFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
+    // a method to setup the right content for = book thumbnails
+    public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
+
+        View Layout = rootView.findViewById(layout);
+        Layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+/*                if (advert && mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {*/
+                    TypedArray bookBuild = getResources().obtainTypedArray(bookContent);
+                    final int[] bookCollected = new int[bookBuild.length()];
+                    for (int i = 0; i < bookBuild.length(); i++)
+                        bookCollected[i] = bookBuild.getResourceId(i, 0);
+                    bookBuild.recycle();
+                    Intent intent = new Intent(getActivity(), BookActivity.class);
+                    intent.putExtra("bookCoverH1Id", bookCollected[0]);
+                    intent.putExtra("bookCoverH2Id", bookCollected[1]);
+                    intent.putExtra("bookCoverImageId", bookCollected[2]);
+                    intent.putExtra("cardText1Id", bookCollected[3]);
+                    intent.putExtra("cardText2Id", bookCollected[4]);
+                    intent.putExtra("cardImageId", bookCollected[5]);
+                    intent.putExtra("bookPageIds", bookCollected[6]);
+                    startActivity(intent);
+                }
+
+        });
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
 
-        // book3b
-        View layout3b = rootView.findViewById(R.id.layout_3b);
-        layout3b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), BookActivity.class);
-                intent.putExtra("bookCoverH1Id", R.string.book3heading1);
-                intent.putExtra("bookCoverH2Id", R.string.book3heading2);
-                intent.putExtra("bookCoverImageId", R.drawable.book3cover);
-                intent.putExtra("cardText1Id", R.array.book3cardtext1);
-                intent.putExtra("cardText2Id", R.array.book3cardtext2);
-                intent.putExtra("cardImageId", R.array.book3cardimages);
-                intent.putExtra("bookPageIds", R.array.book1PageIds);
-                startActivity(intent);
-            }
-        });
-        // book2b
-        View layout2b = rootView.findViewById(R.id.layout_2b);
-        layout2b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), BookActivity.class);
-                intent.putExtra("bookCoverH1Id", R.string.book2heading1);
-                intent.putExtra("bookCoverH2Id", R.string.book2heading2);
-                intent.putExtra("bookCoverImageId", R.drawable.book2cover);
-                intent.putExtra("cardText1Id", R.array.book2cardtext1);
-                intent.putExtra("cardText2Id", R.array.book2cardtext2);
-                intent.putExtra("cardImageId", R.array.book2cardimages);
-                intent.putExtra("bookPageIds", R.array.book1PageIds);
-                startActivity(intent);
-            }
-        });
-        // book1
-        View layout1b = rootView.findViewById(R.id.layout_1b);
-        layout1b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), BookActivity.class);
-                intent.putExtra("bookCoverH1Id", R.string.book1heading1);
-                intent.putExtra("bookCoverH2Id", R.string.book1heading2);
-                intent.putExtra("bookCoverImageId", R.drawable.book1cover);
-                intent.putExtra("cardText1Id", R.array.book1cardtext1);
-                intent.putExtra("cardText2Id", R.array.book1cardtext2);
-                intent.putExtra("cardImageId", R.array.book1cardimages);
-                intent.putExtra("bookPageIds", R.array.book1PageIds);
-                startActivity(intent);
-            }
-        });
+        linkBook(R.id.layout_3b, R.array.book3Build, rootView, false);
+        linkBook(R.id.layout_2b, R.array.book2Build, rootView, false);
+        linkBook(R.id.layout_1b, R.array.book1Build, rootView, false);
 
         return rootView;
     }
-
 
 
     @Override
