@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Draw3</string>
+    <string name="app_name">Learn how to draw</string>
     <string name="action_settings">Share</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
@@ -9,7 +9,8 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_correct">ca-app-pub-7832891006427470/5345932942</string>
 
-
-    <string name="intercom_gcm_sender_id">YOUR_SENDER_ID</string>
+    <string name="fa_icon_areachart">&#xf1fe;</string>
+    <string name="fa_icon_piechart">&#xf200;</string>
+    <string name="fa_icon_linechart">&#xf201;</string>
 
 </resources>

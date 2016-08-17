@@ -1,31 +1,27 @@
 {
   "project_info": {
-    "project_number": "1061301429783",
-    "firebase_url": "https://fir-draw.firebaseio.com",
-    "project_id": "firebase-draw",
-    "storage_bucket": "firebase-draw.appspot.com"
+    "project_number": "2656874705",
+    "firebase_url": "https://draw-891c7.firebaseio.com",
+    "project_id": "draw-891c7",
+    "storage_bucket": "draw-891c7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1061301429783:android:6a28674daca85a1b",
+        "mobilesdk_app_id": "1:2656874705:android:8424ad91c98c9c74",
         "android_client_info": {
-          "package_name": "com.draw.aidansliney.draw3"
+          "package_name": "com.learn.howtodraw.draw"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1061301429783-oi6282qjomeu2mngbes0rlfp1cd82p7i.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "1061301429783-pd9583sksabtmn7v75i1vrtrb68f16td.apps.googleusercontent.com",
+          "client_id": "2656874705-hg3ca4ba0s1purgc2manf5r82trlhjun.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD6ZF-iKRVYIdzrMMlRopn6F5oY0C_99YU"
+          "current_key": "AIzaSyCKIVOp-LO-Z6oyVDU0Fv1_vhjRV2YiqL0"
         }
       ],
       "services": {

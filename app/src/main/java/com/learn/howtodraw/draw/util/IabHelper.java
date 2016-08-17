@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.draw.aidansliney.draw3.util;
+package com.learn.howtodraw.draw.util;
 
 import android.app.Activity;
 import android.app.PendingIntent;

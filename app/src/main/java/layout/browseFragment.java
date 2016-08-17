@@ -10,9 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.draw.aidansliney.draw3.BookActivity;
-import com.draw.aidansliney.draw3.MainActivity;
-import com.draw.aidansliney.draw3.R;
+import com.learn.howtodraw.draw.BookActivity;
+import com.learn.howtodraw.draw.R;
 
 /**
  * A simple {@link Fragment} subclass.

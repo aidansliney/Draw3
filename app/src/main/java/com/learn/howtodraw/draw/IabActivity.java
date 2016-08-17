@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 /* Copyright (c) 2012-2013 Google Inc.
  *
@@ -20,20 +20,19 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.draw.aidansliney.draw3.R;
-import com.draw.aidansliney.draw3.util.IabHelper;
-import com.draw.aidansliney.draw3.util.IabResult;
-import com.draw.aidansliney.draw3.util.Inventory;
-import com.draw.aidansliney.draw3.util.Purchase;
+import com.learn.howtodraw.draw.util.IabHelper;
+import com.learn.howtodraw.draw.util.IabResult;
+import com.learn.howtodraw.draw.util.Inventory;
+import com.learn.howtodraw.draw.util.Purchase;
 
 import java.util.ArrayList;
 
 import android.content.res.Resources;
-import static com.draw.aidansliney.draw3.Constants.*;
-import com.android.vending.billing.IInAppBillingService;
+import static com.learn.howtodraw.draw.Constants.*;
 
 
 /**
@@ -45,7 +44,7 @@ import com.android.vending.billing.IInAppBillingService;
  * The subclass should also override methods onIabSetupFailed and onIabSetupSucceeded.
  */
 
-public abstract class IabActivity extends Activity {
+public abstract class IabActivity extends AppCompatActivity {
 
     public IabActivity() {
         super ();
@@ -538,7 +537,6 @@ public abstract class IabActivity extends Activity {
 
             if (pShowIabErrors) toast (R.string.google_app_id);
         }
-
     }
 
 /**

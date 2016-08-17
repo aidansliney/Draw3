@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.draw.aidansliney.draw3">
+    package="com.learn.howtodraw.draw">
 
 
 
@@ -12,7 +12,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.learn.howtodraw.draw.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BookActivity"
+            android:name="com.learn.howtodraw.draw.BookActivity"
             android:label="@string/title_activity_book2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PageActivity"></activity>
+        <activity android:name="com.learn.howtodraw.draw.PageActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

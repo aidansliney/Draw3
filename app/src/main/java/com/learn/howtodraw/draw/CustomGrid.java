@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -51,10 +51,10 @@ public class CustomGrid extends BaseAdapter {
         if (convertView == null) {
 
             grid = new View(mContext);
-            grid = inflater.inflate(R.layout.grid_single, null);
-            TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-            TextView textView2 = (TextView) grid.findViewById(R.id.grid_text2);
-            ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
+            grid = inflater.inflate(com.learn.howtodraw.draw.R.layout.grid_single, null);
+            TextView textView = (TextView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_text);
+            TextView textView2 = (TextView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_text2);
+            ImageView imageView = (ImageView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_image);
             textView.setText(web[position]);
             textView2.setText(web2[position]);
           //  textView3.setId(web3[position]);

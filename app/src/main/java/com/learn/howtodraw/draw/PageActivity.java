@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
@@ -15,16 +15,15 @@ public class PageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page2);
+        setContentView(com.learn.howtodraw.draw.R.layout.activity_page2);
 
 
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("bookSlides", 0));
         final int[] bookSlides = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++)
             bookSlides[i] = cardImageDrawables.getResourceId(i, 0);
-        View nextImage2 = findViewById(R.id.nextImage2);
+        View nextImage2 = findViewById(com.learn.howtodraw.draw.R.id.nextImage2);
         nextImage2.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 
@@ -35,7 +34,7 @@ public class PageActivity extends AppCompatActivity {
                     Log.d("Right", "Right");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
 
@@ -43,7 +42,7 @@ public class PageActivity extends AppCompatActivity {
             }
         });
 
-        View previousImage2 = findViewById(R.id.previousImage2);
+        View previousImage2 = findViewById(com.learn.howtodraw.draw.R.id.previousImage2);
         previousImage2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -52,14 +51,14 @@ public class PageActivity extends AppCompatActivity {
                     Log.d("left", "left");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
                 }
             }
         });
 
-        ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+        ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
         imageView.setOnTouchListener(new OnSwipeTouchListener(PageActivity.this) {
             public void onSwipeTop() {
                 Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
@@ -71,7 +70,7 @@ public class PageActivity extends AppCompatActivity {
                     Log.d("left", "left");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
 
@@ -86,7 +85,7 @@ public class PageActivity extends AppCompatActivity {
                     Log.d("Right", "Right");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
 

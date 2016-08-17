@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.draw.aidansliney.draw3.util;
+package com.learn.howtodraw.draw.util;
 
 /**
  * Exception thrown when encountering an invalid Base64 input character.

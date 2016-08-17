@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="70dp"
-    tools:context="com.draw.aidansliney.draw3.MainActivity$PlaceholderFragment">
+    tools:context="com.learn.howtodraw.draw.MainActivity$PlaceholderFragment">
 
 
     <LinearLayout
@@ -325,6 +325,75 @@
             android:layout_height="1dp"
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:onClick="onBuyGasButtonClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy and Use"
+                    android:layout_marginBottom="30dp" />
+
+                <TextView
+                    android:id="@+id/upgrade_button"
+                    android:onClick="onUpgradeAppButtonClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy and Keep"
+                    android:layout_marginBottom="30dp" />
+
+                <TextView
+                    android:id="@+id/infinite_gas_button"
+                    android:onClick="onSubscribedButtonClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subscribe"
+                    android:layout_marginBottom="90dp"/>
+
+                <TextView
+                    android:id="@+id/TV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="45sp"
+                    android:text="@string/fa_icon_areachart" />
+
+                <TextView
+
+                    android:id="@+id/TV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="45sp"
+                    android:text="@string/fa_icon_piechart" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="45sp"
+                    android:text="@string/fa_icon_linechart" />
+
+                <Button
+                    android:id="@+id/TV3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="@string/fa_icon_linechart" />
+
+
+            </LinearLayout>
+
     </LinearLayout>
 
 

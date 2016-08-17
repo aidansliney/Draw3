@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -43,12 +43,12 @@ public class BookActivity extends AppCompatActivity {
         // Change the title on the main screen
         setTitle("");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(com.learn.howtodraw.draw.R.layout.activity_book);
+        Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
         setSupportActionBar(toolbar);
 
        //Create floating action button
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,9 +60,9 @@ public class BookActivity extends AppCompatActivity {
         });
 
         //set the top of the page (not the grid)
-        TextView textView = (TextView)findViewById(R.id.primary);
-        TextView textView2 = (TextView)findViewById(R.id.secondary);
-        ImageView imageView = (ImageView)findViewById(R.id.background);
+        TextView textView = (TextView)findViewById(com.learn.howtodraw.draw.R.id.primary);
+        TextView textView2 = (TextView)findViewById(com.learn.howtodraw.draw.R.id.secondary);
+        ImageView imageView = (ImageView)findViewById(com.learn.howtodraw.draw.R.id.background);
         textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
         imageView.setImageResource(getIntent().getIntExtra("bookCoverImageId", 0));
@@ -76,10 +76,10 @@ public class BookActivity extends AppCompatActivity {
         for (int i = 0; i < cardImageDrawables.length(); i++)
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
         final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardText2, cardImage, bookPageIds);
-        grid = (GridView) findViewById(R.id.grid);
+        grid = (GridView) findViewById(com.learn.howtodraw.draw.R.id.grid);
 
         //set the grid
-        ExpandableGridView gridView = (ExpandableGridView) findViewById(R.id.grid);
+        ExpandableGridView gridView = (ExpandableGridView) findViewById(com.learn.howtodraw.draw.R.id.grid);
         grid.setAdapter(adapter);
         gridView.setExpanded(true);
         gridView.setFocusable(false);

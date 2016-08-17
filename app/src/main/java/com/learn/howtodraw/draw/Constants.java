@@ -1,4 +1,4 @@
-package com.draw.aidansliney.draw3;
+package com.learn.howtodraw.draw;
 
 
 /**
@@ -13,11 +13,11 @@ public class Constants {
 
 // SKUs for our products: the premium upgrade (non-consumable)
 // and gas (consumable)
-    public static final String SKU_PREMIUM = "premium2";
-    public static final String SKU_GAS = "gas2";
+    public static final String SKU_PREMIUM = "book";
+    public static final String SKU_GAS = "page";
 
     // SKU for our subscription (infinite gas)
-    public static final String SKU_INFINITE_GAS = "infinite_gas2";
+    public static final String SKU_INFINITE_GAS = "subscription";
 
     /**
      */
@@ -35,13 +35,9 @@ public class Constants {
     /**
      */
     public static final String LOG_IAB = "Trivial Drive IAB";
-
-
     /**
      */
 // Graphics for the gas gauge
-    public static final int[] TANK_RES_IDS = { R.drawable.head1_04, R.drawable.head1_04, R.drawable.head1_04,
-            R.drawable.head1_04, R.drawable.head1_04 };
 
     // How many units (1/4 tank is our unit) fill in the tank.
     public static final int TANK_MAX = 4;
