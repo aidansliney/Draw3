@@ -79,7 +79,7 @@ public abstract class IabActivity extends AppCompatActivity {
     protected boolean mIsPremium = false;
 
     // Does the user have an active subscription to the infinite gas plan?
-    protected boolean mSubscribedToInfiniteGas = false;
+    protected boolean mSubscribed = false;
 
 // Current amount of gas in tank, in units
 // protected int mTank;
@@ -611,11 +611,11 @@ public abstract class IabActivity extends AppCompatActivity {
 
         // Do we have the infinite gas plan?
         Purchase infiniteGasPurchase = inventory.getPurchase(SKU_INFINITE_GAS);
-        mSubscribedToInfiniteGas = (infiniteGasPurchase != null &&
+        mSubscribed = (infiniteGasPurchase != null &&
                 verifyDeveloperPayload(infiniteGasPurchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribedToInfiniteGas ? "HAS" : "DOES NOT HAVE")
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribed ? "HAS" : "DOES NOT HAVE")
                 + " infinite gas subscription.");
-        //if (mSubscribedToInfiniteGas) mTank = TANK_MAX;
+        //if (mSubscribed) mTank = TANK_MAX;
 
         // Check for gas delivery -- if we own gas, we should fill up the tank immediately
         Purchase gasPurchase = inventory.getPurchase(SKU_GAS);
@@ -625,7 +625,7 @@ public abstract class IabActivity extends AppCompatActivity {
             return;
         }
 
-        //if (mSubscribedToInfiniteGas) mTank = TANK_MAX;   // Done in MainActivity
+        //if (mSubscribed) mTank = TANK_MAX;   // Done in MainActivity
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "IabActivity.onIabSetupSucceeded completed. Subclass should update UI.");
 

@@ -364,6 +364,16 @@
                     android:text="@string/fa_thumbs_up"
                     android:textSize="30sp" />
 
+                <TextView
+                    android:id="@+id/subscribedQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Are you subscribed?"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#3c3c3c" />
+
+
 
                 <com.learn.howtodraw.draw.FontA.ButtonAwesome
                     android:id="@+id/infinite_gas_button"

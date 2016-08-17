@@ -2,7 +2,6 @@ package com.learn.howtodraw.draw;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
@@ -64,15 +63,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
         // IabActivity. The original code had all the code here.)
-       setupIabHelper (true, true);
+        setupIabHelper(true, true);
 
         // Set a variable for convenient access
         // to the iab helper object.
-        mHelper = getIabHelper ();
+        mHelper = getIabHelper();
 
         // enable debug logging
         // (For a production application, you would set this to false).
@@ -100,6 +98,15 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         setTitle("");
         setContentView(com.learn.howtodraw.draw.R.layout.fragment_main); // this is needed but could be a better way
 
+        Log.d("subscribed?" + mSubscribed, "" + mSubscribed);
+
+        if (!mSubscribed) {
+            TextView textView = (TextView) findViewById(R.id.subscribedQuestion);
+            textView.setText("You have not subscribed");
+        } else {
+            TextView textView = (TextView) findViewById(R.id.subscribedQuestion);
+            textView.setText("You have subscribed you LEGEND!!");
+        }
 
 
         super.onCreate(savedInstanceState);
@@ -107,6 +114,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
 
 
         // Create the adapter that will return a fragment for each of the Two primary sections of the activity.
@@ -173,8 +181,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public static class PlaceholderFragment extends Fragment {
         //The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
+
         public PlaceholderFragment() {
         }
+
         // Returns a new instance of this fragment for the given section number
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
@@ -267,7 +277,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         }
     }
 
-    // attempt to add full screen pages
+    // attempt to add full screen adverts
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("DBFB9795D39C49D52EAFBA8E58ACA288")
@@ -318,23 +328,24 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             }
             return null;
         }
-   }
+    }
 
 
     /**
      * Called when something fails in the purchase flow before the part where the item is consumed.
-     *
+     * <p/>
      * <p> This is the place to reset the UI if something was done to indicate that a purchase has started.
      *
-     * @param h IabHelper
+     * @param h        IabHelper
      * @param errorNum int - error number from Constants
      * @return void
      */
 
-    @Override void onIabPurchaseFailed (IabHelper h, int errorNum) {
+    @Override
+    void onIabPurchaseFailed(IabHelper h, int errorNum) {
         // We did set up in such a way so that error messages have already been display (with complain method).
         // So all we have to do is remove the "waiting" indicator.
-        if (errorNum != 0) setWaitScreen (false);
+        if (errorNum != 0) setWaitScreen(false);
         updateUi();
 
     }
@@ -346,7 +357,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public void onBuyGasButtonClicked(View arg0) {
         Log.d(TAG, "Buy gas button clicked.");
 
-        if (mSubscribedToInfiniteGas) {
+        if (mSubscribed) {
             complain("No need! You're subscribed to infinite gas. Isn't that awesome?");
             return;
         }
@@ -363,7 +374,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         // The steps needed to complete a purchase are done in code in the IabActivity superclass.
         // IabActivity provides standard handling and calls back to this class.
-        launchInAppPurchaseFlow (this, SKU_GAS);
+        launchInAppPurchaseFlow(this, SKU_GAS);
 
 
     /* TODO: for security, generate your payload here for verification. See the comments on
@@ -382,11 +393,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
      * User clicked the "Upgrade to Premium" button.
      */
 
-    public void onUpgradeAppButtonClicked (View arg0) {
+    public void onUpgradeAppButtonClicked(View arg0) {
         Log.d(TAG, "Upgrade button clicked; launching purchase flow for upgrade.");
         setWaitScreen(true);
 
-        launchInAppPurchaseFlow (this, SKU_PREMIUM);
+        launchInAppPurchaseFlow(this, SKU_PREMIUM);
 
     /* TODO: for security, generate your payload here for verification. See the comments on
      *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
@@ -414,7 +425,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         setWaitScreen(true);
 
-        launchSubscriptionPurchaseFlow (this, SKU_INFINITE_GAS);
+        launchSubscriptionPurchaseFlow(this, SKU_INFINITE_GAS);
     /* (original code)
     Log.d(TAG, "Launching purchase flow for infinite gas subscription.");
     mHelper.launchPurchaseFlow(this,
@@ -434,8 +445,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             // perform any handling of activity results not related to in-app
             // billing...
             super.onActivityResult(requestCode, resultCode, data);
-        }
-        else {
+        } else {
             Log.d(TAG, "onActivityResult handled by IABUtil.");
         }
     }
@@ -471,20 +481,18 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 // bought 1/4 tank of gas. So consume it.
                 Log.d(TAG, "Purchase is gas. Starting gas consumption.");
                 mHelper.consumeAsync(purchase, mConsumeFinishedListener);
-            }
-            else if (purchase.getSku().equals(SKU_PREMIUM)) {
+            } else if (purchase.getSku().equals(SKU_PREMIUM)) {
                 // bought the premium upgrade!
                 Log.d(TAG, "Purchase is premium upgrade. Congratulating user.");
                 alert("Thank you for upgrading to premium!");
                 mIsPremium = true;
                 updateUi();
                 setWaitScreen(false);
-            }
-            else if (purchase.getSku().equals(SKU_INFINITE_GAS)) {
+            } else if (purchase.getSku().equals(SKU_INFINITE_GAS)) {
                 // bought the infinite gas subscription
                 Log.d(TAG, "Infinite gas subscription purchased.");
                 alert("Thank you for subscribing to infinite gas!");
-                mSubscribedToInfiniteGas = true;
+                mSubscribed = true;
                 mTank = TANK_MAX;
                 updateUi();
                 setWaitScreen(false);
@@ -508,10 +516,9 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 // game world's logic, which in our case means filling the gas tank a bit
                 Log.d(TAG, "Consumption successful. Provisioning.");
                 mTank = mTank == TANK_MAX ? TANK_MAX : mTank + 1;
-              //  saveData();
+                //  saveData();
                 alert("You filled 1/4 tank. Your tank is now " + String.valueOf(mTank) + "/4 full!");
-            }
-            else {
+            } else {
                 complain("Error while consuming: " + result);
             }
             updateUi();
@@ -525,9 +532,9 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 /*    // Drive button clicked. Burn gas!
     public void onDriveButtonClicked(View arg0) {
         Log.d(TAG, "Drive button clicked.");
-        if (!mSubscribedToInfiniteGas && mTank <= 0) alert("Oh, no! You are out of gas! Try buying some!");
+        if (!mSubscribed && mTank <= 0) alert("Oh, no! You are out of gas! Try buying some!");
         else {
-            if (!mSubscribedToInfiniteGas) --mTank;
+            if (!mSubscribed) --mTank;
            // saveData();
             alert("Vroooom, you drove a few miles.");
             updateUi();
@@ -558,11 +565,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         findViewById(R.id.upgrade_button).setVisibility(mIsPremium ? View.GONE : View.VISIBLE);
 
         // "Get infinite gas" button is only visible if the user is not subscribed yet
-        findViewById(R.id.infinite_gas_button).setVisibility(mSubscribedToInfiniteGas ?
+        findViewById(R.id.infinite_gas_button).setVisibility(mSubscribed ?
                 View.GONE : View.VISIBLE);
 
         // update gas gauge to reflect tank status
-        if (mSubscribedToInfiniteGas) {
+        if (mSubscribed) {
             ((ImageView)findViewById(R.id.gas_gauge)).setImageResource(R.drawable.gas_inf);
         }
         else {
@@ -604,13 +611,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     /**
      * Called when consumption of a purchase item fails.
-     *
+     * <p/>
      * <p> If this class was set up to issue messages upon failure, there is probably
      * nothing else to be done.
      */
 
-    void onIabConsumeItemFailed (IabHelper h) {
-        super.onIabConsumeItemFailed (h);
+    void onIabConsumeItemFailed(IabHelper h) {
+        super.onIabConsumeItemFailed(h);
 
         // Do whatever you need to in the ui to indicate that consuming a purchase failed.
         updateUi();
@@ -620,20 +627,20 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     /**
      * Called when consumption of a purchase item succeeds.
-     *
+     * <p/>
      * SKU_GAS is the only consumable ite,. When it is purchased, this method gets called.
      * So this is the place where the tank is filled.
      *
-     * @param h IabHelper - helper object
+     * @param h        IabHelper - helper object
      * @param purchase Purchase
-     * @param result IabResult
+     * @param result   IabResult
      */
 
-    void onIabConsumeItemSucceeded (IabHelper h, Purchase purchase, IabResult result) {
-        super.onIabConsumeItemSucceeded (h, purchase, result);
+    void onIabConsumeItemSucceeded(IabHelper h, Purchase purchase, IabResult result) {
+        super.onIabConsumeItemSucceeded(h, purchase, result);
 
         // Update the state of the app and the ui to show the item we purchased and consumed.
-        String purchaseSku = purchase.getSku ();
+        String purchaseSku = purchase.getSku();
         if (purchaseSku.equals(SKU_GAS)) {
             if (result.isSuccess()) {
                 // successfully consumed, so we apply the effects of the item in our
@@ -662,7 +669,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
       // bought the infinite gas subscription
       Log.d(TAG, "Infinite gas subscription purchased.");
       alert("Thank you for subscribing to infinite gas!");
-      mSubscribedToInfiniteGas = true;
+      mSubscribed = true;
       mTank = TANK_MAX;
       updateUi();
       setWaitScreen(false);
@@ -672,13 +679,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     /**
      * Called when setup fails and the inventory of items is not available.
-     *
+     * <p/>
      * <p> If this class was set up to issue messages upon failure, there is probably
      * nothing else to be done.
      */
 
-    void onIabSetupFailed (IabHelper h) {
-        super.onIabSetupFailed (h);
+    void onIabSetupFailed(IabHelper h) {
+        super.onIabSetupFailed(h);
 
         // This would be where to change the ui in the event of a set up error.
     }
@@ -686,20 +693,19 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     /**
      * Called when setup succeeds and the inventory of items is available.
      *
-     * @param h IabHelper - helper object
-     * @param result IabResult
+     * @param h         IabHelper - helper object
+     * @param result    IabResult
      * @param inventory Inventory
-     *
      */
 
-    void onIabSetupSucceeded (IabHelper h, IabResult result, Inventory inventory) {
-        super.onIabSetupSucceeded (h, result, inventory);
+    void onIabSetupSucceeded(IabHelper h, IabResult result, Inventory inventory) {
+        super.onIabSetupSucceeded(h, result, inventory);
 
         // The superclass setup method checks to see what has been purchased and what has been subscribed to.
         // Premium and infinite gas are handled here. If there was a regular gas purchase, steps to consume
         // it (via an async call to consume) were started in the superclass.
 
-        if (mSubscribedToInfiniteGas) mTank = TANK_MAX;
+        if (mSubscribed) mTank = TANK_MAX;
 
         if (mIsPremium) {
             toast("welcome Premium User");
