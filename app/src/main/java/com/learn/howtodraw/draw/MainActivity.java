@@ -100,21 +100,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         setTitle("");
         setContentView(com.learn.howtodraw.draw.R.layout.fragment_main); // this is needed but could be a better way
 
-        Typeface font = Typeface.createFromAsset( getAssets(), "fontawesome-webfont.ttf" );
-        Button button = (Button) findViewById(R.id.TV3 );
-        button.setTypeface(font);
-
 
 
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
-
-
 
 
 
