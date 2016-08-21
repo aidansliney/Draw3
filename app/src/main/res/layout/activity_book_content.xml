@@ -32,7 +32,7 @@
             android:id="@+id/secondary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Complete this tutorial and you will have the full skillset to draw your very own head"
+            android:text="Complete this ttead"
             android:paddingTop="0dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"

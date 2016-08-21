@@ -13,7 +13,7 @@
         >
 
         <LinearLayout
-            android:id="@+id/layout_3b"
+            android:id="@+id/layout_1b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
@@ -23,14 +23,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/head4_cover"
+                android:src="@drawable/mb3_4coveriso"
                 android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mint Man"
+                android:text="@string/book1heading1"
                 android:paddingLeft="15dp"
                 android:paddingTop="15dp"
                 android:textColor="#3c3c3c" />
@@ -39,7 +39,7 @@
                 android:id="@+id/secondary1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's talk about the amazing mint man. The tutorial is for advanced users. We will focus on shading and coloring in this tutorial. Let's get going!"
+                android:text="@string/book1heading2"
                 android:paddingLeft="15dp"
                 android:paddingTop="5dp"
                 android:textColor="#c0b9b9" />
@@ -92,7 +92,47 @@
             android:layout_marginBottom="20dp" />
 
         <LinearLayout
-            android:id="@+id/layout_1b"
+            android:id="@+id/layout_3b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ma3_4coveriso"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 3"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heroic Male"
+                android:paddingLeft="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_0b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
@@ -119,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Let's start with the head"
-                android:paddingLeft="7dp"
+                android:paddingLeft="15dp"
                 android:paddingTop="0dp"
                 android:paddingBottom="2dp"
                 android:textColor="#c0b9b9" />
@@ -131,6 +171,7 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
     </LinearLayout>
+
 
 
 </ScrollView>

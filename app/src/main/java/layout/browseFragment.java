@@ -88,6 +88,7 @@ public class BrowseFragment extends Fragment  {
                     intent.putExtra("cardText2Id", bookCollected[4]);
                     intent.putExtra("cardImageId", bookCollected[5]);
                     intent.putExtra("bookPageIds", bookCollected[6]);
+                    intent.putExtra("bookCoverImageInsideId", bookCollected[7]);
                     startActivity(intent);
                 }
 
@@ -99,9 +100,9 @@ public class BrowseFragment extends Fragment  {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
 
-        linkBook(R.id.layout_3b, R.array.book3Build, rootView, false);
-        linkBook(R.id.layout_2b, R.array.book2Build, rootView, false);
         linkBook(R.id.layout_1b, R.array.book1Build, rootView, false);
+        linkBook(R.id.layout_2b, R.array.book2Build, rootView, false);
+        linkBook(R.id.layout_3b, R.array.book3Build, rootView, false);
 
         return rootView;
     }

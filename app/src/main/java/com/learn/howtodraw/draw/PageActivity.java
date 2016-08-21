@@ -15,13 +15,16 @@ public class PageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.learn.howtodraw.draw.R.layout.activity_page2);
+        setContentView(com.learn.howtodraw.draw.R.layout.activity_page);
 
 
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("bookSlides", 0));
         final int[] bookSlides = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++)
             bookSlides[i] = cardImageDrawables.getResourceId(i, 0);
+        ImageView imageView1 = (ImageView)findViewById(com.learn.howtodraw.draw.R.id.slideImage);
+        int lastPic = bookSlides.length-1;
+        imageView1.setImageResource(bookSlides[lastPic]);
         View nextImage2 = findViewById(com.learn.howtodraw.draw.R.id.nextImage2);
         nextImage2.setOnClickListener(new View.OnClickListener() {
             @Override

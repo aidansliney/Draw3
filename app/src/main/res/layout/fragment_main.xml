@@ -23,14 +23,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/head1_cover"
+                android:src="@drawable/mb3_4coveriso"
                 android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Learn to draw your very own superhero"
+                android:text="@string/book1heading1"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
@@ -40,7 +40,7 @@
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="This tutorial will take you thro"
+                android:text="@string/book1heading2"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="1dp"
@@ -58,7 +58,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
             <!-- Home Card 1 -->
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/home_card_1"
@@ -75,8 +76,9 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb" />
+                        android:layout_height="270dp"
+                        android:src="@drawable/mi3_4head19"
+                        />
 
                     <View
                         android:layout_width="fill_parent"
@@ -87,7 +89,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The advanced head"
+                        android:text="Level 2"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c" />
@@ -96,7 +98,7 @@
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Let's start with the head"
+                        android:text="The Head"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
@@ -119,8 +121,9 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb" />
+                        android:layout_height="270dp"
+                        android:src="@drawable/mi3_4torso18"
+                        />
 
                     <View
                         android:layout_width="fill_parent"
@@ -131,7 +134,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The male eye"
+                        android:text="Level 2"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c" />
@@ -140,7 +143,7 @@
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Let's start with the head"
+                        android:text="The Torso"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
@@ -155,7 +158,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp">
             <!-- Home Card 3 -->
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/home_card_3"
@@ -172,8 +176,8 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb" />
+                        android:layout_height="270dp"
+                        android:src="@drawable/mb3_4figure20" />
 
                     <View
                         android:layout_width="fill_parent"
@@ -184,7 +188,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10 fingers, nails and all"
+                        android:text="Level 1"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c" />
@@ -193,7 +197,7 @@
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Draw fingers and a fist"
+                        android:text="The full male figure"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
@@ -216,8 +220,8 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:src="@drawable/head1_thumb" />
+                        android:layout_height="270dp"
+                        android:src="@drawable/ma3_4figure14" />
 
                     <View
                         android:layout_width="fill_parent"
@@ -228,7 +232,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Drawing hair"
+                        android:text="Level 3"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c" />
@@ -237,7 +241,7 @@
                         android:id="@+id/secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Different types of hair"
+                        android:text="The full male figure"
                         android:paddingLeft="7dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="2dp"
@@ -287,44 +291,7 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
 
-        <LinearLayout
-            android:id="@+id/layout_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="15dp"
-            android:orientation="vertical"
-            android:background="#ffffff">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/head4_cover"
-                android:adjustViewBounds="true" />
-
-            <TextView
-                android:id="@+id/primary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mint Man"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#3c3c3c" />
-
-            <TextView
-                android:id="@+id/secondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Let's talk about the amazing mint man. The tutorial is for advanced users. We will focus on shading and coloring in this tutorial. Let's get going!"
-                android:paddingLeft="15dp"
-                android:paddingTop="5dp"
-                android:textColor="#c0b9b9" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#bababa"
-            android:layout_marginBottom="20dp" />
 
 
             <LinearLayout
@@ -372,8 +339,6 @@
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"
                     android:textColor="#3c3c3c" />
-
-
 
                 <com.learn.howtodraw.draw.FontA.ButtonAwesome
                     android:id="@+id/infinite_gas_button"

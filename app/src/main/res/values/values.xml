@@ -9,66 +9,49 @@
         <item>@array/book1cardtext2</item>
         <item>@array/book1cardimages</item>
         <item>@array/book1PageIds</item>
+        <item>@drawable/book1coverinside</item>
     </array>
 
-
     <string name="book1">book1</string>
-    <drawable name="book1cover">@drawable/head1_cover</drawable>
-    <string name="book1heading1">How to draw a full superhero</string>
-    <string name="book1heading2">How to draw a full superhero</string>
+    <drawable name="book1cover">@drawable/mb3_4coveriso</drawable>
+    <drawable name="book1coverinside">@drawable/mb3_4coverinside</drawable>
+    <string name="book1heading1">Heroic Male 3/4 View - Level 1</string>
+    <string name="book1heading2">Learn how to draw the full figure</string>
     <string-array name="book1cardtext1">
-        <item>Male Head</item>
-        <item>The Hair</item>
-        <item>The Arm</item>
-        <item>Fingers</item>
-        <item>Skin</item>
-        <item>Shading Skin</item>
-        <item>Feet</item>
-        <item>Legs</item>
+        <item>Full Figure</item>
     </string-array>
     <string-array name="book1cardtext2">
-        <item>Creating heads</item>
-        <item>All types of hair</item>
-        <item>Both arms</item>
-        <item>10 fingers</item>
-        <item>Male skin</item>
-        <item>Depth in skin</item>
-        <item>2 feet</item>
-        <item>2 legs and knees</item>
+        <item></item>
     </string-array>
     <integer-array name="book1cardimages">
-        <item>@drawable/head2_09</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
+        <item>@drawable/mb3_4figure20</item>
     </integer-array>
     <string-array name="book1PageIds">
         <item>book1Page1</item>
-        <item>book1Page2</item>
-        <item>book1Page3</item>
-        <item>book1Page4</item>
-        <item>book1Page5</item>
-        <item>book1Page6</item>
-        <item>book1Page7</item>
-        <item>book1Page8</item>
     </string-array>
 
-
-
-
     <integer-array name="book1Page1Slides">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_12</item>
+        <item>@drawable/mb3_4figure01</item>
+        <item>@drawable/mb3_4figure02</item>
+        <item>@drawable/mb3_4figure03</item>
+        <item>@drawable/mb3_4figure04</item>
+        <item>@drawable/mb3_4figure05</item>
+        <item>@drawable/mb3_4figure06</item>
+        <item>@drawable/mb3_4figure07</item>
+        <item>@drawable/mb3_4figure08</item>
+        <item>@drawable/mb3_4figure08</item>
+        <item>@drawable/mb3_4figure10</item>
+        <item>@drawable/mb3_4figure11</item>
+        <item>@drawable/mb3_4figure12</item>
+        <item>@drawable/mb3_4figure13</item>
+        <item>@drawable/mb3_4figure14</item>
+        <item>@drawable/mb3_4figure15</item>
+        <item>@drawable/mb3_4figure16</item>
+        <item>@drawable/mb3_4figure17</item>
+        <item>@drawable/mb3_4figure18</item>
+        <item>@drawable/mb3_4figure19</item>
+        <item>@drawable/mb3_4figure20</item>
+
     </integer-array>
 
     <integer-array name="book1Page2Slides">
@@ -150,7 +133,6 @@
 
     <!-- BOOK 2 -->
 
-
     <array  name="book2Build">
         <item>@string/book2heading1</item>
         <item>@string/book2heading2</item>
@@ -159,9 +141,11 @@
         <item>@array/book2cardtext2</item>
         <item>@array/book2cardimages</item>
         <item>@array/book2PageIds</item>
+        <item>@drawable/book2coverinside</item>
     </array>
 
     <drawable name="book2cover">@drawable/mi3_4cover</drawable>
+    <drawable name="book2coverinside">@drawable/mi3_4coverinside</drawable>
     <string name="book2heading1">Heroic Male 3/4 View</string>
     <string name="book2heading2">Learn how to draw the full figure</string>
     <string-array name="book2cardtext1">
@@ -334,140 +318,48 @@
         <item>@array/book3cardtext1</item>
         <item>@array/book3cardtext2</item>
         <item>@array/book3cardimages</item>
-        <item>@array/book2PageIds</item>
+        <item>@array/book3PageIds</item>
+        <item>@drawable/book3coverinside</item>
     </array>
 
-    <drawable name="book3cover">@drawable/head4_cover</drawable>
-    <string name="book3heading1">How to draw a full superhero</string>
-    <string name="book3heading2">How to draw a full superhero</string>
+    <drawable name="book3cover">@drawable/ma3_4coveriso</drawable>
+    <drawable name="book3coverinside">@drawable/ma3_4coverinside</drawable>
+    <string name="book3heading1">Heroic Male 3/4 View - Level 3</string>
+    <string name="book3heading2">How to draw a full male figure</string>
     <string-array name="book3cardtext1">
-        <item>Creating heads</item>
-        <item>All types of hair</item>
-        <item>Both arms</item>
-        <item>10 fingers</item>
-        <item>Male skin</item>
-        <item>Depth in skin</item>
-        <item>2 feet</item>
-        <item>2 legs and knees</item>
+        <item>Full figure</item>
     </string-array>
     <string-array name="book3cardtext2">
-        <item>Creating heads</item>
-        <item>All types of hair</item>
-        <item>Both arms</item>
-        <item>10 fingers, nails and all</item>
-        <item>Male skin</item>
-        <item>Depth in skin</item>
-        <item>2 feet</item>
-        <item>2 legs</item>
+        <item></item>
+
     </string-array>
     <integer-array name="book3cardimages">
-        <item>@drawable/head2_05</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_05</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_19</item>
+        <item>@drawable/ma3_4figure13</item>
+
     </integer-array>
     <string-array name="book3PageIds">
         <item>book3Page1</item>
-        <item>book3Page2</item>
-        <item>book3Page3</item>
-        <item>book3Page4</item>
-        <item>book3Page5</item>
-        <item>book3Page6</item>
-        <item>book3Page7</item>
-        <item>book3Page8</item>
     </string-array>
 
     <integer-array name="book3Page1Slides">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_12</item>
+        <item>@drawable/ma3_4figure01</item>
+        <item>@drawable/ma3_4figure02</item>
+        <item>@drawable/ma3_4figure03</item>
+        <item>@drawable/ma3_4figure04</item>
+        <item>@drawable/ma3_4figure05</item>
+        <item>@drawable/ma3_4figure06</item>
+        <item>@drawable/ma3_4figure07</item>
+        <item>@drawable/ma3_4figure08</item>
+        <item>@drawable/ma3_4figure09</item>
+        <item>@drawable/ma3_4figure10</item>
+        <item>@drawable/ma3_4figure11</item>
+        <item>@drawable/ma3_4figure12</item>
+        <item>@drawable/ma3_4figure13</item>
+        <item>@drawable/ma3_4figure14</item>
+
     </integer-array>
 
-    <integer-array name="book3Page2Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
 
-    <integer-array name="book3Page3Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book3Page4Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book3Page5Slides">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_12</item>
-    </integer-array>
-
-    <integer-array name="book3Page6Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book3Page7Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book3Page8Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
 
   
 </resources>

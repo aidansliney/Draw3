@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <string name="fa_money">&#xf0d6; Subscribe</string>
+    <string name="fa_money2">&#xf0d6; Buy and use</string>
+    <string name="fa_money3">&#xf0d6; Buy and keep</string>
+    <string name="fa_star_rate">&#xf005; Rate Draw</string>
+
     <string name="fa_adjust">&#xf042;</string>
     <string name="fa_adn">&#xf170;</string>
     <string name="fa_align_center">&#xf037;</string>
@@ -329,9 +335,7 @@
     <string name="fa_minus_square_o">&#xf147;</string>
     <string name="fa_mobile">&#xf10b;</string>
     <string name="fa_mobile_phone">&#xf10b;</string>
-    <string name="fa_money">&#xf0d6; Subscribe</string>
-    <string name="fa_money2">&#xf0d6; Buy and use</string>
-    <string name="fa_money3">&#xf0d6; Buy and keep</string>
+
     <string name="fa_moon_o">&#xf186;</string>
     <string name="fa_mortar_board">&#xf19d;</string>
     <string name="fa_music">&#xf001;</string>
@@ -377,6 +381,7 @@
     <string name="fa_qrcode">&#xf029;</string>
     <string name="fa_question">&#xf128;</string>
     <string name="fa_question_circle">&#xf059;</string>
+    <string name="fa_question_circle_o">&#xf29c;</string>
     <string name="fa_quote_left">&#xf10d;</string>
     <string name="fa_quote_right">&#xf10e;</string>
     <string name="fa_ra">&#xf1d0;</string>
@@ -451,6 +456,7 @@
     <string name="fa_stack_exchange">&#xf18d;</string>
     <string name="fa_stack_overflow">&#xf16c;</string>
     <string name="fa_star">&#xf005;</string>
+
     <string name="fa_star_half">&#xf089;</string>
     <string name="fa_star_half_empty">&#xf123;</string>
     <string name="fa_star_half_full">&#xf123;</string>

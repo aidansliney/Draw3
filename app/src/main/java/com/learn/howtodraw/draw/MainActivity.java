@@ -1,12 +1,16 @@
 package com.learn.howtodraw.draw;
 
+import android.app.FragmentTransaction;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.net.Uri;
+import android.os.Build;
+import android.support.v4.app.FragmentManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -16,14 +20,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import com.learn.howtodraw.draw.util.IabHelper;
@@ -55,6 +56,19 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     IabHelper mHelper = null;
     // Current amount of gas in tank, in units
     protected int mTank;
+
+
+    private String menuItem; // keeps track of what menu item is selected
+
+    public String getMenuItem() {
+        return menuItem;
+    }
+
+    public void setMenuItem(String someVariable) {
+        this.menuItem = someVariable;
+    }
+
+
 
     public void onFragmentInteraction(Uri uri) {
     }
@@ -127,16 +141,20 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         TabLayout tabLayout = (TabLayout) findViewById(com.learn.howtodraw.draw.R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-/* hiding the FAB as it covers the adverts
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/html");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is where we will share the app</p>"));
-                startActivity(Intent.createChooser(sharingIntent, "Share using"));
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+
 
                 String id1 =  "Share";
                 String name = "from Home";
@@ -148,12 +166,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
             }
         });
-*/
-        //Add mobile ads
+
+/*        //Add mobile ads
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
         AdView mAdView = (AdView) findViewById(com.learn.howtodraw.draw.R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
     }
 
     @Override
@@ -170,11 +188,42 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
-        if (id == com.learn.howtodraw.draw.R.id.action_settings) {
+        if (id == com.learn.howtodraw.draw.R.id.share_settings) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
             return true;
         }
+
+        if (id == com.learn.howtodraw.draw.R.id.rate_settings) {
+           rateApp();
+            return true;
+        }
+
+        if (id == com.learn.howtodraw.draw.R.id.about_settings) {
+            FragmentManager fm = getSupportFragmentManager();
+            MyDialogFragment dialogFragment = new MyDialogFragment ();
+            dialogFragment.show(fm, "About Settings");
+            setMenuItem("about"); // telling myDF which menu item was selected
+            return true;
+        }
+
+        if (id == com.learn.howtodraw.draw.R.id.subscribe_settings) {
+            FragmentManager fm = getSupportFragmentManager();
+            MyDialogFragment dialogFragment = new MyDialogFragment ();
+            dialogFragment.show(fm, "Subscribe Settings");
+            setMenuItem("subscribe");
+            return true;
+        }
+
+
         return super.onOptionsItemSelected(item);
     }
+
+
+
 
 
     //A placeholder fragment containing a simple view.
@@ -217,6 +266,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                         intent.putExtra("cardText2Id", bookCollected[4]);
                         intent.putExtra("cardImageId", bookCollected[5]);
                         intent.putExtra("bookPageIds", bookCollected[6]);
+                        intent.putExtra("bookCoverImageInsideId", bookCollected[7]);
+
                         startActivity(intent);
                     }
                 }
@@ -231,7 +282,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
             linkBook(com.learn.howtodraw.draw.R.id.layout_1, com.learn.howtodraw.draw.R.array.book1Build, rootView, false);
             linkBook(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book2Build, rootView, false);
-            linkBook(com.learn.howtodraw.draw.R.id.layout_3, com.learn.howtodraw.draw.R.array.book3Build, rootView, true);
 
 
             View homeCard1 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_1);
@@ -239,7 +289,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book1Page1Slides);
+                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book2Page2Slides);
                     startActivity(intent);
                 }
             });
@@ -249,7 +299,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book1Page1Slides);
+                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book2Page3Slides);
                     startActivity(intent);
                 }
             });
@@ -269,7 +319,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book1Page1Slides);
+                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book3Page1Slides);
                     startActivity(intent);
                 }
             });
@@ -549,11 +599,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         super.onDestroy();
 
         // very important:
-        Log.d(TAG, "Destroying helper.");
+/*        Log.d(TAG, "Destroying helper.");
         if (mHelper != null) {
             mHelper.dispose();
             mHelper = null;
-        }
+        }*/
     }
 
     // updates UI to reflect model
@@ -712,5 +762,44 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             // FIX THIS
         }
     }
+
+
+    public void rateApp()
+    {
+        try
+        {
+            Intent rateIntent = rateIntentForUrl("market://details");
+            startActivity(rateIntent);
+        }
+        catch (ActivityNotFoundException e)
+        {
+            Intent rateIntent = rateIntentForUrl("http://play.google.com/store/apps/details");
+            startActivity(rateIntent);
+        }
+    }
+    private Intent rateIntentForUrl(String url)
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("%s?id=%s", url, getPackageName())));
+        int flags = Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_MULTIPLE_TASK;
+        if (Build.VERSION.SDK_INT >= 21)
+        {
+            flags |= Intent.FLAG_ACTIVITY_NEW_DOCUMENT;
+        }
+        else
+        {
+            //noinspection deprecation
+            flags |= Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET;
+        }
+        intent.addFlags(flags);
+        return intent;
+    }
+
+
+
+
+
+
+
+
 } // end class MainActivity
 

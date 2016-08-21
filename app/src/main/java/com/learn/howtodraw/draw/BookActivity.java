@@ -65,7 +65,7 @@ public class BookActivity extends AppCompatActivity {
         ImageView imageView = (ImageView)findViewById(com.learn.howtodraw.draw.R.id.background);
         textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
-        imageView.setImageResource(getIntent().getIntExtra("bookCoverImageId", 0));
+        imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
 
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
@@ -89,8 +89,8 @@ public class BookActivity extends AppCompatActivity {
                 String pageId = (String) adapter.getItem(position);
 
                 int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
-                showToast(20000, cardText1[+position] );
-                //Toast.makeText(BookActivity.this, "You Clicked at " + cardText1[+position], Toast.LENGTH_LONG).show();
+               // showToast(20000, cardText1[+position] );
+                Toast.makeText(BookActivity.this, cardText1[+position], Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(BookActivity.this,PageActivity.class);
                 Log.d("hello" + slidesID, "" );
                 intent.putExtra("bookSlides", slidesID);

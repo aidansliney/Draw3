@@ -3,8 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.learn.howtodraw.draw.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/share_settings"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Share Draw"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/about_settings"
+        android:orderInCategory="100"
+        android:title="About Draw"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/subscribe_settings"
+        android:orderInCategory="100"
+        android:title="Subscription Info"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rate_settings"
+        android:orderInCategory="100"
+        android:title="Rate Draw"
         app:showAsAction="never" />
 </menu>
