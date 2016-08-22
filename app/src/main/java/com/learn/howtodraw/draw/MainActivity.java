@@ -58,10 +58,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     protected int mTank;
 
 
-
-
-
-
     public void onFragmentInteraction(Uri uri) {
     }
 
@@ -93,7 +89,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 //  We need to continue opening the page here once the add is X'ed
             }
         });
-        requestNewInterstitial(); // preload interstitial advert
+       // requestNewInterstitial();  Turn off the full page advert for now
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -104,7 +100,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         setTitle("");
         setContentView(com.learn.howtodraw.draw.R.layout.fragment_main); // this is needed but could be a better way
 
-        Log.d("subscribed?" + mSubscribed, "" + mSubscribed);
+        Log.d("subscribed?", "" + mSubscribed);
 
         if (!mSubscribed) {
             TextView textView = (TextView) findViewById(R.id.subscribedQuestion);
@@ -114,7 +110,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             textView.setText("You have subscribed you LEGEND!!");
         }
 
-
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
@@ -122,8 +117,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
 
-
-        // Create the adapter that will return a fragment for each of the Two primary sections of the activity.
+        // Create the adapter that will return a fragment for each of the three primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -133,31 +127,31 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         TabLayout tabLayout = (TabLayout) findViewById(com.learn.howtodraw.draw.R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        if (fab != null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
 
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
+                    sendIntent.setType("text/plain");
+                    startActivity(sendIntent);
 
 
-                String id1 =  "Share";
-                String name = "from Home";
-                Bundle bundle = new Bundle();
-                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id1);
-                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
-                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
-                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+                    String id1 =  "Share";
+                    String name = "from Home";
+                    Bundle bundle = new Bundle();
+                    bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id1);
+                    bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+                    bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 
-            }
-        });
+                }
+            });
+        }
 
 /*        //Add mobile ads
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
@@ -175,11 +169,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // Handle action bar item clicks here.
         int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
         if (id == com.learn.howtodraw.draw.R.id.share_settings) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
@@ -188,7 +179,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             startActivity(sendIntent);
             return true;
         }
-
         if (id == com.learn.howtodraw.draw.R.id.rate_settings) {
            rateApp();
             return true;
@@ -229,9 +219,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             return fragment;
         }
 
-        // a method to setup the right content for = book thumbnails
+       // a method to setup the right content for = book thumbnails
         public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
-
             View Layout = rootView.findViewById(layout);
             Layout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -252,7 +241,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                         intent.putExtra("cardImageId", bookCollected[4]);
                         intent.putExtra("bookPageIds", bookCollected[5]);
                         intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
-
                         startActivity(intent);
                     }
                 }
@@ -264,10 +252,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(com.learn.howtodraw.draw.R.layout.fragment_main, container, false);
-
             linkBook(com.learn.howtodraw.draw.R.id.layout_1, com.learn.howtodraw.draw.R.array.book1Build, rootView, false);
-            linkBook(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book2Build, rootView, false);
+            //linkBook(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book2Build, rootView, false);
 
+            linkBooks lb = new linkBooks();
+            lb.linkBook2(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book1Build, rootView, false, getActivity());
 
             View homeCard1 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_1);
             homeCard1.setOnClickListener(new View.OnClickListener() {
@@ -314,7 +303,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
 
-                /*    Fragment mFragment = null;
+                //Trying to link to a new fragment from card in MainActivity
+                    /*    Fragment mFragment = null;
                     mFragment = new ArtistFragment();
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     fragmentManager.beginTransaction()
@@ -331,14 +321,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("DBFB9795D39C49D52EAFBA8E58ACA288")
                 .build();
-
         mInterstitialAd.loadAd(adRequest);
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
+
+    // A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the sections/tabs/pages.
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -367,7 +354,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
             return 3;
         }
 
@@ -768,7 +754,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         }
     }
 
-
+    //Send users to rate the app
     public void rateApp()
     {
         try
@@ -782,6 +768,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             startActivity(rateIntent);
         }
     }
+
+    //Send users to rate the app
     private Intent rateIntentForUrl(String url)
     {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("%s?id=%s", url, getPackageName())));

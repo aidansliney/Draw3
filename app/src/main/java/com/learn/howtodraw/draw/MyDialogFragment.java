@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 /**
  * Created by aidansliney on 21/08/2016.
  */
-public class MyDialogFragment extends DialogFragment {
+public class MyDialogFragment extends DialogFragment  {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
