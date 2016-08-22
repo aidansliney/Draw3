@@ -18,11 +18,19 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-       // String gmi = getMenuItem();
-        //if (gmi == "about")
-        View rootView = inflater.inflate(R.layout.fragment_dialog, container, false);
-        getDialog().setTitle("Simple Dialog");
-        return rootView;
+
+
+        if (MainActivity.menuSelected=="about" ) {
+            View rootView = inflater.inflate(R.layout.fragment_dialog_about, container, false);
+            getDialog().setTitle("Simple Dialog");
+            return rootView;
+        }
+        else
+        {
+            View rootView = inflater.inflate(R.layout.fragment_dialog_subscribe, container, false);
+            getDialog().setTitle("Simple Dialog");
+            return rootView;
+        }
     }
 }
 

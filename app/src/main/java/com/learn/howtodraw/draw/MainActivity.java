@@ -36,6 +36,7 @@ import static com.learn.howtodraw.draw.Constants.*;
 
 import layout.ArtistFragment;
 import layout.BrowseFragment;
+import layout.ThirdFragment;
 
 public class MainActivity extends IabActivity implements BrowseFragment.OnFragmentInteractionListener {
 
@@ -44,12 +45,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     private SectionsPagerAdapter mSectionsPagerAdapter;
     //full page adverts
     private static InterstitialAd mInterstitialAd;
+    public static String menuSelected;
     //The {@link ViewPager} that will host the section contents.
     private ViewPager mViewPager;
 
-    /**
-     */
-// Variables
 
 // Debug tag, for logging
     static final String TAG = Constants.LOG_IAB;
@@ -59,15 +58,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     protected int mTank;
 
 
-    private String menuItem; // keeps track of what menu item is selected
 
-    public String getMenuItem() {
-        return menuItem;
-    }
-
-    public void setMenuItem(String someVariable) {
-        this.menuItem = someVariable;
-    }
 
 
 
@@ -207,25 +198,19 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment ();
             dialogFragment.show(fm, "About Settings");
-            setMenuItem("about"); // telling myDF which menu item was selected
+            menuSelected = "about";
             return true;
         }
 
         if (id == com.learn.howtodraw.draw.R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
-            MyDialogFragment dialogFragment = new MyDialogFragment ();
+            MyDialogFragment dialogFragment = new MyDialogFragment();
             dialogFragment.show(fm, "Subscribe Settings");
-            setMenuItem("subscribe");
+            menuSelected = "subscribe";
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
     //A placeholder fragment containing a simple view.
     public static class PlaceholderFragment extends Fragment {
@@ -324,7 +309,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 }
             });
 
-
             View artist = rootView.findViewById(com.learn.howtodraw.draw.R.id.layout_4);
             artist.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -335,17 +319,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     fragmentManager.beginTransaction()
                             .replace(R.id.main_content, fragment_artist).commit();*/
-
-
                     }
             });
-
-
-
-
-
-
-
 
             return rootView;
         }
@@ -382,6 +357,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                     Log.d("case 1", "BF");
                     return BrowseFragment.newInstance("hello1", "hello2");
 
+                case 2:
+                    Log.d("case 2", "BF");
+                    return ThirdFragment.newInstance("hello1", "hello2");
+
             }
             return null;
         }
@@ -389,16 +368,18 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Discover";
+                    return "New";
                 case 1:
-                    return "Search";
+                    return "Books";
+                case 2:
+                    return "Pages";
             }
             return null;
         }
