@@ -85,10 +85,9 @@ public class BrowseFragment extends Fragment  {
                     intent.putExtra("bookCoverH2Id", bookCollected[1]);
                     intent.putExtra("bookCoverImageId", bookCollected[2]);
                     intent.putExtra("cardText1Id", bookCollected[3]);
-                    intent.putExtra("cardText2Id", bookCollected[4]);
-                    intent.putExtra("cardImageId", bookCollected[5]);
-                    intent.putExtra("bookPageIds", bookCollected[6]);
-                    intent.putExtra("bookCoverImageInsideId", bookCollected[7]);
+                    intent.putExtra("cardImageId", bookCollected[4]);
+                    intent.putExtra("bookPageIds", bookCollected[5]);
+                    intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
                     startActivity(intent);
                 }
 

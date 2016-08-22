@@ -77,7 +77,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="270dp"
-                        android:src="@drawable/mi3_4head19"
+                        android:src="@drawable/ma3_4head17"
                         />
 
                     <View
@@ -89,7 +89,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Level 2"
+                        android:text="Level 3"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c" />
@@ -291,7 +291,44 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
 
+        <LinearLayout
+            android:id="@+id/layout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sliney"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Will Sliney"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meet the Artist Will Sliney. Will is a full time full time comic book artist working for Marvel. He has a small penis."
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
 
 
             <LinearLayout
@@ -301,28 +338,6 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp">
 
-<!--                <TextView
-                    android:onClick="onBuyGasButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buy and Use"
-                    android:layout_marginBottom="30dp" />-->
-
-<!--                <TextView
-                    android:id="@+id/upgrade_button"
-                    android:onClick="onUpgradeAppButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buy and Keep"
-                    android:layout_marginBottom="30dp" />-->
-
-               <!-- <TextView
-                    android:id="@+id/infinite_gas_button2"
-                    android:onClick="onSubscribedButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Subscribe"
-                    android:layout_marginBottom="90dp"/>-->
 
                 <com.learn.howtodraw.draw.FontA.TextAwesome
                     android:id="@+id/tvThumb"

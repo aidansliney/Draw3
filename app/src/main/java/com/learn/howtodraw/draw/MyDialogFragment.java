@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 /**
  * Created by aidansliney on 21/08/2016.
  */
@@ -26,4 +25,5 @@ public class MyDialogFragment extends DialogFragment {
         return rootView;
     }
 }
+
 

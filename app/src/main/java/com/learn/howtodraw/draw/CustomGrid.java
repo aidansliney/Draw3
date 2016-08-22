@@ -12,14 +12,12 @@ public class CustomGrid extends BaseAdapter {
     private Context mContext;
     private final String[] web;
     private final String[] bookPageIds;
-    private final String[] web2;
     private final int[] Imageid;
 
-    public CustomGrid(Context c, String[] web, String[] web2, int[] Imageid, String[] bookPageIds) {
+    public CustomGrid(Context c, String[] web, int[] Imageid, String[] bookPageIds) {
         mContext = c;
         this.Imageid = Imageid;
         this.web = web;
-        this.web2 = web2;
         this.bookPageIds = bookPageIds;
 
     }
@@ -53,10 +51,10 @@ public class CustomGrid extends BaseAdapter {
             grid = new View(mContext);
             grid = inflater.inflate(com.learn.howtodraw.draw.R.layout.grid_single, null);
             TextView textView = (TextView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_text);
-            TextView textView2 = (TextView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_text2);
+
             ImageView imageView = (ImageView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_image);
             textView.setText(web[position]);
-            textView2.setText(web2[position]);
+
           //  textView3.setId(web3[position]);
             imageView.setImageResource(Imageid[position]);
         } else {

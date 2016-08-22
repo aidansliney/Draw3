@@ -69,13 +69,12 @@ public class BookActivity extends AppCompatActivity {
 
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
-        final String[] cardText2 = getResources().getStringArray(getIntent().getIntExtra("cardText2Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++)
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-        final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardText2, cardImage, bookPageIds);
+        final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds);
         grid = (GridView) findViewById(com.learn.howtodraw.draw.R.id.grid);
 
         //set the grid
@@ -90,7 +89,7 @@ public class BookActivity extends AppCompatActivity {
 
                 int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
                // showToast(20000, cardText1[+position] );
-                Toast.makeText(BookActivity.this, cardText1[+position], Toast.LENGTH_LONG).show();
+               // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(BookActivity.this,PageActivity.class);
                 Log.d("hello" + slidesID, "" );
                 intent.putExtra("bookSlides", slidesID);

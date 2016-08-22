@@ -6,7 +6,6 @@
         <item>@string/book1heading2</item>
         <item>@drawable/book1cover</item>
         <item>@array/book1cardtext1</item>
-        <item>@array/book1cardtext2</item>
         <item>@array/book1cardimages</item>
         <item>@array/book1PageIds</item>
         <item>@drawable/book1coverinside</item>
@@ -19,9 +18,6 @@
     <string name="book1heading2">Learn how to draw the full figure</string>
     <string-array name="book1cardtext1">
         <item>Full Figure</item>
-    </string-array>
-    <string-array name="book1cardtext2">
-        <item></item>
     </string-array>
     <integer-array name="book1cardimages">
         <item>@drawable/mb3_4figure20</item>
@@ -138,13 +134,12 @@
         <item>@string/book2heading2</item>
         <item>@drawable/book2cover</item>
         <item>@array/book2cardtext1</item>
-        <item>@array/book2cardtext2</item>
         <item>@array/book2cardimages</item>
         <item>@array/book2PageIds</item>
         <item>@drawable/book2coverinside</item>
     </array>
 
-    <drawable name="book2cover">@drawable/mi3_4cover</drawable>
+    <drawable name="book2cover">@drawable/mi3_4coveriso</drawable>
     <drawable name="book2coverinside">@drawable/mi3_4coverinside</drawable>
     <string name="book2heading1">Heroic Male 3/4 View</string>
     <string name="book2heading2">Learn how to draw the full figure</string>
@@ -157,15 +152,7 @@
         <item>The Legs</item>
         <item>The Feet</item>
     </string-array>
-    <string-array name="book2cardtext2">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
+
     <integer-array name="book2cardimages">
         <item>@drawable/mi3_4figure21</item>
         <item>@drawable/mi3_4head19</item>
@@ -316,7 +303,6 @@
         <item>@string/book3heading2</item>
         <item>@drawable/book3cover</item>
         <item>@array/book3cardtext1</item>
-        <item>@array/book3cardtext2</item>
         <item>@array/book3cardimages</item>
         <item>@array/book3PageIds</item>
         <item>@drawable/book3coverinside</item>
@@ -328,17 +314,31 @@
     <string name="book3heading2">How to draw a full male figure</string>
     <string-array name="book3cardtext1">
         <item>Full figure</item>
+        <item>Torso</item>
+        <item>Legs</item>
+        <item>Head</item>
+        <item>Hands</item>
+        <item>Foot</item>
+        <item>Arms</item>
     </string-array>
-    <string-array name="book3cardtext2">
-        <item></item>
 
-    </string-array>
     <integer-array name="book3cardimages">
         <item>@drawable/ma3_4figure13</item>
-
+        <item>@drawable/ma3_4torso13</item>
+        <item>@drawable/ma3_4legs12</item>
+        <item>@drawable/ma3_4head17</item>
+        <item>@drawable/ma3_4hands07</item>
+        <item>@drawable/ma3_4foot07</item>
+        <item>@drawable/ma3_4arms12</item>
     </integer-array>
     <string-array name="book3PageIds">
         <item>book3Page1</item>
+        <item>book3Page2</item>
+        <item>book3Page3</item>
+        <item>book3Page4</item>
+        <item>book3Page5</item>
+        <item>book3Page6</item>
+        <item>book3Page7</item>
     </string-array>
 
     <integer-array name="book3Page1Slides">
@@ -356,10 +356,94 @@
         <item>@drawable/ma3_4figure12</item>
         <item>@drawable/ma3_4figure13</item>
         <item>@drawable/ma3_4figure14</item>
+    </integer-array>
 
+    <integer-array name="book3Page2Slides">
+        <item>@drawable/ma3_4torso01</item>
+        <item>@drawable/ma3_4torso02</item>
+        <item>@drawable/ma3_4torso03</item>
+        <item>@drawable/ma3_4torso04</item>
+        <item>@drawable/ma3_4torso05</item>
+        <item>@drawable/ma3_4torso06</item>
+        <item>@drawable/ma3_4torso07</item>
+        <item>@drawable/ma3_4torso08</item>
+        <item>@drawable/ma3_4torso09</item>
+        <item>@drawable/ma3_4torso10</item>
+        <item>@drawable/ma3_4torso11</item>
+        <item>@drawable/ma3_4torso12</item>
+        <item>@drawable/ma3_4torso13</item>
+    </integer-array>
+
+    <integer-array name="book3Page3Slides">
+        <item>@drawable/ma3_4legs01</item>
+        <item>@drawable/ma3_4legs02</item>
+        <item>@drawable/ma3_4legs03</item>
+        <item>@drawable/ma3_4legs04</item>
+        <item>@drawable/ma3_4legs05</item>
+        <item>@drawable/ma3_4legs06</item>
+        <item>@drawable/ma3_4legs07</item>
+        <item>@drawable/ma3_4legs08</item>
+        <item>@drawable/ma3_4legs09</item>
+        <item>@drawable/ma3_4legs10</item>
+        <item>@drawable/ma3_4legs11</item>
+        <item>@drawable/ma3_4legs12</item>
+    </integer-array>
+
+    <integer-array name="book3Page4Slides">
+        <item>@drawable/ma3_4head01</item>
+        <item>@drawable/ma3_4head02</item>
+        <item>@drawable/ma3_4head03</item>
+        <item>@drawable/ma3_4head04</item>
+        <item>@drawable/ma3_4head05</item>
+        <item>@drawable/ma3_4head06</item>
+        <item>@drawable/ma3_4head07</item>
+        <item>@drawable/ma3_4head08</item>
+        <item>@drawable/ma3_4head09</item>
+        <item>@drawable/ma3_4head10</item>
+        <item>@drawable/ma3_4head11</item>
+        <item>@drawable/ma3_4head12</item>
+        <item>@drawable/ma3_4head13</item>
+        <item>@drawable/ma3_4head14</item>
+        <item>@drawable/ma3_4head15</item>
+        <item>@drawable/ma3_4head16</item>
+        <item>@drawable/ma3_4head17</item>
+    </integer-array>
+    <integer-array name="book3Page5Slides">
+        <item>@drawable/ma3_4hands01</item>
+        <item>@drawable/ma3_4hands02</item>
+        <item>@drawable/ma3_4hands03</item>
+        <item>@drawable/ma3_4hands04</item>
+        <item>@drawable/ma3_4hands05</item>
+        <item>@drawable/ma3_4hands06</item>
+        <item>@drawable/ma3_4hands07</item>
+    </integer-array>
+
+    <integer-array name="book3Page6Slides">
+        <item>@drawable/ma3_4foot01</item>
+        <item>@drawable/ma3_4foot02</item>
+        <item>@drawable/ma3_4foot03</item>
+        <item>@drawable/ma3_4foot04</item>
+        <item>@drawable/ma3_4foot05</item>
+        <item>@drawable/ma3_4foot06</item>
+        <item>@drawable/ma3_4foot07</item>
+    </integer-array>
+    <integer-array name="book3Page7Slides">
+        <item>@drawable/ma3_4arms01</item>
+        <item>@drawable/ma3_4arms02</item>
+        <item>@drawable/ma3_4arms03</item>
+        <item>@drawable/ma3_4arms04</item>
+        <item>@drawable/ma3_4arms05</item>
+        <item>@drawable/ma3_4arms06</item>
+        <item>@drawable/ma3_4arms07</item>
+        <item>@drawable/ma3_4arms08</item>
+        <item>@drawable/ma3_4arms09</item>
+        <item>@drawable/ma3_4arms10</item>
+        <item>@drawable/ma3_4arms11</item>
+        <item>@drawable/ma3_4arms12</item>
     </integer-array>
 
 
 
-  
+
+
 </resources>

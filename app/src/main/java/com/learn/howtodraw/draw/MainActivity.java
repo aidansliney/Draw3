@@ -34,6 +34,7 @@ import com.learn.howtodraw.draw.util.Purchase;
 
 import static com.learn.howtodraw.draw.Constants.*;
 
+import layout.ArtistFragment;
 import layout.BrowseFragment;
 
 public class MainActivity extends IabActivity implements BrowseFragment.OnFragmentInteractionListener {
@@ -263,10 +264,9 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                         intent.putExtra("bookCoverH2Id", bookCollected[1]);
                         intent.putExtra("bookCoverImageId", bookCollected[2]);
                         intent.putExtra("cardText1Id", bookCollected[3]);
-                        intent.putExtra("cardText2Id", bookCollected[4]);
-                        intent.putExtra("cardImageId", bookCollected[5]);
-                        intent.putExtra("bookPageIds", bookCollected[6]);
-                        intent.putExtra("bookCoverImageInsideId", bookCollected[7]);
+                        intent.putExtra("cardImageId", bookCollected[4]);
+                        intent.putExtra("bookPageIds", bookCollected[5]);
+                        intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
 
                         startActivity(intent);
                     }
@@ -289,7 +289,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book2Page2Slides);
+                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book3Page4Slides);
                     startActivity(intent);
                 }
             });
@@ -323,6 +323,30 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                     startActivity(intent);
                 }
             });
+
+
+            View artist = rootView.findViewById(com.learn.howtodraw.draw.R.id.layout_4);
+            artist.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                /*    Fragment mFragment = null;
+                    mFragment = new ArtistFragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_content, fragment_artist).commit();*/
+
+
+                    }
+            });
+
+
+
+
+
+
+
+
             return rootView;
         }
     }
