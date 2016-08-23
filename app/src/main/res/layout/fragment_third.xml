@@ -33,14 +33,6 @@
             android:layout_width="wrap_content"
             android:layout_height="400dp"
             android:src="@drawable/head1_cover"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:src="@drawable/head1_cover"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:src="@drawable/head1_cover"/>
 
         <com.learn.howtodraw.draw.ExpandableGridView
             android:numColumns="auto_fit"

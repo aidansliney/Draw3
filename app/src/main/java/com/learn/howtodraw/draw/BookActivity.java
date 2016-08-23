@@ -40,6 +40,10 @@ public class BookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
+
+       // Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
+
         // Change the title on the main screen
         setTitle("");
         super.onCreate(savedInstanceState);

@@ -61,6 +61,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public void onFragmentInteraction(Uri uri) {
     }
 
+
+
+    public boolean isSubscribed(){
+        return mSubscribed;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -140,7 +146,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                     sendIntent.setType("text/plain");
                     startActivity(sendIntent);
 
-
                     String id1 =  "Share";
                     String name = "from Home";
                     Bundle bundle = new Bundle();
@@ -174,7 +179,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (id == com.learn.howtodraw.draw.R.id.share_settings) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.rateApp));
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
             return true;
@@ -187,7 +192,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (id == com.learn.howtodraw.draw.R.id.about_settings) {
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment ();
-            dialogFragment.show(fm, "About Settings");
+            dialogFragment.show(fm, getString(R.string.menu_about));
             menuSelected = "about";
             return true;
         }
@@ -195,126 +200,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (id == com.learn.howtodraw.draw.R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment();
-            dialogFragment.show(fm, "Subscribe Settings");
+            dialogFragment.show(fm, getString(R.string.menu_subscribe));
             menuSelected = "subscribe";
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    //A placeholder fragment containing a simple view.
-    public static class PlaceholderFragment extends Fragment {
-        //The fragment argument representing the section number for this fragment.
-        private static final String ARG_SECTION_NUMBER = "section_number";
 
-        public PlaceholderFragment() {
-        }
-
-        // Returns a new instance of this fragment for the given section number
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-       // a method to setup the right content for = book thumbnails
-        public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
-            View Layout = rootView.findViewById(layout);
-            Layout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (advert && mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    } else {
-                        TypedArray bookBuild = getResources().obtainTypedArray(bookContent);
-                        final int[] bookCollected = new int[bookBuild.length()];
-                        for (int i = 0; i < bookBuild.length(); i++)
-                            bookCollected[i] = bookBuild.getResourceId(i, 0);
-                        bookBuild.recycle();
-                        Intent intent = new Intent(getActivity(), BookActivity.class);
-                        intent.putExtra("bookCoverH1Id", bookCollected[0]);
-                        intent.putExtra("bookCoverH2Id", bookCollected[1]);
-                        intent.putExtra("bookCoverImageId", bookCollected[2]);
-                        intent.putExtra("cardText1Id", bookCollected[3]);
-                        intent.putExtra("cardImageId", bookCollected[4]);
-                        intent.putExtra("bookPageIds", bookCollected[5]);
-                        intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
-                        startActivity(intent);
-                    }
-                }
-            });
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(com.learn.howtodraw.draw.R.layout.fragment_main, container, false);
-            linkBook(com.learn.howtodraw.draw.R.id.layout_1, com.learn.howtodraw.draw.R.array.book1Build, rootView, false);
-            //linkBook(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book2Build, rootView, false);
-
-            linkBooks lb = new linkBooks();
-            lb.linkBook2(com.learn.howtodraw.draw.R.id.layout_2, com.learn.howtodraw.draw.R.array.book1Build, rootView, false, getActivity());
-
-            View homeCard1 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_1);
-            homeCard1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book3Page4Slides);
-                    startActivity(intent);
-                }
-            });
-
-            View homeCard2 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_2);
-            homeCard2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book2Page3Slides);
-                    startActivity(intent);
-                }
-            });
-
-            View homeCard3 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_3);
-            homeCard3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book1Page1Slides);
-                    startActivity(intent);
-                }
-            });
-
-            View homeCard4 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_4);
-            homeCard4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), PageActivity.class);
-                    intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book3Page1Slides);
-                    startActivity(intent);
-                }
-            });
-
-            View artist = rootView.findViewById(com.learn.howtodraw.draw.R.id.layout_4);
-            artist.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                //Trying to link to a new fragment from card in MainActivity
-                    /*    Fragment mFragment = null;
-                    mFragment = new ArtistFragment();
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.main_content, fragment_artist).commit();*/
-                    }
-            });
-
-            return rootView;
-        }
-    }
 
     // attempt to add full screen adverts
     private void requestNewInterstitial() {
@@ -346,7 +239,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
                 case 2:
                     Log.d("case 2", "BF");
-                    return ThirdFragment.newInstance("hello1", "hello2");
+                    return ThirdFragment.newInstance(R.array.book2cardtext1, R.array.book2PageIds, R.array.book2cardimages);
 
             }
             return null;
@@ -491,98 +384,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         }
     }
 
-// (wgl, May 2015)
-// The next two variables are the original listener objects.
-// They are no longer used. See superclass IabActivity for the current ones.
 
-    // Callback for when a purchase is finished
-    IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListenerOLD = new IabHelper.OnIabPurchaseFinishedListener() {
-        public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
-            Log.d(TAG, "Purchase finished: " + result + ", purchase: " + purchase);
-
-            // if we were disposed of in the meantime, quit.
-            if (mHelper == null) return;
-
-            if (result.isFailure()) {
-                complain("Error purchasing: " + result);
-                updateUi();
-                setWaitScreen(false);
-                return;
-            }
-            if (!verifyDeveloperPayload(purchase)) {
-                complain("Error purchasing. Authenticity verification failed.");
-                updateUi();
-                setWaitScreen(false);
-                return;
-            }
-
-            Log.d(TAG, "Purchase successful.");
-
-            if (purchase.getSku().equals(SKU_GAS)) {
-                // bought 1/4 tank of gas. So consume it.
-                Log.d(TAG, "Purchase is gas. Starting gas consumption.");
-                mHelper.consumeAsync(purchase, mConsumeFinishedListener);
-            } else if (purchase.getSku().equals(SKU_PREMIUM)) {
-                // bought the premium upgrade!
-                Log.d(TAG, "Purchase is premium upgrade. Congratulating user.");
-                alert("Thank you for upgrading to premium!");
-                mIsPremium = true;
-                updateUi();
-                setWaitScreen(false);
-            } else if (purchase.getSku().equals(SKU_INFINITE_GAS)) {
-                // bought the infinite gas subscription
-                Log.d(TAG, "Infinite gas subscription purchased.");
-                alert("Thank you for subscribing to infinite gas!");
-                mSubscribed = true;
-                mTank = TANK_MAX;
-                updateUi();
-                setWaitScreen(false);
-            }
-        }
-    };
-
-    // Called when consumption is complete
-    IabHelper.OnConsumeFinishedListener mConsumeFinishedListenerOLD = new IabHelper.OnConsumeFinishedListener() {
-        public void onConsumeFinished(Purchase purchase, IabResult result) {
-            Log.d(TAG, "Consumption finished. Purchase: " + purchase + ", result: " + result);
-
-            // if we were disposed of in the meantime, quit.
-            if (mHelper == null) return;
-
-            // We know this is the "gas" sku because it's the only one we consume,
-            // so we don't check which sku was consumed. If you have more than one
-            // sku, you probably should check...
-            if (result.isSuccess()) {
-                // successfully consumed, so we apply the effects of the item in our
-                // game world's logic, which in our case means filling the gas tank a bit
-                Log.d(TAG, "Consumption successful. Provisioning.");
-                mTank = mTank == TANK_MAX ? TANK_MAX : mTank + 1;
-                //  saveData();
-                alert("You filled 1/4 tank. Your tank is now " + String.valueOf(mTank) + "/4 full!");
-            } else {
-                complain("Error while consuming: " + result);
-            }
-            updateUi();
-            setWaitScreen(false);
-            Log.d(TAG, "End consumption flow.");
-        }
-    };
-
-// Methods
-
-/*    // Drive button clicked. Burn gas!
-    public void onDriveButtonClicked(View arg0) {
-        Log.d(TAG, "Drive button clicked.");
-        if (!mSubscribed && mTank <= 0) alert("Oh, no! You are out of gas! Try buying some!");
-        else {
-            if (!mSubscribed) --mTank;
-           // saveData();
-            alert("Vroooom, you drove a few miles.");
-            updateUi();
-            Log.d(TAG, "Vrooom. Tank is now " + mTank);
-        }
-        updateUi ();
-    }*/
 
     // We're being destroyed. It's important to dispose of the helper here!
     @Override
@@ -590,11 +392,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         super.onDestroy();
 
         // very important:
-/*        Log.d(TAG, "Destroying helper.");
+        Log.d(TAG, "Destroying helper.");
         if (mHelper != null) {
             mHelper.dispose();
+
             mHelper = null;
-        }*/
+        }
     }
 
     // updates UI to reflect model
@@ -661,8 +464,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         super.onIabConsumeItemFailed(h);
 
         // Do whatever you need to in the ui to indicate that consuming a purchase failed.
-        updateUi();
-        setWaitScreen(false);
+
 
     }
 
@@ -786,10 +588,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         intent.addFlags(flags);
         return intent;
     }
-
-
-
-
 
 
 

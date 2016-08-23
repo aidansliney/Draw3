@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.learn.howtodraw.draw.BaseFragment;
 import com.learn.howtodraw.draw.R;
 
 /**
@@ -18,7 +19,7 @@ import com.learn.howtodraw.draw.R;
  * Use the {@link ArtistFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ArtistFragment extends Fragment {
+public class ArtistFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

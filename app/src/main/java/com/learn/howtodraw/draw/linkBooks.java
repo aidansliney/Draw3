@@ -8,15 +8,15 @@ import android.view.View;
 /**
  * Created by aidansliney on 23/08/2016.
  */
-public class linkBooks extends MainActivity {
+public class LinkBooks {
 
     // a method to setup the right content for = book thumbnails
-    public void linkBook2(int layout, final int bookContent, View rootView, final boolean advert, final Activity activity) {
+    public static void linkBook(int layout, final int bookContent, View rootView, final boolean advert, final Activity activity) {
         View Layout = rootView.findViewById(layout);
         Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    TypedArray bookBuild = getResources().obtainTypedArray(bookContent);
+                    TypedArray bookBuild = activity.getResources().obtainTypedArray(bookContent);
                     final int[] bookCollected = new int[bookBuild.length()];
                     for (int i = 0; i < bookBuild.length(); i++)
                         bookCollected[i] = bookBuild.getResourceId(i, 0);
@@ -29,7 +29,7 @@ public class linkBooks extends MainActivity {
                     intent.putExtra("cardImageId", bookCollected[4]);
                     intent.putExtra("bookPageIds", bookCollected[5]);
                     intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
-                    startActivity(intent);
+                    activity.startActivity(intent);
             }
         });
     }
