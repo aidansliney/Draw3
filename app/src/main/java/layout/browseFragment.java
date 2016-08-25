@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.learn.howtodraw.draw.BookActivity;
+import com.learn.howtodraw.draw.LinkBooks;
 import com.learn.howtodraw.draw.R;
 
 /**
@@ -65,47 +66,18 @@ public class BrowseFragment extends Fragment  {
 
     }
 
-    // a method to setup the right content for = book thumbnails
-    public void linkBook(int layout, final int bookContent, View rootView, final boolean advert) {
-
-        View Layout = rootView.findViewById(layout);
-        Layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-/*                if (advert && mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {*/
-                    TypedArray bookBuild = getResources().obtainTypedArray(bookContent);
-                    final int[] bookCollected = new int[bookBuild.length()];
-                    for (int i = 0; i < bookBuild.length(); i++)
-                        bookCollected[i] = bookBuild.getResourceId(i, 0);
-                    bookBuild.recycle();
-                    Intent intent = new Intent(getActivity(), BookActivity.class);
-                    intent.putExtra("bookCoverH1Id", bookCollected[0]);
-                    intent.putExtra("bookCoverH2Id", bookCollected[1]);
-                    intent.putExtra("bookCoverImageId", bookCollected[2]);
-                    intent.putExtra("cardText1Id", bookCollected[3]);
-                    intent.putExtra("cardImageId", bookCollected[4]);
-                    intent.putExtra("bookPageIds", bookCollected[5]);
-                    intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
-                    startActivity(intent);
-                }
-
-        });
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_browse, container, false);
 
-        linkBook(R.id.layout_1b, R.array.book1Build, rootView, false);
-        linkBook(R.id.layout_2b, R.array.book2Build, rootView, false);
-        linkBook(R.id.layout_3b, R.array.book3Build, rootView, false);
-
+        LinkBooks.linkBook(R.id.layout_1b, R.array.book1Build, rootView, false, getActivity());
+        LinkBooks.linkBook(R.id.layout_2b, R.array.book2Build, rootView, false,getActivity());
+        LinkBooks.linkBook(R.id.layout_3b, R.array.book3Build, rootView, false, getActivity());
+        LinkBooks.linkBook(R.id.layout_4b, R.array.book4Build, rootView, false, getActivity());
         return rootView;
     }
-
 
     @Override
     public void onAttach(Context context) {

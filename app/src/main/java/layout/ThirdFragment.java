@@ -30,14 +30,6 @@ import com.learn.howtodraw.draw.R;
  * create an instance of this fragment.
  */
 public class ThirdFragment extends BaseFragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
 
     public ThirdFragment() {
@@ -48,8 +40,6 @@ public class ThirdFragment extends BaseFragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment BrowseFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -59,11 +49,11 @@ public class ThirdFragment extends BaseFragment {
         args.putInt("cardText1Id", param1);
         args.putInt("bookPageIds", param2);
         args.putInt("cardImageId", param3);
+        //args.putInt("bookSlides", param4);
+
         fragment.setArguments(args);
         return fragment;
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -96,8 +86,9 @@ public class ThirdFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pageId = (String) adapter.getItem(position);
-
-                int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
+                Log.d("pageID",pageId);
+                int slidesID = getActivity().getResources().getIdentifier(pageId + "Slides", "array", getContext().getPackageName());
+                Log.d("this is ","" + slidesID);
                 // showToast(20000, cardText1[+position] );
                 // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getActivity(),PageActivity.class);

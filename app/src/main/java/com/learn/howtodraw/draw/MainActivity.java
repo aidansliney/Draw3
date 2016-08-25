@@ -239,7 +239,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
                 case 2:
                     Log.d("case 2", "BF");
-                    return ThirdFragment.newInstance(R.array.book2cardtext1, R.array.book2PageIds, R.array.book2cardimages);
+                    return ThirdFragment.newInstance(R.array.bookAllcardtext1, R.array.bookAllPageIds, R.array.bookAllcardimages);
 
             }
             return null;
@@ -384,20 +384,17 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         }
     }
 
-
-
     // We're being destroyed. It's important to dispose of the helper here!
     @Override
     public void onDestroy() {
         super.onDestroy();
 
         // very important:
-        Log.d(TAG, "Destroying helper.");
+/*        Log.d(TAG, "Destroying helper.");
         if (mHelper != null) {
             mHelper.dispose();
-
             mHelper = null;
-        }
+        }*/
     }
 
     // updates UI to reflect model

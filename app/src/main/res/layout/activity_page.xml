@@ -20,37 +20,63 @@
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_question_circle"
-        android:textSize="20dp"
-        android:textColor="@color/colorAccent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"/>
+        android:text="@string/fa_question_circle"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp" />
 
     <com.learn.howtodraw.draw.FontA.TextAwesome
         android:id="@+id/nextImage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_angle_right"
-        android:textSize="50dp"
-        android:textColor="@color/colorAccent"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/fa_angle_right"
+        android:textColor="@color/colorAccent"
+        android:textSize="50dp" />
+
+
+
+    <TextView
+        android:id="@+id/grid_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Share you Drawing"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="80dp"/>
+
+
+
+    <com.learn.howtodraw.draw.FontA.TextAwesome
+        android:id="@+id/camera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="@string/fa_camera_retro"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp" />
+
 
     <com.learn.howtodraw.draw.FontA.TextAwesome
         android:id="@+id/previousImage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_angle_left"
-        android:textSize="50dp"
-        android:textColor="@color/colorAccent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/fa_angle_left"
+        android:textColor="@color/colorAccent"
+        android:textSize="50dp" />
 
 
 </RelativeLayout>

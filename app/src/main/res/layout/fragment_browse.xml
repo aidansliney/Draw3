@@ -134,7 +134,7 @@
             android:layout_marginBottom="20dp" />
 
         <LinearLayout
-            android:id="@+id/layout_0b"
+            android:id="@+id/layout_4b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
@@ -144,14 +144,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/head1_cover"
+                android:src="@drawable/insidebookcover"
                 android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The male eye"
+                android:text="Level 3"
                 android:paddingLeft="15dp"
                 android:paddingTop="15dp"
                 android:textColor="#3c3c3c" />
@@ -160,7 +160,7 @@
                 android:id="@+id/secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's start with the head"
+                android:text="Heroic Male"
                 android:paddingLeft="15dp"
                 android:paddingTop="0dp"
                 android:paddingBottom="2dp"
@@ -172,6 +172,7 @@
             android:layout_height="1dp"
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
+
     </LinearLayout>
 
 
