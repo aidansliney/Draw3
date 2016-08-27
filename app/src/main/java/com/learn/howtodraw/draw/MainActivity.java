@@ -34,7 +34,7 @@ import com.learn.howtodraw.draw.util.Purchase;
 
 import static com.learn.howtodraw.draw.Constants.*;
 
-import layout.ArtistFragment;
+
 import layout.BrowseFragment;
 import layout.ThirdFragment;
 
@@ -61,15 +61,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public void onFragmentInteraction(Uri uri) {
     }
 
-
-
     public boolean isSubscribed(){
         return mSubscribed;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
@@ -104,24 +101,19 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         // Change the title on the main screen
         setTitle("");
-        setContentView(com.learn.howtodraw.draw.R.layout.fragment_main); // this is needed but could be a better way
+        setContentView(R.layout.fragment_main); // this is needed but could be a better way
 
         Log.d("subscribed?", "" + mSubscribed);
 
-        if (!mSubscribed) {
-            TextView textView = (TextView) findViewById(R.id.subscribedQuestion);
-            textView.setText("You have not subscribed");
-        } else {
-            TextView textView = (TextView) findViewById(R.id.subscribedQuestion);
-            textView.setText("You have subscribed you LEGEND!!");
-        }
 
         super.onCreate(savedInstanceState);
-        setContentView(com.learn.howtodraw.draw.R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
+
+
 
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -138,7 +130,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
 
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
@@ -176,7 +167,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here.
         int id = item.getItemId();
-        if (id == com.learn.howtodraw.draw.R.id.share_settings) {
+        if (id == R.id.share_settings) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.rateApp));
@@ -184,12 +175,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             startActivity(sendIntent);
             return true;
         }
-        if (id == com.learn.howtodraw.draw.R.id.rate_settings) {
-           rateApp();
+        if (id == R.id.rate_settings) {
+            rateApp();
             return true;
         }
 
-        if (id == com.learn.howtodraw.draw.R.id.about_settings) {
+        if (id == R.id.about_settings) {
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment ();
             dialogFragment.show(fm, getString(R.string.menu_about));
@@ -197,7 +188,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             return true;
         }
 
-        if (id == com.learn.howtodraw.draw.R.id.subscribe_settings) {
+        if (id == R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment();
             dialogFragment.show(fm, getString(R.string.menu_subscribe));
@@ -209,7 +200,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
 
 
-    // attempt to add full screen adverts
+    //  add full screen adverts
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("DBFB9795D39C49D52EAFBA8E58ACA288")
@@ -220,7 +211,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     // A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the sections/tabs/pages.
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -231,16 +221,15 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
                 case 0:
-                    Log.d("case 0", "BF");
+                    Log.d("case 0", "Entering News");
                     return PlaceholderFragment.newInstance(0);
                 case 1:
-                    Log.d("case 1", "BF");
+                    Log.d("case 1", "Entering Books");
                     return BrowseFragment.newInstance("hello1", "hello2");
 
                 case 2:
-                    Log.d("case 2", "BF");
+                    Log.d("case 2", "Entering Pages");
                     return ThirdFragment.newInstance(R.array.bookAllcardtext1, R.array.bookAllPageIds, R.array.bookAllcardimages);
-
             }
             return null;
         }

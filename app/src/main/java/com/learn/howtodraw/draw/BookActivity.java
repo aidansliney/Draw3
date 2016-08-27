@@ -19,6 +19,9 @@ import android.widget.Toast;
 public class BookActivity extends AppCompatActivity {
 
 
+
+
+
     private void showToast(int duration, String message) {
         final Toast toast = Toast.makeText(getBaseContext(),
                 message,
@@ -40,9 +43,11 @@ public class BookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //pull in isSubscribed
+        BaseFragment bf = new BaseFragment();
+       boolean isSubscribed  = bf.isSubscribed();
 
 
-       // Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
 
         // Change the title on the main screen
         setTitle("");
@@ -79,10 +84,10 @@ public class BookActivity extends AppCompatActivity {
         for (int i = 0; i < cardImageDrawables.length(); i++)
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
         final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds);
-        grid = (GridView) findViewById(com.learn.howtodraw.draw.R.id.grid);
+        grid = (GridView) findViewById(R.id.grid);
 
         //set the grid
-        ExpandableGridView gridView = (ExpandableGridView) findViewById(com.learn.howtodraw.draw.R.id.grid);
+        ExpandableGridView gridView = (ExpandableGridView) findViewById(R.id.grid);
         grid.setAdapter(adapter);
         gridView.setExpanded(true);
         gridView.setFocusable(false);

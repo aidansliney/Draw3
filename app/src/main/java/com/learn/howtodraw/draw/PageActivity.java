@@ -1,6 +1,8 @@
 package com.learn.howtodraw.draw;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -12,15 +14,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class PageActivity extends AppCompatActivity {
+
+
 
     public int x = 0;
 
@@ -30,28 +38,44 @@ public class PageActivity extends AppCompatActivity {
         setContentView(com.learn.howtodraw.draw.R.layout.activity_page);
 
 
+
+
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("bookSlides", 0));
         final int[] bookSlides = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++)
             bookSlides[i] = cardImageDrawables.getResourceId(i, 0);
-        ImageView imageView1 = (ImageView)findViewById(com.learn.howtodraw.draw.R.id.slideImage);
+        ImageView imageView1 = (ImageView)findViewById(R.id.slideImage);
         int lastPic = bookSlides.length-1;
         imageView1.setImageResource(bookSlides[lastPic]);
-        View nextImage2 = findViewById(com.learn.howtodraw.draw.R.id.nextImage2);
+        View nextImage2 = findViewById(R.id.nextImage2);
+
+        TextView endPage = (TextView)findViewById(R.id.endPage);
+        String endPageString = String.valueOf(lastPic+1);
+        endPage.setText(endPageString);
+
         nextImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (bookSlides.length - 1 == x) {
+                View shareLayout = (View) findViewById(R.id.shareLayout);
+                View shareText = (View) findViewById(R.id.share_text);
+                if (bookSlides.length  == x) {
+                    shareLayout.setVisibility(View.VISIBLE);
+                    shareText.setVisibility(View.VISIBLE);
                 }
                 else {
-                    x++;
+
+                    shareLayout.setVisibility(View.INVISIBLE);
+                    shareText.setVisibility(View.INVISIBLE);
                     Log.d("Right", "Right");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
-                    // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
+                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+
+                    TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
                     imageView.setImageResource(bookSlides[x]);
+                    x++;
+                    String pNumber = String.valueOf(x);
+                    pageNumber.setText(pNumber);
 
                 }
             }
@@ -61,7 +85,11 @@ public class PageActivity extends AppCompatActivity {
         previousImage2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                View shareLayout = (View) findViewById(R.id.shareLayout);
+                View shareText = (View) findViewById(R.id.share_text);
                 if (x != 0) {
+                    shareLayout.setVisibility(View.INVISIBLE);
+                    shareText.setVisibility(View.INVISIBLE);
                     x--;
                     Log.d("left", "left");
                     Log.d(getClass().getName(), "position = " + x);
@@ -69,11 +97,17 @@ public class PageActivity extends AppCompatActivity {
                     ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
+
+
+                    TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
+                    String pNumber = String.valueOf(x);
+                    pageNumber.setText(pNumber);
                 }
+
             }
         });
 
-        View camera= findViewById(com.learn.howtodraw.draw.R.id.camera);
+        View camera= findViewById(R.id.camera);
         camera.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -83,7 +117,25 @@ public class PageActivity extends AppCompatActivity {
         });
 
 
-        View info= findViewById(com.learn.howtodraw.draw.R.id.info);
+        View twitter= findViewById(R.id.twitter);
+        twitter.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+
+
+                shareTo = "twitter";
+                dispatchTakePictureIntent();
+
+
+
+
+            }
+        });
+
+
+
+
+/*        View info= findViewById(R.id.info);
         info.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -95,14 +147,11 @@ public class PageActivity extends AppCompatActivity {
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
                 shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
-                shareIntent.setType("image/*");
+                shareIntent.setType("image*//*");
                 startActivity(Intent.createChooser(shareIntent, "Share images to.."));
 
             }
-        });
-
-
-
+        });*/
 
 
 
@@ -113,8 +162,12 @@ public class PageActivity extends AppCompatActivity {
                 Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
             }
             public void onSwipeRight() {
-                Toast.makeText(PageActivity.this, "right", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(PageActivity.this, "right", Toast.LENGTH_SHORT).show();
+                View shareLayout = (View) findViewById(R.id.shareLayout);
+                View shareText = (View) findViewById(R.id.share_text);
                 if (x != 0) {
+                    shareLayout.setVisibility(View.INVISIBLE);
+                    shareText.setVisibility(View.INVISIBLE);
                     x--;
                     Log.d("left", "left");
                     Log.d(getClass().getName(), "position = " + x);
@@ -123,25 +176,38 @@ public class PageActivity extends AppCompatActivity {
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[x]);
 
+
+                    TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
+                    String pNumber = String.valueOf(x);
+                    pageNumber.setText(pNumber);
                 }
             }
             public void onSwipeLeft() {
-                Toast.makeText(PageActivity.this, "left", Toast.LENGTH_SHORT).show();
-                if (bookSlides.length - 1 == x) {
-                }
-                else {
-                    x++;
+              //  Toast.makeText(PageActivity.this, "left", Toast.LENGTH_SHORT).show();
+                View shareLayout = (View) findViewById(R.id.shareLayout);
+                View shareText = (View) findViewById(R.id.share_text);
+                if (bookSlides.length == x) {
+                    shareLayout.setVisibility(View.VISIBLE);
+                    shareText.setVisibility(View.VISIBLE);
+                } else {
+
+                    shareLayout.setVisibility(View.INVISIBLE);
+                    shareText.setVisibility(View.INVISIBLE);
                     Log.d("Right", "Right");
                     Log.d(getClass().getName(), "position = " + x);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
-                    // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
+                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+
+                    TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
                     imageView.setImageResource(bookSlides[x]);
+                    x++;
+                    String pNumber = String.valueOf(x);
+                    pageNumber.setText(pNumber);
 
                 }
             }
             public void onSwipeBottom() {
-                Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
 
 
@@ -154,22 +220,27 @@ public class PageActivity extends AppCompatActivity {
 
     static final int REQUEST_TAKE_PHOTO = 1;
     static Uri photoURI;
+    static String shareTo;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
 
-            ArrayList<Uri> imageUris = new ArrayList<Uri>();
-            imageUris.add(photoURI); // Add your image URIs here
-            Log.d("This is Sparta",photoURI.toString() );
-            Intent shareIntent = new Intent();
-            shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-            shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out my drawing. I learned how to draw it from http://www.google.com");
-            shareIntent.setType("image/*");
-            startActivity(Intent.createChooser(shareIntent, "Share images to.."));
+                ArrayList<Uri> imageUris = new ArrayList<Uri>();
+                imageUris.add(photoURI); // Add your image URIs here
+                Log.d("This is Sparta",photoURI.toString() );
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out my drawing. I learned how to draw it from http://www.google.com");
+                shareIntent.setType("image/*");
+                startActivity(Intent.createChooser(shareIntent, "Share images to.."));
+
+
+
         }
     }
+
 
     private void dispatchTakePictureIntent() {
 

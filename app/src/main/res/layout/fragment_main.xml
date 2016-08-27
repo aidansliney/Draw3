@@ -342,56 +342,6 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp">
 
-
-                <com.learn.howtodraw.draw.FontA.TextAwesome
-                    android:id="@+id/tvThumb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fa_thumbs_up"
-                    android:textSize="30sp" />
-
-                <TextView
-                    android:id="@+id/subscribedQuestion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Are you subscribed?"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:textColor="#3c3c3c" />
-
-                <com.learn.howtodraw.draw.FontA.ButtonAwesome
-                    android:id="@+id/infinite_gas_button"
-                    android:onClick="onSubscribedButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fa_money"
-                    android:textSize="20dp"
-                    android:textColor="#84c380"
-                    android:background="#e1ecf4"
-                    android:layout_marginBottom="10dp"/>
-
-                <com.learn.howtodraw.draw.FontA.ButtonAwesome
-                    android:onClick="onBuyGasButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fa_money2"
-                    android:textSize="20dp"
-                    android:textColor="#84c380"
-                    android:background="#e1ecf4"
-                    android:layout_marginBottom="10dp"/>
-
-
-                <com.learn.howtodraw.draw.FontA.ButtonAwesome
-                    android:id="@+id/upgrade_button"
-                    android:onClick="onUpgradeAppButtonClicked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fa_money3"
-                    android:textSize="20dp"
-                    android:textColor="#84c380"
-                    android:background="#e1ecf4"
-                    android:layout_marginBottom="100dp"/>
-
             </LinearLayout>
 
     </LinearLayout>

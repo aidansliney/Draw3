@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 //A placeholder fragment containing a simple view.
 public class PlaceholderFragment extends BaseFragment {
@@ -25,7 +26,6 @@ public class PlaceholderFragment extends BaseFragment {
         return fragment;
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,7 +35,6 @@ public class PlaceholderFragment extends BaseFragment {
         LinkBooks.linkBook(R.id.layout_2, R.array.book2Build, rootView, false,getActivity());
 
         Log.d("subscribed?", "" + isSubscribed());
-
 
         View homeCard1 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_1);
         homeCard1.setOnClickListener(new View.OnClickListener() {
@@ -81,13 +80,6 @@ public class PlaceholderFragment extends BaseFragment {
         artist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Trying to link to a new fragment from card in MainActivity
-                    /*    Fragment mFragment = null;
-                    mFragment = new ArtistFragment();
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.main_content, fragment_artist).commit();*/
             }
         });
 
