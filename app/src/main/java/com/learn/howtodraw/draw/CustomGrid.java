@@ -13,12 +13,14 @@ public class CustomGrid extends BaseAdapter {
     private final String[] web;
     private final String[] bookPageIds;
     private final int[] Imageid;
+    private final int[] tickIcon;
 
-    public CustomGrid(Context c, String[] web, int[] Imageid, String[] bookPageIds) {
+    public CustomGrid(Context c, String[] web, int[] Imageid, String[] bookPageIds, int[] tickIcon ) {
         mContext = c;
         this.Imageid = Imageid;
         this.web = web;
         this.bookPageIds = bookPageIds;
+        this.tickIcon = tickIcon;
 
     }
 
@@ -49,11 +51,15 @@ public class CustomGrid extends BaseAdapter {
         if (convertView == null) {
 
             grid = new View(mContext);
-            grid = inflater.inflate(com.learn.howtodraw.draw.R.layout.grid_single, null);
-            TextView textView = (TextView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_text);
+            grid = inflater.inflate(R.layout.grid_single, null);
+            TextView textView = (TextView) grid.findViewById(R.id.grid_text);
 
-            ImageView imageView = (ImageView) grid.findViewById(com.learn.howtodraw.draw.R.id.grid_image);
+            TextView tv= (TextView) grid.findViewById(R.id.ticklock2);
+            tv.setText(tickIcon[position]);
+
+            ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             textView.setText(web[position]);
+
 
           //  textView3.setId(web3[position]);
             imageView.setImageResource(Imageid[position]);

@@ -63,7 +63,6 @@ public class ThirdFragment extends BaseFragment {
 
     }
 
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -74,9 +73,13 @@ public class ThirdFragment extends BaseFragment {
         final String[] bookPageIds = getResources().getStringArray(getArguments().getInt("bookPageIds"));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getArguments().getInt("cardImageId"));
         final int[] cardImage = new int[cardImageDrawables.length()];
-        for (int i = 0; i < cardImageDrawables.length(); i++)
+        final int[] tickIcon = new int[cardImageDrawables.length()];
+        for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-        final CustomGrid adapter = new CustomGrid(getActivity(), cardText1, cardImage, bookPageIds);
+            tickIcon[i] = R.string.fa_check;
+
+        }
+        final CustomGrid adapter = new CustomGrid(getActivity(), cardText1, cardImage, bookPageIds, tickIcon);
         //set the grid
         ExpandableGridView gridView = (ExpandableGridView) view.findViewById(R.id.gridthird);
         gridView.setAdapter(adapter);

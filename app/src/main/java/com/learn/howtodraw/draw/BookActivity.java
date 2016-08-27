@@ -1,53 +1,54 @@
 package com.learn.howtodraw.draw;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class BookActivity extends AppCompatActivity {
+public class BookActivity extends MainActivity {
+
+    public Boolean bookPurchasedLock;
+    public String bookName;
 
 
+    public Boolean isLocked(){
 
-
-
-    private void showToast(int duration, String message) {
-        final Toast toast = Toast.makeText(getBaseContext(),
-                message,
-                Toast.LENGTH_SHORT);
-        toast.show();
-        new CountDownTimer(duration, 500) {
-            public void onTick(long millisUntilFinished) {
-                toast.show();
-            }
-            public void onFinish() {
-                toast.cancel();
-            }
-
-        }.start();
+        //check what oage we are on and if it is purchased
+        if (bookName.equals("book1"))
+            bookPurchasedLock = mPurchasedBook1;
+        if (bookName.equals("book2"))
+            bookPurchasedLock = mPurchasedBook2;
+        if (bookName.equals("book3"))
+            bookPurchasedLock = mPurchasedBook3;
+        if (bookName.equals("book4"))
+            bookPurchasedLock = mPurchasedBook4;
+        if (bookPurchasedLock)
+            return true;
+        else
+            return false;
     }
 
 
-    GridView grid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        //pull in isSubscribed
-        BaseFragment bf = new BaseFragment();
-       boolean isSubscribed  = bf.isSubscribed();
-
-
 
         // Change the title on the main screen
         setTitle("");
@@ -56,7 +57,7 @@ public class BookActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       //Create floating action button
+        //Create floating action button
         FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,44 +69,83 @@ public class BookActivity extends AppCompatActivity {
             }
         });
 
+
         //set the top of the page (not the grid)
-        TextView textView = (TextView)findViewById(com.learn.howtodraw.draw.R.id.primary);
-        TextView textView2 = (TextView)findViewById(com.learn.howtodraw.draw.R.id.secondary);
-        ImageView imageView = (ImageView)findViewById(com.learn.howtodraw.draw.R.id.background);
+        TextView textView = (TextView) findViewById(R.id.primary);
+        TextView textView2 = (TextView) findViewById(R.id.secondary);
+        ImageView imageView = (ImageView) findViewById(R.id.background);
         textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
         imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
+        bookName = getString(getIntent().getIntExtra("bookName", 0));
+
+        if (isLocked()){
+            Log.d("PING", "I am afraid this page is locked");
+        }
+        else
+            Log.d("PING", "I am afraid this page is  not locked");
+
 
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
-        for (int i = 0; i < cardImageDrawables.length(); i++)
+        final int[] tickIcon = new int[cardImageDrawables.length()];
+        for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-        final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds);
-        grid = (GridView) findViewById(R.id.grid);
+            if(isLocked())
+                tickIcon[i] = R.string.fa_lock;
+            else
+                tickIcon[i] = R.string.fa_check;
+
+        }
+
+        final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds, tickIcon);
+
 
         //set the grid
         ExpandableGridView gridView = (ExpandableGridView) findViewById(R.id.grid);
-        grid.setAdapter(adapter);
+        gridView.setAdapter(adapter);
         gridView.setExpanded(true);
         gridView.setFocusable(false);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String pageId = (String) adapter.getItem(position);
 
-                int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
-               // showToast(20000, cardText1[+position] );
-               // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(BookActivity.this,PageActivity.class);
-                Log.d("hello" + slidesID, "" );
-                intent.putExtra("bookSlides", slidesID);
-                startActivity(intent);
+
+
+                // see if the user should have access to the content
+                if (isLocked()) {
+
+
+
+                    String pageId = (String) adapter.getItem(position);
+                    int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
+                    // showToast(20000, cardText1[+position] );
+                    // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(BookActivity.this, PageActivity.class);
+                    Log.d("hello" + slidesID, "");
+                    intent.putExtra("bookSlides", slidesID);
+                    startActivity(intent);
+                } else {
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("bookThumb", getIntent().getIntExtra("bookCoverImageInsideId", 0));
+                    bundle.putInt("bookName", getIntent().getIntExtra("bookName", 0));
+
+                    FragmentManager fm = getSupportFragmentManager();
+                    MyDialogFragment dialogFragment = new MyDialogFragment();
+                    dialogFragment.setArguments(bundle);
+                    dialogFragment.show(fm, getString(R.string.menu_subscribe));
+                }
             }
         });
 
 
     }
+
+
+
+
 }

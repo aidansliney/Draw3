@@ -1,10 +1,7 @@
 package com.learn.howtodraw.draw;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -19,25 +16,18 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class PageActivity extends AppCompatActivity {
 
-
-
-    public int x = 0;
+    public int pageCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_page);
-
-
 
 
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("bookSlides", 0));
@@ -58,7 +48,7 @@ public class PageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 View shareLayout = (View) findViewById(R.id.shareLayout);
                 View shareText = (View) findViewById(R.id.share_text);
-                if (bookSlides.length  == x) {
+                if (bookSlides.length  == pageCounter) {
                     shareLayout.setVisibility(View.VISIBLE);
                     shareText.setVisibility(View.VISIBLE);
                 }
@@ -67,14 +57,14 @@ public class PageActivity extends AppCompatActivity {
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
                     Log.d("Right", "Right");
-                    Log.d(getClass().getName(), "position = " + x);
+                    Log.d(getClass().getName(), "position = " + pageCounter);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
                     ImageView imageView = (ImageView) findViewById(R.id.slideImage);
 
                     TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
-                    imageView.setImageResource(bookSlides[x]);
-                    x++;
-                    String pNumber = String.valueOf(x);
+                    imageView.setImageResource(bookSlides[pageCounter]);
+                    pageCounter++;
+                    String pNumber = String.valueOf(pageCounter);
                     pageNumber.setText(pNumber);
 
                 }
@@ -87,20 +77,20 @@ public class PageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 View shareLayout = (View) findViewById(R.id.shareLayout);
                 View shareText = (View) findViewById(R.id.share_text);
-                if (x != 0) {
+                if (pageCounter != 0) {
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
-                    x--;
+                    pageCounter--;
                     Log.d("left", "left");
-                    Log.d(getClass().getName(), "position = " + x);
+                    Log.d(getClass().getName(), "position = " + pageCounter);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
-                    imageView.setImageResource(bookSlides[x]);
+                    imageView.setImageResource(bookSlides[pageCounter]);
 
 
                     TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
-                    String pNumber = String.valueOf(x);
+                    String pNumber = String.valueOf(pageCounter);
                     pageNumber.setText(pNumber);
                 }
 
@@ -116,47 +106,17 @@ public class PageActivity extends AppCompatActivity {
             }
         });
 
-
         View twitter= findViewById(R.id.twitter);
         twitter.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-
-
                 shareTo = "twitter";
                 dispatchTakePictureIntent();
-
-
-
-
             }
         });
 
-
-
-
-/*        View info= findViewById(R.id.info);
-        info.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-
-                ArrayList<Uri> imageUris = new ArrayList<Uri>();
-               // Uri imageUri1=Uri.parse("android.resource://"+getPackageName()+"/drawable/"+camera);
-               // imageUris.add(imageUri1);// Add your image URIs here
-
-                Intent shareIntent = new Intent();
-                shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-                shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris);
-                shareIntent.setType("image*//*");
-                startActivity(Intent.createChooser(shareIntent, "Share images to.."));
-
-            }
-        });*/
-
-
-
-
-        ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
+        ImageView imageView = (ImageView) findViewById(R.id.slideImage);
+        assert imageView != null;
         imageView.setOnTouchListener(new OnSwipeTouchListener(PageActivity.this) {
             public void onSwipeTop() {
                 Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
@@ -165,20 +125,20 @@ public class PageActivity extends AppCompatActivity {
                // Toast.makeText(PageActivity.this, "right", Toast.LENGTH_SHORT).show();
                 View shareLayout = (View) findViewById(R.id.shareLayout);
                 View shareText = (View) findViewById(R.id.share_text);
-                if (x != 0) {
+                if (pageCounter != 0) {
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
-                    x--;
+                    pageCounter--;
                     Log.d("left", "left");
-                    Log.d(getClass().getName(), "position = " + x);
+                    Log.d(getClass().getName(), "position = " + pageCounter);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
-                    ImageView imageView = (ImageView) findViewById(com.learn.howtodraw.draw.R.id.slideImage);
+                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
-                    imageView.setImageResource(bookSlides[x]);
+                    imageView.setImageResource(bookSlides[pageCounter]);
 
 
                     TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
-                    String pNumber = String.valueOf(x);
+                    String pNumber = String.valueOf(pageCounter);
                     pageNumber.setText(pNumber);
                 }
             }
@@ -186,7 +146,7 @@ public class PageActivity extends AppCompatActivity {
               //  Toast.makeText(PageActivity.this, "left", Toast.LENGTH_SHORT).show();
                 View shareLayout = (View) findViewById(R.id.shareLayout);
                 View shareText = (View) findViewById(R.id.share_text);
-                if (bookSlides.length == x) {
+                if (bookSlides.length == pageCounter) {
                     shareLayout.setVisibility(View.VISIBLE);
                     shareText.setVisibility(View.VISIBLE);
                 } else {
@@ -194,14 +154,14 @@ public class PageActivity extends AppCompatActivity {
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
                     Log.d("Right", "Right");
-                    Log.d(getClass().getName(), "position = " + x);
+                    Log.d(getClass().getName(), "position = " + pageCounter);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
                     ImageView imageView = (ImageView) findViewById(R.id.slideImage);
 
                     TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
-                    imageView.setImageResource(bookSlides[x]);
-                    x++;
-                    String pNumber = String.valueOf(x);
+                    imageView.setImageResource(bookSlides[pageCounter]);
+                    pageCounter++;
+                    String pNumber = String.valueOf(pageCounter);
                     pageNumber.setText(pNumber);
 
                 }

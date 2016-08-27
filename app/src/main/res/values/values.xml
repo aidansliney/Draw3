@@ -9,6 +9,7 @@
         <item>@array/book1cardimages</item>
         <item>@array/book1PageIds</item>
         <item>@drawable/book1coverinside</item>
+        <item>@string/book1</item>
     </array>
 
     <string name="book1">book1</string>
@@ -16,6 +17,7 @@
     <drawable name="book1coverinside">@drawable/mb3_4coverinside</drawable>
     <string name="book1heading1">Heroic Male 3/4 View - Level 1</string>
     <string name="book1heading2">Learn how to draw the full figure</string>
+
     <string-array name="book1cardtext1">
         <item>Full Figure</item>
         <item>Basic Head</item>
@@ -167,7 +169,7 @@
     </integer-array>
 
     <!-- BOOK 2 -->
-
+    <string name="book2">book2</string>
     <array  name="book2Build">
         <item>@string/book2heading1</item>
         <item>@string/book2heading2</item>
@@ -176,6 +178,7 @@
         <item>@array/book2cardimages</item>
         <item>@array/book2PageIds</item>
         <item>@drawable/book2coverinside</item>
+        <item>@string/book2</item>
     </array>
 
     <drawable name="book2cover">@drawable/mi3_4coveriso</drawable>
@@ -337,6 +340,7 @@
 
     <!-- BOOK 3 -->
 
+    <string name="book3">book3</string>
     <array name="book3Build">
         <item>@string/book3heading1</item>
         <item>@string/book3heading2</item>
@@ -345,6 +349,7 @@
         <item>@array/book3cardimages</item>
         <item>@array/book3PageIds</item>
         <item>@drawable/book3coverinside</item>
+        <item>@string/book3</item>
     </array>
 
     <drawable name="book3cover">@drawable/ma3_4coveriso</drawable>
@@ -483,6 +488,8 @@
 
     <!-- BOOK 4 -->
 
+
+    <string name="book4">book4</string>
     <array name="book4Build">
         <item>@string/book4heading1</item>
         <item>@string/book4heading2</item>
@@ -491,6 +498,7 @@
         <item>@array/book4cardimages</item>
         <item>@array/book4PageIds</item>
         <item>@drawable/book4coverinside</item>
+        <item>@string/book4</item>
     </array>
 
     <drawable name="book4cover">@drawable/maflexcoveriso</drawable>

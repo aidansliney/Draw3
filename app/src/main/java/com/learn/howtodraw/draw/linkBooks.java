@@ -8,14 +8,19 @@ import android.view.View;
 /**
  * Created by aidansliney on 23/08/2016.
  */
-public class LinkBooks {
+public class LinkBooks{
 
     // a method to setup the right content for = book thumbnails
     public static void linkBook(int layout, final int bookContent, View rootView, final boolean advert, final Activity activity) {
         View Layout = rootView.findViewById(layout);
+
+
         Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               // BaseFragment bf = new BaseFragment();
+                //bf.isSubscribed()
+
                     TypedArray bookBuild = activity.getResources().obtainTypedArray(bookContent);
                     final int[] bookCollected = new int[bookBuild.length()];
                     for (int i = 0; i < bookBuild.length(); i++)
@@ -29,7 +34,11 @@ public class LinkBooks {
                     intent.putExtra("cardImageId", bookCollected[4]);
                     intent.putExtra("bookPageIds", bookCollected[5]);
                     intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
+                    intent.putExtra("bookName", bookCollected[7]);
                     activity.startActivity(intent);
+
+
+
             }
         });
     }

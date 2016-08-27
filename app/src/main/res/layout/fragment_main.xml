@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     android:fillViewport="true"
-    tools:showIn="@layout/fragment_main">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,15 +28,38 @@
                 android:src="@drawable/mb3_4coveriso"
                 android:adjustViewBounds="true" />
 
-            <TextView
-                android:id="@+id/primary"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/book1heading1"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="10dp"
-                android:textColor="#3c3c3c" />
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book1heading1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#3c3c3c"
+                    android:layout_weight="0.9
+                    "/>
+                <com.learn.howtodraw.draw.FontA.TextAwesome
+                    android:id="@+id/ticklock1"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/fa_check"
+                    android:textAlignment="gravity"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp"
+                    android:layout_weight="0.1"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+
+
 
             <TextView
                 android:id="@+id/secondary"
@@ -268,14 +291,42 @@
                 android:src="@drawable/book2cover"
                 android:adjustViewBounds="true" />
 
-            <TextView
-                android:id="@+id/primary"
-                android:layout_width="wrap_content"
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/book2heading1"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#3c3c3c" />
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book2heading1"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#3c3c3c"
+                    android:layout_weight="0.9"/>
+                <com.learn.howtodraw.draw.FontA.TextAwesome
+                    android:id="@+id/ticklock2"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/fa_check"
+                    android:textAlignment="gravity"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp"
+                    android:layout_weight="0.1"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+
+
+
+
+
+
 
             <TextView
                 android:id="@+id/secondary"

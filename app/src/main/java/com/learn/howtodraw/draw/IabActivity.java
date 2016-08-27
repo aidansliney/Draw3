@@ -76,10 +76,20 @@ public abstract class IabActivity extends AppCompatActivity {
 // managed in different activities, you might not have any shared variables here.)
 
 // Does the user have the premium upgrade?
-    protected boolean mIsPremium = false;
+    protected boolean mPurchasedBook = false;
+
+
+    // Does the user have book1?
+    protected boolean mPurchasedBook1 = false;
+    // Does the user have book2?
+    protected boolean mPurchasedBook2 = false;
+    // Does the user have book3?
+    protected boolean mPurchasedBook3 = false;
+    // Does the user have book4?
+    protected boolean mPurchasedBook4 = true;
 
     // Does the user have an active subscription to the infinite gas plan?
-    protected boolean mSubscribed = false;
+    protected  boolean mSubscribed = false;
 
 // Current amount of gas in tank, in units
 // protected int mTank;
@@ -149,12 +159,12 @@ public abstract class IabActivity extends AppCompatActivity {
             if (pIabHelper == null) return;
 
             if (result.isFailure()) {
-                complain("Purchase did not go through. " + result);
+               // complain("Purchase did not go through. " + result);
                 onIabPurchaseFailed (pIabHelper, IAB_PURCHASE_FAILED);
                 return;
             }
             if (!verifyDeveloperPayload(purchase)) {
-                complain("Purchase did not go through. User verification failed.");
+              //  complain("Purchase did not go through. User verification failed.");
                 onIabPurchaseFailed (pIabHelper, IAB_PURCHASE_FAILED_PAYLOAD_PROBLEM);
                 return;
             }
@@ -162,12 +172,31 @@ public abstract class IabActivity extends AppCompatActivity {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase successful.");
 
             if (purchase.getSku().equals (SKU_PREMIUM)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase of premium gas finished. Consuming it ...");
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 0 purchased. Consuming it");
                 pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
-            } else if (purchase.getSku().equals (SKU_GAS)) {
+
+            } else if (purchase.getSku().equals (SKU_BOOK1)) {
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 1 purchased. Consuming it");
+                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+            } else if (purchase.getSku().equals (SKU_BOOK2)) {
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 2 purchased. Consuming it");
+                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+            } else if (purchase.getSku().equals (SKU_BOOK3)) {
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. Consuming it");
+                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+            } else if (purchase.getSku().equals (SKU_BOOK4)) {
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. Consuming it");
+                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+
+
+            } else if (purchase.getSku().equals (SKU_CONSUMABLE)) {
                 if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase is regular gas finished. Consuming it ...");
                 pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
-            } else if (purchase.getSku().equals (SKU_INFINITE_GAS)) {
+            } else if (purchase.getSku().equals (SKU_SUBSCRIPTION)) {
                 if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase of infinite gase. Consuming it ...");
                 pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
             }
@@ -487,7 +516,7 @@ public abstract class IabActivity extends AppCompatActivity {
          * want to make it easy for an attacker to replace the public key with one
          * of their own and then fake messages from the server.
          */
-            String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3d3FUkQgm/4sjS4InIUyR5GNzO3ISc/IcXUETkDW93LV7aYiHrBklBgJnWsIGJmcubx3hRtyaFsCNTQOjgyWeDqEBExjWr1xNFEPikN1J9dmZ6bRdsUBbPKHz2zV1rONTLTpKsw21plblkuG8YzNVyNWB9dZOvUG/qC1prENDMwSDBBXWuwh3YJQ6/K/M2/g/ADSiYG01fUZzDv8qGKgyr1bCJ09qFo7hlczaQOGxG3M+T/YZa3wNuPUaA8OCl5V8tPr2/qGr8cYH90Rb9ty7aauQ8EGuIcrCXU+vJaDz5ZRn/BMNSg00TsY7R1e20Jx2w7LyHokAUg6yOWhWcyj3QIDAQAB\n";
+            String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAneeQ7zrAD2f/wyVhMK7VWT5C3jNqXLps6OJyOUuA7rGIHpymFwEMzukxcWvWSe9rPq3tEyxcE9Mmi+VD+ODLexwxQoX0ZLyVIgfia4xIq5fhRlM5GarKajUpoHQyWJSQRUMSv38j5VCf/k0mzeuFlWMkV7BMVBk0uuQABSFnQ3OtliL0tDii3vi3+MlAcdDVqKjXkqe0uU8sFFekrswneXB7ttgp2o/m/8FJlIujj6Ctth7XBfz9X8pPhM/SXhS+DKovlF99jzcg0ThWI0Xi6eVoxo9VIKnJAx6tZm1tBNs96warOfjWiqW5e1js7EGOvPIkvBsRMYR1BbtEQei8BQIDAQAB";
             // Create the helper, passing it our context and the public key to verify signatures with
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Creating IAB helper.");
             IabHelper ih = new IabHelper(this, base64EncodedPublicKey);
@@ -521,8 +550,12 @@ public abstract class IabActivity extends AppCompatActivity {
                     if (showListedSkus) {
                         skusToBeListed = new ArrayList<String> ();
                         skusToBeListed.add (SKU_PREMIUM);
-                        skusToBeListed.add (SKU_GAS);
-                        skusToBeListed.add (SKU_INFINITE_GAS);
+                        skusToBeListed.add (SKU_BOOK1);
+                        skusToBeListed.add (SKU_BOOK2);
+                        skusToBeListed.add (SKU_BOOK3);
+                        skusToBeListed.add (SKU_BOOK4);
+                        skusToBeListed.add (SKU_CONSUMABLE);
+                        skusToBeListed.add (SKU_SUBSCRIPTION);
                     }
                     pIabHelper.queryInventoryAsync (true, skusToBeListed, mGotInventoryListener);
                 }
@@ -606,26 +639,45 @@ public abstract class IabActivity extends AppCompatActivity {
 
         // Do we have the premium upgrade?
         Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
-        mIsPremium = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mIsPremium ? "PREMIUM" : "NOT PREMIUM"));
+        mPurchasedBook = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook ? "PREMIUM" : "NOT PREMIUM"));
+
+        // Have we purchased book 1
+        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK1);
+        mPurchasedBook1 = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook1 ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
+
+        // Have we purchased book 2
+        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK2);
+        mPurchasedBook2 = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook2 ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
+
+        // Have we purchased book 3
+        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK3);
+        mPurchasedBook3 = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook3 ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
+
+        // Have we purchased book 1
+        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK4);
+        mPurchasedBook4 = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook4 ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
 
         // Do we have the infinite gas plan?
-        Purchase infiniteGasPurchase = inventory.getPurchase(SKU_INFINITE_GAS);
-        mSubscribed = (infiniteGasPurchase != null &&
-                verifyDeveloperPayload(infiniteGasPurchase));
+        Purchase subscriptionPurchase = inventory.getPurchase(SKU_SUBSCRIPTION);
+        mSubscribed = (subscriptionPurchase != null &&
+                verifyDeveloperPayload(subscriptionPurchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribed ? "HAS" : "DOES NOT HAVE")
                 + " infinite gas subscription.");
         //if (mSubscribed) mTank = TANK_MAX;
 
         // Check for gas delivery -- if we own gas, we should fill up the tank immediately
-        Purchase gasPurchase = inventory.getPurchase(SKU_GAS);
+        Purchase gasPurchase = inventory.getPurchase(SKU_CONSUMABLE);
         if (gasPurchase != null && verifyDeveloperPayload(gasPurchase)) {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "We have gas. Consuming it.");
             pIabHelper.consumeAsync (gasPurchase, mConsumeFinishedListener);
             return;
         }
 
-        //if (mSubscribed) mTank = TANK_MAX;   // Done in MainActivity
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "IabActivity.onIabSetupSucceeded completed. Subclass should update UI.");
 

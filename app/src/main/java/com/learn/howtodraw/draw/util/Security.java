@@ -15,6 +15,7 @@
 
 package com.learn.howtodraw.draw.util;
 
+import android.support.design.BuildConfig;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -56,7 +57,7 @@ public class Security {
         if (TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey) ||
                 TextUtils.isEmpty(signature)) {
             Log.e(TAG, "Purchase verification failed: missing data.");
-            return false;
+            return BuildConfig.DEBUG; // Line modified by Cristian. Original line was: return false;
         }
 
         PublicKey key = Security.generatePublicKey(base64PublicKey);

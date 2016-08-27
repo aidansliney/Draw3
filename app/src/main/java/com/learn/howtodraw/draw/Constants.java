@@ -11,13 +11,17 @@ public class Constants {
      */
 // In-app billing constants
 
-// SKUs for our products: the premium upgrade (non-consumable)
-// and gas (consumable)
+// SKUs for our products:
     public static final String SKU_PREMIUM = "book";
-    public static final String SKU_GAS = "page";
+    public static final String SKU_BOOK1 = "book1"; //mPurchasedBook1
+    public static final String SKU_BOOK2 = "book2";
+    public static final String SKU_BOOK3 = "book3";
+    public static final String SKU_BOOK4 = "book4";
+
+    public static final String SKU_CONSUMABLE = "page";  // Consumable
 
     // SKU for our subscription (infinite gas)
-    public static final String SKU_INFINITE_GAS = "subscription";
+    public static final String SKU_SUBSCRIPTION = "subscription";
 
     /**
      */

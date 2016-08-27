@@ -23,6 +23,12 @@ public class BaseFragment extends DialogFragment {
         return getMainActivity().isSubscribed();
     }
 
+
+
+
+
+
+
     public MainActivity getMainActivity(){
 
         return (MainActivity) getActivity();
