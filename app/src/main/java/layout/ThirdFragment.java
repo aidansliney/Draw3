@@ -127,25 +127,25 @@ public class ThirdFragment extends BaseFragment {
                 {
                     hasPurchased = hasBook1();
                     bookThumb = R.drawable.book1cover;
-                    bookName = R.string.book1heading1;
+                    bookName = R.string.book1;
                 }
                 if (booksBook[position].equals("book2"))
                 {
                     hasPurchased = hasBook2();
                     bookThumb = R.drawable.book2cover;
-                    bookName = R.string.book2heading1;
+                    bookName = R.string.book2;
                 }
                 if (booksBook[position].equals("book3"))
                 {
                     hasPurchased = hasBook3();
                     bookThumb = R.drawable.book3cover;
-                    bookName = R.string.book3heading1;
+                    bookName = R.string.book3;
                 }
                 if (booksBook[position].equals("book4"))
                 {
                     hasPurchased = hasBook4();
                     bookThumb = R.drawable.book4cover;
-                    bookName = R.string.book4heading1;
+                    bookName = R.string.book4;
                 }
 
                 if(hasPurchased)

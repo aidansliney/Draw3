@@ -14,7 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BookActivity extends AppCompatActivity  {
+public class BookActivity extends MainActivity {
 
     public Boolean bookPurchasedLock;
     public String bookName;
@@ -131,13 +131,6 @@ public class BookActivity extends AppCompatActivity  {
         }
         else
             Log.d("PING", "I am afraid this page is  not locked");
-
         buildTheGrid();
-
-
     }
-
-
-
-
 }

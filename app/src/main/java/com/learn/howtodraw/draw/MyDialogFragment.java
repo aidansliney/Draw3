@@ -58,9 +58,9 @@ public class MyDialogFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
 
-
                 bookNameString = getString(bookName);
-                getMainActivity().onBookPurchaseButtonClicked(getView(), getString(bookName));
+                Log.d("This is the bookname",bookNameString);
+                getMainActivity().onBookPurchaseButtonClicked(getView(), bookNameString);
 
             }
         });
