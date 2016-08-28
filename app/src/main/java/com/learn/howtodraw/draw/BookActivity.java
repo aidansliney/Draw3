@@ -1,44 +1,48 @@
 package com.learn.howtodraw.draw;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class BookActivity extends MainActivity {
+import com.learn.howtodraw.draw.util.IabHelper;
+
+public class BookActivity extends AppCompatActivity  {
+
 
     public Boolean bookPurchasedLock;
     public String bookName;
 
 
-    public Boolean isLocked(){
 
-        //check what oage we are on and if it is purchased
+
+    public Boolean isUnlocked(){
+
+        // Calling Application class (see application tag in AndroidManifest.xml)
+        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+
+
+        //check what page we are on and if it is purchased
         if (bookName.equals("book1"))
-            bookPurchasedLock = mPurchasedBook1;
+
+            bookPurchasedLock = globalVariable.getbook1bought();;
+          //  bookPurchasedLock = mPurchasedBook1;
         if (bookName.equals("book2"))
-            bookPurchasedLock = mPurchasedBook2;
+            bookPurchasedLock = globalVariable.getbook2bought();;
         if (bookName.equals("book3"))
-            bookPurchasedLock = mPurchasedBook3;
+            bookPurchasedLock = globalVariable.getbook3bought();;
         if (bookName.equals("book4"))
-            bookPurchasedLock = mPurchasedBook4;
+            bookPurchasedLock = globalVariable.getbook4bought();;
         if (bookPurchasedLock)
             return true;
         else
@@ -47,43 +51,7 @@ public class BookActivity extends MainActivity {
 
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        // Change the title on the main screen
-        setTitle("");
-        super.onCreate(savedInstanceState);
-        setContentView(com.learn.howtodraw.draw.R.layout.activity_book);
-        Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        //Create floating action button
-        FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/html");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is where we will share the app</p>"));
-                startActivity(Intent.createChooser(sharingIntent, "Share using"));
-            }
-        });
-
-
-        //set the top of the page (not the grid)
-        TextView textView = (TextView) findViewById(R.id.primary);
-        TextView textView2 = (TextView) findViewById(R.id.secondary);
-        ImageView imageView = (ImageView) findViewById(R.id.background);
-        textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
-        textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
-        imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
-        bookName = getString(getIntent().getIntExtra("bookName", 0));
-
-        if (isLocked()){
-            Log.d("PING", "I am afraid this page is locked");
-        }
-        else
-            Log.d("PING", "I am afraid this page is  not locked");
+    public void buildTheGrid(){
 
 
         //send content in the grid
@@ -94,10 +62,10 @@ public class BookActivity extends MainActivity {
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-            if(isLocked())
-                tickIcon[i] = R.string.fa_lock;
-            else
+            if(isUnlocked()) // this does not work
                 tickIcon[i] = R.string.fa_check;
+            else
+                tickIcon[i] = R.string.fa_lock;
 
         }
 
@@ -114,11 +82,8 @@ public class BookActivity extends MainActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-
                 // see if the user should have access to the content
-                if (isLocked()) {
-
-
+                if (isUnlocked())  { // this  works
 
                     String pageId = (String) adapter.getItem(position);
                     int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
@@ -141,6 +106,58 @@ public class BookActivity extends MainActivity {
                 }
             }
         });
+
+
+
+    }
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
+
+
+
+
+        // Change the title on the main screen
+        setTitle("");
+        super.onCreate(savedInstanceState);
+        setContentView(com.learn.howtodraw.draw.R.layout.activity_book);
+        Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        //Create floating action button
+        FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/html");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is where we will share the app</p>"));
+                startActivity(Intent.createChooser(sharingIntent, "Share using"));
+            }
+        });
+
+        //set the top of the page (not the grid)
+        TextView textView = (TextView) findViewById(R.id.primary);
+        TextView textView2 = (TextView) findViewById(R.id.secondary);
+        ImageView imageView = (ImageView) findViewById(R.id.background);
+        textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
+        textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
+        imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
+        bookName = getString(getIntent().getIntExtra("bookName", 0));
+
+        if (isUnlocked()){
+            Log.d("PING", "I am afraid this page is locked");
+        }
+        else
+            Log.d("PING", "I am afraid this page is  not locked");
+
+        buildTheGrid();
 
 
     }

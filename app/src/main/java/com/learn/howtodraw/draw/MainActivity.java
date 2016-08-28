@@ -67,6 +67,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
+
+        // Calling Application class (see application tag in AndroidManifest.xml)
+        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+        //Set name and email in global/application context
+        globalVariable.setName("Android Example context variable");
+        globalVariable.setEmail("xxxxxx@aaaa.com");
+
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
         // IabActivity. The original code had all the code here.)
@@ -160,16 +168,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);*/
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -391,6 +389,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         Log.d("We are back", "from the purchase");
 
+
         // Pass on the activity result to the helper for handling
         if (!mHelper.handleActivityResult(requestCode, resultCode, data)) {
             // not handled, so handle it ourselves (here's where you'd
@@ -569,6 +568,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             toast("welcome Premium User");
             // FIX THIS
         }
+
+
+        if (mPurchasedBook1) {
+            toast("welcome book 1 owner");
+            // FIX THIS
+        }
+
 
 
      }

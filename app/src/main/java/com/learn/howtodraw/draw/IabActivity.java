@@ -76,11 +76,13 @@ public abstract class IabActivity extends AppCompatActivity {
 // managed in different activities, you might not have any shared variables here.)
 
 // Does the user have the premium upgrade?
-    protected boolean mPurchasedBook = false;
+    protected  boolean mPurchasedBook = false;
 
 
     // Does the user have book1?
     protected boolean mPurchasedBook1 = false;
+
+
     // Does the user have book2?
     protected boolean mPurchasedBook2 = false;
     // Does the user have book3?
@@ -90,6 +92,8 @@ public abstract class IabActivity extends AppCompatActivity {
 
     // Does the user have an active subscription to the infinite gas plan?
     protected  boolean mSubscribed = false;
+
+
 
 // Current amount of gas in tank, in units
 // protected int mTank;
@@ -260,6 +264,8 @@ public abstract class IabActivity extends AppCompatActivity {
      *
      * @param newValue boolean
      */
+
+
 
     public void setShowIabErrors (boolean newValue) {
         pShowIabErrors = newValue;
@@ -637,29 +643,39 @@ public abstract class IabActivity extends AppCompatActivity {
         //  Note that several global variables are set here.)
         //
 
+        // Calling Application class (see application tag in AndroidManifest.xml)
+        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+
+
         // Do we have the premium upgrade?
         Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
         mPurchasedBook = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
+
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook ? "PREMIUM" : "NOT PREMIUM"));
 
         // Have we purchased book 1
         Purchase book1Purchase = inventory.getPurchase(SKU_BOOK1);
         mPurchasedBook1 = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
+        globalVariable.setbook1bought(mPurchasedBook1);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook1 ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
 
         // Have we purchased book 2
         Purchase book2Purchase = inventory.getPurchase(SKU_BOOK2);
         mPurchasedBook2 = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
+        globalVariable.setbook2bought(mPurchasedBook2);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook2 ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
 
         // Have we purchased book 3
         Purchase book3Purchase = inventory.getPurchase(SKU_BOOK3);
         mPurchasedBook3 = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
+        globalVariable.setbook3bought(mPurchasedBook3);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook3 ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
 
         // Have we purchased book 1
         Purchase book4Purchase = inventory.getPurchase(SKU_BOOK4);
         mPurchasedBook4 = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
+        globalVariable.setbook4bought(mPurchasedBook4);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook4 ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
 
         // Do we have the infinite gas plan?

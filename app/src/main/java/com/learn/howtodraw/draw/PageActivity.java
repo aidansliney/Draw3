@@ -170,9 +170,6 @@ public class PageActivity extends AppCompatActivity {
               //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
 
-
-
-
         });
 
 

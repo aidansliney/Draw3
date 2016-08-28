@@ -59,22 +59,21 @@ public class MyDialogFragment extends BaseFragment {
             public void onClick(View view) {
 
 
-
-
-
                 bookNameString = getString(bookName);
                 getMainActivity().onBookPurchaseButtonClicked(getView(), getString(bookName));
 
             }
         });
 
-        TextView textView = (TextView) rootView.findViewById(R.id.subscribedQuestion);
+ /*       TextView textView = (TextView) rootView.findViewById(R.id.subscribedQuestion);
         if (isSubscribed()) {
             textView.setText("You have subscribed you LEGEND!!");
         } else
             textView.setText("No subscription");
+             */
+
         return rootView;
-        /*}*/
+
     }
 
 
