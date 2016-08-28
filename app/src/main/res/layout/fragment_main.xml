@@ -44,7 +44,7 @@
                     android:textColor="#3c3c3c"
                     android:layout_weight="0.9
                     "/>
-                <com.learn.howtodraw.draw.FontA.TextAwesome
+<!--                <com.learn.howtodraw.draw.FontA.TextAwesome
                     android:id="@+id/ticklock1"
                     android:layout_width="38dp"
                     android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp"
                     android:layout_weight="0.1"
-                    android:layout_marginRight="15dp" />
+                    android:layout_marginRight="15dp" />-->
             </LinearLayout>
 
 
@@ -110,6 +110,12 @@
                         android:layout_height="1dp"
                         android:background="#bababa" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
                     <TextView
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
@@ -117,7 +123,25 @@
                         android:text="Level 3"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
-                        android:textColor="#3c3c3c" />
+                        android:textColor="#3c3c3c"
+                        android:layout_weight="0.95"/>
+
+
+                    <com.learn.howtodraw.draw.FontA.TextAwesome
+                        android:id="@+id/ticklock2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/fa_check"
+                        android:textAlignment="gravity"
+                        android:paddingTop="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.05"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/secondary"
@@ -155,14 +179,38 @@
                         android:layout_height="1dp"
                         android:background="#bababa" />
 
-                    <TextView
-                        android:id="@+id/primary"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Level 2"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="2dp"
-                        android:textColor="#3c3c3c" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Level 2"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="2dp"
+                            android:textColor="#3c3c3c"
+                            android:layout_weight="0.95"/>
+
+
+                        <com.learn.howtodraw.draw.FontA.TextAwesome
+                            android:id="@+id/ticklock2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/fa_check"
+                            android:textAlignment="gravity"
+                            android:paddingTop="10dp"
+                            android:gravity="right"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.05"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/secondary"
@@ -209,14 +257,38 @@
                         android:layout_height="1dp"
                         android:background="#bababa" />
 
-                    <TextView
-                        android:id="@+id/primary"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Level 1"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="2dp"
-                        android:textColor="#3c3c3c" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Level 1"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="2dp"
+                            android:textColor="#3c3c3c"
+                            android:layout_weight="0.95"/>
+
+
+                        <com.learn.howtodraw.draw.FontA.TextAwesome
+                            android:id="@+id/ticklock2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/fa_check"
+                            android:textAlignment="gravity"
+                            android:paddingTop="10dp"
+                            android:gravity="right"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.05"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/secondary"
@@ -253,14 +325,38 @@
                         android:layout_height="1dp"
                         android:background="#bababa" />
 
-                    <TextView
-                        android:id="@+id/primary"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Level 3"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="2dp"
-                        android:textColor="#3c3c3c" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Level 3"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="2dp"
+                            android:textColor="#3c3c3c"
+                            android:layout_weight="0.95"/>
+
+
+                        <com.learn.howtodraw.draw.FontA.TextAwesome
+                            android:id="@+id/ticklock2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/fa_check"
+                            android:textAlignment="gravity"
+                            android:paddingTop="10dp"
+                            android:gravity="right"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.05"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/secondary"
@@ -307,7 +403,7 @@
                     android:paddingTop="15dp"
                     android:textColor="#3c3c3c"
                     android:layout_weight="0.9"/>
-                <com.learn.howtodraw.draw.FontA.TextAwesome
+<!--                <com.learn.howtodraw.draw.FontA.TextAwesome
                     android:id="@+id/ticklock2"
                     android:layout_width="38dp"
                     android:layout_height="wrap_content"
@@ -319,12 +415,8 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp"
                     android:layout_weight="0.1"
-                    android:layout_marginRight="15dp" />
+                    android:layout_marginRight="15dp" />-->
             </LinearLayout>
-
-
-
-
 
 
 
