@@ -63,6 +63,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public boolean isSubscribed(){
         return mSubscribed;
     }
+    public boolean hasBook1(){return mPurchasedBook1;}
+    public boolean hasBook2(){return mPurchasedBook2;}
+    public boolean hasBook3(){return mPurchasedBook3;}
+    public boolean hasBook4(){return mPurchasedBook4;}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -244,7 +248,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
                 case 2:
                     Log.d("case 2", "Entering Pages");
-                    return ThirdFragment.newInstance(R.array.bookAllcardtext1, R.array.bookAllPageIds, R.array.bookAllcardimages);
+                    return ThirdFragment.newInstance(R.array.bookAllcardtext1, R.array.bookAllPageIds, R.array.bookAllcardimages, R.array.bookAllbooks);
             }
             return null;
         }

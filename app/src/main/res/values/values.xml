@@ -638,6 +638,32 @@
         <item>book4Page2</item>
     </string-array>
 
+    <string-array name="bookAllbooks">
+        <item>book1</item>
+        <item>book1</item>
+        <item>book1</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book2</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book3</item>
+        <item>book4</item>
+        <item>book4</item>
+    </string-array>
+
+
+
+
+
 
 
 

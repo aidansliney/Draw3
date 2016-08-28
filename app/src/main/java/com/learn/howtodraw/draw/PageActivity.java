@@ -72,6 +72,7 @@ public class PageActivity extends AppCompatActivity {
         });
 
         View previousImage2 = findViewById(com.learn.howtodraw.draw.R.id.previousImage2);
+        assert previousImage2 != null;
         previousImage2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -87,7 +88,6 @@ public class PageActivity extends AppCompatActivity {
                     ImageView imageView = (ImageView) findViewById(R.id.slideImage);
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[pageCounter]);
-
 
                     TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
                     String pNumber = String.valueOf(pageCounter);
@@ -136,7 +136,6 @@ public class PageActivity extends AppCompatActivity {
                     // ((BitmapDrawable)imageView.getDrawable()).getBitmap().recycle();
                     imageView.setImageResource(bookSlides[pageCounter]);
 
-
                     TextView pageNumber = (TextView)findViewById(R.id.pageNumber);
                     String pNumber = String.valueOf(pageCounter);
                     pageNumber.setText(pNumber);
@@ -169,10 +168,7 @@ public class PageActivity extends AppCompatActivity {
             public void onSwipeBottom() {
               //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
-
         });
-
-
     }
 
     static final int REQUEST_TAKE_PHOTO = 1;
@@ -192,12 +188,8 @@ public class PageActivity extends AppCompatActivity {
                 shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out my drawing. I learned how to draw it from http://www.google.com");
                 shareIntent.setType("image/*");
                 startActivity(Intent.createChooser(shareIntent, "Share images to.."));
-
-
-
         }
     }
-
 
     private void dispatchTakePictureIntent() {
 
@@ -222,8 +214,6 @@ public class PageActivity extends AppCompatActivity {
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
-
-
     }
 
     String mCurrentPhotoPath;

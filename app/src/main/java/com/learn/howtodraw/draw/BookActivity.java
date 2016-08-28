@@ -1,6 +1,5 @@
 package com.learn.howtodraw.draw;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -15,26 +14,17 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.learn.howtodraw.draw.util.IabHelper;
-
 public class BookActivity extends AppCompatActivity  {
-
 
     public Boolean bookPurchasedLock;
     public String bookName;
-
-
-
-
     public Boolean isUnlocked(){
 
         // Calling Application class (see application tag in AndroidManifest.xml)
         final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
 
-
         //check what page we are on and if it is purchased
         if (bookName.equals("book1"))
-
             bookPurchasedLock = globalVariable.getbook1bought();;
           //  bookPurchasedLock = mPurchasedBook1;
         if (bookName.equals("book2"))
@@ -66,11 +56,9 @@ public class BookActivity extends AppCompatActivity  {
                 tickIcon[i] = R.string.fa_check;
             else
                 tickIcon[i] = R.string.fa_lock;
-
         }
 
         final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds, tickIcon);
-
 
         //set the grid
         ExpandableGridView gridView = (ExpandableGridView) findViewById(R.id.grid);
@@ -81,10 +69,8 @@ public class BookActivity extends AppCompatActivity  {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
                 // see if the user should have access to the content
                 if (isUnlocked())  { // this  works
-
                     String pageId = (String) adapter.getItem(position);
                     int slidesID = getResources().getIdentifier(pageId + "Slides", "array", getClass().getPackage().getName());
                     // showToast(20000, cardText1[+position] );
@@ -107,22 +93,11 @@ public class BookActivity extends AppCompatActivity  {
             }
         });
 
-
-
     }
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-
-
-
-
-
         // Change the title on the main screen
         setTitle("");
         super.onCreate(savedInstanceState);

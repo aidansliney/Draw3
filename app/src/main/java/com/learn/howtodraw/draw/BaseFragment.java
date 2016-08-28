@@ -20,6 +20,20 @@ public class BaseFragment extends DialogFragment {
         return getMainActivity().isSubscribed();
     }
 
+    public boolean hasBook1(){
+        return getMainActivity().hasBook1();
+    }
+
+    public boolean hasBook2(){
+        return getMainActivity().hasBook2();
+    }
+    public boolean hasBook3(){
+        return getMainActivity().hasBook3();
+    }
+    public boolean hasBook4(){
+        return getMainActivity().hasBook4();
+    }
+
 
 
     public MainActivity getMainActivity(){

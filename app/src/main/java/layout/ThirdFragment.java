@@ -7,20 +7,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 
 import com.learn.howtodraw.draw.BaseFragment;
-import com.learn.howtodraw.draw.BookActivity;
 import com.learn.howtodraw.draw.CustomGrid;
 import com.learn.howtodraw.draw.ExpandableGridView;
+import com.learn.howtodraw.draw.MyDialogFragment;
 import com.learn.howtodraw.draw.PageActivity;
 import com.learn.howtodraw.draw.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -29,8 +28,14 @@ import com.learn.howtodraw.draw.R;
  * Use the {@link ThirdFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+
 public class ThirdFragment extends BaseFragment {
 
+
+    boolean hasPurchased;
+    int bookThumb;
+    int bookName;
 
     public ThirdFragment() {
         // Required empty public constructor
@@ -43,13 +48,16 @@ public class ThirdFragment extends BaseFragment {
      * @return A new instance of fragment BrowseFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ThirdFragment newInstance(int param1, int param2, int param3) {
+    public static ThirdFragment newInstance(int param1, int param2, int param3, int param4) {
         ThirdFragment fragment = new ThirdFragment();
         Bundle args = new Bundle();
         args.putInt("cardText1Id", param1);
         args.putInt("bookPageIds", param2);
         args.putInt("cardImageId", param3);
-        //args.putInt("bookSlides", param4);
+        args.putInt("booksBooks", param4); //the book the page belongs to
+
+
+
 
         fragment.setArguments(args);
         return fragment;
@@ -58,9 +66,9 @@ public class ThirdFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_third, container, false);
         return rootView;
-
     }
 
     @Override
@@ -71,12 +79,36 @@ public class ThirdFragment extends BaseFragment {
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getArguments().getInt("cardText1Id"));
         final String[] bookPageIds = getResources().getStringArray(getArguments().getInt("bookPageIds"));
+        final String[] booksBook = getResources().getStringArray(getArguments().getInt("booksBooks"));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getArguments().getInt("cardImageId"));
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-            tickIcon[i] = R.string.fa_check;
+
+
+
+            if (booksBook[i].equals("book1"))
+            {
+                hasPurchased = hasBook1();
+            }
+            if (booksBook[i].equals("book2"))
+            {
+                hasPurchased = hasBook2();
+            }
+            if (booksBook[i].equals("book3"))
+            {
+                hasPurchased = hasBook3();
+            }
+            if (booksBook[i].equals("book4"))
+            {
+                hasPurchased = hasBook4();
+            }
+
+            if(hasPurchased)
+                tickIcon[i] = R.string.fa_check;
+            else
+                tickIcon[i] = R.string.fa_lock;
 
         }
         final CustomGrid adapter = new CustomGrid(getActivity(), cardText1, cardImage, bookPageIds, tickIcon);
@@ -89,15 +121,53 @@ public class ThirdFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pageId = (String) adapter.getItem(position);
-                Log.d("pageID",pageId);
-                int slidesID = getActivity().getResources().getIdentifier(pageId + "Slides", "array", getContext().getPackageName());
-                Log.d("this is ","" + slidesID);
-                // showToast(20000, cardText1[+position] );
-                // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getActivity(),PageActivity.class);
-                Log.d("hello" + slidesID, "" );
-                intent.putExtra("bookSlides", slidesID);
-                startActivity(intent);
+
+
+                if (booksBook[position].equals("book1"))
+                {
+                    hasPurchased = hasBook1();
+                    bookThumb = R.drawable.book1cover;
+                    bookName = R.string.book1heading1;
+                }
+                if (booksBook[position].equals("book2"))
+                {
+                    hasPurchased = hasBook2();
+                    bookThumb = R.drawable.book2cover;
+                    bookName = R.string.book2heading1;
+                }
+                if (booksBook[position].equals("book3"))
+                {
+                    hasPurchased = hasBook3();
+                    bookThumb = R.drawable.book3cover;
+                    bookName = R.string.book3heading1;
+                }
+                if (booksBook[position].equals("book4"))
+                {
+                    hasPurchased = hasBook4();
+                    bookThumb = R.drawable.book4cover;
+                    bookName = R.string.book4heading1;
+                }
+
+                if(hasPurchased)
+                {
+                    int slidesID = getActivity().getResources().getIdentifier(pageId + "Slides", "array", getContext().getPackageName());
+                    Intent intent = new Intent(getActivity(),PageActivity.class);
+                    intent.putExtra("bookSlides", slidesID);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("bookThumb", bookThumb);
+                    bundle.putInt("bookName", bookName);
+
+                    FragmentManager fm = getFragmentManager();
+                    MyDialogFragment dialogFragment = new MyDialogFragment();
+                    dialogFragment.setArguments(bundle);
+                    dialogFragment.show(fm, getString(R.string.menu_subscribe));
+                }
+
+
             }
         });
 
