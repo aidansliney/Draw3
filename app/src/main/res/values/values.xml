@@ -508,16 +508,32 @@
     <string-array name="book4cardtext1">
         <item>Flex Up</item>
         <item>Flex Down</item>
+        <item>Side Flex</item>
+        <item>Begin Flex</item>
+        <item>Air Flex</item>
+        <item>Arm Cross</item>
+        <item>Side View Flex</item>
     </string-array>
 
     <integer-array name="book4cardimages">
         <item>@drawable/maflexa21</item>
         <item>@drawable/maflexb19</item>
+        <item>@drawable/maflexc18</item>
+        <item>@drawable/maflexd18</item>
+        <item>@drawable/maflexe19</item>
+        <item>@drawable/maflexf20</item>
+        <item>@drawable/maflexg17</item>
 
     </integer-array>
     <string-array name="book4PageIds">
         <item>book4Page1</item>
         <item>book4Page2</item>
+        <item>book4Page3</item>
+        <item>book4Page4</item>
+        <item>book4Page5</item>
+        <item>book4Page6</item>
+        <item>book4Page7</item>
+
     </string-array>
 
     <integer-array name="book4Page1Slides">
@@ -568,6 +584,340 @@
         <item>@drawable/maflexb19</item>
     </integer-array>
 
+    <integer-array name="book4Page3Slides">
+        <item>@drawable/maflexc01</item>
+        <item>@drawable/maflexc02</item>
+        <item>@drawable/maflexc03</item>
+        <item>@drawable/maflexc04</item>
+        <item>@drawable/maflexc05</item>
+        <item>@drawable/maflexc06</item>
+        <item>@drawable/maflexc07</item>
+        <item>@drawable/maflexc08</item>
+        <item>@drawable/maflexc09</item>
+        <item>@drawable/maflexc10</item>
+        <item>@drawable/maflexc11</item>
+        <item>@drawable/maflexc12</item>
+        <item>@drawable/maflexc13</item>
+        <item>@drawable/maflexc14</item>
+        <item>@drawable/maflexc15</item>
+        <item>@drawable/maflexc16</item>
+        <item>@drawable/maflexc17</item>
+        <item>@drawable/maflexc18</item>
+    </integer-array>
+
+    <integer-array name="book4Page4Slides">
+        <item>@drawable/maflexd01</item>
+        <item>@drawable/maflexd02</item>
+        <item>@drawable/maflexd03</item>
+        <item>@drawable/maflexd04</item>
+        <item>@drawable/maflexd05</item>
+        <item>@drawable/maflexd06</item>
+        <item>@drawable/maflexd07</item>
+        <item>@drawable/maflexd08</item>
+        <item>@drawable/maflexd09</item>
+        <item>@drawable/maflexd10</item>
+        <item>@drawable/maflexd11</item>
+        <item>@drawable/maflexd12</item>
+        <item>@drawable/maflexd13</item>
+        <item>@drawable/maflexd14</item>
+        <item>@drawable/maflexd15</item>
+        <item>@drawable/maflexd16</item>
+        <item>@drawable/maflexd17</item>
+        <item>@drawable/maflexd18</item>
+    </integer-array>
+
+    <integer-array name="book4Page5Slides">
+        <item>@drawable/maflexe01</item>
+        <item>@drawable/maflexe02</item>
+        <item>@drawable/maflexe03</item>
+        <item>@drawable/maflexe04</item>
+        <item>@drawable/maflexe05</item>
+        <item>@drawable/maflexe06</item>
+        <item>@drawable/maflexe07</item>
+        <item>@drawable/maflexe08</item>
+        <item>@drawable/maflexe09</item>
+        <item>@drawable/maflexe10</item>
+        <item>@drawable/maflexe11</item>
+        <item>@drawable/maflexe12</item>
+        <item>@drawable/maflexe13</item>
+        <item>@drawable/maflexe14</item>
+        <item>@drawable/maflexe15</item>
+        <item>@drawable/maflexe16</item>
+        <item>@drawable/maflexe17</item>
+        <item>@drawable/maflexe18</item>
+        <item>@drawable/maflexe19</item>
+    </integer-array>
+
+    <integer-array name="book4Page6Slides">
+        <item>@drawable/maflexf01</item>
+        <item>@drawable/maflexf02</item>
+        <item>@drawable/maflexf03</item>
+        <item>@drawable/maflexf04</item>
+        <item>@drawable/maflexf05</item>
+        <item>@drawable/maflexf06</item>
+        <item>@drawable/maflexf07</item>
+        <item>@drawable/maflexf08</item>
+        <item>@drawable/maflexf09</item>
+        <item>@drawable/maflexf10</item>
+        <item>@drawable/maflexf11</item>
+        <item>@drawable/maflexf12</item>
+        <item>@drawable/maflexf13</item>
+        <item>@drawable/maflexf14</item>
+        <item>@drawable/maflexf15</item>
+        <item>@drawable/maflexf16</item>
+        <item>@drawable/maflexf17</item>
+        <item>@drawable/maflexf18</item>
+        <item>@drawable/maflexf19</item>
+        <item>@drawable/maflexf20</item>
+    </integer-array>
+
+    <integer-array name="book4Page7Slides">
+        <item>@drawable/maflexg01</item>
+        <item>@drawable/maflexg02</item>
+        <item>@drawable/maflexg03</item>
+        <item>@drawable/maflexg04</item>
+        <item>@drawable/maflexg05</item>
+        <item>@drawable/maflexg06</item>
+        <item>@drawable/maflexg07</item>
+        <item>@drawable/maflexg08</item>
+        <item>@drawable/maflexg09</item>
+        <item>@drawable/maflexg10</item>
+        <item>@drawable/maflexg11</item>
+        <item>@drawable/maflexg12</item>
+        <item>@drawable/maflexg13</item>
+        <item>@drawable/maflexg14</item>
+        <item>@drawable/maflexg15</item>
+        <item>@drawable/maflexg16</item>
+        <item>@drawable/maflexg17</item>
+    </integer-array>
+
+
+    <!-- BOOK 5 -->
+    <string name="book5">book5</string>
+    <array name="book5Build">
+        <item>@string/book5heading1</item>
+        <item>@string/book5heading2</item>
+        <item>@drawable/book5cover</item>
+        <item>@array/book5cardtext1</item>
+        <item>@array/book5cardimages</item>
+        <item>@array/book5PageIds</item>
+        <item>@drawable/book5coverinside</item>
+        <item>@string/book5</item>
+    </array>
+
+    <drawable name="book5cover">@drawable/midynamickickcoveriso</drawable>
+    <drawable name="book5coverinside">@drawable/midynamickickinsidecover</drawable>
+    <string name="book5heading1">Dymanic Kick</string>
+    <string name="book5heading2">Learn how to draw the dynamic kick</string>
+    <string-array name="book5cardtext1">
+        <item>Dynamic Kick 1</item>
+        <item>Dynamic Kick 2</item>
+        <item>Dynamic Kick 3</item>
+        <item>Dynamic Kick 4</item>
+        <item>Dynamic Kick 5</item>
+        <item>Dynamic Kick 6</item>
+        <item>Dynamic Kick 7</item>
+        <item>Dynamic Kick 8</item>
+    </string-array>
+
+    <integer-array name="book5cardimages">
+        <item>@drawable/midynamickicka0118</item>
+        <item>@drawable/midynamickicka0218</item>
+        <item>@drawable/midynamickicka0316</item>
+        <item>@drawable/midynamickicka0418</item>
+        <item>@drawable/midynamickicka0516</item>
+        <item>@drawable/midynamickicka0618</item>
+        <item>@drawable/midynamickicka0716</item>
+        <item>@drawable/midynamickicka0818</item>
+
+
+    </integer-array>
+    <string-array name="book5PageIds">
+        <item>book5Page1</item>
+        <item>book5Page2</item>
+        <item>book5Page3</item>
+        <item>book5Page4</item>
+        <item>book5Page5</item>
+        <item>book5Page6</item>
+        <item>book5Page7</item>
+        <item>book5Page8</item>
+
+    </string-array>
+
+    <integer-array name="book5Page1Slides">
+        <item>@drawable/midynamickicka0101</item>
+        <item>@drawable/midynamickicka0102</item>
+        <item>@drawable/midynamickicka0103</item>
+        <item>@drawable/midynamickicka0104</item>
+        <item>@drawable/midynamickicka0105</item>
+        <item>@drawable/midynamickicka0106</item>
+        <item>@drawable/midynamickicka0107</item>
+        <item>@drawable/midynamickicka0108</item>
+        <item>@drawable/midynamickicka0109</item>
+        <item>@drawable/midynamickicka0110</item>
+        <item>@drawable/midynamickicka0111</item>
+        <item>@drawable/midynamickicka0112</item>
+        <item>@drawable/midynamickicka0113</item>
+        <item>@drawable/midynamickicka0114</item>
+        <item>@drawable/midynamickicka0115</item>
+        <item>@drawable/midynamickicka0116</item>
+        <item>@drawable/midynamickicka0117</item>
+        <item>@drawable/midynamickicka0118</item>
+
+    </integer-array>
+
+    <integer-array name="book5Page2Slides">
+        <item>@drawable/midynamickicka0201</item>
+        <item>@drawable/midynamickicka0202</item>
+        <item>@drawable/midynamickicka0203</item>
+        <item>@drawable/midynamickicka0204</item>
+        <item>@drawable/midynamickicka0205</item>
+        <item>@drawable/midynamickicka0206</item>
+        <item>@drawable/midynamickicka0207</item>
+        <item>@drawable/midynamickicka0208</item>
+        <item>@drawable/midynamickicka0209</item>
+        <item>@drawable/midynamickicka0210</item>
+        <item>@drawable/midynamickicka0211</item>
+        <item>@drawable/midynamickicka0212</item>
+        <item>@drawable/midynamickicka0213</item>
+        <item>@drawable/midynamickicka0214</item>
+        <item>@drawable/midynamickicka0215</item>
+        <item>@drawable/midynamickicka0216</item>
+        <item>@drawable/midynamickicka0217</item>
+        <item>@drawable/midynamickicka0218</item>
+
+    </integer-array>
+
+    <integer-array name="book5Page3Slides">
+        <item>@drawable/midynamickicka0301</item>
+        <item>@drawable/midynamickicka0302</item>
+        <item>@drawable/midynamickicka0303</item>
+        <item>@drawable/midynamickicka0304</item>
+        <item>@drawable/midynamickicka0305</item>
+        <item>@drawable/midynamickicka0306</item>
+        <item>@drawable/midynamickicka0307</item>
+        <item>@drawable/midynamickicka0308</item>
+        <item>@drawable/midynamickicka0309</item>
+        <item>@drawable/midynamickicka0310</item>
+        <item>@drawable/midynamickicka0311</item>
+        <item>@drawable/midynamickicka0312</item>
+        <item>@drawable/midynamickicka0313</item>
+        <item>@drawable/midynamickicka0314</item>
+        <item>@drawable/midynamickicka0315</item>
+        <item>@drawable/midynamickicka0316</item>
+        <item>@drawable/midynamickicka0317</item>
+    </integer-array>
+
+    <integer-array name="book5Page4Slides">
+        <item>@drawable/midynamickicka0401</item>
+        <item>@drawable/midynamickicka0402</item>
+        <item>@drawable/midynamickicka0403</item>
+        <item>@drawable/midynamickicka0404</item>
+        <item>@drawable/midynamickicka0405</item>
+        <item>@drawable/midynamickicka0406</item>
+        <item>@drawable/midynamickicka0407</item>
+        <item>@drawable/midynamickicka0408</item>
+        <item>@drawable/midynamickicka0409</item>
+        <item>@drawable/midynamickicka0410</item>
+        <item>@drawable/midynamickicka0411</item>
+        <item>@drawable/midynamickicka0412</item>
+        <item>@drawable/midynamickicka0413</item>
+        <item>@drawable/midynamickicka0414</item>
+        <item>@drawable/midynamickicka0415</item>
+        <item>@drawable/midynamickicka0416</item>
+        <item>@drawable/midynamickicka0417</item>
+        <item>@drawable/midynamickicka0418</item>
+        <item>@drawable/midynamickicka0419</item>
+
+    </integer-array>
+
+    <integer-array name="book5Page5Slides">
+        <item>@drawable/midynamickicka0501</item>
+        <item>@drawable/midynamickicka0502</item>
+        <item>@drawable/midynamickicka0503</item>
+        <item>@drawable/midynamickicka0504</item>
+        <item>@drawable/midynamickicka0505</item>
+        <item>@drawable/midynamickicka0506</item>
+        <item>@drawable/midynamickicka0507</item>
+        <item>@drawable/midynamickicka0508</item>
+        <item>@drawable/midynamickicka0509</item>
+        <item>@drawable/midynamickicka0510</item>
+        <item>@drawable/midynamickicka0511</item>
+        <item>@drawable/midynamickicka0512</item>
+        <item>@drawable/midynamickicka0513</item>
+        <item>@drawable/midynamickicka0514</item>
+        <item>@drawable/midynamickicka0515</item>
+        <item>@drawable/midynamickicka0516</item>
+
+    </integer-array>
+
+    <integer-array name="book5Page6Slides">
+        <item>@drawable/midynamickicka0601</item>
+        <item>@drawable/midynamickicka0602</item>
+        <item>@drawable/midynamickicka0603</item>
+        <item>@drawable/midynamickicka0604</item>
+        <item>@drawable/midynamickicka0605</item>
+        <item>@drawable/midynamickicka0606</item>
+        <item>@drawable/midynamickicka0607</item>
+        <item>@drawable/midynamickicka0608</item>
+        <item>@drawable/midynamickicka0609</item>
+        <item>@drawable/midynamickicka0610</item>
+        <item>@drawable/midynamickicka0611</item>
+        <item>@drawable/midynamickicka0612</item>
+        <item>@drawable/midynamickicka0613</item>
+        <item>@drawable/midynamickicka0614</item>
+        <item>@drawable/midynamickicka0615</item>
+        <item>@drawable/midynamickicka0616</item>
+        <item>@drawable/midynamickicka0617</item>
+        <item>@drawable/midynamickicka0618</item>
+
+    </integer-array>
+
+    <integer-array name="book5Page7Slides">
+        <item>@drawable/midynamickicka0701</item>
+        <item>@drawable/midynamickicka0702</item>
+        <item>@drawable/midynamickicka0703</item>
+        <item>@drawable/midynamickicka0704</item>
+        <item>@drawable/midynamickicka0705</item>
+        <item>@drawable/midynamickicka0706</item>
+        <item>@drawable/midynamickicka0707</item>
+        <item>@drawable/midynamickicka0708</item>
+        <item>@drawable/midynamickicka0709</item>
+        <item>@drawable/midynamickicka0710</item>
+        <item>@drawable/midynamickicka0711</item>
+        <item>@drawable/midynamickicka0712</item>
+        <item>@drawable/midynamickicka0713</item>
+        <item>@drawable/midynamickicka0714</item>
+        <item>@drawable/midynamickicka0715</item>
+        <item>@drawable/midynamickicka0716</item>
+        <item>@drawable/midynamickicka0717</item>
+    </integer-array>
+
+    <integer-array name="book5Page8Slides">
+        <item>@drawable/midynamickicka0801</item>
+        <item>@drawable/midynamickicka0802</item>
+        <item>@drawable/midynamickicka0803</item>
+        <item>@drawable/midynamickicka0804</item>
+        <item>@drawable/midynamickicka0805</item>
+        <item>@drawable/midynamickicka0806</item>
+        <item>@drawable/midynamickicka0807</item>
+        <item>@drawable/midynamickicka0808</item>
+        <item>@drawable/midynamickicka0809</item>
+        <item>@drawable/midynamickicka0810</item>
+        <item>@drawable/midynamickicka0811</item>
+        <item>@drawable/midynamickicka0812</item>
+        <item>@drawable/midynamickicka0813</item>
+        <item>@drawable/midynamickicka0814</item>
+        <item>@drawable/midynamickicka0815</item>
+        <item>@drawable/midynamickicka0816</item>
+        <item>@drawable/midynamickicka0817</item>
+        <item>@drawable/midynamickicka0818</item>
+    </integer-array>
+
+
+
+
+
 
     <!--all pages fragment-->
 
@@ -591,6 +941,19 @@
         <item>Level 3 - Arms</item>
         <item>Level 3 - Flex up</item>
         <item>Level 3 - Flex down</item>
+        <item>Level 3 - Side Flex</item>
+        <item>Level 3 - Begin Flex</item>
+        <item>Level 3 - Air Flex</item>
+        <item>Level 3 - Arm Cross</item>
+        <item>Level 3 - Side View Flex</item>
+        <item>Level 2 - Dynamic Kick 1</item>
+        <item>Level 2 - Dynamic Kick 2</item>
+        <item>Level 2 - Dynamic Kick 3</item>
+        <item>Level 2 - Dynamic Kick 4</item>
+        <item>Level 2 - Dynamic Kick 5</item>
+        <item>Level 2 - Dynamic Kick 6</item>
+        <item>Level 2 - Dynamic Kick 7</item>
+        <item>Level 2 - Dynamic Kick 8</item>
     </string-array>
 
 
@@ -613,7 +976,20 @@
         <item>@drawable/ma3_4foot07</item>
         <item>@drawable/ma3_4arms12</item>
         <item>@drawable/maflexa21</item>
-        <item>@drawable/maflexb19</item>
+        <item>@drawable/maflexb16</item>
+        <item>@drawable/maflexc16</item>
+        <item>@drawable/maflexd18</item>
+        <item>@drawable/maflexe12</item>
+        <item>@drawable/maflexf18</item>
+        <item>@drawable/maflexg16</item>
+        <item>@drawable/midynamickicka0117</item>
+        <item>@drawable/midynamickicka0217</item>
+        <item>@drawable/midynamickicka0317</item>
+        <item>@drawable/midynamickicka0417</item>
+        <item>@drawable/midynamickicka0516</item>
+        <item>@drawable/midynamickicka0617</item>
+        <item>@drawable/midynamickicka0717</item>
+        <item>@drawable/midynamickicka0817</item>
     </integer-array>
 
     <string-array name="bookAllPageIds">
@@ -636,6 +1012,19 @@
         <item>book3Page7</item>
         <item>book4Page1</item>
         <item>book4Page2</item>
+        <item>book4Page3</item>
+        <item>book4Page4</item>
+        <item>book4Page5</item>
+        <item>book4Page6</item>
+        <item>book4Page7</item>
+        <item>book5Page1</item>
+        <item>book5Page2</item>
+        <item>book5Page3</item>
+        <item>book5Page4</item>
+        <item>book5Page5</item>
+        <item>book5Page6</item>
+        <item>book5Page7</item>
+        <item>book5Page8</item>
     </string-array>
 
     <string-array name="bookAllbooks">
@@ -658,13 +1047,20 @@
         <item>book3</item>
         <item>book4</item>
         <item>book4</item>
+        <item>book4</item>
+        <item>book4</item>
+        <item>book4</item>
+        <item>book4</item>
+        <item>book4</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
+        <item>book5</item>
     </string-array>
-
-
-
-
-
-
 
 
 </resources>

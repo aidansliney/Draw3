@@ -30,9 +30,8 @@ public class BaseFragment extends DialogFragment {
     public boolean hasBook3(){
         return getMainActivity().hasBook3();
     }
-    public boolean hasBook4(){
-        return getMainActivity().hasBook4();
-    }
+    public boolean hasBook4(){return getMainActivity().hasBook4();}
+    public boolean hasBook5(){return getMainActivity().hasBook5();}
 
 
 

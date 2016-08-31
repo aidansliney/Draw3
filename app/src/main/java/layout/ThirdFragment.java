@@ -104,6 +104,10 @@ public class ThirdFragment extends BaseFragment {
             {
                 hasPurchased = hasBook4();
             }
+            if (booksBook[i].equals("book5"))
+            {
+                hasPurchased = hasBook5();
+            }
 
             if(hasPurchased)
                 tickIcon[i] = R.string.fa_check;
@@ -146,6 +150,12 @@ public class ThirdFragment extends BaseFragment {
                     hasPurchased = hasBook4();
                     bookThumb = R.drawable.book4cover;
                     bookName = R.string.book4;
+                }
+                if (booksBook[position].equals("book5"))
+                {
+                    hasPurchased = hasBook5();
+                    bookThumb = R.drawable.book5cover;
+                    bookName = R.string.book5;
                 }
 
                 if(hasPurchased)

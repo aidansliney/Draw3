@@ -13,16 +13,8 @@
         android:orderInCategory="100"
         android:title="About Draw"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/subscribe_settings"
-        android:orderInCategory="100"
-        android:title="Subscription Info"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/artist_settings"
-        android:orderInCategory="100"
-        android:title="Meet the Artist"
-        app:showAsAction="never" />
+
+
     <item
         android:id="@+id/rate_settings"
         android:orderInCategory="100"

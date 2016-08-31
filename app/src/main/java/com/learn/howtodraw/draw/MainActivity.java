@@ -67,6 +67,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public boolean hasBook2(){return mPurchasedBook2;}
     public boolean hasBook3(){return mPurchasedBook3;}
     public boolean hasBook4(){return mPurchasedBook4;}
+    public boolean hasBook5(){return mPurchasedBook5;}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,20 +117,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         Log.d("subscribed?", "" + mSubscribed);
 
-
-
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
-
-
-
 
 
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
@@ -207,13 +200,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             return true;
         }
 
-        if (id == R.id.subscribe_settings) {
+/*        if (id == R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
             MyDialogFragment dialogFragment = new MyDialogFragment();
             dialogFragment.show(fm, getString(R.string.menu_subscribe));
             menuSelected = "subscribe";
             return true;
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -346,6 +339,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (book.equals("book3"))
             launchInAppPurchaseFlow(this, SKU_BOOK3);
         if (book.equals("book4"))
+            launchInAppPurchaseFlow(this, SKU_BOOK4);
+        if (book.equals("book5"))
             launchInAppPurchaseFlow(this, SKU_BOOK4);
 
 

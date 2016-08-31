@@ -12,11 +12,28 @@ public class Constants {
 // In-app billing constants
 
 // SKUs for our products:
+
+    public static final String[] SKU_BOOK_ARRAY = {"book","book2","book3","book4","book5","book6"};
+
     public static final String SKU_PREMIUM = "book";
     public static final String SKU_BOOK1 = "book1"; //mPurchasedBook1
     public static final String SKU_BOOK2 = "book2";
     public static final String SKU_BOOK3 = "book3";
     public static final String SKU_BOOK4 = "book4";
+    public static final String SKU_BOOK5 = "book5";
+    public static final String SKU_BOOK6 = "book6";
+    public static final String SKU_BOOK7 = "book7";
+    public static final String SKU_BOOK8 = "book8";
+    public static final String SKU_BOOK9 = "book9";
+    public static final String SKU_BOOK10 = "book10";
+    public static final String SKU_BOOK11 = "book11";
+
+
+
+
+
+
+
 
     public static final String SKU_CONSUMABLE = "page";  // Consumable
 
@@ -38,7 +55,7 @@ public class Constants {
 
     /**
      */
-    public static final String LOG_IAB = "Trivial Drive IAB";
+    public static final String LOG_IAB = "IAB";
     /**
      */
 // Graphics for the gas gauge

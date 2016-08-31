@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'key'
+            keyAlias 'key_build_android'
             keyPassword 'mECOTIN5'
             storeFile file('/Users/aidansliney/version-control/key.jks')
             storePassword 'mECOTIN5'
@@ -25,6 +25,8 @@ android {
             lintOptions {
                 checkReleaseBuilds false
             }
+            debuggable true
+            signingConfig signingConfigs.config
         }
     }
     dexOptions {

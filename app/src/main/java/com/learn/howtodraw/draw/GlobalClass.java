@@ -14,6 +14,7 @@ public class GlobalClass extends Application {
     private boolean mBook2;
     private boolean mBook3;
     private boolean mBook4;
+    private boolean mBook5;
 
 
     public Boolean getbook1bought() {
@@ -40,12 +41,16 @@ public class GlobalClass extends Application {
         mBook3 = aName;
     }
 
-    public Boolean getbook4bought() {
-        return mBook4;
-    }
-
+    public Boolean getbook4bought() {return mBook4;}
     public void setbook4bought(Boolean aName) {
         mBook4 = aName;
+    }
+
+
+
+    public Boolean getbook5bought() {return mBook5;}
+    public void setbook5bought(Boolean aName) {
+        mBook5 = aName;
     }
 
 

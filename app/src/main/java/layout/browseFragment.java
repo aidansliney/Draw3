@@ -76,6 +76,7 @@ public class BrowseFragment extends Fragment  {
         LinkBooks.linkBook(R.id.layout_2b, R.array.book2Build, rootView, false,getActivity());
         LinkBooks.linkBook(R.id.layout_3b, R.array.book3Build, rootView, false, getActivity());
         LinkBooks.linkBook(R.id.layout_4b, R.array.book4Build, rootView, false, getActivity());
+        LinkBooks.linkBook(R.id.layout_5b, R.array.book5Build, rootView, false, getActivity());
         return rootView;
     }
 

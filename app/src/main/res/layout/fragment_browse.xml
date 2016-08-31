@@ -173,6 +173,46 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
 
+        <LinearLayout
+            android:id="@+id/layout_5b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/midynamickickcoveriso"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn how to draw the dynamic kick"
+                android:paddingLeft="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
     </LinearLayout>
 
 

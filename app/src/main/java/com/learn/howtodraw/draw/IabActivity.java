@@ -86,9 +86,21 @@ public abstract class IabActivity extends AppCompatActivity {
     // Does the user have book2?
     protected boolean mPurchasedBook2 = false;
     // Does the user have book3?
-    protected boolean mPurchasedBook3 = false;
+    protected boolean mPurchasedBook3 = true;
     // Does the user have book4?
     protected boolean mPurchasedBook4 = true;
+    // Does the user have book5?
+    protected boolean mPurchasedBook5 = true;
+    // Does the user have book6?
+    protected boolean mPurchasedBook6 = true;
+    // Does the user have book7?
+    protected boolean mPurchasedBook7 = true;
+    // Does the user have book8?
+    protected boolean mPurchasedBook8 = true;
+    // Does the user have book9?
+    protected boolean mPurchasedBook9 = true;
+    // Does the user have book10?
+    protected boolean mPurchasedBook10 = true;
 
     // Does the user have an active subscription to the infinite gas plan?
     protected  boolean mSubscribed = false;
@@ -106,6 +118,7 @@ public abstract class IabActivity extends AppCompatActivity {
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Query inventory finished.");
 
+
             // Have we been disposed of in the meantime? If so, quit.
             if (pIabHelper == null) return;
 
@@ -120,6 +133,8 @@ public abstract class IabActivity extends AppCompatActivity {
 
             // Call the methods
             onIabSetupSucceeded (pIabHelper, result, inventory);
+
+            Log.d("inventory", ""+inventory);
 
         }
     };
@@ -176,33 +191,39 @@ public abstract class IabActivity extends AppCompatActivity {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase successful.");
 
             if (purchase.getSku().equals (SKU_PREMIUM)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 0 purchased. Consuming it");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 0 purchased. No Consuming book ");
+               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
 
             } else if (purchase.getSku().equals (SKU_BOOK1)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 1 purchased. Consuming it");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 1 purchased. No Consuming book");
+                //pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
 
             } else if (purchase.getSku().equals (SKU_BOOK2)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 2 purchased. Consuming it");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 2 purchased. No Consuming book 2");
+                //pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
 
             } else if (purchase.getSku().equals (SKU_BOOK3)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. Consuming it");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. No Consuming book");
+               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
 
             } else if (purchase.getSku().equals (SKU_BOOK4)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. Consuming it");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 4 purchased. No Consuming book");
+              //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+            } else if (purchase.getSku().equals (SKU_BOOK5)) {
+                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 5 purchased. No Consuming book");
+                //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+
+
 
 
 
             } else if (purchase.getSku().equals (SKU_CONSUMABLE)) {
                 if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase is regular gas finished. Consuming it ...");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
             } else if (purchase.getSku().equals (SKU_SUBSCRIPTION)) {
                 if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase of infinite gase. Consuming it ...");
-                pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+              //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
             }
         }
     };
@@ -555,13 +576,24 @@ public abstract class IabActivity extends AppCompatActivity {
                     ArrayList<String> skusToBeListed = null;
                     if (showListedSkus) {
                         skusToBeListed = new ArrayList<String> ();
-                        skusToBeListed.add (SKU_PREMIUM);
-                        skusToBeListed.add (SKU_BOOK1);
-                        skusToBeListed.add (SKU_BOOK2);
-                        skusToBeListed.add (SKU_BOOK3);
-                        skusToBeListed.add (SKU_BOOK4);
-                        skusToBeListed.add (SKU_CONSUMABLE);
-                        skusToBeListed.add (SKU_SUBSCRIPTION);
+
+/*                        int counter = 0;
+                        while (counter <SKU_BOOK_ARRAY.length) {
+
+                            skusToBeListed.add(SKU_BOOK_ARRAY[counter]);
+                            counter++;
+                        }*/
+
+
+                       skusToBeListed.add(SKU_PREMIUM);
+                            skusToBeListed.add(SKU_BOOK1);
+                            skusToBeListed.add(SKU_BOOK2);
+                            skusToBeListed.add(SKU_BOOK3);
+                            skusToBeListed.add(SKU_BOOK4);
+                            skusToBeListed.add(SKU_CONSUMABLE);
+                            skusToBeListed.add(SKU_SUBSCRIPTION);
+
+
                     }
                     pIabHelper.queryInventoryAsync (true, skusToBeListed, mGotInventoryListener);
                 }
@@ -651,7 +683,6 @@ public abstract class IabActivity extends AppCompatActivity {
         Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
         mPurchasedBook = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
 
-
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook ? "PREMIUM" : "NOT PREMIUM"));
 
         // Have we purchased book 1
@@ -672,11 +703,21 @@ public abstract class IabActivity extends AppCompatActivity {
         globalVariable.setbook3bought(mPurchasedBook3);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook3 ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
 
-        // Have we purchased book 1
+        // Have we purchased book 4
         Purchase book4Purchase = inventory.getPurchase(SKU_BOOK4);
         mPurchasedBook4 = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
         globalVariable.setbook4bought(mPurchasedBook4);  //Set Book
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook4 ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
+
+        // Have we purchased book 5
+        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK5);
+        mPurchasedBook5 = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
+        globalVariable.setbook5bought(mPurchasedBook5);  //Set Book
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook5 ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));
+
+
+
+
 
         // Do we have the infinite gas plan?
         Purchase subscriptionPurchase = inventory.getPurchase(SKU_SUBSCRIPTION);
