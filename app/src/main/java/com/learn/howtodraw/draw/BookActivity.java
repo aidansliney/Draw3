@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import static com.learn.howtodraw.draw.Constants.*;
 
 public class BookActivity extends MainActivity {
 
@@ -25,16 +26,16 @@ public class BookActivity extends MainActivity {
 
         //check what page we are on and if it is purchased
         if (bookName.equals("book1"))
-            bookPurchasedLock = globalVariable.getbook1bought();
+            bookPurchasedLock = mPurchasedBook1;
           //  bookPurchasedLock = mPurchasedBook1;
         if (bookName.equals("book2"))
-            bookPurchasedLock = globalVariable.getbook2bought();
+            bookPurchasedLock = mPurchasedBook2;
         if (bookName.equals("book3"))
-            bookPurchasedLock = globalVariable.getbook3bought();
+            bookPurchasedLock = mPurchasedBook3;
         if (bookName.equals("book4"))
-            bookPurchasedLock = globalVariable.getbook4bought();
+            bookPurchasedLock = mPurchasedBook4;
         if (bookName.equals("book5"))
-            bookPurchasedLock = globalVariable.getbook5bought();
+            bookPurchasedLock = mPurchasedBook5;
         if (bookPurchasedLock)
             return true;
         else

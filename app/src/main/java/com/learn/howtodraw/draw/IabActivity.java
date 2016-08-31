@@ -79,18 +79,10 @@ public abstract class IabActivity extends AppCompatActivity {
     protected  boolean mPurchasedBook = false;
 
 
-    // Does the user have book1?
-    protected boolean mPurchasedBook1 = false;
 
 
-    // Does the user have book2?
-    protected boolean mPurchasedBook2 = false;
-    // Does the user have book3?
-    protected boolean mPurchasedBook3 = true;
-    // Does the user have book4?
-    protected boolean mPurchasedBook4 = true;
-    // Does the user have book5?
-    protected boolean mPurchasedBook5 = true;
+
+
     // Does the user have book6?
     protected boolean mPurchasedBook6 = true;
     // Does the user have book7?
@@ -188,42 +180,18 @@ public abstract class IabActivity extends AppCompatActivity {
                 return;
             }
 
+
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase successful.");
 
-            if (purchase.getSku().equals (SKU_PREMIUM)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 0 purchased. No Consuming book ");
-               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
 
-            } else if (purchase.getSku().equals (SKU_BOOK1)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 1 purchased. No Consuming book");
-                //pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+            int counter = 0; // iterate through the books for sale
+            while (counter <SKU_BOOK_ARRAY.length) {
 
-            } else if (purchase.getSku().equals (SKU_BOOK2)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 2 purchased. No Consuming book 2");
-                //pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                if (purchase.getSku().equals (SKU_BOOK_ARRAY[counter])) {
+                    if (AppConfig.DEBUG) Log.d (LOG_TAG, SKU_BOOK_ARRAY[counter]+ " Book 0 purchased. No Consuming book ");
 
-            } else if (purchase.getSku().equals (SKU_BOOK3)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 3 purchased. No Consuming book");
-               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
+                }
 
-            } else if (purchase.getSku().equals (SKU_BOOK4)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 4 purchased. No Consuming book");
-              //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
-
-            } else if (purchase.getSku().equals (SKU_BOOK5)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Book 5 purchased. No Consuming book");
-                //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
-
-
-
-
-
-            } else if (purchase.getSku().equals (SKU_CONSUMABLE)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase is regular gas finished. Consuming it ...");
-               // pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
-            } else if (purchase.getSku().equals (SKU_SUBSCRIPTION)) {
-                if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase of infinite gase. Consuming it ...");
-              //  pIabHelper.consumeAsync (purchase, mConsumeFinishedListener);
             }
         }
     };
@@ -585,7 +553,7 @@ public abstract class IabActivity extends AppCompatActivity {
                         }
 
 
-                       skusToBeListed.add(SKU_PREMIUM);
+
                            /* skusToBeListed.add(SKU_BOOK1);
                             skusToBeListed.add(SKU_BOOK2);
                             skusToBeListed.add(SKU_BOOK3);
@@ -674,50 +642,41 @@ public abstract class IabActivity extends AppCompatActivity {
         // Check for the in-app purchases of items.
         // (Do this here in the superclass of all the other classes so it is done only once.
         //  Note that several global variables are set here.)
-        //
-
-        // Calling Application class (see application tag in AndroidManifest.xml)
-        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
 
 
-        // Do we have the premium upgrade?
-        Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
-        mPurchasedBook = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
+//TODO AS:::: put mPs into and Array and cut this down to one while loop
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook ? "PREMIUM" : "NOT PREMIUM"));
 
         // Have we purchased book 1
-        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK1);
+        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[0]);
         mPurchasedBook1 = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
-        globalVariable.setbook1bought(mPurchasedBook1);  //Set Book
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook1 ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
 
         // Have we purchased book 2
-        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK2);
+        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[1]);
         mPurchasedBook2 = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
-        globalVariable.setbook2bought(mPurchasedBook2);  //Set Book
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook2 ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
 
         // Have we purchased book 3
-        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK3);
+        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[2]);
         mPurchasedBook3 = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
-        globalVariable.setbook3bought(mPurchasedBook3);  //Set Book
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook3 ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
 
         // Have we purchased book 4
-        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK4);
+        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[3]);
         mPurchasedBook4 = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
-        globalVariable.setbook4bought(mPurchasedBook4);  //Set Book
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook4 ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
 
         // Have we purchased book 5
-        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK5);
+        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[4]);
         mPurchasedBook5 = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
-        globalVariable.setbook5bought(mPurchasedBook5);  //Set Book
+
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBook5 ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));
-
-
-
 
 
         // Do we have the infinite gas plan?
@@ -725,16 +684,7 @@ public abstract class IabActivity extends AppCompatActivity {
         mSubscribed = (subscriptionPurchase != null &&
                 verifyDeveloperPayload(subscriptionPurchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribed ? "HAS" : "DOES NOT HAVE")
-                + " infinite gas subscription.");
-        //if (mSubscribed) mTank = TANK_MAX;
-
-        // Check for gas delivery -- if we own gas, we should fill up the tank immediately
-        Purchase gasPurchase = inventory.getPurchase(SKU_CONSUMABLE);
-        if (gasPurchase != null && verifyDeveloperPayload(gasPurchase)) {
-            if (AppConfig.DEBUG) Log.d (LOG_TAG, "We have gas. Consuming it.");
-            pIabHelper.consumeAsync (gasPurchase, mConsumeFinishedListener);
-            return;
-        }
+                + " subscription.");
 
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "IabActivity.onIabSetupSucceeded completed. Subclass should update UI.");

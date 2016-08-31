@@ -55,19 +55,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     // Current amount of gas in tank, in units
     protected int mTank;
 
-
-
     public void onFragmentInteraction(Uri uri) {
     }
 
     public boolean isSubscribed(){
         return mSubscribed;
     }
-    public boolean hasBook1(){return mPurchasedBook1;}
-    public boolean hasBook2(){return mPurchasedBook2;}
-    public boolean hasBook3(){return mPurchasedBook3;}
-    public boolean hasBook4(){return mPurchasedBook4;}
-    public boolean hasBook5(){return mPurchasedBook5;}
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -329,17 +323,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         Log.d(TAG, "Purchase button clicked; launching purchase flow for a book.");
         setWaitScreen(true);
 
-        if (book.equals("book1"))
-            launchInAppPurchaseFlow(this, SKU_BOOK1);
-        if (book.equals("book2"))
-            launchInAppPurchaseFlow(this, SKU_BOOK2);
-        if (book.equals("book3"))
-            launchInAppPurchaseFlow(this, SKU_BOOK3);
-        if (book.equals("book4"))
-            launchInAppPurchaseFlow(this, SKU_BOOK4);
-        if (book.equals("book5"))
-            launchInAppPurchaseFlow(this, SKU_BOOK5);
-
+            launchInAppPurchaseFlow(this, book);
 
         //launchInAppPurchaseFlow(this, SKU_PREMIUM);
 

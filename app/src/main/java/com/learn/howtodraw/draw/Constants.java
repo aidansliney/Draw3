@@ -11,18 +11,22 @@ public class Constants {
      */
 // In-app billing constants
 
+    // Does the user have book1?
+   public static boolean mPurchasedBook1 = false;
+    // Does the user have book2?
+    public static boolean mPurchasedBook2 = false;
+    // Does the user have book3?
+    public static boolean mPurchasedBook3 = true;
+    // Does the user have book4?
+    public static boolean mPurchasedBook4 = true;
+    // Does the user have book5?
+   public static boolean mPurchasedBook5 = true;
+
+
+
 // SKUs for our products:
 
-    public static final String[] SKU_BOOK_ARRAY = {"book","book2","book3","book4","book5"};
-
-    public static final String SKU_PREMIUM = "book";
-    public static final String SKU_BOOK1 = "book1"; //mPurchasedBook1
-    public static final String SKU_BOOK2 = "book2";
-    public static final String SKU_BOOK3 = "book3";
-    public static final String SKU_BOOK4 = "book4";
-    public static final String SKU_BOOK5 = "book5";
-
-
+    public static final String[] SKU_BOOK_ARRAY = {"book1","book2","book3","book4","book5"};
 
 
     public static final String SKU_CONSUMABLE = "page";  // Consumable

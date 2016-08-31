@@ -20,6 +20,8 @@ import com.learn.howtodraw.draw.ExpandableGridView;
 import com.learn.howtodraw.draw.MyDialogFragment;
 import com.learn.howtodraw.draw.PageActivity;
 import com.learn.howtodraw.draw.R;
+
+import static com.learn.howtodraw.draw.Constants.*;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -90,23 +92,23 @@ public class ThirdFragment extends BaseFragment {
 
             if (booksBook[i].equals("book1"))
             {
-                hasPurchased = hasBook1();
+                hasPurchased = mPurchasedBook1;
             }
             if (booksBook[i].equals("book2"))
             {
-                hasPurchased = hasBook2();
+                hasPurchased = mPurchasedBook2;
             }
             if (booksBook[i].equals("book3"))
             {
-                hasPurchased = hasBook3();
+                hasPurchased = mPurchasedBook3;
             }
             if (booksBook[i].equals("book4"))
             {
-                hasPurchased = hasBook4();
+                hasPurchased = mPurchasedBook4;
             }
             if (booksBook[i].equals("book5"))
             {
-                hasPurchased = hasBook5();
+                hasPurchased = mPurchasedBook5;
             }
 
             if(hasPurchased)
@@ -129,31 +131,31 @@ public class ThirdFragment extends BaseFragment {
 
                 if (booksBook[position].equals("book1"))
                 {
-                    hasPurchased = hasBook1();
+                    hasPurchased = mPurchasedBook1;
                     bookThumb = R.drawable.book1cover;
                     bookName = R.string.book1;
                 }
                 if (booksBook[position].equals("book2"))
                 {
-                    hasPurchased = hasBook2();
+                    hasPurchased = mPurchasedBook2;
                     bookThumb = R.drawable.book2cover;
                     bookName = R.string.book2;
                 }
                 if (booksBook[position].equals("book3"))
                 {
-                    hasPurchased = hasBook3();
+                    hasPurchased = mPurchasedBook3;
                     bookThumb = R.drawable.book3cover;
                     bookName = R.string.book3;
                 }
                 if (booksBook[position].equals("book4"))
                 {
-                    hasPurchased = hasBook4();
+                    hasPurchased = mPurchasedBook4;
                     bookThumb = R.drawable.book4cover;
                     bookName = R.string.book4;
                 }
                 if (booksBook[position].equals("book5"))
                 {
-                    hasPurchased = hasBook5();
+                    hasPurchased = mPurchasedBook5;
                     bookThumb = R.drawable.book5cover;
                     bookName = R.string.book5;
                 }
