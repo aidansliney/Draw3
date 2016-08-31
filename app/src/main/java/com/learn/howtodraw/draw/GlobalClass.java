@@ -62,10 +62,7 @@ public class GlobalClass extends Application {
         name = aName;
     }
 
-    public String getEmail() {
 
-        return email;
-    }
 
     public void setEmail(String aEmail) {
 

@@ -577,19 +577,20 @@ public abstract class IabActivity extends AppCompatActivity {
                     if (showListedSkus) {
                         skusToBeListed = new ArrayList<String> ();
 
-/*                        int counter = 0;
+                       int counter = 0;
                         while (counter <SKU_BOOK_ARRAY.length) {
 
                             skusToBeListed.add(SKU_BOOK_ARRAY[counter]);
                             counter++;
-                        }*/
+                        }
 
 
                        skusToBeListed.add(SKU_PREMIUM);
-                            skusToBeListed.add(SKU_BOOK1);
+                           /* skusToBeListed.add(SKU_BOOK1);
                             skusToBeListed.add(SKU_BOOK2);
                             skusToBeListed.add(SKU_BOOK3);
                             skusToBeListed.add(SKU_BOOK4);
+                             skusToBeListed.add(SKU_BOOK5);*/
                             skusToBeListed.add(SKU_CONSUMABLE);
                             skusToBeListed.add(SKU_SUBSCRIPTION);
 

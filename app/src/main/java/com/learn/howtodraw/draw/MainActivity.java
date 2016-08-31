@@ -76,9 +76,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         // Calling Application class (see application tag in AndroidManifest.xml)
         final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
-        //Set name and email in global/application context
-        globalVariable.setName("Android Example context variable");
-        globalVariable.setEmail("xxxxxx@aaaa.com");
 
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
@@ -341,7 +338,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (book.equals("book4"))
             launchInAppPurchaseFlow(this, SKU_BOOK4);
         if (book.equals("book5"))
-            launchInAppPurchaseFlow(this, SKU_BOOK4);
+            launchInAppPurchaseFlow(this, SKU_BOOK5);
 
 
         //launchInAppPurchaseFlow(this, SKU_PREMIUM);

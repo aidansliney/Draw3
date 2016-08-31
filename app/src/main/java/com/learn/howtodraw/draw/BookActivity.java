@@ -45,7 +45,6 @@ public class BookActivity extends MainActivity {
 
     public void buildTheGrid(){
 
-
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
