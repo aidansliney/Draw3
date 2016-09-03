@@ -21,21 +21,18 @@ public class BookActivity extends MainActivity {
     public String bookName;
     public Boolean isUnlocked(){
 
-        // Calling Application class (see application tag in AndroidManifest.xml)
-        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
-
         //check what page we are on and if it is purchased
         if (bookName.equals("book1"))
-            bookPurchasedLock = mPurchasedBook1;
+            bookPurchasedLock = mPurchasedBooksArray[0];
           //  bookPurchasedLock = mPurchasedBook1;
         if (bookName.equals("book2"))
-            bookPurchasedLock = mPurchasedBook2;
+            bookPurchasedLock = mPurchasedBooksArray[1];
         if (bookName.equals("book3"))
-            bookPurchasedLock = mPurchasedBook3;
+            bookPurchasedLock = mPurchasedBooksArray[2];
         if (bookName.equals("book4"))
-            bookPurchasedLock = mPurchasedBook4;
+            bookPurchasedLock = mPurchasedBooksArray[3];
         if (bookName.equals("book5"))
-            bookPurchasedLock = mPurchasedBook5;
+            bookPurchasedLock = mPurchasedBooksArray[4];
         if (bookPurchasedLock)
             return true;
         else
@@ -54,7 +51,7 @@ public class BookActivity extends MainActivity {
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-            if(isUnlocked()) // this does not work
+            if(isUnlocked()) // Set the tick icon
                 tickIcon[i] = R.string.fa_check;
             else
                 tickIcon[i] = R.string.fa_lock;
@@ -129,9 +126,14 @@ public class BookActivity extends MainActivity {
 
         if (isUnlocked()){
             Log.d("PING", "I am afraid this page is locked");
+            toast("You own this book");
+
+            buildTheGrid(); //todo AS added recently to try and update the locks
         }
         else
-            Log.d("PING", "I am afraid this page is  not locked");
-        buildTheGrid();
+            Log.d("PING", "This page is  not locked");
+
+            buildTheGrid();
+
     }
 }

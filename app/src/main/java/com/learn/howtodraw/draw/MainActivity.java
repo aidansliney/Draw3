@@ -1,6 +1,6 @@
 package com.learn.howtodraw.draw;
 import android.content.ActivityNotFoundException;
-import android.content.Context;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -12,14 +12,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -40,13 +36,15 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     //Fire Analytics
     private FirebaseAnalytics mFirebaseAnalytics;
+
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
     //full page adverts
     private static InterstitialAd mInterstitialAd;
+
     public static String menuSelected;
     //The {@link ViewPager} that will host the section contents.
     private ViewPager mViewPager;
-
 
 // Debug tag, for logging
     static final String TAG = Constants.LOG_IAB;
@@ -62,14 +60,26 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         return mSubscribed;
     }
 
+    public void consumeBook(final String skuName) {
+
+        mHelper.queryInventoryAsync(true, new IabHelper.QueryInventoryFinishedListener() {
+            @Override
+            public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
+                if (inventory.getSkuDetails(skuName) != null){
+                    mHelper.consumeAsync(inventory.getPurchase(skuName), null);
+                }
+            }
+        });
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
         // Calling Application class (see application tag in AndroidManifest.xml)
         final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+
+
 
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
@@ -79,6 +89,9 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Set a variable for convenient access
         // to the iab helper object.
         mHelper = getIabHelper();
+
+
+
 
         // enable debug logging
         // (For a production application, you would set this to false).
@@ -132,7 +145,13 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 @Override
                 public void onClick(View view) {
 
-                    Intent sendIntent = new Intent();
+
+                        consumeBook(SKU_BOOK_ARRAY[1]);
+                        mPurchasedBooksArray[1] = false;
+
+
+
+/*                    Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
                     sendIntent.setType("text/plain");
@@ -144,11 +163,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                     bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id1);
                     bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
                     bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
-                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);*/
 
                 }
             });
         }
+
+
+
 
 /*        //Add mobile ads
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-7832891006427470~2392466545");
@@ -276,44 +298,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     }
 
-    /**
-     * User clicked the "Buy Gas" button
-     */
 
-    public void onBuyGasButtonClicked(View arg0) {
-        Log.d(TAG, "Buy gas button clicked.");
-
-        if (mSubscribed) {
-            complain("No need! You're subscribed to infinite gas. Isn't that awesome?");
-            return;
-        }
-
-        if (mTank >= TANK_MAX) {
-            complain("Your tank is full. Drive around a bit!");
-            return;
-        }
-
-        // launch the gas purchase UI flow.
-        // We will be notified of completion via mPurchaseFinishedListener
-        setWaitScreen(true);
-        Log.d(TAG, "Launching purchase flow for gas.");
-
-        // The steps needed to complete a purchase are done in code in the IabActivity superclass.
-        // IabActivity provides standard handling and calls back to this class.
-        launchInAppPurchaseFlow(this, SKU_CONSUMABLE);
-
-
-    /* TODO: for security, generate your payload here for verification. See the comments on
-     *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
-     *        an empty string, but on a production app you should carefully generate this. */
-
-    /*
-    String payload = "";
-
-    mHelper.launchPurchaseFlow(this, SKU_CONSUMABLE, RC_PURCHASE_REQUEST,
-            mPurchaseFinishedListener, payload);
-    */
-    }
 
     /**
      * User clicked the "Upgrade to Premium" button.
@@ -396,24 +381,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     // updates UI to reflect model
     public void updateUi() {
-/*        // update the car color to reflect premium status or lack thereof
-        ((ImageView)findViewById(R.id.free_or_premium)).setImageResource(mPurchasedBook ? R.drawable.premium : R.drawable.free);
 
-        // "Upgrade" button is only visible if the user is not premium
-        findViewById(R.id.upgrade_button).setVisibility(mPurchasedBook ? View.GONE : View.VISIBLE);
-
-        // "Get infinite gas" button is only visible if the user is not subscribed yet
-        findViewById(R.id.infinite_gas_button).setVisibility(mSubscribed ?
-                View.GONE : View.VISIBLE);
-
-        // update gas gauge to reflect tank status
-        if (mSubscribed) {
-            ((ImageView)findViewById(R.id.gas_gauge)).setImageResource(R.drawable.gas_inf);
-        }
-        else {
-            int index = mTank >= TANK_RES_IDS.length ? TANK_RES_IDS.length - 1 : mTank;
-            ((ImageView)findViewById(R.id.gas_gauge)).setImageResource(TANK_RES_IDS[index]);
-        }*/
     }
 
     // Enables or disables the "please wait" screen.
@@ -422,25 +390,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         findViewById(R.id.screen_wait).setVisibility(set ? View.VISIBLE : View.GONE);*/
     }
 
-/*    void saveData() {
 
-        *//*
-         * WARNING: on a real application, we recommend you save data in a secure way to
-         * prevent tampering. For simplicity in this sample, we simply store the data using a
-         * SharedPreferences.
-         *//*
-
-        SharedPreferences.Editor spe = getPreferences(MODE_PRIVATE).edit();
-        spe.putInt("tank", mTank);
-        spe.commit();
-        Log.d(TAG, "Saved data: tank = " + String.valueOf(mTank));
-    }
-
-    void loadData() {
-        SharedPreferences sp = getPreferences(MODE_PRIVATE);
-        mTank = sp.getInt("tank", 2);
-        Log.d(TAG, "Loaded data: tank = " + String.valueOf(mTank));
-    }*/
 
 /**
  */
@@ -475,43 +425,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
     void onIabConsumeItemSucceeded(IabHelper h, Purchase purchase, IabResult result) {
         super.onIabConsumeItemSucceeded(h, purchase, result);
-
-        // Update the state of the app and the ui to show the item we purchased and consumed.
-        String purchaseSku = purchase.getSku();
-        if (purchaseSku.equals(SKU_CONSUMABLE)) {
-            if (result.isSuccess()) {
-                // successfully consumed, so we apply the effects of the item in our
-                // game world's logic, which in our case means filling the gas tank a bit
-                Log.d(TAG, "Consumption successful. Provisioning.");
-                mTank = mTank == TANK_MAX ? TANK_MAX : mTank + 1;
-                //saveData();
-                alert("You filled 1/4 tank. Your tank is now " + String.valueOf(mTank) + "/4 full!");
-            } else {
-                complain("Error while consuming regular gas: " + result);
-            }
-
-        }
-
-        // Original code did some processing here. I moved this to IabActivity. (wgl, May 2015)
-    /*
-    else if (purchase.getSku().equals(SKU_PREMIUM)) {
-      // bought the premium upgrade!
-      Log.d(TAG, "Purchase is premium upgrade. Congratulating user.");
-      alert("Thank you for upgrading to premium!");
-      mPurchasedBook = true;
-      updateUi();
-      setWaitScreen(false);
-    } else if (purchase.getSku().equals(SKU_SUBSCRIPTION)) {
-
-      // bought the infinite gas subscription
-      Log.d(TAG, "Infinite gas subscription purchased.");
-      alert("Thank you for subscribing to infinite gas!");
-      mSubscribed = true;
-      mTank = TANK_MAX;
-      updateUi();
-      setWaitScreen(false);
-    }
-    */
     }
 
     /**
@@ -533,7 +446,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
      * @param h         IabHelper - helper object
      * @param result    IabResult
      * @param inventory Inventory
+     *
+     *
+     *
+     *
      */
+
+
+
 
     void onIabSetupSucceeded(IabHelper h, IabResult result, Inventory inventory) {
         super.onIabSetupSucceeded(h, result, inventory);
@@ -542,19 +462,17 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Premium and infinite gas are handled here. If there was a regular gas purchase, steps to consume
         // it (via an async call to consume) were started in the superclass.
 
-        if (mSubscribed) mTank = TANK_MAX;
-
-        if (mPurchasedBook) {
-            toast("welcome Premium User");
-            // FIX THIS
-        }
 
 
-        if (mPurchasedBook1) {
+
+
+
+
+       /* if (mPurchasedBook1) {
             toast("welcome book 1 owner");
             // FIX THIS
         }
-
+*/
 
 
      }
@@ -591,6 +509,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         intent.addFlags(flags);
         return intent;
     }
+
+
+
+
+
 
 
 

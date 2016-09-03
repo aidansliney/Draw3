@@ -95,6 +95,7 @@ public class IabHelper {
 
     // Connection to the service
     IInAppBillingService mService;
+
     ServiceConnection mServiceConn;
 
     // The request code used to launch purchase flow
@@ -177,6 +178,11 @@ public class IabHelper {
     public void enableDebugLogging(boolean enable) {
         checkNotDisposed();
         mDebugLog = enable;
+    }
+
+
+    public void consumeit(){
+
     }
 
     /**
@@ -934,6 +940,7 @@ public class IabHelper {
             SkuDetails d = new SkuDetails(itemType, thisResponse);
             logDebug("Got sku details: " + d);
             inv.addSkuDetails(d);
+
         }
         return BILLING_RESPONSE_RESULT_OK;
     }
@@ -987,4 +994,12 @@ public class IabHelper {
     void logWarn(String msg) {
         Log.w(mDebugTag, "In-app billing warning: " + msg);
     }
+
+
+
+
+
+
+
+
 }

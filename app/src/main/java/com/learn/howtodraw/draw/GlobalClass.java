@@ -10,11 +10,6 @@ public class GlobalClass extends Application {
 
     private String name;
 
-
-
-
-
-
     public String getName() {
         return name;
     }
