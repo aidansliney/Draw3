@@ -8,18 +8,19 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomGrid extends BaseAdapter {
+public class CustomGridBookFragment extends BaseAdapter {
     private Context mContext;
     private final String[] web;
     private final String[] bookPageIds;
     private final int[] Imageid;
     private final int[] tickIcon;
 
-    public CustomGrid(Context c, String[] web, int[] Imageid, String[] bookPageIds, int[] tickIcon ) {
+    public CustomGridBookFragment(Context c, String[] web, int[] Imageid, String[] bookPageIds, int[] tickIcon) {
         mContext = c;
         this.Imageid = Imageid;
         this.web = web;
         this.bookPageIds = bookPageIds;
+
         this.tickIcon = tickIcon;
 
     }
@@ -51,12 +52,11 @@ public class CustomGrid extends BaseAdapter {
         if (convertView == null) {
 
             grid = new View(mContext);
-            grid = inflater.inflate(R.layout.grid_single, null);
+            grid = inflater.inflate(R.layout.grid_single_book, null);
             TextView textView = (TextView) grid.findViewById(R.id.grid_text);
 
             TextView tv= (TextView) grid.findViewById(R.id.ticklock2);
             tv.setText(tickIcon[position]);
-
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             textView.setText(web[position]);
 

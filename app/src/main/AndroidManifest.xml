@@ -4,7 +4,6 @@
     package="com.learn.howtodraw.draw">
 
     <application
-        android:name="com.learn.howtodraw.draw.GlobalClass"
         android:debuggable="true"
         tools:ignore="HardcodedDebugMode"
         android:allowBackup="true"

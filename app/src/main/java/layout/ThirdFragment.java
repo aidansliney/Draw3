@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
 import com.learn.howtodraw.draw.BaseFragment;
-import com.learn.howtodraw.draw.CustomGrid;
+import com.learn.howtodraw.draw.CustomGridPagesFragment;
 import com.learn.howtodraw.draw.ExpandableGridView;
 import com.learn.howtodraw.draw.MyDialogFragment;
 import com.learn.howtodraw.draw.PageActivity;
@@ -50,13 +49,15 @@ public class ThirdFragment extends BaseFragment {
      * @return A new instance of fragment BrowseFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ThirdFragment newInstance(int param1, int param2, int param3, int param4) {
+    public static ThirdFragment newInstance(int param1, int param2, int param3, int param4, int param5) {
         ThirdFragment fragment = new ThirdFragment();
         Bundle args = new Bundle();
         args.putInt("cardText1Id", param1);
         args.putInt("bookPageIds", param2);
         args.putInt("cardImageId", param3);
         args.putInt("booksBooks", param4); //the book the page belongs to
+        args.putInt("bookLevel", param5); //the book the page belongs to
+
 
         fragment.setArguments(args);
         return fragment;
@@ -78,34 +79,23 @@ public class ThirdFragment extends BaseFragment {
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getArguments().getInt("cardText1Id"));
         final String[] bookPageIds = getResources().getStringArray(getArguments().getInt("bookPageIds"));
-        final String[] booksBook = getResources().getStringArray(getArguments().getInt("booksBooks"));
+        final String[] bookNames = getResources().getStringArray(getArguments().getInt("booksBooks"));
+        final String[] bookLevels = getResources().getStringArray(getArguments().getInt("bookLevel"));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getArguments().getInt("cardImageId"));
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
 
+            int counter = 0;
+            while(counter < mPurchasedBooksArray.length)
+            {
 
-
-            if (booksBook[i].equals("book1"))
-            {
-                hasPurchased =  mPurchasedBooksArray[0];
-            }
-            if (booksBook[i].equals("book2"))
-            {
-                hasPurchased =  mPurchasedBooksArray[1];
-            }
-            if (booksBook[i].equals("book3"))
-            {
-                hasPurchased =  mPurchasedBooksArray[2];
-            }
-            if (booksBook[i].equals("book4"))
-            {
-                hasPurchased =  mPurchasedBooksArray[3];
-            }
-            if (booksBook[i].equals("book5"))
-            {
-                hasPurchased =  mPurchasedBooksArray[4];
+                if (bookNames[i].equals(SKU_BOOK_ARRAY[counter]))
+                {
+                    hasPurchased =  mPurchasedBooksArray[counter];
+                }
+                counter++;
             }
 
             if(hasPurchased)
@@ -114,7 +104,7 @@ public class ThirdFragment extends BaseFragment {
                 tickIcon[i] = R.string.fa_lock;
 
         }
-        final CustomGrid adapter = new CustomGrid(getActivity(), cardText1, cardImage, bookPageIds, tickIcon);
+        final CustomGridPagesFragment adapter = new CustomGridPagesFragment(getActivity(), cardText1, cardImage, bookPageIds, tickIcon, bookNames, bookLevels);
         //set the grid
         ExpandableGridView gridView = (ExpandableGridView) view.findViewById(R.id.gridthird);
         gridView.setAdapter(adapter);
@@ -126,31 +116,31 @@ public class ThirdFragment extends BaseFragment {
                 String pageId = (String) adapter.getItem(position);
 
 
-                if (booksBook[position].equals("book1"))
+                if (bookNames[position].equals("book1"))
                 {
                     hasPurchased =  mPurchasedBooksArray[0];
                     bookThumb = R.drawable.book1cover;
                     bookName = R.string.book1;
                 }
-                if (booksBook[position].equals("book2"))
+                if (bookNames[position].equals("book2"))
                 {
                     hasPurchased =  mPurchasedBooksArray[1];
                     bookThumb = R.drawable.book2cover;
                     bookName = R.string.book2;
                 }
-                if (booksBook[position].equals("book3"))
+                if (bookNames[position].equals("book3"))
                 {
                     hasPurchased =  mPurchasedBooksArray[2];
                     bookThumb = R.drawable.book3cover;
                     bookName = R.string.book3;
                 }
-                if (booksBook[position].equals("book4"))
+                if (bookNames[position].equals("book4"))
                 {
                     hasPurchased =  mPurchasedBooksArray[3];
                     bookThumb = R.drawable.book4cover;
                     bookName = R.string.book4;
                 }
-                if (booksBook[position].equals("book5"))
+                if (bookNames[position].equals("book5"))
                 {
                     hasPurchased =  mPurchasedBooksArray[4];
                     bookThumb = R.drawable.book5cover;

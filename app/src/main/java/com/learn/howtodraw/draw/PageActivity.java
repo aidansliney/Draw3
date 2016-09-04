@@ -43,6 +43,7 @@ public class PageActivity extends AppCompatActivity {
         String endPageString = String.valueOf(lastPic+1);
         endPage.setText(endPageString);
 
+        assert nextImage2 != null;
         nextImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +57,6 @@ public class PageActivity extends AppCompatActivity {
 
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
-                    Log.d("Right", "Right");
                     Log.d(getClass().getName(), "position = " + pageCounter);
                     Log.d(getClass().getName(), "length = " + bookSlides.length);
                     ImageView imageView = (ImageView) findViewById(R.id.slideImage);

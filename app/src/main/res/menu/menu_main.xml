@@ -9,13 +9,6 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/about_settings"
-        android:orderInCategory="100"
-        android:title="About Draw"
-        app:showAsAction="never" />
-
-
-    <item
         android:id="@+id/rate_settings"
         android:orderInCategory="100"
         android:title="Rate Draw"

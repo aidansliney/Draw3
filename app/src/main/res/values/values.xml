@@ -10,9 +10,11 @@
         <item>@array/book1PageIds</item>
         <item>@drawable/book1coverinside</item>
         <item>@string/book1</item>
+        <item>@string/book1level</item>
     </array>
 
     <string name="book1">book1</string>
+    <string name="book1level">Level 1</string>
     <drawable name="book1cover">@drawable/mb3_4coveriso</drawable>
     <drawable name="book1coverinside">@drawable/mb3_4coverinside</drawable>
     <string name="book1heading1">Heroic Male 3/4 View - Level 1</string>
@@ -169,7 +171,7 @@
     </integer-array>
 
     <!-- BOOK 2 -->
-    <string name="book2">book2</string>
+
     <array  name="book2Build">
         <item>@string/book2heading1</item>
         <item>@string/book2heading2</item>
@@ -179,8 +181,10 @@
         <item>@array/book2PageIds</item>
         <item>@drawable/book2coverinside</item>
         <item>@string/book2</item>
+        <item>@string/book2level</item>
     </array>
-
+    <string name="book2">book2</string>
+    <string name="book2level">Level 2</string>
     <drawable name="book2cover">@drawable/mi3_4coveriso</drawable>
     <drawable name="book2coverinside">@drawable/mi3_4coverinside</drawable>
     <string name="book2heading1">Heroic Male 3/4 View</string>
@@ -340,7 +344,7 @@
 
     <!-- BOOK 3 -->
 
-    <string name="book3">book3</string>
+
     <array name="book3Build">
         <item>@string/book3heading1</item>
         <item>@string/book3heading2</item>
@@ -349,9 +353,10 @@
         <item>@array/book3cardimages</item>
         <item>@array/book3PageIds</item>
         <item>@drawable/book3coverinside</item>
-        <item>@string/book3</item>
+        <item>@string/book3level</item>
     </array>
-
+    <string name="book3">book3</string>
+    <string name="book3level">Level 3</string>
     <drawable name="book3cover">@drawable/ma3_4coveriso</drawable>
     <drawable name="book3coverinside">@drawable/ma3_4coverinside</drawable>
     <string name="book3heading1">Heroic Male 3/4 View - Level 3</string>
@@ -488,8 +493,6 @@
 
     <!-- BOOK 4 -->
 
-
-    <string name="book4">book4</string>
     <array name="book4Build">
         <item>@string/book4heading1</item>
         <item>@string/book4heading2</item>
@@ -499,8 +502,11 @@
         <item>@array/book4PageIds</item>
         <item>@drawable/book4coverinside</item>
         <item>@string/book4</item>
+        <item>@string/book4level</item>
     </array>
 
+    <string name="book4">book4</string>
+    <string name="book4level">Level 3</string>
     <drawable name="book4cover">@drawable/maflexcoveriso</drawable>
     <drawable name="book4coverinside">@drawable/insidebookcover</drawable>
     <string name="book4heading1">Flex</string>
@@ -693,7 +699,7 @@
 
 
     <!-- BOOK 5 -->
-    <string name="book5">book5</string>
+
     <array name="book5Build">
         <item>@string/book5heading1</item>
         <item>@string/book5heading2</item>
@@ -703,8 +709,11 @@
         <item>@array/book5PageIds</item>
         <item>@drawable/book5coverinside</item>
         <item>@string/book5</item>
+        <item>@string/book5level</item>
     </array>
 
+    <string name="book5">book5</string>
+    <string name="book5level">Level 2</string>
     <drawable name="book5cover">@drawable/midynamickickcoveriso</drawable>
     <drawable name="book5coverinside">@drawable/midynamickickinsidecover</drawable>
     <string name="book5heading1">Dymanic Kick</string>
@@ -920,44 +929,81 @@
 
 
     <!--all pages fragment-->
-
-    <string-array name="bookAllcardtext1">
-        <item>Level 1 - Full Figure</item>
-        <item>Level 1 - Basic Head</item>
-        <item>Level 1 - Basic Hand</item>
-        <item>Level 2 - Full Figure</item>
-        <item>Level 2 - The Head</item>
-        <item>Level 2 - The Torso</item>
-        <item>Level 2 - The Arms</item>
-        <item>Level 2 - The Hands</item>
-        <item>Level 2 - The Legs</item>
-        <item>Level 2 - The Feet</item>
-        <item>Level 3 - Full figure</item>
-        <item>Level 3 - Torso</item>
-        <item>Level 3 - Legs</item>
-        <item>Level 3 - Head</item>
-        <item>Level 3 - Hands</item>
-        <item>Level 3 - Foot</item>
-        <item>Level 3 - Arms</item>
-        <item>Level 3 - Flex up</item>
-        <item>Level 3 - Flex down</item>
-        <item>Level 3 - Side Flex</item>
-        <item>Level 3 - Begin Flex</item>
-        <item>Level 3 - Air Flex</item>
-        <item>Level 3 - Arm Cross</item>
-        <item>Level 3 - Side View Flex</item>
-        <item>Level 2 - Dynamic Kick 1</item>
-        <item>Level 2 - Dynamic Kick 2</item>
-        <item>Level 2 - Dynamic Kick 3</item>
-        <item>Level 2 - Dynamic Kick 4</item>
-        <item>Level 2 - Dynamic Kick 5</item>
-        <item>Level 2 - Dynamic Kick 6</item>
-        <item>Level 2 - Dynamic Kick 7</item>
-        <item>Level 2 - Dynamic Kick 8</item>
+    <string-array name="pagesAllHeadings">
+        <item>Full Figure</item>
+        <item>Basic Head</item>
+        <item>Basic Hand</item>
+        <item>Full Figure</item>
+        <item>The Head</item>
+        <item>The Torso</item>
+        <item>The Arms</item>
+        <item>The Hands</item>
+        <item>The Legs</item>
+        <item>The Feet</item>
+        <item>Full figure</item>
+        <item>Torso</item>
+        <item>Legs</item>
+        <item>Head</item>
+        <item>Hands</item>
+        <item>Foot</item>
+        <item>Arms</item>
+        <item>Flex up</item>
+        <item>Flex down</item>
+        <item>Side Flex</item>
+        <item>Begin Flex</item>
+        <item>Air Flex</item>
+        <item>Arm Cross</item>
+        <item>Side View Flex</item>
+        <item>Dynamic Kick 1</item>
+        <item>Dynamic Kick 2</item>
+        <item>Dynamic Kick 3</item>
+        <item>Dynamic Kick 4</item>
+        <item>Dynamic Kick 5</item>
+        <item>Dynamic Kick 6</item>
+        <item>Dynamic Kick 7</item>
+        <item>Dynamic Kick 8</item>
     </string-array>
 
 
-    <integer-array name="bookAllcardimages">
+
+    <!--all pages level-->
+    <string-array name="pagesAllLevels">
+        <item>Level 1</item>
+        <item>Level 1</item>
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+    </string-array>
+
+
+    <integer-array name="pagesAllImages">
         <item>@drawable/mb3_4figure20</item>
         <item>@drawable/mb3_4head27</item>
         <item>@drawable/mb3_4hand20</item>
@@ -992,7 +1038,7 @@
         <item>@drawable/midynamickicka0817</item>
     </integer-array>
 
-    <string-array name="bookAllPageIds">
+    <string-array name="pagesAllIds">
         <item>book1Page1</item>
         <item>book1Page2</item>
         <item>book1Page3</item>
@@ -1027,7 +1073,7 @@
         <item>book5Page8</item>
     </string-array>
 
-    <string-array name="bookAllbooks">
+    <string-array name="pagesAllbooks">
         <item>book1</item>
         <item>book1</item>
         <item>book1</item>

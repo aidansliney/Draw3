@@ -31,9 +31,12 @@ import android.util.Log;
 
 import com.android.vending.billing.IInAppBillingService;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -72,6 +75,13 @@ public class IabHelper {
     // Is debug logging enabled?
     boolean mDebugLog = false;
     String mDebugTag = "IabHelper";
+
+    static String price;
+    static String skuKey;
+
+  public static Map<String, String> map = new HashMap<String, String>();
+
+
 
     // Is setup done?
     boolean mSetupDone = false;
@@ -938,6 +948,15 @@ public class IabHelper {
 
         for (String thisResponse : responseList) {
             SkuDetails d = new SkuDetails(itemType, thisResponse);
+
+            JSONObject object = new JSONObject(thisResponse);
+            price = object.getString("price");
+            skuKey = object.getString("productId");
+
+            map.put(skuKey, price);
+            Log.d("This is the price ",price);
+            Log.d("This is the skuKey ",skuKey);
+
             logDebug("Got sku details: " + d);
             inv.addSkuDetails(d);
 

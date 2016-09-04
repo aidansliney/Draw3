@@ -35,6 +35,7 @@ public class LinkBooks{
                     intent.putExtra("bookPageIds", bookCollected[5]);
                     intent.putExtra("bookCoverImageInsideId", bookCollected[6]);
                     intent.putExtra("bookName", bookCollected[7]);
+                    intent.putExtra("booksBooks", bookCollected[8]);
                     activity.startActivity(intent);
 
 

@@ -20,51 +20,21 @@
         <ImageView
             android:id="@+id/bookThumb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="25dp"
             android:src="@drawable/book1cover" />
 
-        <TextView
-            android:id="@+id/book_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Book name goes here"
-            android:textColor="#282828"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:text="Subscription Information"
-            android:textColor="#282828"
-            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textabout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
-
+            android:layout_margin="15dp"
             android:paddingBottom="5dp"
-            android:text="This is why you should love Learn to draw"
+            android:text="This book contains multiples pages that will train you in the art of drawing. This book you full access to all the tutorial pages it contains."
             android:textColor="#282828"
             android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/subscribedQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:text="Are you subscribed?"
-            android:textColor="#3c3c3c" />
-
 
 
 
@@ -73,22 +43,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="5dp"
-            android:background="#e1ecf4"
-            android:text="@string/fa_money3"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/buy_button"
+            android:text="$2.99"
             android:textColor="#84c380"
-            android:textSize="20dp" />
+            android:textSize="15dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/textabout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:paddingBottom="5dp"
+            android:text="If you prefer to have access to all books you can subscribe. Subscribing gives you access to all the back catalogue and all upcoming new content"
+            android:textColor="#282828"
+            android:textSize="15dp" />
 
         <com.learn.howtodraw.draw.FontA.ButtonAwesome
             android:id="@+id/subscribeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
-            android:background="#e1ecf4"
-            android:text="@string/fa_money"
+            android:padding="10dp"
+            android:background="@drawable/buy_button"
+            android:text="Subscription info"
+            android:layout_marginBottom="30dp"
             android:textColor="#84c380"
-            android:textSize="20dp" />
+            android:textSize="12dp" />
 
     </LinearLayout>
 

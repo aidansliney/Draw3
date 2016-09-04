@@ -46,6 +46,8 @@ public class BookActivity extends MainActivity {
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
+        final String[] bookNames = getResources().getStringArray(getIntent().getIntExtra("booksBooks", 0)); // get book names
+
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
@@ -57,7 +59,7 @@ public class BookActivity extends MainActivity {
                 tickIcon[i] = R.string.fa_lock;
         }
 
-        final CustomGrid adapter = new CustomGrid(BookActivity.this, cardText1, cardImage, bookPageIds, tickIcon);
+        final CustomGridBookFragment adapter = new CustomGridBookFragment(BookActivity.this, cardText1, cardImage, bookPageIds, tickIcon);
 
         //set the grid
         ExpandableGridView gridView = (ExpandableGridView) findViewById(R.id.grid);
@@ -87,6 +89,7 @@ public class BookActivity extends MainActivity {
                     MyDialogFragment dialogFragment = new MyDialogFragment();
                     dialogFragment.setArguments(bundle);
                     dialogFragment.show(fm, getString(R.string.menu_subscribe));
+
                 }
             }
         });

@@ -15,6 +15,14 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="New content every Monday"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
 
 
         <LinearLayout
@@ -87,6 +95,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal"
+            android:paddingBottom="30dp"
             >
             <!-- Home Card 1 -->
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -102,11 +111,42 @@
                     android:orientation="vertical"
                     android:background="#ffffff">
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:src="@drawable/ma3_4head17"
-                        />
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:src="@drawable/ma3_4head17" />
+
+
+
+                        <!--Level 2 60bdb1-->
+                        <!--Level 3 ef6067-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Level 3"
+                            android:background="#ef6067"
+                            android:layout_marginTop="220dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Free this week"
+
+                            android:background="#60beef"
+                            android:layout_marginTop="245dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+                    </RelativeLayout>
+
 
                     <View
                         android:layout_width="fill_parent"
@@ -123,7 +163,7 @@
                         android:id="@+id/primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Level 3"
+                        android:text="The Head"
                         android:paddingLeft="7dp"
                         android:paddingTop="2dp"
                         android:textColor="#3c3c3c"
@@ -143,18 +183,8 @@
                         android:textSize="14dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.05"/>
-
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/secondary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="The Head"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- Home Card 2 -->
@@ -171,89 +201,48 @@
                     android:orientation="vertical"
                     android:background="#ffffff">
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:src="@drawable/mi3_4torso18"
-                        />
+                        android:layout_height="match_parent">
 
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#bababa" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:src="@drawable/mi3_4torso18"/>
 
                         <TextView
-                            android:id="@+id/primary"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Free this week"
+                            android:background="#60beef"
+                            android:layout_marginTop="245dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+
+                        <!--Level 3 ef6067-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
                             android:text="Level 2"
-                            android:paddingLeft="7dp"
-                            android:paddingTop="2dp"
-                            android:textColor="#3c3c3c"
-                            android:layout_weight="0.95"/>
+                            android:background="#60bdb1"
+                            android:layout_marginTop="220dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
 
-
-                        <com.learn.howtodraw.draw.FontA.TextAwesome
-                            android:id="@+id/ticklock2"
+                        <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:text="@string/fa_check"
-                            android:textAlignment="gravity"
-                            android:paddingTop="10dp"
-                            android:gravity="right"
-                            android:textColor="@color/colorAccent"
-                            android:textSize="14dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="0.05"/>
+                            android:layout_height="20dp"
+                            android:text="New"
+                            android:background="#e27cde"
+                            android:layout_marginTop="195dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+                    </RelativeLayout>
 
-                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/secondary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="The Torso"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-        // vertical
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="40dp">
-            <!-- Home Card 3 -->
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/home_card_3"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
-                android:layout_margin="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="#ffffff">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:src="@drawable/mb3_4figure20" />
 
                     <View
                         android:layout_width="fill_parent"
@@ -270,7 +259,7 @@
                             android:id="@+id/primary"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Level 1"
+                            android:text="The Torso"
                             android:paddingLeft="7dp"
                             android:paddingTop="2dp"
                             android:textColor="#3c3c3c"
@@ -293,151 +282,16 @@
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/secondary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="The full male figure"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- Home Card 4 -->
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/home_card_4"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
-                android:layout_margin="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="#ffffff">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:src="@drawable/ma3_4figure14" />
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#bababa" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-                        <TextView
-                            android:id="@+id/primary"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Level 3"
-                            android:paddingLeft="7dp"
-                            android:paddingTop="2dp"
-                            android:textColor="#3c3c3c"
-                            android:layout_weight="0.95"/>
-
-
-                        <com.learn.howtodraw.draw.FontA.TextAwesome
-                            android:id="@+id/ticklock2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:text="@string/fa_check"
-                            android:textAlignment="gravity"
-                            android:paddingTop="10dp"
-                            android:gravity="right"
-                            android:textColor="@color/colorAccent"
-                            android:textSize="14dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="0.05"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/secondary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="The full male figure"
-                        android:paddingLeft="7dp"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="2dp"
-                        android:textColor="#c0b9b9" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
         // vertical
 
-        <LinearLayout
-            android:id="@+id/layout_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="15dp"
-            android:orientation="vertical"
-            android:background="#ffffff">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/book2cover"
-                android:adjustViewBounds="true" />
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-                <TextView
-                    android:id="@+id/primary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/book2heading1"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:textColor="#3c3c3c"
-                    android:layout_weight="0.9"/>
-<!--                <com.learn.howtodraw.draw.FontA.TextAwesome
-                    android:id="@+id/ticklock2"
-                    android:layout_width="38dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/fa_check"
-                    android:textAlignment="gravity"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="15dp"
-                    android:layout_weight="0.1"
-                    android:layout_marginRight="15dp" />-->
-            </LinearLayout>
-
-
-
-            <TextView
-                android:id="@+id/secondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/book2heading2"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="#c0b9b9" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#bababa"
-            android:layout_marginBottom="20dp" />
 
         <LinearLayout
             android:id="@+id/layout_4"
@@ -445,16 +299,18 @@
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
             android:orientation="vertical"
-            android:background="#ffffff">
+            android:background="#ffffff"
+            android:onClick="mario">
 
             <ImageView
+                android:id="@+id/willy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sliney"
                 android:adjustViewBounds="true" />
 
             <TextView
-                android:id="@+id/primary"
+                android:id="@+id/will_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Will Sliney"
@@ -463,12 +319,10 @@
                 android:textColor="#3c3c3c" />
 
             <TextView
-                android:id="@+id/secondary"
+                android:id="@+id/will_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel's Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland.
-
-"
+                android:text="Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel's Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland."
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="#c0b9b9" />
@@ -481,14 +335,41 @@
             android:layout_marginBottom="20dp" />
 
 
-            <LinearLayout
+  <!--      <LinearLayout
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginBottom="15dp">
+
+            <VideoView
+                android:id="@+id/myVideoA"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/video_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp">
+                android:text="Video"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
 
-            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watch this video to learn how to use 'Learn how to draw'"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>-->
 
     </LinearLayout>
 

@@ -13,26 +13,35 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
+        android:paddingTop="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:gravity="center"
-            android:titleTextColor="@color/cardview_dark_background"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <TextView
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DRAW"
-                android:textSize="28dp"
-                android:textColor="#ffffff"
-                android:layout_gravity="center" />
+                android:layout_height="match_parent"
+                android:src="@drawable/baricon"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/removeBook"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fa_anchor"
+                android:layout_marginTop="10dp"
+                />
+
+
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

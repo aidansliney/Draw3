@@ -1,4 +1,5 @@
 package com.learn.howtodraw.draw;
+
 import android.content.ActivityNotFoundException;
 
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -32,8 +34,11 @@ import static com.learn.howtodraw.draw.Constants.*;
 
 import layout.BrowseFragment;
 import layout.ThirdFragment;
+
 public class MainActivity extends IabActivity implements BrowseFragment.OnFragmentInteractionListener {
 
+
+    public int imageCounter = 0;
     //Fire Analytics
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -46,39 +51,33 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     //The {@link ViewPager} that will host the section contents.
     private ViewPager mViewPager;
 
-// Debug tag, for logging
+    // Debug tag, for logging
     static final String TAG = Constants.LOG_IAB;
     // Helper object for in-app billing.
     IabHelper mHelper = null;
-    // Current amount of gas in tank, in units
-    protected int mTank;
+
 
     public void onFragmentInteraction(Uri uri) {
     }
 
-    public boolean isSubscribed(){
+    public boolean isSubscribed() {
         return mSubscribed;
     }
 
-    public void consumeBook(final String skuName) {
+    public  void consumeBook(final String skuName) {
 
         mHelper.queryInventoryAsync(true, new IabHelper.QueryInventoryFinishedListener() {
             @Override
             public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
-                if (inventory.getSkuDetails(skuName) != null){
+                if (inventory.getSkuDetails(skuName) != null) {
                     mHelper.consumeAsync(inventory.getPurchase(skuName), null);
                 }
             }
         });
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        // Calling Application class (see application tag in AndroidManifest.xml)
-        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
-
 
 
         // Start setup of in-app billing.
@@ -89,8 +88,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Set a variable for convenient access
         // to the iab helper object.
         mHelper = getIabHelper();
-
-
 
 
         // enable debug logging
@@ -108,7 +105,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 //  We need to continue opening the page here once the add is X'ed
             }
         });
-       // requestNewInterstitial();  Turn off the full page advert for now
+        // requestNewInterstitial();  Turn off the full page advert for now
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -118,6 +115,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Change the title on the main screen
         setTitle("");
         setContentView(R.layout.fragment_main); // this is needed but could be a better way
+
+
 
         Log.d("subscribed?", "" + mSubscribed);
 
@@ -139,35 +138,57 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         TabLayout tabLayout = (TabLayout) findViewById(com.learn.howtodraw.draw.R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+
+
+        TextView tv = (TextView) findViewById(R.id.removeBook);
+        assert tv != null;
+        tv.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                consumeBook(SKU_BOOK_ARRAY[1]);
+                mPurchasedBooksArray[1] = false;
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-
-                        consumeBook(SKU_BOOK_ARRAY[1]);
-                        mPurchasedBooksArray[1] = false;
-
+                    consumeBook(SKU_BOOK_ARRAY[1]);
+                    mPurchasedBooksArray[1] = false;
 
 
-/*                    Intent sendIntent = new Intent();
+                    Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
                     sendIntent.setType("text/plain");
                     startActivity(sendIntent);
-
-                    String id1 =  "Share";
+                    String id1 = "Share";
                     String name = "from Home";
                     Bundle bundle = new Bundle();
                     bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id1);
                     bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
                     bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
-                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);*/
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 
                 }
             });
         }
+
+
 
 
 
@@ -180,8 +201,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     }
 
 
-
-      @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(com.learn.howtodraw.draw.R.menu.menu_main, menu);
@@ -205,13 +225,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             return true;
         }
 
-        if (id == R.id.about_settings) {
-            FragmentManager fm = getSupportFragmentManager();
-            MyDialogFragment dialogFragment = new MyDialogFragment ();
-            dialogFragment.show(fm, getString(R.string.menu_about));
-            menuSelected = "about";
-            return true;
-        }
+
 
 /*        if (id == R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
@@ -222,7 +236,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         }*/
         return super.onOptionsItemSelected(item);
     }
-
 
 
     //  add full screen adverts
@@ -243,18 +256,18 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
+            // Return a firstFragment (defined as a static inner class below).
             switch (position) {
                 case 0:
                     Log.d("case 0", "Entering News");
-                    return PlaceholderFragment.newInstance(0);
+                    return firstFragment.newInstance(0);
                 case 1:
                     Log.d("case 1", "Entering Books");
                     return BrowseFragment.newInstance("hello1", "hello2");
 
                 case 2:
                     Log.d("case 2", "Entering Pages");
-                    return ThirdFragment.newInstance(R.array.bookAllcardtext1, R.array.bookAllPageIds, R.array.bookAllcardimages, R.array.bookAllbooks);
+                    return ThirdFragment.newInstance(R.array.pagesAllHeadings, R.array.pagesAllIds, R.array.pagesAllImages, R.array.pagesAllbooks, R.array.pagesAllLevels);
             }
             return null;
         }
@@ -299,7 +312,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     }
 
 
-
     /**
      * User clicked the "Upgrade to Premium" button.
      */
@@ -308,7 +320,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         Log.d(TAG, "Purchase button clicked; launching purchase flow for a book.");
         setWaitScreen(true);
 
-            launchInAppPurchaseFlow(this, book);
+        launchInAppPurchaseFlow(this, book);
 
         //launchInAppPurchaseFlow(this, SKU_PREMIUM);
 
@@ -322,6 +334,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             mPurchaseFinishedListener, payload);
 */
     }
+
 
     // "Subscribe to infinite gas" button clicked. Explain to user, then start purchase
 // flow for subscription.
@@ -391,7 +404,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     }
 
 
-
 /**
  */
 // Methods for IabHelperListener.
@@ -440,21 +452,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // This would be where to change the ui in the event of a set up error.
     }
 
+
     /**
      * Called when setup succeeds and the inventory of items is available.
      *
      * @param h         IabHelper - helper object
      * @param result    IabResult
      * @param inventory Inventory
-     *
-     *
-     *
-     *
      */
-
-
-
-
     void onIabSetupSucceeded(IabHelper h, IabResult result, Inventory inventory) {
         super.onIabSetupSucceeded(h, result, inventory);
 
@@ -475,45 +480,32 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 */
 
 
-     }
+    }
 
     //Send users to rate the app
-    public void rateApp()
-    {
-        try
-        {
+    public void rateApp() {
+        try {
             Intent rateIntent = rateIntentForUrl("market://details");
             startActivity(rateIntent);
-        }
-        catch (ActivityNotFoundException e)
-        {
+        } catch (ActivityNotFoundException e) {
             Intent rateIntent = rateIntentForUrl("http://play.google.com/store/apps/details");
             startActivity(rateIntent);
         }
     }
 
     //Send users to rate the app
-    private Intent rateIntentForUrl(String url)
-    {
+    private Intent rateIntentForUrl(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("%s?id=%s", url, getPackageName())));
         int flags = Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_MULTIPLE_TASK;
-        if (Build.VERSION.SDK_INT >= 21)
-        {
+        if (Build.VERSION.SDK_INT >= 21) {
             flags |= Intent.FLAG_ACTIVITY_NEW_DOCUMENT;
-        }
-        else
-        {
+        } else {
             //noinspection deprecation
             flags |= Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET;
         }
         intent.addFlags(flags);
         return intent;
     }
-
-
-
-
-
 
 
 

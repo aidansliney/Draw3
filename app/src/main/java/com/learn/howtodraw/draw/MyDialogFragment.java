@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.learn.howtodraw.draw.util.IabHelper;
+
 /**
  * Created by aidansliney on 21/08/2016.
  */
@@ -24,12 +26,7 @@ public class MyDialogFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        if (MainActivity.menuSelected == "about") {
-            View rootView = inflater.inflate(R.layout.fragment_dialog_about, container, false);
-            return rootView;
-        } else
-
-            bookThumb = getArguments().getInt("bookThumb");
+        bookThumb = getArguments().getInt("bookThumb");
         bookName = getArguments().getInt("bookName");
 
 
@@ -41,9 +38,8 @@ public class MyDialogFragment extends BaseFragment {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.bookThumb);
         imageView.setImageResource(bookThumb);
 
-        //set the bookname from the bundle
-        tv = (TextView) rootView.findViewById(R.id.book_name);
-        tv.setText(bookName);
+
+
 
         Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
         subscribebtn.setOnClickListener(new View.OnClickListener() {
@@ -53,15 +49,13 @@ public class MyDialogFragment extends BaseFragment {
             }
         });
 
+        bookNameString = getString(bookName);
         Button buyBookbtn = (Button) rootView.findViewById(R.id.buyBookButton);
+        buyBookbtn.setText(IabHelper.map.get(bookNameString));
         buyBookbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                bookNameString = getString(bookName);
-                Log.d("This is the bookname",bookNameString);
                 getMainActivity().onBookPurchaseButtonClicked(getView(), bookNameString);
-
             }
         });
 

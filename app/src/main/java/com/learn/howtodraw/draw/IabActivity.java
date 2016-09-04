@@ -391,7 +391,7 @@ public abstract class IabActivity extends AppCompatActivity {
      * @return void
      */
 
-    public void toast (int stringId)
+    public  void toast (int stringId)
     {
         Resources res = getResources ();
         String msg = res.getString (stringId);
