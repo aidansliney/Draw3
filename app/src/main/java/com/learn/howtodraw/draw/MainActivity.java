@@ -154,13 +154,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
 
 
-
-
-
-
-
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
