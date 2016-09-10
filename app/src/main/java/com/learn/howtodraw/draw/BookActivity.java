@@ -3,8 +3,10 @@ package com.learn.howtodraw.draw;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -17,6 +19,7 @@ import static com.learn.howtodraw.draw.Constants.*;
 
 public class BookActivity extends MainActivity {
 
+    int Color = R.color.colorAccent;
     public Boolean bookPurchasedLock;
     public String bookName;
     public Boolean isUnlocked(){
@@ -43,17 +46,38 @@ public class BookActivity extends MainActivity {
     }
 
 
-
     public void buildTheGrid(){
-
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
-        final String[] bookNames = getResources().getStringArray(getIntent().getIntExtra("booksBooks", 0)); // get book names
-
+        final String bookLevel = getResources().getString(getIntent().getIntExtra("booksLevel", 0)); // get book names
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
+
+
+        if (bookLevel.equals("Level 1")) {
+            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
+            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelOne)));
+            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelOne)));
+        }
+
+        if (bookLevel.equals("Level 2")) {
+            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
+            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelTwo)));
+            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelTwo)));
+        }
+        if (bookLevel.equals("Level 3")) {
+            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
+            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelThree)));
+            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelThree)));
+        }
+
+
+
+
+
+
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
             if(isUnlocked()) // Set the tick icon
@@ -99,6 +123,9 @@ public class BookActivity extends MainActivity {
             }
         });
 
+
+
+
     }
 
 
@@ -108,8 +135,11 @@ public class BookActivity extends MainActivity {
         setTitle("");
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_book);
-        Toolbar toolbar = (Toolbar) findViewById(com.learn.howtodraw.draw.R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
 
         //Create floating action button
         FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
@@ -127,21 +157,24 @@ public class BookActivity extends MainActivity {
         TextView textView = (TextView) findViewById(R.id.primary);
         TextView textView2 = (TextView) findViewById(R.id.secondary);
         ImageView imageView = (ImageView) findViewById(R.id.background);
-        textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
-        textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
+        //textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
+        getSupportActionBar().setTitle(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
+
+
+
+        //textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
         imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
-        bookName = getString(getIntent().getIntExtra("bookName", 0));
+        bookName = getString(getIntent().getIntExtra("booksLevel", 0));
+        buildTheGrid();
 
-        if (isUnlocked()){
-            Log.d("PING", "I am afraid this page is locked");
+
+
+
+
+        if (isUnlocked())
             toast("You own this book");
-
-            buildTheGrid(); //todo AS added recently to try and update the locks
-        }
         else
             Log.d("PING", "This page is  not locked");
-
-            buildTheGrid();
 
     }
 }

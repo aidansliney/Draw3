@@ -17,7 +17,7 @@
     <string name="book1level">Level 1</string>
     <drawable name="book1cover">@drawable/mb3_4coveriso</drawable>
     <drawable name="book1coverinside">@drawable/mb3_4coverinside</drawable>
-    <string name="book1heading1">Heroic Male 3/4 View - Level 1</string>
+    <string name="book1heading1">HEROIC MALE 3/4 VIEW</string>
     <string name="book1heading2">Learn how to draw the full figure</string>
 
     <string-array name="book1tutorialnames">

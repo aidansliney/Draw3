@@ -14,12 +14,18 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
+            android:id="@+id/collapse_commonview_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:contentScrim="@color/levelOne"
+            app:expandedTitleMarginStart="10dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+           app:expandedTitleMargin="10dp"
+            app:expandedTitleMarginEnd="40dp"
+            app:expandedTitleMarginBottom="10dp"
+            app:expandedTitleTextAppearance="@style/ExpandedAppBar">
+
+
 
             <ImageView
                 android:id="@+id/background"

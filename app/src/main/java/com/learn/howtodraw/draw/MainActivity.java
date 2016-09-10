@@ -24,7 +24,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
-import com.google.firebase.crash.FirebaseCrash;
 import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;
@@ -120,7 +119,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         setContentView(R.layout.fragment_main); // this is needed but could be a better way
 
 
-
+        Bundle params = new Bundle();
+        params.putString("image_name","Name");
+        params.putString("full_text", "string");
+        mFirebaseAnalytics.logEvent("share_image", params);
 
 
         super.onCreate(savedInstanceState);
@@ -293,7 +295,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 case 1:
                     return getString(R.string.pagetitlebooks);
                 case 2:
-                    return getString(R.string.pagetitlepages);
+                    return getString(R.string.page_title_tutorials);
             }
             return null;
         }
