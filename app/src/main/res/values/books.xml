@@ -5,7 +5,7 @@
         <item>@string/book1heading1</item>
         <item>@string/book1heading2</item>
         <item>@drawable/book1cover</item>
-        <item>@array/book1cardtext1</item>
+        <item>@array/book1tutorialnames</item>
         <item>@array/book1cardimages</item>
         <item>@array/book1PageIds</item>
         <item>@drawable/book1coverinside</item>
@@ -20,155 +20,193 @@
     <string name="book1heading1">Heroic Male 3/4 View - Level 1</string>
     <string name="book1heading2">Learn how to draw the full figure</string>
 
-    <string-array name="book1cardtext1">
+    <string-array name="book1tutorialnames">
         <item>Full Figure</item>
         <item>Basic Head</item>
         <item>The Hands</item>
     </string-array>
     <integer-array name="book1cardimages">
-        <item>@drawable/mb3_4figure22</item>
-        <item>@drawable/mb3_4head27</item>
-        <item>@drawable/mb3_4hand20</item>
+        <item>@drawable/b01t01p29</item>
+        <item>@drawable/b01t02p28</item>
+        <item>@drawable/b01t03p20</item>
     </integer-array>
     <string-array name="book1PageIds">
-        <item>book1Page1</item>
-        <item>book1Page2</item>
-        <item>book1Page3</item>
+        <item>book1Tutorial1</item>
+        <item>book1Tutorial2</item>
+        <item>book1Tutorial3</item>
     </string-array>
 
-    <integer-array name="book1Page1Slides">
-        <item>@drawable/mb3_4figure01</item>
-        <item>@drawable/mb3_4figure02</item>
-        <item>@drawable/mb3_4figure03</item>
-        <item>@drawable/mb3_4figure04</item>
-        <item>@drawable/mb3_4figure05</item>
-        <item>@drawable/mb3_4figure06</item>
-        <item>@drawable/mb3_4figure07</item>
-        <item>@drawable/mb3_4figure08</item>
-        <item>@drawable/mb3_4figure08</item>
-        <item>@drawable/mb3_4figure10</item>
-        <item>@drawable/mb3_4figure11</item>
-        <item>@drawable/mb3_4figure12</item>
-        <item>@drawable/mb3_4figure13</item>
-        <item>@drawable/mb3_4figure14</item>
-        <item>@drawable/mb3_4figure15</item>
-        <item>@drawable/mb3_4figure16</item>
-        <item>@drawable/mb3_4figure17</item>
-        <item>@drawable/mb3_4figure18</item>
-        <item>@drawable/mb3_4figure19</item>
-        <item>@drawable/mb3_4figure20</item>
-        <item>@drawable/mb3_4figure21</item>
-        <item>@drawable/mb3_4figure22</item>
+    <integer-array name="book1Tutorial1Pages">
+        <item>@drawable/b01t01p01</item>
+        <item>@drawable/b01t01p02</item>
+        <item>@drawable/b01t01p03</item>
+        <item>@drawable/b01t01p04</item>
+        <item>@drawable/b01t01p05</item>
+        <item>@drawable/b01t01p06</item>
+        <item>@drawable/b01t01p07</item>
+        <item>@drawable/b01t01p08</item>
+        <item>@drawable/b01t01p09</item>
+        <item>@drawable/b01t01p10</item>
+        <item>@drawable/b01t01p11</item>
+        <item>@drawable/b01t01p12</item>
+        <item>@drawable/b01t01p13</item>
+        <item>@drawable/b01t01p14</item>
+        <item>@drawable/b01t01p15</item>
+        <item>@drawable/b01t01p16</item>
+        <item>@drawable/b01t01p17</item>
+        <item>@drawable/b01t01p18</item>
+        <item>@drawable/b01t01p19</item>
+        <item>@drawable/b01t01p20</item>
+        <item>@drawable/b01t01p21</item>
+        <item>@drawable/b01t01p22</item>
+        <item>@drawable/b01t01p23</item>
+        <item>@drawable/b01t01p24</item>
+        <item>@drawable/b01t01p25</item>
+        <item>@drawable/b01t01p26</item>
+        <item>@drawable/b01t01p27</item>
+        <item>@drawable/b01t01p28</item>
+        <item>@drawable/b01t01p29</item>
+    </integer-array>
+    <!--ur hero is 8 heads high-->
+    <string-array name="book1Tutorial1Help">
+        <item>Start by laying down the basic shape of the head</item>
+        <item>Using the size of the head, we can lay out markers for proportions</item>
+        <item></item>
+        <item>Lay out the figure as simply as this. With circles as the joints and lines to indicate the limbs and torso</item>
+        <item>Note the shoulders should be half a head down</item>
+        <item>The Hands reach down at the bottom of the 4th head alongside the hips</item>
+        <item>The legs reach down to 8 heads down. With these indicators, we can lay more solid down forms on top</item>
+        <item>Two three dimensional shapes, the Top and bottom forms are cylinders, and the middle one is a sphere</item>
+        <item>Draw in the larger top cylinder to represent the chest</item>
+        <item>A sphere for the stomach, which can help us visualise how the torso can bend and rotate if we were twisting the body</item>
+        <item>And the small cylinder for the waist</item>
+        <item>These spheres will represent the ball and socket joints that our arms and legs rotate from. Namely the shoulder and the hips</item>
+        <item>Some more three dimensional shapes we will use for the arms and the legs</item>
+        <item>Start off the arms and legs with a long cylinder that reaches the ball we drew to mark the elbow</item>
+        <item>Then use a tapered cylinder for the lower half of each limb</item>
+        <item>The hands are covered in more detail in their own tutorial. Draw in the shapes for the legs, and connect the forms together</item>
+        <item>Finally, draw in a cylinder to represent the neck</item>
+        <item>Using the head tutorial, draw in where the facial features will go</item>
+        <item>The chest line will go from the point where your arm meets the Shoulder, down to the line that is two heads down</item>
+        <item>I like to connect the major cylinders together</item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
+        <item>Use the head tutorial and draw in what is often the most important part of your figure</item>
+        <item>Draw in the neck and whatever neckline you want depending on what clothes your figure is wearing</item>
+        <item>Now outline the shoulder and arms. Note the trapezius muscle will make the line from his shoulder go up around his neck</item>
+        <item>Most tops will go down the the belt line, which is at the top of your cylinder</item>
+        <item>Then outline those chest muscles</item>
+        <item>Use a lot of straight lines to draw in the legs. Most important is to outline the difference in shapes between the thighs and the calves</item>
+        <item>Keep the foot nice and simple</item>
+        <item>And there you have it.  You can fully erase the basic forms now to show off your character</item>
+    </string-array>
+
+    <integer-array name="book1Tutorial2Pages">
+        <item>@drawable/b01t02p01</item>
+        <item>@drawable/b01t02p02</item>
+        <item>@drawable/b01t02p03</item>
+        <item>@drawable/b01t02p04</item>
+        <item>@drawable/b01t02p05</item>
+        <item>@drawable/b01t02p06</item>
+        <item>@drawable/b01t02p07</item>
+        <item>@drawable/b01t02p08</item>
+        <item>@drawable/b01t02p09</item>
+        <item>@drawable/b01t02p10</item>
+        <item>@drawable/b01t02p11</item>
+        <item>@drawable/b01t02p12</item>
+        <item>@drawable/b01t02p13</item>
+        <item>@drawable/b01t02p14</item>
+        <item>@drawable/b01t02p15</item>
+        <item>@drawable/b01t02p16</item>
+        <item>@drawable/b01t02p17</item>
+        <item>@drawable/b01t02p18</item>
+        <item>@drawable/b01t02p19</item>
+        <item>@drawable/b01t02p20</item>
+        <item>@drawable/b01t02p21</item>
+        <item>@drawable/b01t02p22</item>
+        <item>@drawable/b01t02p23</item>
+        <item>@drawable/b01t02p24</item>
+        <item>@drawable/b01t02p25</item>
+        <item>@drawable/b01t02p26</item>
+        <item>@drawable/b01t02p27</item>
+        <item>@drawable/b01t02p28</item>
     </integer-array>
 
-    <integer-array name="book1Page2Slides">
-        <item>@drawable/mb3_4head01</item>
-        <item>@drawable/mb3_4head02</item>
-        <item>@drawable/mb3_4head03</item>
-        <item>@drawable/mb3_4head04</item>
-        <item>@drawable/mb3_4head05</item>
-        <item>@drawable/mb3_4head06</item>
-        <item>@drawable/mb3_4head07</item>
-        <item>@drawable/mb3_4head08</item>
-        <item>@drawable/mb3_4head09</item>
-        <item>@drawable/mb3_4head10</item>
-        <item>@drawable/mb3_4head11</item>
-        <item>@drawable/mb3_4head12</item>
-        <item>@drawable/mb3_4head13</item>
-        <item>@drawable/mb3_4head14</item>
-        <item>@drawable/mb3_4head15</item>
-        <item>@drawable/mb3_4head16</item>
-        <item>@drawable/mb3_4head17</item>
-        <item>@drawable/mb3_4head18</item>
-        <item>@drawable/mb3_4head19</item>
-        <item>@drawable/mb3_4head20</item>
-        <item>@drawable/mb3_4head21</item>
-        <item>@drawable/mb3_4head22</item>
-        <item>@drawable/mb3_4head23</item>
-        <item>@drawable/mb3_4head24</item>
-        <item>@drawable/mb3_4head25</item>
-        <item>@drawable/mb3_4head26</item>
-        <item>@drawable/mb3_4head27</item>
-    </integer-array>
+    <string-array name="book1Tutorial2Help">
+        <item>Let’s start with an oval shape to represent the head</item>
+        <item>Draw two lines across to split it up into thirds</item>
+        <item>Our drawing will be looking at the head at an angle. This line will be the centre line of our face</item>
+        <item>Let’s take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle</item>
+        <item>Now, to help us lay out where the features go, let us add some more lines. Take the middle and bottom segment, and draw a line 1/3rd down in each segment</item>
+        <item>We now know where to put the facial features. Let us add in ovals for the eyes along this line</item>
+        <item>Draw a line from the centre of the eyes straight down the head. This will tell us exactly where to draw the mouth</item>
+        <item>The top line is where we draw the eyebrows. You can draw the basics shapes of a rectangle joined to a triangle</item>
+        <item>Where the centre line meets our third line, is where to put the nose. Remember, check the facial features book that outlines how to draw the nose</item>
+        <item>The the mouth goes on the bottom line, and its width goes from the two centre lines drawn from our eyes</item>
+        <item>We know where to put the ear thanks to the lines from our nose and eyes</item>
+        <item>Let’s sharpen up the jaw line. Bring it to meet the chin, which is directly under the mouth, using the same lines from the eye</item>
+        <item>Continue the jawline and chin line around to the other side of the face</item>
+        <item>Add in the hair line</item>
+        <item>And extent the back of the head. Our skull goes out slightly further than the initial oval shape we draw</item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it</item>
+        <item>Remember, the facial features are important, and we have a whole book dedicated to them.  Use it to learn how to draw them from each angle</item>
+        <item>Everybodys features are different. Feel free to experiment with different facial shapes and sizes.</item>
+        <item>Use the forms we laid out as guides where to draw in the detailed versions of each feature</item>
+        <item>We look at the ear in the Features book too</item>
+        <item>Now draw in the crown of the head, or use the outline to draw whatever hairstyle you like</item>
+        <item>Draw in the jaw line, ignoring the curve of the initial oval</item>
+        <item>Add in a few features. A line from the chin up towards the ear can indicate a strong jawline</item>
+        <item>I like to indicate the bottom lip with a small line which helps tell us that the lip protrudes from the face. </item>
+        <item>A small curve can show the “ala” area around the nostril</item>
+        <item>And a curve here can help define the planes of the face.</item>
+        <item>And there you have it.  You can fully erase the basic forms now</item>
+        <item>Take a look at Level 2 of this figure to take your drawing up to the next stage. Or why not share your drawing with us.</item>
+    </string-array>
 
-    <integer-array name="book1Page3Slides">
-        <item>@drawable/mb3_4hand01</item>
-        <item>@drawable/mb3_4hand02</item>
-        <item>@drawable/mb3_4hand03</item>
-        <item>@drawable/mb3_4hand04</item>
-        <item>@drawable/mb3_4hand05</item>
-        <item>@drawable/mb3_4hand06</item>
-        <item>@drawable/mb3_4hand07</item>
-        <item>@drawable/mb3_4hand08</item>
-        <item>@drawable/mb3_4hand09</item>
-        <item>@drawable/mb3_4hand10</item>
-        <item>@drawable/mb3_4hand11</item>
-        <item>@drawable/mb3_4hand12</item>
-        <item>@drawable/mb3_4hand13</item>
-        <item>@drawable/mb3_4hand14</item>
-        <item>@drawable/mb3_4hand15</item>
-        <item>@drawable/mb3_4hand16</item>
-        <item>@drawable/mb3_4hand17</item>
-        <item>@drawable/mb3_4hand18</item>
-        <item>@drawable/mb3_4hand19</item>
-        <item>@drawable/mb3_4hand20</item>
 
+    <integer-array name="book1Tutorial3Pages">
+        <item>@drawable/b01t03p01</item>
+        <item>@drawable/b01t03p02</item>
+        <item>@drawable/b01t03p03</item>
+        <item>@drawable/b01t03p04</item>
+        <item>@drawable/b01t03p05</item>
+        <item>@drawable/b01t03p06</item>
+        <item>@drawable/b01t03p07</item>
+        <item>@drawable/b01t03p08</item>
+        <item>@drawable/b01t03p09</item>
+        <item>@drawable/b01t03p10</item>
+        <item>@drawable/b01t03p11</item>
+        <item>@drawable/b01t03p12</item>
+        <item>@drawable/b01t03p13</item>
+        <item>@drawable/b01t03p14</item>
+        <item>@drawable/b01t03p15</item>
+        <item>@drawable/b01t03p16</item>
+        <item>@drawable/b01t03p17</item>
+        <item>@drawable/b01t03p18</item>
+        <item>@drawable/b01t03p19</item>
+        <item>@drawable/b01t03p20</item>
     </integer-array>
-
-    <integer-array name="book1Page4Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book1Page5Slides">
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_18</item>
-        <item>@drawable/head2_17</item>
-        <item>@drawable/head2_16</item>
-        <item>@drawable/head2_15</item>
-        <item>@drawable/head2_14</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_12</item>
-    </integer-array>
-
-    <integer-array name="book1Page6Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book1Page7Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
-
-    <integer-array name="book1Page8Slides">
-        <item>@drawable/head2_12</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_13</item>
-        <item>@drawable/head2_19</item>
-        <item>@drawable/head2_07</item>
-        <item>@drawable/head2_01</item>
-        <item>@drawable/head2_10</item>
-        <item>@drawable/head2_19</item>
-    </integer-array>
+    <string-array name="book1Tutorial3Help">
+        <item>Drawing the hands at an angle can be difficult. So always take a look at your own hands for reference. Draw in two rectangles as the palms of your hand </item>
+        <item> Break the finger joints down into rectangles that extend from the top of your palm of your hand</item>
+        <item> The tops of these rectangles curve down to indicate middle finger being the longest and the pinky being the smallest</item>
+        <item>Your fingers have three joints and there for three bendable areas.  </item>
+        <item>Extending from the palm, I like to draw a cylinder, almost representing the first bone of your thumb as a ball joint </item>
+        <item>The second bone of the thumb extends from this like the fingers </item>
+        <item>And the third follows. </item>
+        <item>Break the rectangles used to outline the fingers into their own parts</item>
+        <item>On the right hand here, the pinky is obscured by the ring finger</item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final hand over it</item>
+        <item>Each finger joins your sectioned off rectangles together.</item>
+        <item>Remember, the middle finger is the longest</item>
+        <item>The ring finger is slightly longer than the index finger</item>
+        <item>The pinky is the smallest</item>
+        <item>Lets draw the thumb, but note, we only indicate a small part of the ball joint, as the flesh surrounding it blends into the hand</item>
+        <item>Same for the left hand. Draw the top two bones as normal, then a small bit of the ball joint as it blends into the hand.</item>
+        <item>We can outline the hands going into the palms using the rectangle we drew in stage one</item>
+        <item>Where the finger lines end, draw a small curve to indicate the knuckles where they should be seen</item>
+        <item>And there you have it.  You can fully erase the basic forms now</item>
+        <item>Take a look at Level 2 of the hand to take your drawing up to the next stage. Or why not share your drawing with us</item>
+    </string-array>
 
     <!-- BOOK 2 -->
 
@@ -210,16 +248,16 @@
     </integer-array>
 
     <string-array name="book2PageIds">
-        <item>book2Page1</item>
-        <item>book2Page2</item>
-        <item>book2Page3</item>
-        <item>book2Page4</item>
-        <item>book2Page5</item>
-        <item>book2Page6</item>
-        <item>book2Page7</item>
+        <item>book2Tutorial1</item>
+        <item>book2Tutorial2</item>
+        <item>book2Tutorial3</item>
+        <item>book2Tutorial4</item>
+        <item>book2Tutorial5</item>
+        <item>book2Tutorial6</item>
+        <item>book2Tutorial7</item>
     </string-array>
 
-    <integer-array name="book2Page1Slides">
+    <integer-array name="book2Tutorial1Pages">
         <item>@drawable/mi3_4figure01</item>
         <item>@drawable/mi3_4figure02</item>
         <item>@drawable/mi3_4figure03</item>
@@ -242,8 +280,31 @@
         <item>@drawable/mi3_4figure20</item>
         <item>@drawable/mi3_4figure21</item>
     </integer-array>
+    <string-array name="book2Tutorial1Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page2Slides">
+    <integer-array name="book2Tutorial2Pages">
         <item>@drawable/mi3_4head01</item>
         <item>@drawable/mi3_4head02</item>
         <item>@drawable/mi3_4head03</item>
@@ -263,10 +324,31 @@
         <item>@drawable/mi3_4head17</item>
         <item>@drawable/mi3_4head18</item>
         <item>@drawable/mi3_4head19</item>
-
     </integer-array>
+    <string-array name="book2Tutorial2Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page3Slides">
+    <integer-array name="book2Tutorial3Pages">
         <item>@drawable/mi3_4torso01</item>
         <item>@drawable/mi3_4torso02</item>
         <item>@drawable/mi3_4torso03</item>
@@ -285,10 +367,30 @@
         <item>@drawable/mi3_4torso16</item>
         <item>@drawable/mi3_4torso17</item>
         <item>@drawable/mi3_4torso18</item>
-
     </integer-array>
+    <string-array name="book2Tutorial3Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page4Slides">
+    <integer-array name="book2Tutorial4Pages">
         <item>@drawable/mi3_4arm01</item>
         <item>@drawable/mi3_4arm02</item>
         <item>@drawable/mi3_4arm03</item>
@@ -300,10 +402,22 @@
         <item>@drawable/mi3_4arm09</item>
         <item>@drawable/mi3_4arm10</item>
         <item>@drawable/mi3_4arm11</item>
-
     </integer-array>
+    <string-array name="book2Tutorial4Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page5Slides">
+    <integer-array name="book2Tutorial5Pages">
         <item>@drawable/mi3_4hand01</item>
         <item>@drawable/mi3_4hand02</item>
         <item>@drawable/mi3_4hand03</item>
@@ -316,8 +430,21 @@
         <item>@drawable/mi3_4hand10</item>
         <item>@drawable/mi3_4hand11</item>
     </integer-array>
+    <string-array name="book2Tutorial5Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page6Slides">
+    <integer-array name="book2Tutorial6Pages">
         <item>@drawable/mi3_4leg01</item>
         <item>@drawable/mi3_4leg02</item>
         <item>@drawable/mi3_4leg03</item>
@@ -328,10 +455,22 @@
         <item>@drawable/mi3_4leg08</item>
         <item>@drawable/mi3_4leg09</item>
         <item>@drawable/mi3_4leg10</item>
-
     </integer-array>
+    <string-array name="book2Tutorial6Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book2Page7Slides">
+    <integer-array name="book2Tutorial7Pages">
         <item>@drawable/mi3_4foot01</item>
         <item>@drawable/mi3_4foot02</item>
         <item>@drawable/mi3_4foot03</item>
@@ -341,9 +480,19 @@
         <item>@drawable/mi3_4foot07</item>
         <item>@drawable/mi3_4foot08</item>
     </integer-array>
+    <string-array name="book2Tutorial7Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <!-- BOOK 3 -->
-
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 3 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
 
     <array name="book3Build">
         <item>@string/book3heading1</item>
@@ -353,6 +502,7 @@
         <item>@array/book3cardimages</item>
         <item>@array/book3PageIds</item>
         <item>@drawable/book3coverinside</item>
+        <item>@string/book3</item>
         <item>@string/book3level</item>
     </array>
     <string name="book3">book3</string>
@@ -381,16 +531,16 @@
         <item>@drawable/ma3_4arms12</item>
     </integer-array>
     <string-array name="book3PageIds">
-        <item>book3Page1</item>
-        <item>book3Page2</item>
-        <item>book3Page3</item>
-        <item>book3Page4</item>
-        <item>book3Page5</item>
-        <item>book3Page6</item>
-        <item>book3Page7</item>
+        <item>book3Tutorial1</item>
+        <item>book3Tutorial2</item>
+        <item>book3Tutorial3</item>
+        <item>book3Tutorial4</item>
+        <item>book3Tutorial5</item>
+        <item>book3Tutorial6</item>
+        <item>book3Tutorial7</item>
     </string-array>
 
-    <integer-array name="book3Page1Slides">
+    <integer-array name="book3Tutorial1Pages">
         <item>@drawable/ma3_4figure01</item>
         <item>@drawable/ma3_4figure02</item>
         <item>@drawable/ma3_4figure03</item>
@@ -406,8 +556,24 @@
         <item>@drawable/ma3_4figure13</item>
         <item>@drawable/ma3_4figure14</item>
     </integer-array>
+    <string-array name="book3Tutorial1Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book3Page2Slides">
+    <integer-array name="book3Tutorial2Pages">
         <item>@drawable/ma3_4torso01</item>
         <item>@drawable/ma3_4torso02</item>
         <item>@drawable/ma3_4torso03</item>
@@ -422,8 +588,23 @@
         <item>@drawable/ma3_4torso12</item>
         <item>@drawable/ma3_4torso13</item>
     </integer-array>
+    <string-array name="book3Tutorial2Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book3Page3Slides">
+    <integer-array name="book3Tutorial3Pages">
         <item>@drawable/ma3_4legs01</item>
         <item>@drawable/ma3_4legs02</item>
         <item>@drawable/ma3_4legs03</item>
@@ -437,8 +618,22 @@
         <item>@drawable/ma3_4legs11</item>
         <item>@drawable/ma3_4legs12</item>
     </integer-array>
+    <string-array name="book3Tutorial3Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book3Page4Slides">
+    <integer-array name="book3Tutorial4Pages">
         <item>@drawable/ma3_4head01</item>
         <item>@drawable/ma3_4head02</item>
         <item>@drawable/ma3_4head03</item>
@@ -457,7 +652,26 @@
         <item>@drawable/ma3_4head16</item>
         <item>@drawable/ma3_4head17</item>
     </integer-array>
-    <integer-array name="book3Page5Slides">
+    <string-array name="book3Tutorial4Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <integer-array name="book3Tutorial5Pages">
         <item>@drawable/ma3_4hands01</item>
         <item>@drawable/ma3_4hands02</item>
         <item>@drawable/ma3_4hands03</item>
@@ -466,8 +680,17 @@
         <item>@drawable/ma3_4hands06</item>
         <item>@drawable/ma3_4hands07</item>
     </integer-array>
+    <string-array name="book3Tutorial5Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book3Page6Slides">
+    <integer-array name="book3Tutorial6Pages">
         <item>@drawable/ma3_4foot01</item>
         <item>@drawable/ma3_4foot02</item>
         <item>@drawable/ma3_4foot03</item>
@@ -476,7 +699,18 @@
         <item>@drawable/ma3_4foot06</item>
         <item>@drawable/ma3_4foot07</item>
     </integer-array>
-    <integer-array name="book3Page7Slides">
+    <string-array name="book3Tutorial6Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <integer-array name="book3Tutorial7Pages">
         <item>@drawable/ma3_4arms01</item>
         <item>@drawable/ma3_4arms02</item>
         <item>@drawable/ma3_4arms03</item>
@@ -490,8 +724,24 @@
         <item>@drawable/ma3_4arms11</item>
         <item>@drawable/ma3_4arms12</item>
     </integer-array>
+    <string-array name="book3Tutorial7Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <!-- BOOK 4 -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 4 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
 
     <array name="book4Build">
         <item>@string/book4heading1</item>
@@ -532,17 +782,17 @@
 
     </integer-array>
     <string-array name="book4PageIds">
-        <item>book4Page1</item>
-        <item>book4Page2</item>
-        <item>book4Page3</item>
-        <item>book4Page4</item>
-        <item>book4Page5</item>
-        <item>book4Page6</item>
-        <item>book4Page7</item>
+        <item>book4Tutorial1</item>
+        <item>book4Tutorial2</item>
+        <item>book4Tutorial3</item>
+        <item>book4Tutorial4</item>
+        <item>book4Tutorial5</item>
+        <item>book4Tutorial6</item>
+        <item>book4Tutorial7</item>
 
     </string-array>
 
-    <integer-array name="book4Page1Slides">
+    <integer-array name="book4Tutorial1Pages">
         <item>@drawable/maflexa01</item>
         <item>@drawable/maflexa02</item>
         <item>@drawable/maflexa03</item>
@@ -550,7 +800,6 @@
         <item>@drawable/maflexa05</item>
         <item>@drawable/maflexa06</item>
         <item>@drawable/maflexa07</item>
-        <item>@drawable/maflexa08</item>
         <item>@drawable/maflexa08</item>
         <item>@drawable/maflexa09</item>
         <item>@drawable/maflexa10</item>
@@ -566,8 +815,31 @@
         <item>@drawable/maflexa20</item>
         <item>@drawable/maflexa21</item>
     </integer-array>
+    <string-array name="book4Tutorial1Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page2Slides">
+    <integer-array name="book4Tutorial2Pages">
         <item>@drawable/maflexb01</item>
         <item>@drawable/maflexb02</item>
         <item>@drawable/maflexb03</item>
@@ -575,7 +847,6 @@
         <item>@drawable/maflexb05</item>
         <item>@drawable/maflexb06</item>
         <item>@drawable/maflexb07</item>
-        <item>@drawable/maflexb08</item>
         <item>@drawable/maflexb08</item>
         <item>@drawable/maflexb09</item>
         <item>@drawable/maflexb10</item>
@@ -589,8 +860,29 @@
         <item>@drawable/maflexb18</item>
         <item>@drawable/maflexb19</item>
     </integer-array>
+    <string-array name="book4Tutorial2Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page3Slides">
+    <integer-array name="book4Tutorial3Pages">
         <item>@drawable/maflexc01</item>
         <item>@drawable/maflexc02</item>
         <item>@drawable/maflexc03</item>
@@ -610,8 +902,28 @@
         <item>@drawable/maflexc17</item>
         <item>@drawable/maflexc18</item>
     </integer-array>
+    <string-array name="book4Tutorial3Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page4Slides">
+    <integer-array name="book4Tutorial4Pages">
         <item>@drawable/maflexd01</item>
         <item>@drawable/maflexd02</item>
         <item>@drawable/maflexd03</item>
@@ -631,8 +943,28 @@
         <item>@drawable/maflexd17</item>
         <item>@drawable/maflexd18</item>
     </integer-array>
+    <string-array name="book4Tutorial4Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page5Slides">
+    <integer-array name="book4Tutorial5Pages">
         <item>@drawable/maflexe01</item>
         <item>@drawable/maflexe02</item>
         <item>@drawable/maflexe03</item>
@@ -653,8 +985,29 @@
         <item>@drawable/maflexe18</item>
         <item>@drawable/maflexe19</item>
     </integer-array>
+    <string-array name="book4Tutorial5Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page6Slides">
+    <integer-array name="book4Tutorial6Pages">
         <item>@drawable/maflexf01</item>
         <item>@drawable/maflexf02</item>
         <item>@drawable/maflexf03</item>
@@ -676,8 +1029,31 @@
         <item>@drawable/maflexf19</item>
         <item>@drawable/maflexf20</item>
     </integer-array>
+    <string-array name="book4Tutorial6Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book4Page7Slides">
+
+    <integer-array name="book4Tutorial7Pages">
         <item>@drawable/maflexg01</item>
         <item>@drawable/maflexg02</item>
         <item>@drawable/maflexg03</item>
@@ -696,9 +1072,29 @@
         <item>@drawable/maflexg16</item>
         <item>@drawable/maflexg17</item>
     </integer-array>
+    <string-array name="book4Tutorial7Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-
-    <!-- BOOK 5 -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 5 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
 
     <array name="book5Build">
         <item>@string/book5heading1</item>
@@ -742,18 +1138,18 @@
 
     </integer-array>
     <string-array name="book5PageIds">
-        <item>book5Page1</item>
-        <item>book5Page2</item>
-        <item>book5Page3</item>
-        <item>book5Page4</item>
-        <item>book5Page5</item>
-        <item>book5Page6</item>
-        <item>book5Page7</item>
-        <item>book5Page8</item>
+        <item>book5Tutorial1</item>
+        <item>book5Tutorial2</item>
+        <item>book5Tutorial3</item>
+        <item>book5Tutorial4</item>
+        <item>book5Tutorial5</item>
+        <item>book5Tutorial6</item>
+        <item>book5Tutorial7</item>
+        <item>book5Tutorial8</item>
 
     </string-array>
 
-    <integer-array name="book5Page1Slides">
+    <integer-array name="book5Tutorial1Pages">
         <item>@drawable/midynamickicka0101</item>
         <item>@drawable/midynamickicka0102</item>
         <item>@drawable/midynamickicka0103</item>
@@ -772,10 +1168,29 @@
         <item>@drawable/midynamickicka0116</item>
         <item>@drawable/midynamickicka0117</item>
         <item>@drawable/midynamickicka0118</item>
-
     </integer-array>
+    <string-array name="book5Tutorial1Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page2Slides">
+    <integer-array name="book5Tutorial2Pages">
         <item>@drawable/midynamickicka0201</item>
         <item>@drawable/midynamickicka0202</item>
         <item>@drawable/midynamickicka0203</item>
@@ -794,10 +1209,29 @@
         <item>@drawable/midynamickicka0216</item>
         <item>@drawable/midynamickicka0217</item>
         <item>@drawable/midynamickicka0218</item>
-
     </integer-array>
+    <string-array name="book5Tutorial2Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page3Slides">
+    <integer-array name="book5Tutorial3Pages">
         <item>@drawable/midynamickicka0301</item>
         <item>@drawable/midynamickicka0302</item>
         <item>@drawable/midynamickicka0303</item>
@@ -816,8 +1250,27 @@
         <item>@drawable/midynamickicka0316</item>
         <item>@drawable/midynamickicka0317</item>
     </integer-array>
+    <string-array name="book5Tutorial3Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page4Slides">
+    <integer-array name="book5Tutorial4Pages">
         <item>@drawable/midynamickicka0401</item>
         <item>@drawable/midynamickicka0402</item>
         <item>@drawable/midynamickicka0403</item>
@@ -837,10 +1290,30 @@
         <item>@drawable/midynamickicka0417</item>
         <item>@drawable/midynamickicka0418</item>
         <item>@drawable/midynamickicka0419</item>
-
     </integer-array>
+    <string-array name="book5Tutorial4Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page5Slides">
+    <integer-array name="book5Tutorial5Pages">
         <item>@drawable/midynamickicka0501</item>
         <item>@drawable/midynamickicka0502</item>
         <item>@drawable/midynamickicka0503</item>
@@ -857,10 +1330,28 @@
         <item>@drawable/midynamickicka0514</item>
         <item>@drawable/midynamickicka0515</item>
         <item>@drawable/midynamickicka0516</item>
-
     </integer-array>
+    <string-array name="book5Tutorial5Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page6Slides">
+    <integer-array name="book5Tutorial6Pages">
         <item>@drawable/midynamickicka0601</item>
         <item>@drawable/midynamickicka0602</item>
         <item>@drawable/midynamickicka0603</item>
@@ -879,10 +1370,29 @@
         <item>@drawable/midynamickicka0616</item>
         <item>@drawable/midynamickicka0617</item>
         <item>@drawable/midynamickicka0618</item>
-
     </integer-array>
+    <string-array name="book5Tutorial6Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page7Slides">
+    <integer-array name="book5Tutorial7Pages">
         <item>@drawable/midynamickicka0701</item>
         <item>@drawable/midynamickicka0702</item>
         <item>@drawable/midynamickicka0703</item>
@@ -901,8 +1411,27 @@
         <item>@drawable/midynamickicka0716</item>
         <item>@drawable/midynamickicka0717</item>
     </integer-array>
+    <string-array name="book5Tutorial7Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
-    <integer-array name="book5Page8Slides">
+    <integer-array name="book5Tutorial8Pages">
         <item>@drawable/midynamickicka0801</item>
         <item>@drawable/midynamickicka0802</item>
         <item>@drawable/midynamickicka0803</item>
@@ -922,17 +1451,32 @@
         <item>@drawable/midynamickicka0817</item>
         <item>@drawable/midynamickicka0818</item>
     </integer-array>
-
-
-
-
-
+    <string-array name="book5Tutorial8Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
     <!--all pages fragment-->
     <string-array name="pagesAllHeadings">
-        <item>Full Figure</item>
-        <item>Basic Head</item>
-        <item>Basic Hand</item>
+        <item>Full Figure</item> <!--b01t01-->
+        <item>Basic Head</item> <!--b01t02-->
+        <item>Basic Hand</item> <!--b01t03-->
         <item>Full Figure</item>
         <item>The Head</item>
         <item>The Torso</item>
@@ -968,9 +1512,9 @@
 
     <!--all pages level-->
     <string-array name="pagesAllLevels">
-        <item>Level 1</item>
-        <item>Level 1</item>
-        <item>Level 1</item>
+        <item>Level 1</item> <!--b01t01-->
+        <item>Level 1</item> <!--b01t02-->
+        <item>Level 1</item> <!--b01t03-->
         <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
@@ -1004,9 +1548,9 @@
 
 
     <integer-array name="pagesAllImages">
-        <item>@drawable/mb3_4figure20</item>
-        <item>@drawable/mb3_4head27</item>
-        <item>@drawable/mb3_4hand20</item>
+        <item>@drawable/b01t01p29</item> <!--b01t01-->
+        <item>@drawable/b01t02p28</item> <!--b01t02-->
+        <item>@drawable/b01t03p18</item> <!--b01t03-->
         <item>@drawable/mi3_4figure21</item>
         <item>@drawable/mi3_4head19</item>
         <item>@drawable/mi3_4torso18</item>
@@ -1039,44 +1583,45 @@
     </integer-array>
 
     <string-array name="pagesAllIds">
-        <item>book1Page1</item>
-        <item>book1Page2</item>
-        <item>book1Page3</item>
-        <item>book2Page1</item>
-        <item>book2Page2</item>
-        <item>book2Page3</item>
-        <item>book2Page4</item>
-        <item>book2Page5</item>
-        <item>book2Page6</item>
-        <item>book2Page7</item>
-        <item>book3Page1</item>
-        <item>book3Page2</item>
-        <item>book3Page3</item>
-        <item>book3Page4</item>
-        <item>book3Page5</item>
-        <item>book3Page6</item>
-        <item>book3Page7</item>
-        <item>book4Page1</item>
-        <item>book4Page2</item>
-        <item>book4Page3</item>
-        <item>book4Page4</item>
-        <item>book4Page5</item>
-        <item>book4Page6</item>
-        <item>book4Page7</item>
-        <item>book5Page1</item>
-        <item>book5Page2</item>
-        <item>book5Page3</item>
-        <item>book5Page4</item>
-        <item>book5Page5</item>
-        <item>book5Page6</item>
-        <item>book5Page7</item>
-        <item>book5Page8</item>
+        <item>book1Tutorial1</item>
+        <item>book1Tutorial2</item>
+        <item>book1Tutorial3</item>
+        <item>book2Tutorial1</item>
+        <item>book2Tutorial2</item>
+        <item>book2Tutorial3</item>
+        <item>book2Tutorial4</item>
+        <item>book2Tutorial5</item>
+        <item>book2Tutorial6</item>
+        <item>book2Tutorial7</item>
+        <item>book3Tutorial1</item>
+        <item>book3Tutorial2</item>
+        <item>book3Tutorial3</item>
+        <item>book3Tutorial4</item>
+        <item>book3Tutorial5</item>
+        <item>book3Tutorial6</item>
+        <item>book3Tutorial7</item>
+        <item>book4Tutorial1</item>
+        <item>book4Tutorial2</item>
+        <item>book4Tutorial3</item>
+        <item>book4Tutorial4</item>
+        <item>book4Tutorial5</item>
+        <item>book4Tutorial6</item>
+        <item>book4Tutorial7</item>
+        <item>book5Tutorial1</item>
+        <item>book5Tutorial2</item>
+        <item>book5Tutorial3</item>
+        <item>book5Tutorial4</item>
+        <item>book5Tutorial5</item>
+        <item>book5Tutorial6</item>
+        <item>book5Tutorial7</item>
+        <item>book5Tutorial8</item>
     </string-array>
 
     <string-array name="pagesAllbooks">
         <item>book1</item>
         <item>book1</item>
         <item>book1</item>
+
         <item>book2</item>
         <item>book2</item>
         <item>book2</item>
@@ -1084,6 +1629,7 @@
         <item>book2</item>
         <item>book2</item>
         <item>book2</item>
+
         <item>book3</item>
         <item>book3</item>
         <item>book3</item>
@@ -1091,6 +1637,7 @@
         <item>book3</item>
         <item>book3</item>
         <item>book3</item>
+
         <item>book4</item>
         <item>book4</item>
         <item>book4</item>
@@ -1098,6 +1645,7 @@
         <item>book4</item>
         <item>book4</item>
         <item>book4</item>
+
         <item>book5</item>
         <item>book5</item>
         <item>book5</item>
@@ -1107,6 +1655,4 @@
         <item>book5</item>
         <item>book5</item>
     </string-array>
-
-
 </resources>

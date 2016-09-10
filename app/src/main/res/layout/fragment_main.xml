@@ -19,7 +19,7 @@
             android:id="@+id/monday"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="New content every Monday"
+            android:text="@string/new_content"
             android:background="#60beef"
             android:gravity="center"
             android:layout_margin="10dp"/>
@@ -322,7 +322,7 @@
                 android:id="@+id/will_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel's Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland."
+                android:text="@string/will"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="#c0b9b9" />

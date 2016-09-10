@@ -84,18 +84,15 @@ public class firstFragment extends BaseFragment  {
             }
         });
 
-
-
-
-
         Log.d("subscribed?", "" + isSubscribed());
 
-        View homeCard1 = rootView.findViewById(com.learn.howtodraw.draw.R.id.home_card_1);
+        View homeCard1 = rootView.findViewById(R.id.home_card_1);
         homeCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book3Page4Slides);
+                intent.putExtra("bookSlides", R.array.book3Tutorial4Pages);
+                intent.putExtra("bookHelp", R.array.book3Tutorial4Help);
                 startActivity(intent);
             }
         });
@@ -105,15 +102,13 @@ public class firstFragment extends BaseFragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", com.learn.howtodraw.draw.R.array.book2Page3Slides);
+                intent.putExtra("bookSlides", R.array.book2Tutorial3Pages);
+                intent.putExtra("bookHelp", R.array.book2Tutorial3Help);
                 startActivity(intent);
             }
         });
 
-
-
-
-        View artist = rootView.findViewById(com.learn.howtodraw.draw.R.id.layout_4);
+        View artist = rootView.findViewById(R.id.layout_4);
         artist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

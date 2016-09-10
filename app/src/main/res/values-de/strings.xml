@@ -1,0 +1,13 @@
+<resources>
+    <string name="share"> Diese Nachricht wurde von der Android-App Draw gesendet. Laden Sie die App aus http://www.google.com</string>
+    <string name="pagetitlenew">Neu</string>
+    <string name="pagetitlebooks">Bücher</string>
+    <string name="pagetitlepages">Seiten</string>
+    <string name="shareimage">Freigabe von Bildern zu ..</string>
+    <string name="new_content">Neue Inhalte jeden Montag</string>
+    <string name="rate_draw">bewerten Draw</string>
+    <string name="share_draw">Teilen Draw</string>
+    <string name="will">Will Sliney ist eine preisgekrönte und beste Comiczeichner und Autor von Cork zu verkaufen. Er ist derzeit der Künstler für Marvels Spiderman 2099 , und seine Graphic Novel Celtic Warrior: The Legend of Cú Chulainn , herausgegeben von der O Brien Press im Jahr 2013 , machte die Irish Times Bestsellerliste und ist auch das am schnellsten verkaufte Grafik Roman in Irland .</string>
+
+
+</resources>

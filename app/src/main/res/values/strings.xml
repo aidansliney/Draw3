@@ -1,17 +1,25 @@
 <resources>
-    <string name="icon_heartS">&#xf004;</string>
+
     <string name="app_name">Learn how to draw</string>
     <string name="action_settings">Share</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_book2">BookActivity2</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_correct">ca-app-pub-7832891006427470/5345932942</string>
-    <string name="rateApp">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
     <string name="menu_about">About Settings</string>
     <string name="menu_subscribe">Subscribe Settings</string>
+    <string name="share">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
+    <string name="pagetitlenew">New</string>
+    <string name="pagetitlebooks">Books</string>
+    <string name="pagetitlepages">Pages</string>
+    <string name="subscriptionerror">Subscriptions not supported on your device yet. Sorry!</string>
+    <string name="shareimage">Share images to..</string>
+    <string name="new_content">New content every Monday</string>
+    <string name="rate_draw">Rate Draw</string>
+    <string name="share_draw">Share Draw</string>
+    <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel\'s Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O\'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland.</string>
 
 
 </resources>

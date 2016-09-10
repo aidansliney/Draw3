@@ -76,12 +76,13 @@ public class ThirdFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        //send content in the grid
+        //send content in the grid. The data is sent to the third fragment from ...Main Activity
         final String[] cardText1 = getResources().getStringArray(getArguments().getInt("cardText1Id"));
         final String[] bookPageIds = getResources().getStringArray(getArguments().getInt("bookPageIds"));
         final String[] bookNames = getResources().getStringArray(getArguments().getInt("booksBooks"));
         final String[] bookLevels = getResources().getStringArray(getArguments().getInt("bookLevel"));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getArguments().getInt("cardImageId"));
+
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
@@ -98,7 +99,7 @@ public class ThirdFragment extends BaseFragment {
                 counter++;
             }
 
-            if(hasPurchased)
+            if(hasPurchased || mSubscribed)
                 tickIcon[i] = R.string.fa_check;
             else
                 tickIcon[i] = R.string.fa_lock;
@@ -147,11 +148,14 @@ public class ThirdFragment extends BaseFragment {
                     bookName = R.string.book5;
                 }
 
-                if(hasPurchased)
+                if(hasPurchased || mSubscribed)
                 {
-                    int slidesID = getActivity().getResources().getIdentifier(pageId + "Slides", "array", getContext().getPackageName());
+                    int slidesID = getActivity().getResources().getIdentifier(pageId + "Pages", "array", getContext().getPackageName());
+
+                    int helpID = getActivity().getResources().getIdentifier(pageId + "Help", "array", getContext().getPackageName());
                     Intent intent = new Intent(getActivity(),PageActivity.class);
                     intent.putExtra("bookSlides", slidesID);
+                    intent.putExtra("bookHelp", helpID);
                     startActivity(intent);
                 }
                 else

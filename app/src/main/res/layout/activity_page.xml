@@ -15,17 +15,7 @@
         android:layout_height="fill_parent"
         android:src="@drawable/mi3_4figure21" />
 
- <!--   <com.learn.howtodraw.draw.FontA.TextAwesome
-        android:id="@+id/info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/fa_question_circle"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp" />-->
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,11 +69,29 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/fa_angle_left"
         android:textColor="@color/colorAccent"
-        android:textSize="50dp" />
+        android:textSize="50dp"
+        android:padding="10dp"/>
+
+
+    <TextView
+        android:id="@+id/help_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="55dp"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/helpcontainer"
+        android:paddingBottom="10dp"
+        android:text="Tool tip Tool tipT tTool tip Tool tip tTool tip Tool tip "
+        android:textColor="#ffffff" />
 
 
 
@@ -106,6 +114,8 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:id="@+id/shareLayout">
+
+
 
         <com.learn.howtodraw.draw.FontA.TextAwesome
             android:id="@+id/twitter"
@@ -148,10 +158,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/fa_angle_right"
         android:textColor="@color/colorAccent"
+        android:padding="10dp"
         android:textSize="50dp" />
 
 

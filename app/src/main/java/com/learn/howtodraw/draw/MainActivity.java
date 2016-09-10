@@ -24,6 +24,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import com.google.firebase.crash.FirebaseCrash;
 import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;
@@ -79,6 +80,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+       // FirebaseCrash.report(new Exception("My first Android non-fatal error"));
+
 
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
@@ -118,7 +121,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
 
 
-        Log.d("subscribed?", "" + mSubscribed);
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -152,6 +155,18 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             }
         });
 
+        TextView tv2 = (TextView) findViewById(R.id.removeBook2);
+        assert tv != null;
+        tv2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                consumeBook("subscription");
+                mSubscribed= false;
+
+            }
+        });
+
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -166,7 +181,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, "This message has been sent from the Android app Draw. Download the app from http://www.google.com");
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share));
                     sendIntent.setType("text/plain");
                     startActivity(sendIntent);
                     String id1 = "Share";
@@ -208,7 +223,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         if (id == R.id.share_settings) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.rateApp));
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share));
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
             return true;
@@ -274,11 +289,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "New";
+                    return getString(R.string.pagetitlenew);
                 case 1:
-                    return "Books";
+                    return getString(R.string.pagetitlebooks);
                 case 2:
-                    return "Pages";
+                    return getString(R.string.pagetitlepages);
             }
             return null;
         }
@@ -333,7 +348,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 // flow for subscription.
     public void onSubscribedButtonClicked(View arg0) {
         if (!mHelper.subscriptionsSupported()) {
-            complain("Subscriptions not supported on your device yet. Sorry!");
+            complain(getString(R.string.subscriptionerror));
             return;
         }
 
@@ -459,11 +474,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // The superclass setup method checks to see what has been purchased and what has been subscribed to.
         // Premium and infinite gas are handled here. If there was a regular gas purchase, steps to consume
         // it (via an async call to consume) were started in the superclass.
-
-
-
-
-
 
 
        /* if (mPurchasedBook1) {
