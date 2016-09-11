@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/new_content"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/monday1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/new_content"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/monday2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/new_content"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/monday3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/new_content"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mb3_4coveriso"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book1heading1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#3c3c3c"
+                    android:layout_weight="0.9
+                    "/>
+<!--                <com.learn.howtodraw.draw.FontA.TextAwesome
+                    android:id="@+id/ticklock1"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/fa_check"
+                    android:textAlignment="gravity"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp"
+                    android:layout_weight="0.1"
+                    android:layout_marginRight="15dp" />-->
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book1heading2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="1dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp"
+            >
+            <!-- Home Card 1 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_1"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:src="@drawable/ma3_4head17" />
+
+
+
+                        <!--Level 2 60bdb1-->
+                        <!--Level 3 ef6067-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Level 3"
+                            android:background="#ef6067"
+                            android:layout_marginTop="220dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Free this week"
+
+                            android:background="#60beef"
+                            android:layout_marginTop="245dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#bababa" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Head"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="2dp"
+                        android:textColor="#3c3c3c"
+                        android:layout_weight="0.95"/>
+
+
+                    <com.learn.howtodraw.draw.FontA.TextAwesome
+                        android:id="@+id/ticklock2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/fa_check"
+                        android:textAlignment="gravity"
+                        android:paddingTop="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.05"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- Home Card 2 -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_card_2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:src="@drawable/mi3_4torso18"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Free this week"
+                            android:background="#60beef"
+                            android:layout_marginTop="245dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+
+                        <!--Level 3 ef6067-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Level 2"
+                            android:background="#60bdb1"
+                            android:layout_marginTop="220dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="New"
+                            android:background="#e27cde"
+                            android:layout_marginTop="195dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#bababa" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="The Torso"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="2dp"
+                            android:textColor="#3c3c3c"
+                            android:layout_weight="0.95"/>
+
+
+                        <com.learn.howtodraw.draw.FontA.TextAwesome
+                            android:id="@+id/ticklock2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/fa_check"
+                            android:textAlignment="gravity"
+                            android:paddingTop="10dp"
+                            android:gravity="right"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.05"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        // vertical
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:onClick="mario">
+
+            <ImageView
+                android:id="@+id/willy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sliney"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/will_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Will Sliney"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/will_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/will"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+
+  <!--      <LinearLayout
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginBottom="15dp">
+
+            <VideoView
+                android:id="@+id/myVideoA"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/video_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+
+
+            <TextView
+                android:id="@+id/video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watch this video to learn how to use 'Learn how to draw'"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
