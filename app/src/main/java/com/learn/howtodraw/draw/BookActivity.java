@@ -15,17 +15,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
 import static com.learn.howtodraw.draw.Constants.*;
 
 public class BookActivity extends MainActivity {
 
-    int Color = R.color.colorAccent;
     public Boolean bookPurchasedLock;
     public String bookName;
     public Boolean isUnlocked(){
 
-        if (mSubscribed)
-            return true;
+        /*if (mSubscribed)
+            return true;*/
 
         //check what page we are on and if it is purchased
         if (bookName.equals("book1"))
@@ -39,6 +41,13 @@ public class BookActivity extends MainActivity {
             bookPurchasedLock = mPurchasedBooksArray[3];
         if (bookName.equals("book5"))
             bookPurchasedLock = mPurchasedBooksArray[4];
+        assert bookPurchasedLock != null;
+
+        if (bookPurchasedLock == null){
+            toast("bpl is equal to null :(");
+            return false;
+        }
+
         if (bookPurchasedLock)
             return true;
         else
@@ -72,11 +81,6 @@ public class BookActivity extends MainActivity {
             collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelThree)));
             collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelThree)));
         }
-
-
-
-
-
 
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
@@ -138,9 +142,6 @@ public class BookActivity extends MainActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
-
         //Create floating action button
         FloatingActionButton fab = (FloatingActionButton) findViewById(com.learn.howtodraw.draw.R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -160,21 +161,15 @@ public class BookActivity extends MainActivity {
         //textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         getSupportActionBar().setTitle(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
 
-
-
         //textView2.setText(getString(getIntent().getIntExtra("bookCoverH2Id", 0)));
         imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
-        bookName = getString(getIntent().getIntExtra("booksLevel", 0));
+
+        bookName = getString(getIntent().getIntExtra("bookName", 0));
         buildTheGrid();
-
-
-
-
 
         if (isUnlocked())
             toast("You own this book");
         else
             Log.d("PING", "This page is  not locked");
-
     }
 }

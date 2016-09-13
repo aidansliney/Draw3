@@ -14,13 +14,9 @@ public class LinkBooks{
     public static void linkBook(int layout, final int bookContent, View rootView, final boolean advert, final Activity activity) {
         View Layout = rootView.findViewById(layout);
 
-
         Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // BaseFragment bf = new BaseFragment();
-                //bf.isSubscribed()
-
                     TypedArray bookBuild = activity.getResources().obtainTypedArray(bookContent);
                     final int[] bookCollected = new int[bookBuild.length()];
                     for (int i = 0; i < bookBuild.length(); i++)
@@ -37,9 +33,6 @@ public class LinkBooks{
                     intent.putExtra("bookName", bookCollected[7]);
                     intent.putExtra("booksLevel", bookCollected[8]);
                     activity.startActivity(intent);
-
-
-
             }
         });
     }

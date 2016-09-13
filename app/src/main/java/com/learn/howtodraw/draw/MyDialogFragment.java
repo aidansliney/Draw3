@@ -38,9 +38,6 @@ public class MyDialogFragment extends BaseFragment {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.bookThumb);
         imageView.setImageResource(bookThumb);
 
-
-
-
         Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
         subscribebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +47,7 @@ public class MyDialogFragment extends BaseFragment {
         });
 
         bookNameString = getString(bookName);
+        Log.d("BBook name",bookNameString);
         Button buyBookbtn = (Button) rootView.findViewById(R.id.buyBookButton);
         buyBookbtn.setText(IabHelper.map.get(bookNameString));
         buyBookbtn.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +57,7 @@ public class MyDialogFragment extends BaseFragment {
             }
         });
 
- /*       TextView textView = (TextView) rootView.findViewById(R.id.subscribedQuestion);
+ /*     TextView textView = (TextView) rootView.findViewById(R.id.subscribedQuestion);
         if (isSubscribed()) {
             textView.setText("You have subscribed you LEGEND!!");
         } else

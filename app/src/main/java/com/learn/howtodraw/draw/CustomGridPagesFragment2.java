@@ -1,7 +1,7 @@
 package com.learn.howtodraw.draw;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,31 +9,31 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomGridPagesFragment extends BaseAdapter {
+import static com.learn.howtodraw.draw.Constants.*;
+
+public class CustomGridPagesFragment2 extends BaseAdapter {
     private Context mContext;
-    private final String[] web;
+    private Activity mActivity;
+    private final String[] text;
     private final String[] bookPageIds;
     private final String[] bookNames;
-    private final String[] bookLevels;
     private final int[] Imageid;
-    private final int[] tickIcon;
-    Resources res;
 
-    public CustomGridPagesFragment(Context c, String[] web, int[] Imageid, String[] bookPageIds, int[] tickIcon, String[] bookNames, String[] bookLevels) {
-        mContext = c;
+
+    public CustomGridPagesFragment2(Activity c, String[] text, int[] Imageid, String[] bookPageIds,  String[] bookNames) {
+         mContext = c;
+        mActivity = c;
         this.Imageid = Imageid;
-        this.web = web;
+        this.text = text;
         this.bookPageIds = bookPageIds;
         this.bookNames = bookNames;
-        this.bookLevels = bookLevels;
-        this.tickIcon = tickIcon;
 
     }
 
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return web.length;
+        return text.length;
     }
 
     @Override
@@ -55,35 +55,15 @@ public class CustomGridPagesFragment extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null) {
-
-            grid = new View(mContext);
-            grid = inflater.inflate(R.layout.grid_of_tutorials, null);
+            grid = inflater.inflate(R.layout.grid_of_books, null);
             TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-
-            TextView tv= (TextView) grid.findViewById(R.id.ticklock2);
-            tv.setText(tickIcon[position]);
-
             TextView tv2= (TextView) grid.findViewById(R.id.bookName);
             tv2.setText(bookNames[position]);
-
-            TextView tv3= (TextView) grid.findViewById(R.id.bookLevel);
-            tv3.setText(bookLevels[position]);
-
-            if (bookLevels[position].equals("Level 1")){
-                tv3.setBackgroundResource(R.color.levelOne);
-            }
-
-            if (bookLevels[position].equals("Level 3")){
-                tv3.setBackgroundResource(R.color.levelThree);
-            }
-
-
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
-            textView.setText(web[position]);
-
-
-          //  textView3.setId(web3[position]);
+            textView.setText(text[position]);
             imageView.setImageResource(Imageid[position]);
+            LinkBooks.linkBook(R.id.grid_image,SKU_BOOK_ARRAY_ARRAY[position], grid, false, mActivity);
+
         } else {
             grid = convertView;
         }

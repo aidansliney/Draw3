@@ -206,8 +206,6 @@ public class PageActivity extends AppCompatActivity {
                 }
             }
 
-
-
             public void onSwipeBottom() {
               //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_1b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mb3_4coveriso"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Book 1"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="221dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/primary1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book1heading1"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book1heading2"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_2b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/book2cover"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Book 2"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="221dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/primary2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book2heading1"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book2heading2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#c0b9b9" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_3b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ma3_4coveriso"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Book 3"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="221dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 3"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heroic Male"
+                android:paddingLeft="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_4b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/insidebookcover"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Book 4"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="221dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 3"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heroic Male"
+                android:paddingLeft="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_5b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/midynamickickcoveriso"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Book 5"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="221dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#3c3c3c" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn how to draw the dynamic kick"
+                android:paddingLeft="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:textColor="#c0b9b9" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

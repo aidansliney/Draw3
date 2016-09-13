@@ -52,7 +52,7 @@ public class CustomGridBookFragment extends BaseAdapter {
         if (convertView == null) {
 
             grid = new View(mContext);
-            grid = inflater.inflate(R.layout.grid_single_book, null);
+            grid = inflater.inflate(R.layout.grid_of_tutorials_in_book, null);
             TextView textView = (TextView) grid.findViewById(R.id.grid_text);
 
             TextView tv= (TextView) grid.findViewById(R.id.ticklock2);

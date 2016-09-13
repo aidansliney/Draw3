@@ -15,8 +15,8 @@ android {
         applicationId "com.learn.howtodraw.draw"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 4
-        versionName "1.4"
+        versionCode 5
+        versionName "1.5"
     }
     buildTypes {
         release {
@@ -25,7 +25,7 @@ android {
             lintOptions {
                 checkReleaseBuilds false
             }
-           /* debuggable true*/
+           debuggable true
             signingConfig signingConfigs.config
         }
     }
@@ -46,6 +46,8 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:9.4.0'
     compile 'com.google.firebase:firebase-ads:9.4.0'
     compile 'com.google.firebase:firebase-crash:9.4.0'
+    compile 'com.google.firebase:firebase-storage:9.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 apply plugin: 'com.google.gms.google-services'
 

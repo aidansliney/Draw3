@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- A Card -->
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/grid_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/head1_thumb"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:background="@color/colorAccent"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="book1"
+                    android:layout_gravity="bottom"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/grid_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.95"
+                android:padding="7dp"
+                android:text="test test test"
+                android:textColor="#3c3c3c" />
+
+
+            <View
+                android:id="@+id/gridId"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee" />
+
+
+
+    </LinearLayout>
+</LinearLayout>

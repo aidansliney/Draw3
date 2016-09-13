@@ -92,7 +92,7 @@ public class ThirdFragment extends BaseFragment {
             while(counter < mPurchasedBooksArray.length)
             {
 
-                if (bookNames[i].equals(SKU_BOOK_ARRAY[counter]))
+                if (bookNames[i].equals(SKU_BOOK_NAME_ARRAY[counter]))
                 {
                     hasPurchased =  mPurchasedBooksArray[counter];
                 }

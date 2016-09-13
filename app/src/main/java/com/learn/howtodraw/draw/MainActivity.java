@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
@@ -28,6 +29,7 @@ import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;
 import com.learn.howtodraw.draw.util.Purchase;
+import com.squareup.picasso.Picasso;
 
 import static com.learn.howtodraw.draw.Constants.*;
 
@@ -38,24 +40,19 @@ import layout.ThirdFragment;
 public class MainActivity extends IabActivity implements BrowseFragment.OnFragmentInteractionListener {
 
 
-    public int imageCounter = 0;
-    //Fire Analytics
-    private FirebaseAnalytics mFirebaseAnalytics;
-
-
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-    //full page adverts
-    private static InterstitialAd mInterstitialAd;
-
-    public static String menuSelected;
-    //The {@link ViewPager} that will host the section contents.
-    private ViewPager mViewPager;
-
     // Debug tag, for logging
     static final String TAG = Constants.LOG_IAB;
+    public static String menuSelected;
+    //full page adverts
+    private static InterstitialAd mInterstitialAd;
+    public int imageCounter = 0;
     // Helper object for in-app billing.
     IabHelper mHelper = null;
-
+    //Fire Analytics
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+    //The {@link ViewPager} that will host the section contents.
+    private ViewPager mViewPager;
 
     public void onFragmentInteraction(Uri uri) {
     }
@@ -64,7 +61,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         return mSubscribed;
     }
 
-    public  void consumeBook(final String skuName) {
+    public void consumeBook(final String skuName) {
 
         mHelper.queryInventoryAsync(true, new IabHelper.QueryInventoryFinishedListener() {
             @Override
@@ -79,7 +76,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-       // FirebaseCrash.report(new Exception("My first Android non-fatal error"));
+        // FirebaseCrash.report(new Exception("My first Android non-fatal error"));
 
 
         // Start setup of in-app billing.
@@ -117,10 +114,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Change the title on the main screen
         setTitle("");
         setContentView(R.layout.fragment_main); // this is needed but could be a better way
-
-
         Bundle params = new Bundle();
-        params.putString("image_name","Name");
+        params.putString("image_name", "Name");
         params.putString("full_text", "string");
         mFirebaseAnalytics.logEvent("share_image", params);
 
@@ -130,7 +125,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Log.d("subscribed2?" + mSubscribed, "" + mSubscribed);
+        Log.d("subscribed?", "" + mSubscribed);
 
 
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
@@ -144,31 +139,17 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         tabLayout.setupWithViewPager(mViewPager);
 
 
-
         TextView tv = (TextView) findViewById(R.id.removeBook);
         assert tv != null;
         tv.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                consumeBook(SKU_BOOK_ARRAY[1]);
+                consumeBook(SKU_BOOK_NAME_ARRAY[4]);
                 mPurchasedBooksArray[1] = false;
 
             }
         });
-
-        TextView tv2 = (TextView) findViewById(R.id.removeBook2);
-        assert tv != null;
-        tv2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                consumeBook("subscription");
-                mSubscribed= false;
-
-            }
-        });
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -176,11 +157,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    consumeBook(SKU_BOOK_ARRAY[1]);
-                    mPurchasedBooksArray[1] = false;
-
-
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share));
@@ -197,8 +173,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 }
             });
         }
-
-
 
 
 
@@ -256,52 +230,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         mInterstitialAd.loadAd(adRequest);
     }
 
-
-    // A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the sections/tabs/pages.
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a firstFragment (defined as a static inner class below).
-            switch (position) {
-                case 0:
-                    Log.d("case 0", "Entering News");
-                    return firstFragment.newInstance(0);
-                case 1:
-                    Log.d("case 1", "Entering Books");
-                    return BrowseFragment.newInstance("hello1", "hello2");
-
-                case 2:
-                    Log.d("case 2", "Entering Pages");
-                    return ThirdFragment.newInstance(R.array.pagesAllHeadings, R.array.pagesAllIds, R.array.pagesAllImages, R.array.pagesAllbooks, R.array.pagesAllLevels);
-            }
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getString(R.string.pagetitlenew);
-                case 1:
-                    return getString(R.string.pagetitlebooks);
-                case 2:
-                    return getString(R.string.page_title_tutorials);
-            }
-            return null;
-        }
-    }
-
-
     /**
      * Called when something fails in the purchase flow before the part where the item is consumed.
      * <p/>
@@ -320,7 +248,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         updateUi();
 
     }
-
 
     /**
      * User clicked the "Upgrade to Premium" button.
@@ -344,7 +271,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             mPurchaseFinishedListener, payload);
 */
     }
-
 
     // "Subscribe to infinite gas" button clicked. Explain to user, then start purchase
 // flow for subscription.
@@ -413,12 +339,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         findViewById(R.id.screen_wait).setVisibility(set ? View.VISIBLE : View.GONE);*/
     }
 
-
-/**
- */
-// Methods for IabHelperListener.
-// Subclasses should call the superclass method if they override any of these methods.
-
     /**
      * Called when consumption of a purchase item fails.
      * <p/>
@@ -433,6 +353,12 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
 
     }
+
+
+/**
+ */
+// Methods for IabHelperListener.
+// Subclasses should call the superclass method if they override any of these methods.
 
     /**
      * Called when consumption of a purchase item succeeds.
@@ -461,7 +387,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         // This would be where to change the ui in the event of a set up error.
     }
-
 
     /**
      * Called when setup succeeds and the inventory of items is available.
@@ -512,7 +437,49 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         return intent;
     }
 
+    // A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the sections/tabs/pages.
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a firstFragment (defined as a static inner class below).
+            switch (position) {
+                case 0:
+                    Log.d("case 0", "Entering News");
+                    return firstFragment.newInstance(0);
+                case 1:
+                    Log.d("case 1", "Entering Books");
+                    return BrowseFragment.newInstance(R.array.allBooksHeadings, R.array.allBooksIds, R.array.allBooksImages, R.array.allBooksBooks, R.array.allBooksBooks);
+
+                case 2:
+                    Log.d("case 2", "Entering Pages");
+                    return ThirdFragment.newInstance(R.array.pagesAllHeadings, R.array.pagesAllIds, R.array.pagesAllImages, R.array.pagesAllbooks, R.array.pagesAllLevels);
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return getString(R.string.pagetitlenew);
+                case 1:
+                    return getString(R.string.pagetitlebooks);
+                case 2:
+                    return getString(R.string.page_title_tutorials);
+            }
+            return null;
+        }
+    }
 
 
 } // end class MainActivity

@@ -14,8 +14,10 @@
 
     <string name="book1">book1</string>
     <string name="book1level">Level 1</string>
+
+
     <drawable name="book1cover">@drawable/mb3_4coveriso</drawable>
-    <drawable name="book1coverinside">@drawable/mb3_4coverinside</drawable>
+    <drawable name="book1coverinside">@drawable/b01insidecover</drawable>
     <string name="book1heading1">HEROIC MALE 3/4 VIEW</string>
     <string name="book1heading2">Learn how to draw the full figure</string>
 
@@ -223,7 +225,7 @@
     <string name="book2">book2</string>
     <string name="book2level">Level 2</string>
     <drawable name="book2cover">@drawable/mi3_4coveriso</drawable>
-    <drawable name="book2coverinside">@drawable/mi3_4coverinside</drawable>
+    <drawable name="book2coverinside">@drawable/b02insidecover</drawable>
     <string name="book2heading1">Heroic Male 3/4 View</string>
     <string name="book2heading2">Learn how to draw the full figure</string>
     <string-array name="book2cardtext1">
@@ -506,8 +508,8 @@
     </array>
     <string name="book3">book3</string>
     <string name="book3level">Level 3</string>
-    <drawable name="book3cover">@drawable/ma3_4coveriso</drawable>
-    <drawable name="book3coverinside">@drawable/ma3_4coverinside</drawable>
+    <drawable name="book3cover">@drawable/book3cover</drawable>
+    <drawable name="book3coverinside">@drawable/b03insidecover</drawable>
     <string name="book3heading1">Heroic Male 3/4 View - Level 3</string>
     <string name="book3heading2">How to draw a full male figure</string>
     <string-array name="book3cardtext1">
@@ -757,7 +759,7 @@
     <string name="book4">book4</string>
     <string name="book4level">Level 3</string>
     <drawable name="book4cover">@drawable/maflexcoveriso</drawable>
-    <drawable name="book4coverinside">@drawable/insidebookcover</drawable>
+    <drawable name="book4coverinside">@drawable/b04flatcover</drawable>
     <string name="book4heading1">Flex</string>
     <string name="book4heading2">Learn how to draw the flex</string>
     <string-array name="book4cardtext1">
@@ -1110,7 +1112,7 @@
     <string name="book5">book5</string>
     <string name="book5level">Level 2</string>
     <drawable name="book5cover">@drawable/midynamickickcoveriso</drawable>
-    <drawable name="book5coverinside">@drawable/midynamickickinsidecover</drawable>
+    <drawable name="book5coverinside">@drawable/b05flatcover</drawable>
     <string name="book5heading1">Dymanic Kick</string>
     <string name="book5heading2">Learn how to draw the dynamic kick</string>
     <string-array name="book5cardtext1">
@@ -1654,4 +1656,38 @@
         <item>book5</item>
         <item>book5</item>
     </string-array>
+
+
+    <integer-array name="allBooksImages">
+        <item>@drawable/b01insidecover</item> <!--b01t01-->
+        <item>@drawable/b02insidecover</item> <!--b01t02-->
+        <item>@drawable/b03insidecover</item> <!--b01t03-->
+        <item>@drawable/b04flatcover</item>
+        <item>@drawable/b05flatcover</item>
+    </integer-array>
+
+    <string-array name="allBooksHeadings">
+    <item>Full Figure</item> <!--b01t01-->
+    <item>Basic Head</item> <!--b01t02-->
+    <item>Basic Hand</item> <!--b01t03-->
+    <item>Full Figure</item>
+    <item>The Head</item>
+    </string-array>
+
+    <string-array name="allBooksIds">
+    <item>book1Tutorial1</item>
+    <item>book1Tutorial2</item>
+    <item>book1Tutorial3</item>
+    <item>book2Tutorial1</item>
+    <item>book2Tutorial2</item>
+    </string-array>
+
+    <string-array name="allBooksBooks">
+    <item>book1</item>
+    <item>book2</item>
+    <item>book3</item>
+    <item>book4</item>
+    <item>book5</item>
+    </string-array>
+
 </resources>

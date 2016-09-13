@@ -8,12 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.net.Uri;
-import android.widget.MediaController;
-import android.widget.VideoView;
-
-import static com.learn.howtodraw.draw.Constants.SKU_BOOK_ARRAY;
-import static com.learn.howtodraw.draw.Constants.mPurchasedBooksArray;
 
 //A placeholder fragment containing a simple view.
 public class firstFragment extends BaseFragment  {

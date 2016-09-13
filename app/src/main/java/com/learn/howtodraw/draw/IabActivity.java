@@ -83,7 +83,7 @@ public abstract class IabActivity extends AppCompatActivity {
 
             // Is it a failure?
             if (result.isFailure()) {
-                complain("Failed to query inventory: " + result);
+               // complain("Failed to query inventory: " + result);
                 onIabSetupFailed (pIabHelper);
                 return;
             }
@@ -148,9 +148,9 @@ public abstract class IabActivity extends AppCompatActivity {
 
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Purchase successful.");
             int counter = 0; // iterate through the books for sale
-            while (counter <SKU_BOOK_ARRAY.length) {
-                if (purchase.getSku().equals (SKU_BOOK_ARRAY[counter])) {
-                    if (AppConfig.DEBUG) Log.d (LOG_TAG, SKU_BOOK_ARRAY[counter]+ " purchased. No Consuming book ");
+            while (counter < SKU_BOOK_NAME_ARRAY.length) {
+                if (purchase.getSku().equals (SKU_BOOK_NAME_ARRAY[counter])) {
+                    if (AppConfig.DEBUG) Log.d (LOG_TAG, SKU_BOOK_NAME_ARRAY[counter]+ " purchased. No Consuming book ");
                     mPurchasedBooksArray[counter] = true;
                 }
                 counter++;
@@ -512,9 +512,9 @@ public abstract class IabActivity extends AppCompatActivity {
 
 
                        int counter = 0;
-                        while (counter <SKU_BOOK_ARRAY.length) {
+                        while (counter < SKU_BOOK_NAME_ARRAY.length) {
 
-                            skusToBeListed.add(SKU_BOOK_ARRAY[counter]);
+                            skusToBeListed.add(SKU_BOOK_NAME_ARRAY[counter]);
                             counter++;
                         }
 
@@ -607,30 +607,30 @@ public abstract class IabActivity extends AppCompatActivity {
 
 
         // Have we purchased book 1
-        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[0]);
+        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[0]);
 
         mPurchasedBooksArray[0] = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[0] ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
 
         // Have we purchased book 2
-        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[1]);
+        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);
         mPurchasedBooksArray[1] = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[1] ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
 
         // Have we purchased book 3
-        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[2]);
+        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[2]);
         mPurchasedBooksArray[2] = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[2] ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
 
         // Have we purchased book 4
-        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[3]);
+        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[3]);
         mPurchasedBooksArray[3] = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[3] ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
 
         // Have we purchased book 5
-        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_ARRAY[4]);
+        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[4]);
         mPurchasedBooksArray[4] = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
 
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[4] ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));

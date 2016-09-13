@@ -41,15 +41,6 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <TextView
-                android:id="@+id/removeBook2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/fa_bank"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="80dp"
-                />
-
 
         </android.support.v7.widget.Toolbar>
 

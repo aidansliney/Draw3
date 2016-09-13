@@ -7,12 +7,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     android:fillViewport="true"
+    android:background="#d4d4d4"
     tools:showIn="@layout/fragment_third">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
         android:orientation="vertical"
         android:paddingLeft="0dp">
 
