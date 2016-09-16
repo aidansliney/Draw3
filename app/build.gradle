@@ -20,12 +20,12 @@ android {
     }
     buildTypes {
         release {
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             lintOptions {
                 checkReleaseBuilds false
             }
-           debuggable true
             signingConfig signingConfigs.config
         }
     }
@@ -45,9 +45,9 @@ dependencies {
     compile 'com.google.firebase:firebase-core:9.4.0'
     compile 'com.google.firebase:firebase-messaging:9.4.0'
     compile 'com.google.firebase:firebase-ads:9.4.0'
-    compile 'com.google.firebase:firebase-crash:9.4.0'
     compile 'com.google.firebase:firebase-storage:9.4.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+
 }
 apply plugin: 'com.google.gms.google-services'
 

@@ -30,16 +30,16 @@ public class BookActivity extends MainActivity {
             return true;*/
 
         //check what page we are on and if it is purchased
-        if (bookName.equals("book1"))
+        if (bookName.equals("book01"))
             bookPurchasedLock = mPurchasedBooksArray[0];
           //  bookPurchasedLock = mPurchasedBook1;
-        if (bookName.equals("book2"))
+        if (bookName.equals("book02"))
             bookPurchasedLock = mPurchasedBooksArray[1];
-        if (bookName.equals("book3"))
+        if (bookName.equals("book03"))
             bookPurchasedLock = mPurchasedBooksArray[2];
-        if (bookName.equals("book4"))
+        if (bookName.equals("book04"))
             bookPurchasedLock = mPurchasedBooksArray[3];
-        if (bookName.equals("book5"))
+        if (bookName.equals("book05"))
             bookPurchasedLock = mPurchasedBooksArray[4];
         assert bookPurchasedLock != null;
 
@@ -59,7 +59,8 @@ public class BookActivity extends MainActivity {
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
         final String[] bookPageIds = getResources().getStringArray(getIntent().getIntExtra("bookPageIds", 0));//get IDs
-        final String bookLevel = getResources().getString(getIntent().getIntExtra("booksLevel", 0)); // get book names
+        final String bookLevel = getResources().getString(getIntent().getIntExtra("booksLevel", 0)); // get book Levela
+        final String bookName = getResources().getString(getIntent().getIntExtra("bookName", 0));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getIntent().getIntExtra("cardImageId", 0));
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
@@ -110,8 +111,9 @@ public class BookActivity extends MainActivity {
                     // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(BookActivity.this, PageActivity.class);
                     Log.d("hello" + slidesID, "");
-                    intent.putExtra("bookSlides", slidesID);
                     intent.putExtra("bookHelp", helpID);
+                    intent.putExtra("tutorialId", pageId);
+                    intent.putExtra("bookName", bookName);
                     startActivity(intent);
                 } else {
                     Bundle bundle = new Bundle();

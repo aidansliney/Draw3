@@ -7,17 +7,17 @@
         <item>@array/book1tutorialnames</item>
         <item>@array/book1cardimages</item>
         <item>@array/book1PageIds</item>
-        <item>@drawable/book1coverinside</item>
-        <item>@string/book1</item>
+        <item>@drawable/b01banner</item>
+        <item>@string/book01</item>
         <item>@string/book1level</item>
     </array>
 
-    <string name="book1">book1</string>
+    <string name="book01">book01</string>
     <string name="book1level">Level 1</string>
 
 
-    <drawable name="book1cover">@drawable/mb3_4coveriso</drawable>
-    <drawable name="book1coverinside">@drawable/b01insidecover</drawable>
+    <drawable name="book1cover">@drawable/b01isocover</drawable>
+    <drawable name="book1coverinside">@drawable/b01banner</drawable>
     <string name="book1heading1">HEROIC MALE 3/4 VIEW</string>
     <string name="book1heading2">Learn how to draw the full figure</string>
 
@@ -32,12 +32,12 @@
         <item>@drawable/b01t03p20</item>
     </integer-array>
     <string-array name="book1PageIds">
-        <item>book1Tutorial1</item>
-        <item>book1Tutorial2</item>
-        <item>book1Tutorial3</item>
+        <item>b01t01</item>
+        <item>b01t02</item>
+        <item>b01t03</item>
     </string-array>
 
-    <integer-array name="book1Tutorial1Pages">
+    <integer-array name="b01t01Pages">
         <item>@drawable/b01t01p01</item>
         <item>@drawable/b01t01p02</item>
         <item>@drawable/b01t01p03</item>
@@ -69,7 +69,7 @@
         <item>@drawable/b01t01p29</item>
     </integer-array>
     <!--ur hero is 8 heads high-->
-    <string-array name="book1Tutorial1Help">
+    <string-array name="b01t01Help">
         <item>Start by laying down the basic shape of the head</item>
         <item>Using the size of the head, we can lay out markers for proportions</item>
         <item></item>
@@ -101,7 +101,7 @@
         <item>And there you have it.  You can fully erase the basic forms now to show off your character</item>
     </string-array>
 
-    <integer-array name="book1Tutorial2Pages">
+    <integer-array name="b01t02Pages">
         <item>@drawable/b01t02p01</item>
         <item>@drawable/b01t02p02</item>
         <item>@drawable/b01t02p03</item>
@@ -132,7 +132,7 @@
         <item>@drawable/b01t02p28</item>
     </integer-array>
 
-    <string-array name="book1Tutorial2Help">
+    <string-array name="b01t02Help">
         <item>Let’s start with an oval shape to represent the head</item>
         <item>Draw two lines across to split it up into thirds</item>
         <item>Our drawing will be looking at the head at an angle. This line will be the centre line of our face</item>
@@ -164,7 +164,7 @@
     </string-array>
 
 
-    <integer-array name="book1Tutorial3Pages">
+    <integer-array name="b01t03Pages">
         <item>@drawable/b01t03p01</item>
         <item>@drawable/b01t03p02</item>
         <item>@drawable/b01t03p03</item>
@@ -186,7 +186,7 @@
         <item>@drawable/b01t03p19</item>
         <item>@drawable/b01t03p20</item>
     </integer-array>
-    <string-array name="book1Tutorial3Help">
+    <string-array name="b01t03Help">
         <item>Drawing the hands at an angle can be difficult. So always take a look at your own hands for reference. Draw in two rectangles as the palms of your hand </item>
         <item> Break the finger joints down into rectangles that extend from the top of your palm of your hand</item>
         <item> The tops of these rectangles curve down to indicate middle finger being the longest and the pinky being the smallest</item>
@@ -218,14 +218,14 @@
         <item>@array/book2cardtext1</item>
         <item>@array/book2cardimages</item>
         <item>@array/book2PageIds</item>
-        <item>@drawable/book2coverinside</item>
-        <item>@string/book2</item>
+        <item>@drawable/b02banner</item>
+        <item>@string/book02</item>
         <item>@string/book2level</item>
     </array>
-    <string name="book2">book2</string>
+    <string name="book02">book02</string>
     <string name="book2level">Level 2</string>
-    <drawable name="book2cover">@drawable/mi3_4coveriso</drawable>
-    <drawable name="book2coverinside">@drawable/b02insidecover</drawable>
+    <drawable name="book2cover">@drawable/b02isocover</drawable>
+    <drawable name="book2coverinside">@drawable/b02banner</drawable>
     <string name="book2heading1">Heroic Male 3/4 View</string>
     <string name="book2heading2">Learn how to draw the full figure</string>
     <string-array name="book2cardtext1">
@@ -249,16 +249,16 @@
     </integer-array>
 
     <string-array name="book2PageIds">
-        <item>book2Tutorial1</item>
-        <item>book2Tutorial2</item>
-        <item>book2Tutorial3</item>
-        <item>book2Tutorial4</item>
-        <item>book2Tutorial5</item>
-        <item>book2Tutorial6</item>
-        <item>book2Tutorial7</item>
+        <item>b02t01</item>
+        <item>b02t02</item>
+        <item>b02t03</item>
+        <item>b02t04</item>
+        <item>b02t05</item>
+        <item>b02t06</item>
+        <item>b02t07</item>
     </string-array>
 
-    <integer-array name="book2Tutorial1Pages">
+    <integer-array name="b02t01Pages">
         <item>@drawable/mi3_4figure01</item>
         <item>@drawable/mi3_4figure02</item>
         <item>@drawable/mi3_4figure03</item>
@@ -281,31 +281,33 @@
         <item>@drawable/mi3_4figure20</item>
         <item>@drawable/mi3_4figure21</item>
     </integer-array>
-    <string-array name="book2Tutorial1Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+
+    <string-array name="b02t01Help">
+        <item>Start by laying down the basic shape of the head.</item>
+        <item>Using the size of the head, we can lay out markers for proportions. .Our figure is 8 heads high.</item>
+        <item>Lay out the figure as simply as this. With circles as the joints and lines to indicate the limbs and torso. Use the level 1 tutorial if you need help here.</item>
+        <item>Now we can draw in the basic forms starting with the chest.</item>
+        <item>Remember, each section is individually covered in more detail in this book.</item>
+        <item>Always reference the grid of 8 heads to know where to line up the features. The belly button should be 3 heads down.</item>
+        <item>The hips should be around 4 heads down. </item>
+        <item>At this stage, the legs and the arms can be treated similarly.</item>
+        <item>Use the tutorials for the hand and the foot when you are drawing them in.</item>
+        <item>The bottom half of the leg and hand get thinner as they reach towards the wrist and foot.</item>
+        <item>Outline the hands and the feet. Reference their individual tutorials. </item>
+        <item>Lastly connect the head to the neck.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and let us take the definition of the forms to the next level.</item>
+        <item>Here is where the individual tutorials really come into play. Make sure you look at them.</item>
+        <item>Continue refining the forms.</item>
+        <item>Look at how the body parts interconnect. The chest muscle connects strongly to the shoulder, which the arm muscle emerges from.</item>
+        <item>Similarly, the legs emerge from the hips.</item>
+        <item>Draw in the feet.</item>
+        <item>And the hands, referring the their tutorials.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it</item>
+        <item>Take a look at Level 3 of the full figure to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="book2Tutorial2Pages">
+
+    <integer-array name="b02t02Pages">
         <item>@drawable/mi3_4head01</item>
         <item>@drawable/mi3_4head02</item>
         <item>@drawable/mi3_4head03</item>
@@ -326,30 +328,35 @@
         <item>@drawable/mi3_4head18</item>
         <item>@drawable/mi3_4head19</item>
     </integer-array>
-    <string-array name="book2Tutorial2Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t02Help">
+        <item>Start with a simple spherical shape for the head.</item>
+        <item>Take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle.</item>
+        <item>Draw in a horizontal and vertical line through the sphere. With the vertical one at an angle in the direction that the head will look towards.</item>
+        <item>The head is not fully round, in fact it is important to create the planes of the face that are the side of the head and the front of the face. </item>
+        <item>We can create those planes by taking a vertical slice off the sphere. </item>
+        <item> From these three points we can draw in the bottom half of the face. </item>
+        <item>Take the point where the jaw line meets the chopped sphere as a halfway marker from the spheres midline, in order to find out how far down the chin should go. </item>
+        <item>Now we can clearly see the planes of the face.  </item>
+        <item>Lightly erase some lines to give us a better view. </item>
+        <item>Now draw a line horizontally half ways down our skull shape. This will be the eye line. Divide the front plane in half too.</item>
+        <item> Draw some more horizontal lines down. One that is 1/3rd down from the eyes to the jaw. The other just slightly lower, marked by the bottom of our original sphere.</item>
+        <item>Now, like in the level 1 tutorial, we can mark in where the facial features go.</item>
+        <item>Remember, the facial features are covered in depth in their own book.</item>
+        <item>The ear should go from the bottom of the nose, up to the eyebrows.</item>
+        <item>Draw in your characters hairline, which can help define the planes of the face.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final head over it.</item>
+        <item>I like to start with the eyes as they are often the first feature we look at. </item>
+        <item>Add in the nose.</item>
+        <item>The eyebrows.</item>
+        <item>The mouth.</item>
+        <item>And the ears.</item>
+        <item>We can use our layout lines to draw the shape of the face. Depending on the the face you are drawing, you can add in a slight protrusion for the cheek bones.</item>
+        <item>Follow the lines around and mark in the hairline to complete the basic head shape.</item>
+        <item>And there you have it.  You can fully erase the basic forms now.</item>
+        <item>Take a look at Level 3 of the head to fully understand how the muscles and plains work. Or why not share your drawing with us.</item>
     </string-array>
 
-    <integer-array name="book2Tutorial3Pages">
+    <integer-array name="b02t03Pages">
         <item>@drawable/mi3_4torso01</item>
         <item>@drawable/mi3_4torso02</item>
         <item>@drawable/mi3_4torso03</item>
@@ -369,29 +376,29 @@
         <item>@drawable/mi3_4torso17</item>
         <item>@drawable/mi3_4torso18</item>
     </integer-array>
-    <string-array name="book2Tutorial3Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t03Help">
+        <item>Start by laying out the lines that will represent the shoulders, and hips.</item>
+        <item>The chest should stretch from shoulder to shoulder.</item>
+        <item>The rib cage and the back is a large form that takes up most of the volume of the torso.</item>
+        <item>The bottom half of the torso is shaped like a cylinder, down to the waist.</item>
+        <item>The shoulders connect into the chest. They rise up higher following there the collarbone will go</item>
+        <item>The neck then emerges from the chest, it will connected to the face by a group of muscles.</item>
+        <item>The area that will be the abs comes down from the ribcage. It goes right down passed the waist towards the groin area.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>The pecs are two separate large muscles.</item>
+        <item>Define the collarbone as it goes from the top of the chest over the shoulder.</item>
+        <item>The shoulders will connect to the arms through the deltoid.</item>
+        <item>Draw in the ribcage at the front and then the lats which wrap around from under the shoulder to the back.</item>
+        <item>Now the abs. Note how one the belly button is in a gap between four abs.</item>
+        <item>The oblique muscles emerge from the side of the abs at an angle up towards the lats.</item>
+        <item>Draw in four small muscles which will connect the lats to the obliques. </item>
+        <item>Then define the hips.</item>
+        <item>Finally, the neck muscles. The most important two at the front, connect from the ears, down to the middle point of the collarbone.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final torso over it.</item>
+        <item>Take a look at Level 3 of the torso to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="book2Tutorial4Pages">
+    <integer-array name="b02t04Pages">
         <item>@drawable/mi3_4arm01</item>
         <item>@drawable/mi3_4arm02</item>
         <item>@drawable/mi3_4arm03</item>
@@ -404,21 +411,22 @@
         <item>@drawable/mi3_4arm10</item>
         <item>@drawable/mi3_4arm11</item>
     </integer-array>
-    <string-array name="book2Tutorial4Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t04Help">
+        <item>Start by laying out the lines that will represent the shoulders, elbows and hands.</item>
+        <item>Draw in a basic shape of the shoulders.</item>
+        <item>The limbs can be represented as cylinders for now.</item>
+        <item>Similar to the level 1 tutorial, draw a tapered cylinder for bottom half of the arm as it thins as it goes down towards the wrist.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>First, let us draw in the shoulder. </item>
+        <item>The main muscle of the arm comes out from below the lowest point of the deltoid. It stretches like this when the arm is flat</item>
+        <item>The triceps wrap around the back of the arm, framing the shoulder. We can only see a small part of them from this angle.</item>
+        <item>It is important to have a visual break in between where the lower half of the arm meets the top half.</item>
+        <item>I will outline the hand here, but it has its own separate tutorial in this book.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final arm over it. Add in some extra details like the veins.</item>
+        <item>Take a look at level 3 of the arm to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="book2Tutorial5Pages">
+    <integer-array name="b02t05Pages">
         <item>@drawable/mi3_4hand01</item>
         <item>@drawable/mi3_4hand02</item>
         <item>@drawable/mi3_4hand03</item>
@@ -431,21 +439,21 @@
         <item>@drawable/mi3_4hand10</item>
         <item>@drawable/mi3_4hand11</item>
     </integer-array>
-    <string-array name="book2Tutorial5Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t05Help">
+        <item>Start by laying out the lines that will represent the hips, knees, limbs and feet.</item>
+        <item>The limbs can be represented as cylinders for now.</item>
+        <item>Similar to the level 1 tutorial, draw a tapered cylinder for bottom half of the leg as it thins as it goes down towards the foot.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>The groin and the glutes act similar to the shoulder in the arm. The limbs will emerge from here.</item>
+        <item>The top half of the leg is mainly built of three muscles. The bottom two reach down to the knees.</item>
+        <item>The knees are similar to the elbows, but its much larger and more prominent.</item>
+        <item>The calve muscles will form the large mass at the top of this part of the leg, it thins out as we drop towards the foot.</item>
+        <item>I will outline the foot here, but it has its own separate tutorial in this book.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final legs over it.</item>
+        <item>Take a look at level 3 of the leg to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="book2Tutorial6Pages">
+    <integer-array name="b02t06Pages">
         <item>@drawable/mi3_4leg01</item>
         <item>@drawable/mi3_4leg02</item>
         <item>@drawable/mi3_4leg03</item>
@@ -457,21 +465,21 @@
         <item>@drawable/mi3_4leg09</item>
         <item>@drawable/mi3_4leg10</item>
     </integer-array>
-    <string-array name="book2Tutorial6Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t06Help">
+        <item>Start by drawing in some rectangles which will block out the shapes of the palms.</item>
+        <item>The fingers are broken up into three cylinders each.</item>
+        <item>Block them in, remembering that different size of each finger.</item>
+        <item>The bottom bone of the thumb is surrounded by a large area of flesh. So I draw it as a large cone rather than a cylinder. </item>
+        <item>The rest of the thumb is similar to the fingers.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>We can add in bumps for each knuckles.</item>
+        <item>That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final hand over it.</item>
+        <item>I like to draw the tips of the fingers a little thicker than the rest of the finger.</item>
+        <item>Take the definition up a level drawing in the fingernails, breaking up the sections of the finger, outlining the bones, and even adding in some veins. </item>
+        <item>Take a look at Level 3 of the hands to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="book2Tutorial7Pages">
+    <integer-array name="b02t07Pages">
         <item>@drawable/mi3_4foot01</item>
         <item>@drawable/mi3_4foot02</item>
         <item>@drawable/mi3_4foot03</item>
@@ -481,14 +489,16 @@
         <item>@drawable/mi3_4foot07</item>
         <item>@drawable/mi3_4foot08</item>
     </integer-array>
-    <string-array name="book2Tutorial7Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b02t07Help">
+        <item>The basic shape of the foot is a wedge. Make sure it has a flat face where the toes will extrude from.</item>
+        <item>It connects the the leg with a cylinder, with the ankle bones on either side.</item>
+        <item>Draw in a large cylinder at the front of the wedge for the big toe.</item>
+        <item>The rest of the toes you can do as one block. Sculptors usually treat this area as one form.</item>
+        <item>Add in the fleshy area of the foot that is behind the toes. This is what creates the arch in your foot.</item>
+        <item>Then you can indicate the separate toes.</item>
+        <item>That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final foot over it.</item>
+        <item>Take the definition up a level drawing in the toenails.</item>
+        <item>Take a look at Level 3 of the feet to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
@@ -502,15 +512,18 @@
         <item>@array/book3cardtext1</item>
         <item>@array/book3cardimages</item>
         <item>@array/book3PageIds</item>
-        <item>@drawable/book3coverinside</item>
-        <item>@string/book3</item>
+        <item>@drawable/b03banner</item>
+        <item>@string/book03</item>
         <item>@string/book3level</item>
     </array>
-    <string name="book3">book3</string>
+
+    <string name="tutorial03">b03t03</string>
+
+    <string name="book03">book03</string>
     <string name="book3level">Level 3</string>
-    <drawable name="book3cover">@drawable/book3cover</drawable>
-    <drawable name="book3coverinside">@drawable/b03insidecover</drawable>
-    <string name="book3heading1">Heroic Male 3/4 View - Level 3</string>
+    <drawable name="book3cover">@drawable/b03isocover</drawable>
+    <drawable name="book3coverinside">@drawable/b03banner</drawable>
+    <string name="book3heading1">Heroic Male 3/4 View</string>
     <string name="book3heading2">How to draw a full male figure</string>
     <string-array name="book3cardtext1">
         <item>Full figure</item>
@@ -524,24 +537,25 @@
 
     <integer-array name="book3cardimages">
         <item>@drawable/ma3_4figure13</item>
-        <item>@drawable/ma3_4torso13</item>
-        <item>@drawable/ma3_4legs12</item>
         <item>@drawable/ma3_4head17</item>
+        <item>@drawable/ma3_4torso13</item>
+        <item>@drawable/ma3_4arms12</item>
+        <item>@drawable/ma3_4legs12</item>
         <item>@drawable/ma3_4hands07</item>
         <item>@drawable/ma3_4foot07</item>
-        <item>@drawable/ma3_4arms12</item>
+
     </integer-array>
     <string-array name="book3PageIds">
-        <item>book3Tutorial1</item>
-        <item>book3Tutorial2</item>
-        <item>book3Tutorial3</item>
-        <item>book3Tutorial4</item>
-        <item>book3Tutorial5</item>
-        <item>book3Tutorial6</item>
-        <item>book3Tutorial7</item>
+        <item>b03t01</item>
+        <item>b03t02</item>
+        <item>b03t03</item>
+        <item>b03t04</item>
+        <item>b03t05</item>
+        <item>b03t06</item>
+        <item>b03t07</item>
     </string-array>
 
-    <integer-array name="book3Tutorial1Pages">
+    <integer-array name="b03t01Pages">
         <item>@drawable/ma3_4figure01</item>
         <item>@drawable/ma3_4figure02</item>
         <item>@drawable/ma3_4figure03</item>
@@ -557,24 +571,24 @@
         <item>@drawable/ma3_4figure13</item>
         <item>@drawable/ma3_4figure14</item>
     </integer-array>
-    <string-array name="book3Tutorial1Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t01Help">
+        <item>We will start with the basic forms that we sketch in for the level 2 tutorial.</item>
+        <item>Take a look at the individual tutorials which looks in detail at each muscle.</item>
+        <item>From this angle, the sternocleidomastoid  and trapezius muscles slot right behind the clavicle.</item>
+        <item>The deltoid is attached to the biceps, pulling on it if the arm is raised. The triceps emerge out of the back of the deltoid.</item>
+        <item>The leg muscles come out from under the obliques and hip bone.</item>
+        <item>Outline the muscles on the foot.</item>
+        <item>And then the hand.</item>
+        <item>Great, let us take a look now and see what plains the anatomy can create. Look at it through the eyes of a sculptor.</item>
+        <item>Take a look at the individual tutorials which looks in detail at each section. The plains that the face makes really help define areas for adding in shading details.</item>
+        <item>Again the neck muscles appear to slot right into the area behind the collarbone.</item>
+        <item>The arms lock onto the shoulder.</item>
+        <item>As the legs emerge from the hip bone.</item>
+        <item>Remember to look at each individual tutorial.</item>
+        <item>Finish the full figure by drawing on the hands.</item>
     </string-array>
 
-    <integer-array name="book3Tutorial2Pages">
+    <integer-array name="b03t02Pages">
         <item>@drawable/ma3_4torso01</item>
         <item>@drawable/ma3_4torso02</item>
         <item>@drawable/ma3_4torso03</item>
@@ -589,23 +603,30 @@
         <item>@drawable/ma3_4torso12</item>
         <item>@drawable/ma3_4torso13</item>
     </integer-array>
-    <string-array name="book3Tutorial2Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t02Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>The frontalis muscle defines the forehead.</item>
+        <item>The orbital portion of the eye surrounds the eye lids.</item>
+        <item>The cheekbones are an important defining feature. The temporalis muscle acts as one of the side planes of the top half of the face.</item>
+        <item>The nasalis muscle is the bridge of the nose. The nose tip itself is broken into a few sections, one area for the centre point, the others to surround the nasal passages.</item>
+        <item>Smiling involves lots of muscles. The outer portion of the mouth has lots of muscles connected into it. </item>
+        <item>The mentalis muscle surrounded by the depressor labii inferioris creates a fleshy shape underneath and to the lower side of the mouth.</item>
+        <item>Lastly draw in the ear.</item>
+        <item>Great, now that we understand the muscles of the face a bit better, let us take a look at how they create plains on the face.</item>
+        <item>The forehead areas is one of the largest. Make sure to define the front and side planes of the face and follow those down throughout the head.</item>
+        <item>The brow creates a deep area for shadows. It cuts right back to behind the eye. </item>
+        <item>The bridge of the nose is a flat area, then the nose tips itself creates a few important planes, often casting a shadow beneath it.</item>
+        <item>A flat area runs from the nose down along the front plane of the face. </item>
+        <item>The cheeks create an strongly defined area as the plane goes down to the chin.</item>
+        <item>The side of the jaw can hollow under the line created by the cheekbones as it is a thin area which expands as the mouth opens. </item>
+        <item>The chin is a simple shape. The more defined it is often leads to the stereotypical heroic look.</item>
+        <item>The extrusion of the philtrum creates a groove that catches shade. You can break the top lip up to three areas.</item>
+        <item>As the chin meets the bottom lip, there is a round fleshy area which curves around to create the wrinkle that extends from the nose.</item>
+        <item>The ears have lots of hollows and extrusions. It takes a bit of practice to master.</item>
+        <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the skull and skin create, you should be able to master drawing the head.</item>
     </string-array>
 
-    <integer-array name="book3Tutorial3Pages">
+    <integer-array name="b03t03Pages">
         <item>@drawable/ma3_4legs01</item>
         <item>@drawable/ma3_4legs02</item>
         <item>@drawable/ma3_4legs03</item>
@@ -619,22 +640,26 @@
         <item>@drawable/ma3_4legs11</item>
         <item>@drawable/ma3_4legs12</item>
     </integer-array>
-    <string-array name="book3Tutorial3Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t03Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>The pectoralis muscles connect to the bottom of the deltoids. It emerges from that one point across the body.</item>
+        <item>The ab muscles, or rectus abdominis go from below the chest down to the crotch.</item>
+        <item>The latissimus dorsi is the muscle which is runs around from the back and under the arm. The serratus anterior are the small muscles which connect them into the obliques.</item>
+        <item>The external obliques run up from the ab muscles into the serratus anterior.</item>
+        <item>The largest of the obliques goes around to the crotch area. This is largest area from the side of the torso.</item>
+        <item>The deltoids are strongly linked to the chest muscles.</item>
+        <item>The dominant neck muscles are the sternocleidomastoids which go from beneath the ear down towards the collarbone. </item>
+        <item>The trapezius wraps around behind the neck forming connecting the shoulder to the back of the head.</item>
+        <item>Great, now that we understand the muscles of the torso a bit better, let us take a look at how they create planes. </item>
+        <item>The chest and ribcage area are the most dominant muscles. They create large flat planes that cut in to create shadows underneath them.</item>
+        <item>The shoulders break into three sections from the deltoids. The middle one being the most dominant. </item>
+        <item>The abs cut into each other to create areas for shadows. The deltoids from here up to the lats.</item>
+        <item>From the underdrawing we can see how the rest of the muscles shape out the rest of the torso.</item>
+        <item>The adams apple extrudes out from the neck, and between it and the sternocleidomastoid is an intruded plane.</item>
+        <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the torso.</item>
     </string-array>
 
-    <integer-array name="book3Tutorial4Pages">
+    <integer-array name="b03t04Pages">
         <item>@drawable/ma3_4head01</item>
         <item>@drawable/ma3_4head02</item>
         <item>@drawable/ma3_4head03</item>
@@ -653,26 +678,22 @@
         <item>@drawable/ma3_4head16</item>
         <item>@drawable/ma3_4head17</item>
     </integer-array>
-    <string-array name="book3Tutorial4Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t04Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>The deltoids run down into the same point between the top of the biceps and triceps.</item>
+        <item>The biceps are the dominant muscle and work in harmony with the triceps.</item>
+        <item>The triceps wrap around the elbow and split into two parts.</item>
+        <item>The brachioradialis go from alongside the biceps down to the wrist.</item>
+        <item>The flexor carpi radialis and the rest of the arm muscles rotate around and down to the wrist.</item>
+        <item>The flexor aponeurosis is almost like a wrist band wrapping around the lower part of the arm. </item>
+        <item>Great, now that we understand the muscles of the arm a bit better, let us take a look at how they create planes.</item>
+        <item>The more a person trains, the more defined their deltoids are. </item>
+        <item>The biceps can be cut into three main planes, which like the deltoid, creates a sharp edge as it comes to its end.</item>
+        <item>The triceps are extruded in a flat plane which curls around the back of the arm, the stronger the arm, the more the plane protrudes out.</item>
+        <item>The lower arm muscles curve around the arms. They knit into each other defining their separate areas.</item>
+        <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the arm.</item>
     </string-array>
-    <integer-array name="book3Tutorial5Pages">
+    <integer-array name="b03t05Pages">
         <item>@drawable/ma3_4hands01</item>
         <item>@drawable/ma3_4hands02</item>
         <item>@drawable/ma3_4hands03</item>
@@ -681,17 +702,23 @@
         <item>@drawable/ma3_4hands06</item>
         <item>@drawable/ma3_4hands07</item>
     </integer-array>
-    <string-array name="book3Tutorial5Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t05Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>The top half of the leg is comprised of three large muscles. The vastus medialis, the vastus lateralis and the rectus femoris.</item>
+        <item>The inside of the leg is divided from those muscles by the sartorius muscle which curves down around the inside of the leg. </item>
+        <item>The gluteus maximus and gluteus medius wrap around the back of the body and support the legs. </item>
+        <item>Draw in the knee bones.</item>
+        <item>The gastrocnemius muscles are the calve area of the leg.The tibialis anterior muscles are quite close to the tibia bone of the leg.</item>
+        <item>Just like the arms, the superior extensor retinaculum wraps like a band around the lower leg.</item>
+        <item>Great, now that we understand the muscles of the leg bit better, let us take a look at how they create planes on the face.</item>
+        <item>The three dominant leg muscles are the main planes of the leg.</item>
+        <item>Draw in the glutes.</item>
+        <item>The knee changes drastically as the leg bends. Treat it as two separate planes as the top protrudes out. </item>
+        <item>The calve muscles dominate the back of the leg. The tibia bone is the front point running down the leg.</item>
+        <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the legs.</item>
     </string-array>
 
-    <integer-array name="book3Tutorial6Pages">
+    <integer-array name="b03t06Pages">
         <item>@drawable/ma3_4foot01</item>
         <item>@drawable/ma3_4foot02</item>
         <item>@drawable/ma3_4foot03</item>
@@ -700,18 +727,18 @@
         <item>@drawable/ma3_4foot06</item>
         <item>@drawable/ma3_4foot07</item>
     </integer-array>
-    <string-array name="book3Tutorial6Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t06Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>The lumbricals run  long with the metacarpus bones from the exterior retinaculum down to the knuckles.</item>
+        <item>That is all the information we need for the hands.</item>
+        <item>The knuckles and the hand’s bones are the important shapes here.</item>
+        <item>Draw in the plane of the hand. The lower part of the thumb is one of the larger areas.</item>
+        <item>The fingers break into three individual parts. Look at the shape the fingertips can make, with the forward plane of each at an angle to make the tip the biggest part.</item>
+        <item>Each break in the finger has a knuckle, but the forward one is not as noticeable.</item>
     </string-array>
 
 
-    <integer-array name="book3Tutorial7Pages">
+    <integer-array name="b03t07Pages">
         <item>@drawable/ma3_4arms01</item>
         <item>@drawable/ma3_4arms02</item>
         <item>@drawable/ma3_4arms03</item>
@@ -725,19 +752,14 @@
         <item>@drawable/ma3_4arms11</item>
         <item>@drawable/ma3_4arms12</item>
     </integer-array>
-    <string-array name="book3Tutorial7Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b03t07Help">
+        <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
+        <item>Similar to the hand, the lumbricals run along with the metatarsal bones from the superior exterior retinaculum down to the toe knuckles.</item>
+        <item>That is all the information we need for the feet.</item>
+        <item>The main area of the foot is like a wedge. Note the flat area on the top and how the mass creates the arch underneath the foot.</item>
+        <item>The back of the boot squashes down onto the ground.</item>
+        <item>Treat the tips of the toes similarly to the tips of the fingers.</item>
+        <item>Then the rest of the toes act as arched cylinders connecting the toes to the foot. </item>
     </string-array>
 
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
@@ -751,15 +773,15 @@
         <item>@array/book4cardtext1</item>
         <item>@array/book4cardimages</item>
         <item>@array/book4PageIds</item>
-        <item>@drawable/book4coverinside</item>
-        <item>@string/book4</item>
+        <item>@drawable/b04banner</item>
+        <item>@string/book04</item>
         <item>@string/book4level</item>
     </array>
 
-    <string name="book4">book4</string>
+    <string name="book04">book04</string>
     <string name="book4level">Level 3</string>
-    <drawable name="book4cover">@drawable/maflexcoveriso</drawable>
-    <drawable name="book4coverinside">@drawable/b04flatcover</drawable>
+    <drawable name="book4cover">@drawable/b04isocover</drawable>
+    <drawable name="book4coverinside">@drawable/b04banner</drawable>
     <string name="book4heading1">Flex</string>
     <string name="book4heading2">Learn how to draw the flex</string>
     <string-array name="book4cardtext1">
@@ -783,17 +805,17 @@
 
     </integer-array>
     <string-array name="book4PageIds">
-        <item>book4Tutorial1</item>
-        <item>book4Tutorial2</item>
-        <item>book4Tutorial3</item>
-        <item>book4Tutorial4</item>
-        <item>book4Tutorial5</item>
-        <item>book4Tutorial6</item>
-        <item>book4Tutorial7</item>
+        <item>b04t01</item>
+        <item>b04t02</item>
+        <item>b04t03</item>
+        <item>b04t04</item>
+        <item>b04t05</item>
+        <item>b04t06</item>
+        <item>b04t07</item>
 
     </string-array>
 
-    <integer-array name="book4Tutorial1Pages">
+    <integer-array name="b04t01Pages">
         <item>@drawable/maflexa01</item>
         <item>@drawable/maflexa02</item>
         <item>@drawable/maflexa03</item>
@@ -816,31 +838,30 @@
         <item>@drawable/maflexa20</item>
         <item>@drawable/maflexa21</item>
     </integer-array>
-    <string-array name="book4Tutorial1Help">
+    <string-array name="b04t01Help">
+        <item>Let’s bend the arm up like a bicep curl to show the muscle contracting.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles</item>
+        <item> </item>
+        <item> </item>
         <item></item>
+        <item>Now let us erase these lines and draw in the muscles to examine how they work together</item>
+        <item>The chest muscles all originate at a point towards the deltoid and biceps muscles.</item>
+        <item>They work in harmony together.</item>
+        <item> </item>
+        <item>As the biceps contracts, pulling up the forearm, it grows in size.</item>
+        <item> </item>
+        <item>The triceps relaxes as the biceps contracts.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item> </item>
+        <item>The forearm will bulge as it compresses against the upper arm.</item>
+        <item> </item>
+        <item>Lightly erase the construction lines and draw over them.</item>
+        <item>The biceps is often the defining muscle of the arm.</item>
     </string-array>
 
-    <integer-array name="book4Tutorial2Pages">
+    <integer-array name="b04t02Pages">
         <item>@drawable/maflexb01</item>
         <item>@drawable/maflexb02</item>
         <item>@drawable/maflexb03</item>
@@ -861,29 +882,28 @@
         <item>@drawable/maflexb18</item>
         <item>@drawable/maflexb19</item>
     </integer-array>
-    <string-array name="book4Tutorial2Help">
+    <string-array name="b04t02Help">
+        <item>Let’s rotate the wrist to watch how the lower arm muscles can pop.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
+        <item> </item>
+        <item>The forearm muscles mostly wrap around the arm.</item>
+        <item>Now let us erase these lines and draw in the muscles to examine how they work together.</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>The brachioradialis muscle contracts and bulges out.</item>
+        <item>Most of the forearm muscles follow it around.</item>
+        <item>But some, closer in line with the elbow will still run straight down to the wrist.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item> Lightly erase the construction lines and draw over them.</item>
+        <item>The forearm muscles will pop the more you rotate the wrist.</item>
     </string-array>
 
-    <integer-array name="book4Tutorial3Pages">
+    <integer-array name="b04t03Pages">
         <item>@drawable/maflexc01</item>
         <item>@drawable/maflexc02</item>
         <item>@drawable/maflexc03</item>
@@ -903,28 +923,29 @@
         <item>@drawable/maflexc17</item>
         <item>@drawable/maflexc18</item>
     </integer-array>
-    <string-array name="book4Tutorial3Help">
+    <string-array name="b04t03Help">
+        <item>Let us rotate the arm to watch how the tricep muscles can pop.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item> </item>
+        <item>The biceps is relaxed and flat in this pose.</item>
+        <item>The triceps will bulge as they contract. </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>Lightly erase the construction lines and draw over them.</item>
+        <item>The defined triceps can cast a shadow as it cuts in to meet the elbow.</item>
     </string-array>
 
-    <integer-array name="book4Tutorial4Pages">
+    <integer-array name="b04t04Pages">
         <item>@drawable/maflexd01</item>
         <item>@drawable/maflexd02</item>
         <item>@drawable/maflexd03</item>
@@ -944,13 +965,11 @@
         <item>@drawable/maflexd17</item>
         <item>@drawable/maflexd18</item>
     </integer-array>
-    <string-array name="book4Tutorial4Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b04t04Help">
+        <item>Let us draw the arm as it naturally falls.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
         <item></item>
         <item></item>
         <item></item>
@@ -965,7 +984,7 @@
         <item></item>
     </string-array>
 
-    <integer-array name="book4Tutorial5Pages">
+    <integer-array name="b04t05Pages">
         <item>@drawable/maflexe01</item>
         <item>@drawable/maflexe02</item>
         <item>@drawable/maflexe03</item>
@@ -986,19 +1005,18 @@
         <item>@drawable/maflexe18</item>
         <item>@drawable/maflexe19</item>
     </integer-array>
-    <string-array name="book4Tutorial5Help">
+    <string-array name="b04t05Help">
+        <item>Let us look at the deltoid muscles as they raise up the arm.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
         <item></item>
         <item></item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>The deltoid wraps around the trapezius.</item>
+        <item> </item>
+        <item>The biceps contact the pull the forearm up.</item>
+        <item>The triceps relaxes, alternating with the biceps.</item>
         <item></item>
         <item></item>
         <item></item>
@@ -1008,7 +1026,7 @@
         <item></item>
     </string-array>
 
-    <integer-array name="book4Tutorial6Pages">
+    <integer-array name="b04t06Pages">
         <item>@drawable/maflexf01</item>
         <item>@drawable/maflexf02</item>
         <item>@drawable/maflexf03</item>
@@ -1030,22 +1048,21 @@
         <item>@drawable/maflexf19</item>
         <item>@drawable/maflexf20</item>
     </integer-array>
-    <string-array name="book4Tutorial6Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b04t06Help">
+        <item>Let us look at the deltoid muscles as they raise up the arm.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
+        <item> </item>
+        <item> </item>
+        <item>Lots of squashing of muscle and contracting here.</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>The biceps are contracted here, but they are also pushed forward by the arm and chest. </item>
+        <item>The triceps relax letting the arm bend.</item>
+        <item> </item>
+        <item>The brachioradialis muscle contracts and bulges out. It is also soft so it can be pushed out by other parts of anatomy.</item>
         <item></item>
         <item></item>
         <item></item>
@@ -1054,7 +1071,7 @@
     </string-array>
 
 
-    <integer-array name="book4Tutorial7Pages">
+    <integer-array name="b04t07Pages">
         <item>@drawable/maflexg01</item>
         <item>@drawable/maflexg02</item>
         <item>@drawable/maflexg03</item>
@@ -1073,13 +1090,11 @@
         <item>@drawable/maflexg16</item>
         <item>@drawable/maflexg17</item>
     </integer-array>
-    <string-array name="book4Tutorial7Help">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="b04t07Help">
+        <item>Let us draw the arm as it naturally falls.</item>
+        <item>Build up the drawing like you would always, starting with the simple forms.</item>
+        <item>Use these forms as basic guidelines.</item>
+        <item>Rough out the basic shapes of the muscles.</item>
         <item></item>
         <item></item>
         <item></item>
@@ -1104,15 +1119,15 @@
         <item>@array/book5cardtext1</item>
         <item>@array/book5cardimages</item>
         <item>@array/book5PageIds</item>
-        <item>@drawable/book5coverinside</item>
-        <item>@string/book5</item>
+        <item>@drawable/b05banner</item>
+        <item>@string/book05</item>
         <item>@string/book5level</item>
     </array>
 
-    <string name="book5">book5</string>
+    <string name="book05">book05</string>
     <string name="book5level">Level 2</string>
-    <drawable name="book5cover">@drawable/midynamickickcoveriso</drawable>
-    <drawable name="book5coverinside">@drawable/b05flatcover</drawable>
+    <drawable name="book5cover">@drawable/b05banner</drawable>
+    <drawable name="book5coverinside">@drawable/b05isocover</drawable>
     <string name="book5heading1">Dymanic Kick</string>
     <string name="book5heading2">Learn how to draw the dynamic kick</string>
     <string-array name="book5cardtext1">
@@ -1135,22 +1150,20 @@
         <item>@drawable/midynamickicka0618</item>
         <item>@drawable/midynamickicka0716</item>
         <item>@drawable/midynamickicka0818</item>
-
-
     </integer-array>
     <string-array name="book5PageIds">
-        <item>book5Tutorial1</item>
-        <item>book5Tutorial2</item>
-        <item>book5Tutorial3</item>
-        <item>book5Tutorial4</item>
-        <item>book5Tutorial5</item>
-        <item>book5Tutorial6</item>
-        <item>book5Tutorial7</item>
-        <item>book5Tutorial8</item>
+        <item>b05t01</item>
+        <item>b05t02</item>
+        <item>b05t03</item>
+        <item>b05t04</item>
+        <item>b05t05</item>
+        <item>b05t06</item>
+        <item>b05t07</item>
+        <item>b05t08</item>
 
     </string-array>
 
-    <integer-array name="book5Tutorial1Pages">
+    <integer-array name="b05t01Pages">
         <item>@drawable/midynamickicka0101</item>
         <item>@drawable/midynamickicka0102</item>
         <item>@drawable/midynamickicka0103</item>
@@ -1170,28 +1183,27 @@
         <item>@drawable/midynamickicka0117</item>
         <item>@drawable/midynamickicka0118</item>
     </integer-array>
-    <string-array name="book5Tutorial1Help">
+    <string-array name="b05t01Help">
+        <item>Let us study the body as it is in motion.</item>
+        <item>Every image here is referenced with a UFC fighter filmed with a HD high speed camera.</item>
+        <item>When the figure is in motion, the line between the hips will alternate with the line between the shoulders.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item>Reference the accompanying video to see the figure in motion.</item>
+        <item> </item>
+        <item>As the cylinders we use for the legs and arms point away or towards us, the 3D volume of the shape can be seen.</item>
         <item></item>
         <item></item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
+        <item>Use the individual tutorials to help with the forms of each part of the body.</item>
+        <item>As the torso twists we can see the forms of the latissimus dorsi and the external oblique down the side of the figure.</item>
+        <item>The arms alternate with the legs for balance.</item>
+        <item> </item>
+        <item>The right foot is firmly planted on the ground as it is about to take off.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial2Pages">
+    <integer-array name="b05t02Pages">
         <item>@drawable/midynamickicka0201</item>
         <item>@drawable/midynamickicka0202</item>
         <item>@drawable/midynamickicka0203</item>
@@ -1211,28 +1223,27 @@
         <item>@drawable/midynamickicka0217</item>
         <item>@drawable/midynamickicka0218</item>
     </integer-array>
-    <string-array name="book5Tutorial2Help">
+    <string-array name="b05t02Help">
+        <item>As the head turns, we can clearly see the front and side planes of the face.</item>
+        <item>The shoulders and hips still alternate as the figure springs up while twisting.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item>The torso elongates as the figure stretches up.</item>
+        <item>The glutes are twisted around in a much different direction than the chest.</item>
+        <item>The right leg is extended to thrust the body into the air.</item>
         <item></item>
+        <item>The forearm of the left arm is pointed right at us.</item>
+        <item>As is the left hand. </item>
         <item></item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
+        <item>Use the individual tutorials to help with the forms of each part of the body.</item>
+        <item>The oblique muscle turns around the side of the body from the abs up to the lats.</item>
         <item></item>
+        <item> </item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial3Pages">
+    <integer-array name="b05t03Pages">
         <item>@drawable/midynamickicka0301</item>
         <item>@drawable/midynamickicka0302</item>
         <item>@drawable/midynamickicka0303</item>
@@ -1251,27 +1262,26 @@
         <item>@drawable/midynamickicka0316</item>
         <item>@drawable/midynamickicka0317</item>
     </integer-array>
-    <string-array name="book5Tutorial3Help">
+    <string-array name="b05t03Help">
+        <item>The figure, now mid air is about to explode into a high kick.</item>
+        <item>The arms are balancing the figure out.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item> </item>
+        <item> </item>
+        <item>Even when the part of the body is obscured, you should still draw the form in.</item>
+        <item> </item>
+        <item>Remember each section of the figure is outlined in detail in the figure books. </item>
+        <item> </item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
         <item></item>
+        <item>Look at how the chest muscles raise as the shoulders are raised up.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item> </item>
+        <item> </item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial4Pages">
+    <integer-array name="b05t04Pages">
         <item>@drawable/midynamickicka0401</item>
         <item>@drawable/midynamickicka0402</item>
         <item>@drawable/midynamickicka0403</item>
@@ -1292,29 +1302,27 @@
         <item>@drawable/midynamickicka0418</item>
         <item>@drawable/midynamickicka0419</item>
     </integer-array>
-    <string-array name="book5Tutorial4Help">
+    <string-array name="b05t04Help">
+        <item>The shoulders and hips alternate as the figure is about to kick.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item>With the arms raised, the lats are visible to the side of the figure.</item>
         <item></item>
+        <item>Reference the accompanying video to see the figure in motion.</item>
+        <item> </item>
+        <item> </item>
         <item></item>
+        <item>Even when the part of the body is obscured, you should still draw the form in.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
+        <item> </item>
+        <item>As the torso is contracted on the figures right side, so the obliques are closer together.</item>
+        <item>The right bicep flattens out as it relaxes.</item>
+        <item> </item>
+        <item> </item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial5Pages">
+    <integer-array name="b05t05Pages">
         <item>@drawable/midynamickicka0501</item>
         <item>@drawable/midynamickicka0502</item>
         <item>@drawable/midynamickicka0503</item>
@@ -1332,27 +1340,25 @@
         <item>@drawable/midynamickicka0515</item>
         <item>@drawable/midynamickicka0516</item>
     </integer-array>
-    <string-array name="book5Tutorial5Help">
+    <string-array name="b05t05Help">
+        <item>This will be the point of impact for the kick.</item>
+        <item>The right leg fully extends as it kicks out.</item>
+        <item>The hips and the shoulders have rotated in opposite directions to give the kick an extra force.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item> </item>
+        <item> </item>
+        <item>Even when the part of the body is obscured, you should still draw the form in.</item>
         <item></item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
         <item></item>
+        <item>The torso is twisted and contracted as the hips swing around.</item>
         <item></item>
+        <item> </item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial6Pages">
+    <integer-array name="b05t06Pages">
         <item>@drawable/midynamickicka0601</item>
         <item>@drawable/midynamickicka0602</item>
         <item>@drawable/midynamickicka0603</item>
@@ -1372,28 +1378,27 @@
         <item>@drawable/midynamickicka0617</item>
         <item>@drawable/midynamickicka0618</item>
     </integer-array>
-    <string-array name="book5Tutorial6Help">
+    <string-array name="b05t06Help">
+        <item>The foot will now swing around in front of the figure.</item>
+        <item>The shoulders and hips are still alternated, an important gesture to show motion.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item> </item>
+        <item> </item>
+        <item>The foot is pointed right at us so we can see the glutes underneath it.</item>
         <item></item>
+        <item> </item>
+        <item>The lower part of the leg is pointed directly at us.</item>
+        <item> </item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
+        <item>With the arm raised we get a good view of the serratus anterior muscles.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item> Remember each section of the figure is outline in detail in the figure books. </item>
+        <item> </item>
+        <item> </item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial7Pages">
+    <integer-array name="b05t07Pages">
         <item>@drawable/midynamickicka0701</item>
         <item>@drawable/midynamickicka0702</item>
         <item>@drawable/midynamickicka0703</item>
@@ -1412,27 +1417,27 @@
         <item>@drawable/midynamickicka0716</item>
         <item>@drawable/midynamickicka0717</item>
     </integer-array>
-    <string-array name="book5Tutorial7Help">
+    <string-array name="b05t07Help">
+        <item>The figure begins to land.</item>
+        <item>The shoulders and hips are still alternated.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item> </item>
+        <item></item>
+        <item>The right leg now crosses completely over the front of the body.</item>
+        <item>The top part of the left arm is pointed directly at us. </item>
         <item></item>
         <item></item>
+        <item> </item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
         <item></item>
+        <item>The torso begins to relax.</item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Remember each section of the figure is outlined in detail in the figure books. </item>
+        <item> </item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="book5Tutorial8Pages">
+    <integer-array name="b05t08Pages">
         <item>@drawable/midynamickicka0801</item>
         <item>@drawable/midynamickicka0802</item>
         <item>@drawable/midynamickicka0803</item>
@@ -1452,25 +1457,24 @@
         <item>@drawable/midynamickicka0817</item>
         <item>@drawable/midynamickicka0818</item>
     </integer-array>
-    <string-array name="book5Tutorial8Help">
+    <string-array name="b05t08Help">
+        <item>The figure fully lands on the ground.</item>
+        <item>The shoulders and torso begin to rest level with each other.</item>
+        <item>As always, build up the forms over the simple skeletal structure.</item>
+        <item> </item>
+        <item> </item>
+        <item>Reference the accompanying video to see the figure in motion.</item>
         <item></item>
+        <item>The right leg is still crossed over as it comes to rest. </item>
+        <item>The arm can relax as it is not needed for balance. </item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Lightly erase these lines so we can draw in the muscles in more detail.</item>
+        <item> </item>
+        <item>We still have a twist between the chest and the waist.</item>
+        <item> </item>
+        <item>Remember each section of the figure is outlined in detail in the figure books. </item>
+        <item> </item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
     <!--all pages fragment-->
@@ -1583,87 +1587,88 @@
         <item>@drawable/midynamickicka0817</item>
     </integer-array>
 
+    <!--for third Fragment-->
     <string-array name="pagesAllIds">
-        <item>book1Tutorial1</item>
-        <item>book1Tutorial2</item>
-        <item>book1Tutorial3</item>
-        <item>book2Tutorial1</item>
-        <item>book2Tutorial2</item>
-        <item>book2Tutorial3</item>
-        <item>book2Tutorial4</item>
-        <item>book2Tutorial5</item>
-        <item>book2Tutorial6</item>
-        <item>book2Tutorial7</item>
-        <item>book3Tutorial1</item>
-        <item>book3Tutorial2</item>
-        <item>book3Tutorial3</item>
-        <item>book3Tutorial4</item>
-        <item>book3Tutorial5</item>
-        <item>book3Tutorial6</item>
-        <item>book3Tutorial7</item>
-        <item>book4Tutorial1</item>
-        <item>book4Tutorial2</item>
-        <item>book4Tutorial3</item>
-        <item>book4Tutorial4</item>
-        <item>book4Tutorial5</item>
-        <item>book4Tutorial6</item>
-        <item>book4Tutorial7</item>
-        <item>book5Tutorial1</item>
-        <item>book5Tutorial2</item>
-        <item>book5Tutorial3</item>
-        <item>book5Tutorial4</item>
-        <item>book5Tutorial5</item>
-        <item>book5Tutorial6</item>
-        <item>book5Tutorial7</item>
-        <item>book5Tutorial8</item>
+        <item>b01t01</item>
+        <item>b01t02</item>
+        <item>b01t03</item>
+        <item>b02t01</item>
+        <item>b02t02</item>
+        <item>b02t03</item>
+        <item>b02t04</item>
+        <item>b02t05</item>
+        <item>b02t06</item>
+        <item>b02t07</item>
+        <item>b03t01</item>
+        <item>b03t02</item>
+        <item>b03t03</item>
+        <item>b03t04</item>
+        <item>b03t05</item>
+        <item>b03t06</item>
+        <item>b03t07</item>
+        <item>b04t01</item>
+        <item>b04t02</item>
+        <item>b04t03</item>
+        <item>b04t04</item>
+        <item>b04t05</item>
+        <item>b04t06</item>
+        <item>b04t07</item>
+        <item>b05t01</item>
+        <item>b05t02</item>
+        <item>b05t03</item>
+        <item>b05t04</item>
+        <item>b05t05</item>
+        <item>b05t06</item>
+        <item>b05t07</item>
+        <item>b05t08</item>
     </string-array>
 
     <string-array name="pagesAllbooks">
-        <item>book1</item>
-        <item>book1</item>
-        <item>book1</item>
+        <item>book01</item>
+        <item>book01</item>
+        <item>book01</item>
 
-        <item>book2</item>
-        <item>book2</item>
-        <item>book2</item>
-        <item>book2</item>
-        <item>book2</item>
-        <item>book2</item>
-        <item>book2</item>
+        <item>book02</item>
+        <item>book02</item>
+        <item>book02</item>
+        <item>book02</item>
+        <item>book02</item>
+        <item>book02</item>
+        <item>book02</item>
 
-        <item>book3</item>
-        <item>book3</item>
-        <item>book3</item>
-        <item>book3</item>
-        <item>book3</item>
-        <item>book3</item>
-        <item>book3</item>
+        <item>book03</item>
+        <item>book03</item>
+        <item>book03</item>
+        <item>book03</item>
+        <item>book03</item>
+        <item>book03</item>
+        <item>book03</item>
 
-        <item>book4</item>
-        <item>book4</item>
-        <item>book4</item>
-        <item>book4</item>
-        <item>book4</item>
-        <item>book4</item>
-        <item>book4</item>
+        <item>book04</item>
+        <item>book04</item>
+        <item>book04</item>
+        <item>book04</item>
+        <item>book04</item>
+        <item>book04</item>
+        <item>book04</item>
 
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
-        <item>book5</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
+        <item>book05</item>
     </string-array>
 
 
     <integer-array name="allBooksImages">
-        <item>@drawable/b01insidecover</item> <!--b01t01-->
-        <item>@drawable/b02insidecover</item> <!--b01t02-->
-        <item>@drawable/b03insidecover</item> <!--b01t03-->
-        <item>@drawable/b04flatcover</item>
-        <item>@drawable/b05flatcover</item>
+        <item>@drawable/b01isocover</item> <!--b01t01-->
+        <item>@drawable/b02isocover</item> <!--b01t02-->
+        <item>@drawable/b03isocover</item> <!--b01t03-->
+        <item>@drawable/b04isocover</item>
+        <item>@drawable/b05isocover</item>
     </integer-array>
 
     <string-array name="allBooksHeadings">
@@ -1675,19 +1680,19 @@
     </string-array>
 
     <string-array name="allBooksIds">
-    <item>book1Tutorial1</item>
-    <item>book1Tutorial2</item>
-    <item>book1Tutorial3</item>
-    <item>book2Tutorial1</item>
-    <item>book2Tutorial2</item>
+    <item>b01t01</item>
+    <item>b01t02</item>
+    <item>b01t03</item>
+    <item>b02t01</item>
+    <item>b02t02</item>
     </string-array>
 
     <string-array name="allBooksBooks">
-    <item>book1</item>
-    <item>book2</item>
-    <item>book3</item>
-    <item>book4</item>
-    <item>book5</item>
+    <item>book01</item>
+    <item>book02</item>
+    <item>book03</item>
+    <item>book04</item>
+    <item>book05</item>
     </string-array>
 
 </resources>

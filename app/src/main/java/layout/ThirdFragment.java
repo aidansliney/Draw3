@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,46 +117,49 @@ public class ThirdFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pageId = (String) adapter.getItem(position);
 
+                Log.d("this is the page id",pageId);
 
-                if (bookNames[position].equals("book1"))
+
+                if (bookNames[position].equals("book01"))
                 {
                     hasPurchased =  mPurchasedBooksArray[0];
                     bookThumb = R.drawable.book1cover;
-                    bookName = R.string.book1;
+                    bookName = R.string.book01;
                 }
-                if (bookNames[position].equals("book2"))
+                if (bookNames[position].equals("book02"))
                 {
                     hasPurchased =  mPurchasedBooksArray[1];
                     bookThumb = R.drawable.book2cover;
-                    bookName = R.string.book2;
+                    bookName = R.string.book02;
                 }
-                if (bookNames[position].equals("book3"))
+                if (bookNames[position].equals("book03"))
                 {
                     hasPurchased =  mPurchasedBooksArray[2];
                     bookThumb = R.drawable.book3cover;
-                    bookName = R.string.book3;
+                    bookName = R.string.book03;
                 }
-                if (bookNames[position].equals("book4"))
+                if (bookNames[position].equals("book04"))
                 {
                     hasPurchased =  mPurchasedBooksArray[3];
                     bookThumb = R.drawable.book4cover;
-                    bookName = R.string.book4;
+                    bookName = R.string.book04;
                 }
-                if (bookNames[position].equals("book5"))
+                if (bookNames[position].equals("book05"))
                 {
                     hasPurchased =  mPurchasedBooksArray[4];
                     bookThumb = R.drawable.book5cover;
-                    bookName = R.string.book5;
+                    bookName = R.string.book05;
                 }
 
                 if(hasPurchased || mSubscribed)
                 {
-                    int slidesID = getActivity().getResources().getIdentifier(pageId + "Pages", "array", getContext().getPackageName());
+                    //int slidesID = getActivity().getResources().getIdentifier(pageId + "Pages", "array", getContext().getPackageName());
 
                     int helpID = getActivity().getResources().getIdentifier(pageId + "Help", "array", getContext().getPackageName());
                     Intent intent = new Intent(getActivity(),PageActivity.class);
-                    intent.putExtra("bookSlides", slidesID);
                     intent.putExtra("bookHelp", helpID);
+                    intent.putExtra("tutorialId", pageId);
+                    intent.putExtra("bookName",bookNames[position]);
                     startActivity(intent);
                 }
                 else

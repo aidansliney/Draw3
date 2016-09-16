@@ -85,8 +85,11 @@ public class firstFragment extends BaseFragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", R.array.book3Tutorial4Pages);
-                intent.putExtra("bookHelp", R.array.book3Tutorial4Help);
+                intent.putExtra("bookSlides", R.array.b03t02Pages);
+                intent.putExtra("tutorialId", "b03t02");
+                intent.putExtra("bookHelp", R.array.b03t02Help);
+
+                intent.putExtra("bookName", "book03");
                 startActivity(intent);
             }
         });
@@ -96,8 +99,10 @@ public class firstFragment extends BaseFragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", R.array.book2Tutorial3Pages);
-                intent.putExtra("bookHelp", R.array.book2Tutorial3Help);
+                intent.putExtra("bookSlides", R.array.b02t03Pages);
+                intent.putExtra("bookHelp", R.array.b02t03Help);
+                intent.putExtra("tutorialId", "b02t03");
+                intent.putExtra("bookName", "book02");
                 startActivity(intent);
             }
         });
