@@ -1,12 +1,9 @@
 <resources>
     <string name="app_name">Learn how to draw</string>
-    <string name="action_settings">Share</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_book2" translatable="false">BookActivity2</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_correct" translatable="false">ca-app-pub-7832891006427470/5345932942</string>
-    <string name="menu_about" translatable="false">About Settings</string>
     <string name="menu_subscribe">Subscribe Settings</string>
     <string name="share">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
     <string name="pagetitlenew">New</string>

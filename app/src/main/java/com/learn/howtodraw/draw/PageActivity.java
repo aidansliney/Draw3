@@ -45,7 +45,7 @@ public class PageActivity extends AppCompatActivity {
         if (tabletSize) {
             imagesRef = storageRef.child("tablet");
         } else {
-             imagesRef = storageRef.child("phone");
+            imagesRef = storageRef.child("phone");
         }
 
         final TextView helpText = (TextView) findViewById(R.id.help_text);
@@ -78,10 +78,10 @@ public class PageActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(Uri uri) {
 
-                  String s=uri.toString();
+                    String s=uri.toString();
 
                     Log.d("URL",s);
-                     String requiredString = s.substring(s.indexOf(tutorialId+"p") + 7, s.indexOf(".png"));
+                    String requiredString = s.substring(s.indexOf(tutorialId+"p") + 7, s.indexOf(".png"));
                     int result = Integer.parseInt(requiredString);
                     Log.d("String to int",""+result);
 
@@ -102,7 +102,7 @@ public class PageActivity extends AppCompatActivity {
         shareLayout.setVisibility(View.INVISIBLE);
         shareText.setVisibility(View.INVISIBLE);
         int lastPic = bookHelpStrings.length - 1;
-       // Picasso.with(PageActivity.this).load(downloadLinks[downloadLinks.length-1]).noFade().into(imageView);
+        // Picasso.with(PageActivity.this).load(downloadLinks[downloadLinks.length-1]).noFade().into(imageView);
         View nextImage2 = findViewById(R.id.nextImage2);
         TextView endPage = (TextView) findViewById(R.id.endPage);
         String endPageString = String.valueOf(lastPic + 1);
@@ -130,8 +130,8 @@ public class PageActivity extends AppCompatActivity {
                     else
                         helpText.setVisibility(View.VISIBLE);
                     Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                   // Picasso.with(PageActivity.this).load("https://www.eff.org/files/tor-https-1.png").noFade().into(imageView);
-                       // Log.d("downlaod link",downloadLinks[pageCounter+1]);
+                    // Picasso.with(PageActivity.this).load("https://www.eff.org/files/tor-https-1.png").noFade().into(imageView);
+                    // Log.d("downlaod link",downloadLinks[pageCounter+1]);
 
                     helpText.setText(bookHelpStrings[pageCounter]);
                     String pNumber = String.valueOf(pageCounter + 1);
@@ -146,7 +146,6 @@ public class PageActivity extends AppCompatActivity {
 
             public void onClick(View view) {
                 rightArrow.setVisibility(View.VISIBLE);
-
                 if (pageCounter != 0) {
                     pageCounter--;
                     Log.d("this is the counter", "" + pageCounter);
@@ -200,22 +199,16 @@ public class PageActivity extends AppCompatActivity {
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-
-                    ImageView imageView = (ImageView) findViewById(R.id.slideImage);
-
+                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
                     helpText.setText(bookHelpStrings[pageCounter]);
                     TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
-
                     String pNumber = String.valueOf(pageCounter + 1);
                     pageNumber.setText(pNumber);
-
                 }
             }
 
 
-
             public void onSwipeLeft() {
-
                 leftArrow.setVisibility(View.VISIBLE);
 
                 if (pageCounter == bookHelpStrings.length - 1) {
@@ -223,7 +216,6 @@ public class PageActivity extends AppCompatActivity {
                     shareText.setVisibility(View.VISIBLE);
                     helpText.setVisibility(View.INVISIBLE);
                     rightArrow.setVisibility(View.INVISIBLE);
-
                 } else {
                     pageCounter++;
                     Log.d("this is the counter", "" + pageCounter);
@@ -234,16 +226,17 @@ public class PageActivity extends AppCompatActivity {
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-
-
+                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    // Picasso.with(PageActivity.this).load("https://www.eff.org/files/tor-https-1.png").noFade().into(imageView);
+                    // Log.d("downlaod link",downloadLinks[pageCounter+1]);
 
                     helpText.setText(bookHelpStrings[pageCounter]);
-
                     String pNumber = String.valueOf(pageCounter + 1);
                     pageNumber.setText(pNumber);
-
                 }
             }
+
+
 
             public void onSwipeBottom() {
                 //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();

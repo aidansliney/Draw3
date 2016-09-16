@@ -17,7 +17,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdListener;
@@ -29,13 +28,13 @@ import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;
 import com.learn.howtodraw.draw.util.Purchase;
-import com.squareup.picasso.Picasso;
 
 import static com.learn.howtodraw.draw.Constants.*;
 
 
 import layout.BrowseFragment;
 import layout.ThirdFragment;
+import layout.firstFragment;
 
 public class MainActivity extends IabActivity implements BrowseFragment.OnFragmentInteractionListener {
 

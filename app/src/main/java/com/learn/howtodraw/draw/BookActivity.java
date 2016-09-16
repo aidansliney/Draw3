@@ -104,13 +104,15 @@ public class BookActivity extends MainActivity {
 
                 // see if the user should have access to the content
                 if (isUnlocked())  { // this  works
-                    String pageId = (String) adapter.getItem(position);
-                    int slidesID = getResources().getIdentifier(pageId + "Pages", "array", getClass().getPackage().getName());
+
+                    String pageId =  bookPageIds[position];
+                    Log.d("paged",pageId);
+                    //String pageId = (String) adapter.getItem(position);
                     int helpID = getResources().getIdentifier(pageId + "Help", "array", getClass().getPackage().getName());
                     // showToast(20000, cardText1[+position] );
                     // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(BookActivity.this, PageActivity.class);
-                    Log.d("hello" + slidesID, "");
+
                     intent.putExtra("bookHelp", helpID);
                     intent.putExtra("tutorialId", pageId);
                     intent.putExtra("bookName", bookName);

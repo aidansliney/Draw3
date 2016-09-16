@@ -37,37 +37,7 @@
         <item>b01t03</item>
     </string-array>
 
-    <integer-array name="b01t01Pages">
-        <item>@drawable/b01t01p01</item>
-        <item>@drawable/b01t01p02</item>
-        <item>@drawable/b01t01p03</item>
-        <item>@drawable/b01t01p04</item>
-        <item>@drawable/b01t01p05</item>
-        <item>@drawable/b01t01p06</item>
-        <item>@drawable/b01t01p07</item>
-        <item>@drawable/b01t01p08</item>
-        <item>@drawable/b01t01p09</item>
-        <item>@drawable/b01t01p10</item>
-        <item>@drawable/b01t01p11</item>
-        <item>@drawable/b01t01p12</item>
-        <item>@drawable/b01t01p13</item>
-        <item>@drawable/b01t01p14</item>
-        <item>@drawable/b01t01p15</item>
-        <item>@drawable/b01t01p16</item>
-        <item>@drawable/b01t01p17</item>
-        <item>@drawable/b01t01p18</item>
-        <item>@drawable/b01t01p19</item>
-        <item>@drawable/b01t01p20</item>
-        <item>@drawable/b01t01p21</item>
-        <item>@drawable/b01t01p22</item>
-        <item>@drawable/b01t01p23</item>
-        <item>@drawable/b01t01p24</item>
-        <item>@drawable/b01t01p25</item>
-        <item>@drawable/b01t01p26</item>
-        <item>@drawable/b01t01p27</item>
-        <item>@drawable/b01t01p28</item>
-        <item>@drawable/b01t01p29</item>
-    </integer-array>
+
     <!--ur hero is 8 heads high-->
     <string-array name="b01t01Help">
         <item>Start by laying down the basic shape of the head</item>
@@ -101,36 +71,6 @@
         <item>And there you have it.  You can fully erase the basic forms now to show off your character</item>
     </string-array>
 
-    <integer-array name="b01t02Pages">
-        <item>@drawable/b01t02p01</item>
-        <item>@drawable/b01t02p02</item>
-        <item>@drawable/b01t02p03</item>
-        <item>@drawable/b01t02p04</item>
-        <item>@drawable/b01t02p05</item>
-        <item>@drawable/b01t02p06</item>
-        <item>@drawable/b01t02p07</item>
-        <item>@drawable/b01t02p08</item>
-        <item>@drawable/b01t02p09</item>
-        <item>@drawable/b01t02p10</item>
-        <item>@drawable/b01t02p11</item>
-        <item>@drawable/b01t02p12</item>
-        <item>@drawable/b01t02p13</item>
-        <item>@drawable/b01t02p14</item>
-        <item>@drawable/b01t02p15</item>
-        <item>@drawable/b01t02p16</item>
-        <item>@drawable/b01t02p17</item>
-        <item>@drawable/b01t02p18</item>
-        <item>@drawable/b01t02p19</item>
-        <item>@drawable/b01t02p20</item>
-        <item>@drawable/b01t02p21</item>
-        <item>@drawable/b01t02p22</item>
-        <item>@drawable/b01t02p23</item>
-        <item>@drawable/b01t02p24</item>
-        <item>@drawable/b01t02p25</item>
-        <item>@drawable/b01t02p26</item>
-        <item>@drawable/b01t02p27</item>
-        <item>@drawable/b01t02p28</item>
-    </integer-array>
 
     <string-array name="b01t02Help">
         <item>Let’s start with an oval shape to represent the head</item>
@@ -164,28 +104,7 @@
     </string-array>
 
 
-    <integer-array name="b01t03Pages">
-        <item>@drawable/b01t03p01</item>
-        <item>@drawable/b01t03p02</item>
-        <item>@drawable/b01t03p03</item>
-        <item>@drawable/b01t03p04</item>
-        <item>@drawable/b01t03p05</item>
-        <item>@drawable/b01t03p06</item>
-        <item>@drawable/b01t03p07</item>
-        <item>@drawable/b01t03p08</item>
-        <item>@drawable/b01t03p09</item>
-        <item>@drawable/b01t03p10</item>
-        <item>@drawable/b01t03p11</item>
-        <item>@drawable/b01t03p12</item>
-        <item>@drawable/b01t03p13</item>
-        <item>@drawable/b01t03p14</item>
-        <item>@drawable/b01t03p15</item>
-        <item>@drawable/b01t03p16</item>
-        <item>@drawable/b01t03p17</item>
-        <item>@drawable/b01t03p18</item>
-        <item>@drawable/b01t03p19</item>
-        <item>@drawable/b01t03p20</item>
-    </integer-array>
+
     <string-array name="b01t03Help">
         <item>Drawing the hands at an angle can be difficult. So always take a look at your own hands for reference. Draw in two rectangles as the palms of your hand </item>
         <item> Break the finger joints down into rectangles that extend from the top of your palm of your hand</item>
@@ -258,29 +177,6 @@
         <item>b02t07</item>
     </string-array>
 
-    <integer-array name="b02t01Pages">
-        <item>@drawable/mi3_4figure01</item>
-        <item>@drawable/mi3_4figure02</item>
-        <item>@drawable/mi3_4figure03</item>
-        <item>@drawable/mi3_4figure04</item>
-        <item>@drawable/mi3_4figure05</item>
-        <item>@drawable/mi3_4figure06</item>
-        <item>@drawable/mi3_4figure07</item>
-        <item>@drawable/mi3_4figure08</item>
-        <item>@drawable/mi3_4figure09</item>
-        <item>@drawable/mi3_4figure10</item>
-        <item>@drawable/mi3_4figure11</item>
-        <item>@drawable/mi3_4figure12</item>
-        <item>@drawable/mi3_4figure13</item>
-        <item>@drawable/mi3_4figure14</item>
-        <item>@drawable/mi3_4figure15</item>
-        <item>@drawable/mi3_4figure16</item>
-        <item>@drawable/mi3_4figure17</item>
-        <item>@drawable/mi3_4figure18</item>
-        <item>@drawable/mi3_4figure19</item>
-        <item>@drawable/mi3_4figure20</item>
-        <item>@drawable/mi3_4figure21</item>
-    </integer-array>
 
     <string-array name="b02t01Help">
         <item>Start by laying down the basic shape of the head.</item>
@@ -307,27 +203,6 @@
     </string-array>
 
 
-    <integer-array name="b02t02Pages">
-        <item>@drawable/mi3_4head01</item>
-        <item>@drawable/mi3_4head02</item>
-        <item>@drawable/mi3_4head03</item>
-        <item>@drawable/mi3_4head04</item>
-        <item>@drawable/mi3_4head05</item>
-        <item>@drawable/mi3_4head06</item>
-        <item>@drawable/mi3_4head07</item>
-        <item>@drawable/mi3_4head08</item>
-        <item>@drawable/mi3_4head09</item>
-        <item>@drawable/mi3_4head10</item>
-        <item>@drawable/mi3_4head11</item>
-        <item>@drawable/mi3_4head12</item>
-        <item>@drawable/mi3_4head13</item>
-        <item>@drawable/mi3_4head14</item>
-        <item>@drawable/mi3_4head15</item>
-        <item>@drawable/mi3_4head16</item>
-        <item>@drawable/mi3_4head17</item>
-        <item>@drawable/mi3_4head18</item>
-        <item>@drawable/mi3_4head19</item>
-    </integer-array>
     <string-array name="b02t02Help">
         <item>Start with a simple spherical shape for the head.</item>
         <item>Take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle.</item>
@@ -356,26 +231,7 @@
         <item>Take a look at Level 3 of the head to fully understand how the muscles and plains work. Or why not share your drawing with us.</item>
     </string-array>
 
-    <integer-array name="b02t03Pages">
-        <item>@drawable/mi3_4torso01</item>
-        <item>@drawable/mi3_4torso02</item>
-        <item>@drawable/mi3_4torso03</item>
-        <item>@drawable/mi3_4torso04</item>
-        <item>@drawable/mi3_4torso05</item>
-        <item>@drawable/mi3_4torso06</item>
-        <item>@drawable/mi3_4torso07</item>
-        <item>@drawable/mi3_4torso08</item>
-        <item>@drawable/mi3_4torso09</item>
-        <item>@drawable/mi3_4torso10</item>
-        <item>@drawable/mi3_4torso11</item>
-        <item>@drawable/mi3_4torso12</item>
-        <item>@drawable/mi3_4torso13</item>
-        <item>@drawable/mi3_4torso14</item>
-        <item>@drawable/mi3_4torso15</item>
-        <item>@drawable/mi3_4torso16</item>
-        <item>@drawable/mi3_4torso17</item>
-        <item>@drawable/mi3_4torso18</item>
-    </integer-array>
+
     <string-array name="b02t03Help">
         <item>Start by laying out the lines that will represent the shoulders, and hips.</item>
         <item>The chest should stretch from shoulder to shoulder.</item>
@@ -398,19 +254,7 @@
         <item>Take a look at Level 3 of the torso to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="b02t04Pages">
-        <item>@drawable/mi3_4arm01</item>
-        <item>@drawable/mi3_4arm02</item>
-        <item>@drawable/mi3_4arm03</item>
-        <item>@drawable/mi3_4arm04</item>
-        <item>@drawable/mi3_4arm05</item>
-        <item>@drawable/mi3_4arm06</item>
-        <item>@drawable/mi3_4arm07</item>
-        <item>@drawable/mi3_4arm08</item>
-        <item>@drawable/mi3_4arm09</item>
-        <item>@drawable/mi3_4arm10</item>
-        <item>@drawable/mi3_4arm11</item>
-    </integer-array>
+
     <string-array name="b02t04Help">
         <item>Start by laying out the lines that will represent the shoulders, elbows and hands.</item>
         <item>Draw in a basic shape of the shoulders.</item>
@@ -426,19 +270,7 @@
         <item>Take a look at level 3 of the arm to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="b02t05Pages">
-        <item>@drawable/mi3_4hand01</item>
-        <item>@drawable/mi3_4hand02</item>
-        <item>@drawable/mi3_4hand03</item>
-        <item>@drawable/mi3_4hand04</item>
-        <item>@drawable/mi3_4hand05</item>
-        <item>@drawable/mi3_4hand06</item>
-        <item>@drawable/mi3_4hand07</item>
-        <item>@drawable/mi3_4hand08</item>
-        <item>@drawable/mi3_4hand09</item>
-        <item>@drawable/mi3_4hand10</item>
-        <item>@drawable/mi3_4hand11</item>
-    </integer-array>
+
     <string-array name="b02t05Help">
         <item>Start by laying out the lines that will represent the hips, knees, limbs and feet.</item>
         <item>The limbs can be represented as cylinders for now.</item>
@@ -453,18 +285,6 @@
         <item>Take a look at level 3 of the leg to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="b02t06Pages">
-        <item>@drawable/mi3_4leg01</item>
-        <item>@drawable/mi3_4leg02</item>
-        <item>@drawable/mi3_4leg03</item>
-        <item>@drawable/mi3_4leg04</item>
-        <item>@drawable/mi3_4leg05</item>
-        <item>@drawable/mi3_4leg06</item>
-        <item>@drawable/mi3_4leg07</item>
-        <item>@drawable/mi3_4leg08</item>
-        <item>@drawable/mi3_4leg09</item>
-        <item>@drawable/mi3_4leg10</item>
-    </integer-array>
     <string-array name="b02t06Help">
         <item>Start by drawing in some rectangles which will block out the shapes of the palms.</item>
         <item>The fingers are broken up into three cylinders each.</item>
@@ -479,16 +299,6 @@
         <item>Take a look at Level 3 of the hands to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-    <integer-array name="b02t07Pages">
-        <item>@drawable/mi3_4foot01</item>
-        <item>@drawable/mi3_4foot02</item>
-        <item>@drawable/mi3_4foot03</item>
-        <item>@drawable/mi3_4foot04</item>
-        <item>@drawable/mi3_4foot05</item>
-        <item>@drawable/mi3_4foot06</item>
-        <item>@drawable/mi3_4foot07</item>
-        <item>@drawable/mi3_4foot08</item>
-    </integer-array>
     <string-array name="b02t07Help">
         <item>The basic shape of the foot is a wedge. Make sure it has a flat face where the toes will extrude from.</item>
         <item>It connects the the leg with a cylinder, with the ankle bones on either side.</item>
@@ -555,22 +365,7 @@
         <item>b03t07</item>
     </string-array>
 
-    <integer-array name="b03t01Pages">
-        <item>@drawable/ma3_4figure01</item>
-        <item>@drawable/ma3_4figure02</item>
-        <item>@drawable/ma3_4figure03</item>
-        <item>@drawable/ma3_4figure04</item>
-        <item>@drawable/ma3_4figure05</item>
-        <item>@drawable/ma3_4figure06</item>
-        <item>@drawable/ma3_4figure07</item>
-        <item>@drawable/ma3_4figure08</item>
-        <item>@drawable/ma3_4figure09</item>
-        <item>@drawable/ma3_4figure10</item>
-        <item>@drawable/ma3_4figure11</item>
-        <item>@drawable/ma3_4figure12</item>
-        <item>@drawable/ma3_4figure13</item>
-        <item>@drawable/ma3_4figure14</item>
-    </integer-array>
+
     <string-array name="b03t01Help">
         <item>We will start with the basic forms that we sketch in for the level 2 tutorial.</item>
         <item>Take a look at the individual tutorials which looks in detail at each muscle.</item>
@@ -588,21 +383,6 @@
         <item>Finish the full figure by drawing on the hands.</item>
     </string-array>
 
-    <integer-array name="b03t02Pages">
-        <item>@drawable/ma3_4torso01</item>
-        <item>@drawable/ma3_4torso02</item>
-        <item>@drawable/ma3_4torso03</item>
-        <item>@drawable/ma3_4torso04</item>
-        <item>@drawable/ma3_4torso05</item>
-        <item>@drawable/ma3_4torso06</item>
-        <item>@drawable/ma3_4torso07</item>
-        <item>@drawable/ma3_4torso08</item>
-        <item>@drawable/ma3_4torso09</item>
-        <item>@drawable/ma3_4torso10</item>
-        <item>@drawable/ma3_4torso11</item>
-        <item>@drawable/ma3_4torso12</item>
-        <item>@drawable/ma3_4torso13</item>
-    </integer-array>
     <string-array name="b03t02Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The frontalis muscle defines the forehead.</item>
@@ -626,20 +406,6 @@
         <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the skull and skin create, you should be able to master drawing the head.</item>
     </string-array>
 
-    <integer-array name="b03t03Pages">
-        <item>@drawable/ma3_4legs01</item>
-        <item>@drawable/ma3_4legs02</item>
-        <item>@drawable/ma3_4legs03</item>
-        <item>@drawable/ma3_4legs04</item>
-        <item>@drawable/ma3_4legs05</item>
-        <item>@drawable/ma3_4legs06</item>
-        <item>@drawable/ma3_4legs07</item>
-        <item>@drawable/ma3_4legs08</item>
-        <item>@drawable/ma3_4legs09</item>
-        <item>@drawable/ma3_4legs10</item>
-        <item>@drawable/ma3_4legs11</item>
-        <item>@drawable/ma3_4legs12</item>
-    </integer-array>
     <string-array name="b03t03Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The pectoralis muscles connect to the bottom of the deltoids. It emerges from that one point across the body.</item>
@@ -659,25 +425,6 @@
         <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the torso.</item>
     </string-array>
 
-    <integer-array name="b03t04Pages">
-        <item>@drawable/ma3_4head01</item>
-        <item>@drawable/ma3_4head02</item>
-        <item>@drawable/ma3_4head03</item>
-        <item>@drawable/ma3_4head04</item>
-        <item>@drawable/ma3_4head05</item>
-        <item>@drawable/ma3_4head06</item>
-        <item>@drawable/ma3_4head07</item>
-        <item>@drawable/ma3_4head08</item>
-        <item>@drawable/ma3_4head09</item>
-        <item>@drawable/ma3_4head10</item>
-        <item>@drawable/ma3_4head11</item>
-        <item>@drawable/ma3_4head12</item>
-        <item>@drawable/ma3_4head13</item>
-        <item>@drawable/ma3_4head14</item>
-        <item>@drawable/ma3_4head15</item>
-        <item>@drawable/ma3_4head16</item>
-        <item>@drawable/ma3_4head17</item>
-    </integer-array>
     <string-array name="b03t04Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The deltoids run down into the same point between the top of the biceps and triceps.</item>
@@ -693,15 +440,7 @@
         <item>The lower arm muscles curve around the arms. They knit into each other defining their separate areas.</item>
         <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the arm.</item>
     </string-array>
-    <integer-array name="b03t05Pages">
-        <item>@drawable/ma3_4hands01</item>
-        <item>@drawable/ma3_4hands02</item>
-        <item>@drawable/ma3_4hands03</item>
-        <item>@drawable/ma3_4hands04</item>
-        <item>@drawable/ma3_4hands05</item>
-        <item>@drawable/ma3_4hands06</item>
-        <item>@drawable/ma3_4hands07</item>
-    </integer-array>
+
     <string-array name="b03t05Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The top half of the leg is comprised of three large muscles. The vastus medialis, the vastus lateralis and the rectus femoris.</item>
@@ -718,15 +457,7 @@
         <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the legs.</item>
     </string-array>
 
-    <integer-array name="b03t06Pages">
-        <item>@drawable/ma3_4foot01</item>
-        <item>@drawable/ma3_4foot02</item>
-        <item>@drawable/ma3_4foot03</item>
-        <item>@drawable/ma3_4foot04</item>
-        <item>@drawable/ma3_4foot05</item>
-        <item>@drawable/ma3_4foot06</item>
-        <item>@drawable/ma3_4foot07</item>
-    </integer-array>
+
     <string-array name="b03t06Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The lumbricals run  long with the metacarpus bones from the exterior retinaculum down to the knuckles.</item>
@@ -738,20 +469,6 @@
     </string-array>
 
 
-    <integer-array name="b03t07Pages">
-        <item>@drawable/ma3_4arms01</item>
-        <item>@drawable/ma3_4arms02</item>
-        <item>@drawable/ma3_4arms03</item>
-        <item>@drawable/ma3_4arms04</item>
-        <item>@drawable/ma3_4arms05</item>
-        <item>@drawable/ma3_4arms06</item>
-        <item>@drawable/ma3_4arms07</item>
-        <item>@drawable/ma3_4arms08</item>
-        <item>@drawable/ma3_4arms09</item>
-        <item>@drawable/ma3_4arms10</item>
-        <item>@drawable/ma3_4arms11</item>
-        <item>@drawable/ma3_4arms12</item>
-    </integer-array>
     <string-array name="b03t07Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>Similar to the hand, the lumbricals run along with the metatarsal bones from the superior exterior retinaculum down to the toe knuckles.</item>
@@ -815,29 +532,7 @@
 
     </string-array>
 
-    <integer-array name="b04t01Pages">
-        <item>@drawable/maflexa01</item>
-        <item>@drawable/maflexa02</item>
-        <item>@drawable/maflexa03</item>
-        <item>@drawable/maflexa04</item>
-        <item>@drawable/maflexa05</item>
-        <item>@drawable/maflexa06</item>
-        <item>@drawable/maflexa07</item>
-        <item>@drawable/maflexa08</item>
-        <item>@drawable/maflexa09</item>
-        <item>@drawable/maflexa10</item>
-        <item>@drawable/maflexa11</item>
-        <item>@drawable/maflexa12</item>
-        <item>@drawable/maflexa13</item>
-        <item>@drawable/maflexa14</item>
-        <item>@drawable/maflexa15</item>
-        <item>@drawable/maflexa16</item>
-        <item>@drawable/maflexa17</item>
-        <item>@drawable/maflexa18</item>
-        <item>@drawable/maflexa19</item>
-        <item>@drawable/maflexa20</item>
-        <item>@drawable/maflexa21</item>
-    </integer-array>
+
     <string-array name="b04t01Help">
         <item>Let’s bend the arm up like a bicep curl to show the muscle contracting.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -861,27 +556,7 @@
         <item>The biceps is often the defining muscle of the arm.</item>
     </string-array>
 
-    <integer-array name="b04t02Pages">
-        <item>@drawable/maflexb01</item>
-        <item>@drawable/maflexb02</item>
-        <item>@drawable/maflexb03</item>
-        <item>@drawable/maflexb04</item>
-        <item>@drawable/maflexb05</item>
-        <item>@drawable/maflexb06</item>
-        <item>@drawable/maflexb07</item>
-        <item>@drawable/maflexb08</item>
-        <item>@drawable/maflexb09</item>
-        <item>@drawable/maflexb10</item>
-        <item>@drawable/maflexb11</item>
-        <item>@drawable/maflexb12</item>
-        <item>@drawable/maflexb13</item>
-        <item>@drawable/maflexb14</item>
-        <item>@drawable/maflexb15</item>
-        <item>@drawable/maflexb16</item>
-        <item>@drawable/maflexb17</item>
-        <item>@drawable/maflexb18</item>
-        <item>@drawable/maflexb19</item>
-    </integer-array>
+
     <string-array name="b04t02Help">
         <item>Let’s rotate the wrist to watch how the lower arm muscles can pop.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -903,26 +578,7 @@
         <item>The forearm muscles will pop the more you rotate the wrist.</item>
     </string-array>
 
-    <integer-array name="b04t03Pages">
-        <item>@drawable/maflexc01</item>
-        <item>@drawable/maflexc02</item>
-        <item>@drawable/maflexc03</item>
-        <item>@drawable/maflexc04</item>
-        <item>@drawable/maflexc05</item>
-        <item>@drawable/maflexc06</item>
-        <item>@drawable/maflexc07</item>
-        <item>@drawable/maflexc08</item>
-        <item>@drawable/maflexc09</item>
-        <item>@drawable/maflexc10</item>
-        <item>@drawable/maflexc11</item>
-        <item>@drawable/maflexc12</item>
-        <item>@drawable/maflexc13</item>
-        <item>@drawable/maflexc14</item>
-        <item>@drawable/maflexc15</item>
-        <item>@drawable/maflexc16</item>
-        <item>@drawable/maflexc17</item>
-        <item>@drawable/maflexc18</item>
-    </integer-array>
+
     <string-array name="b04t03Help">
         <item>Let us rotate the arm to watch how the tricep muscles can pop.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -945,26 +601,7 @@
         <item>The defined triceps can cast a shadow as it cuts in to meet the elbow.</item>
     </string-array>
 
-    <integer-array name="b04t04Pages">
-        <item>@drawable/maflexd01</item>
-        <item>@drawable/maflexd02</item>
-        <item>@drawable/maflexd03</item>
-        <item>@drawable/maflexd04</item>
-        <item>@drawable/maflexd05</item>
-        <item>@drawable/maflexd06</item>
-        <item>@drawable/maflexd07</item>
-        <item>@drawable/maflexd08</item>
-        <item>@drawable/maflexd09</item>
-        <item>@drawable/maflexd10</item>
-        <item>@drawable/maflexd11</item>
-        <item>@drawable/maflexd12</item>
-        <item>@drawable/maflexd13</item>
-        <item>@drawable/maflexd14</item>
-        <item>@drawable/maflexd15</item>
-        <item>@drawable/maflexd16</item>
-        <item>@drawable/maflexd17</item>
-        <item>@drawable/maflexd18</item>
-    </integer-array>
+
     <string-array name="b04t04Help">
         <item>Let us draw the arm as it naturally falls.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -984,27 +621,7 @@
         <item></item>
     </string-array>
 
-    <integer-array name="b04t05Pages">
-        <item>@drawable/maflexe01</item>
-        <item>@drawable/maflexe02</item>
-        <item>@drawable/maflexe03</item>
-        <item>@drawable/maflexe04</item>
-        <item>@drawable/maflexe05</item>
-        <item>@drawable/maflexe06</item>
-        <item>@drawable/maflexe07</item>
-        <item>@drawable/maflexe08</item>
-        <item>@drawable/maflexe09</item>
-        <item>@drawable/maflexe10</item>
-        <item>@drawable/maflexe11</item>
-        <item>@drawable/maflexe12</item>
-        <item>@drawable/maflexe13</item>
-        <item>@drawable/maflexe14</item>
-        <item>@drawable/maflexe15</item>
-        <item>@drawable/maflexe16</item>
-        <item>@drawable/maflexe17</item>
-        <item>@drawable/maflexe18</item>
-        <item>@drawable/maflexe19</item>
-    </integer-array>
+
     <string-array name="b04t05Help">
         <item>Let us look at the deltoid muscles as they raise up the arm.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -1026,28 +643,7 @@
         <item></item>
     </string-array>
 
-    <integer-array name="b04t06Pages">
-        <item>@drawable/maflexf01</item>
-        <item>@drawable/maflexf02</item>
-        <item>@drawable/maflexf03</item>
-        <item>@drawable/maflexf04</item>
-        <item>@drawable/maflexf05</item>
-        <item>@drawable/maflexf06</item>
-        <item>@drawable/maflexf07</item>
-        <item>@drawable/maflexf08</item>
-        <item>@drawable/maflexf09</item>
-        <item>@drawable/maflexf10</item>
-        <item>@drawable/maflexf11</item>
-        <item>@drawable/maflexf12</item>
-        <item>@drawable/maflexf13</item>
-        <item>@drawable/maflexf14</item>
-        <item>@drawable/maflexf15</item>
-        <item>@drawable/maflexf16</item>
-        <item>@drawable/maflexf17</item>
-        <item>@drawable/maflexf18</item>
-        <item>@drawable/maflexf19</item>
-        <item>@drawable/maflexf20</item>
-    </integer-array>
+
     <string-array name="b04t06Help">
         <item>Let us look at the deltoid muscles as they raise up the arm.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -1071,25 +667,7 @@
     </string-array>
 
 
-    <integer-array name="b04t07Pages">
-        <item>@drawable/maflexg01</item>
-        <item>@drawable/maflexg02</item>
-        <item>@drawable/maflexg03</item>
-        <item>@drawable/maflexg04</item>
-        <item>@drawable/maflexg05</item>
-        <item>@drawable/maflexg06</item>
-        <item>@drawable/maflexg07</item>
-        <item>@drawable/maflexg08</item>
-        <item>@drawable/maflexg09</item>
-        <item>@drawable/maflexg10</item>
-        <item>@drawable/maflexg11</item>
-        <item>@drawable/maflexg12</item>
-        <item>@drawable/maflexg13</item>
-        <item>@drawable/maflexg14</item>
-        <item>@drawable/maflexg15</item>
-        <item>@drawable/maflexg16</item>
-        <item>@drawable/maflexg17</item>
-    </integer-array>
+
     <string-array name="b04t07Help">
         <item>Let us draw the arm as it naturally falls.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -1163,26 +741,7 @@
 
     </string-array>
 
-    <integer-array name="b05t01Pages">
-        <item>@drawable/midynamickicka0101</item>
-        <item>@drawable/midynamickicka0102</item>
-        <item>@drawable/midynamickicka0103</item>
-        <item>@drawable/midynamickicka0104</item>
-        <item>@drawable/midynamickicka0105</item>
-        <item>@drawable/midynamickicka0106</item>
-        <item>@drawable/midynamickicka0107</item>
-        <item>@drawable/midynamickicka0108</item>
-        <item>@drawable/midynamickicka0109</item>
-        <item>@drawable/midynamickicka0110</item>
-        <item>@drawable/midynamickicka0111</item>
-        <item>@drawable/midynamickicka0112</item>
-        <item>@drawable/midynamickicka0113</item>
-        <item>@drawable/midynamickicka0114</item>
-        <item>@drawable/midynamickicka0115</item>
-        <item>@drawable/midynamickicka0116</item>
-        <item>@drawable/midynamickicka0117</item>
-        <item>@drawable/midynamickicka0118</item>
-    </integer-array>
+
     <string-array name="b05t01Help">
         <item>Let us study the body as it is in motion.</item>
         <item>Every image here is referenced with a UFC fighter filmed with a HD high speed camera.</item>
@@ -1203,26 +762,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t02Pages">
-        <item>@drawable/midynamickicka0201</item>
-        <item>@drawable/midynamickicka0202</item>
-        <item>@drawable/midynamickicka0203</item>
-        <item>@drawable/midynamickicka0204</item>
-        <item>@drawable/midynamickicka0205</item>
-        <item>@drawable/midynamickicka0206</item>
-        <item>@drawable/midynamickicka0207</item>
-        <item>@drawable/midynamickicka0208</item>
-        <item>@drawable/midynamickicka0209</item>
-        <item>@drawable/midynamickicka0210</item>
-        <item>@drawable/midynamickicka0211</item>
-        <item>@drawable/midynamickicka0212</item>
-        <item>@drawable/midynamickicka0213</item>
-        <item>@drawable/midynamickicka0214</item>
-        <item>@drawable/midynamickicka0215</item>
-        <item>@drawable/midynamickicka0216</item>
-        <item>@drawable/midynamickicka0217</item>
-        <item>@drawable/midynamickicka0218</item>
-    </integer-array>
+
     <string-array name="b05t02Help">
         <item>As the head turns, we can clearly see the front and side planes of the face.</item>
         <item>The shoulders and hips still alternate as the figure springs up while twisting.</item>
@@ -1243,25 +783,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t03Pages">
-        <item>@drawable/midynamickicka0301</item>
-        <item>@drawable/midynamickicka0302</item>
-        <item>@drawable/midynamickicka0303</item>
-        <item>@drawable/midynamickicka0304</item>
-        <item>@drawable/midynamickicka0305</item>
-        <item>@drawable/midynamickicka0306</item>
-        <item>@drawable/midynamickicka0307</item>
-        <item>@drawable/midynamickicka0308</item>
-        <item>@drawable/midynamickicka0309</item>
-        <item>@drawable/midynamickicka0310</item>
-        <item>@drawable/midynamickicka0311</item>
-        <item>@drawable/midynamickicka0312</item>
-        <item>@drawable/midynamickicka0313</item>
-        <item>@drawable/midynamickicka0314</item>
-        <item>@drawable/midynamickicka0315</item>
-        <item>@drawable/midynamickicka0316</item>
-        <item>@drawable/midynamickicka0317</item>
-    </integer-array>
+
     <string-array name="b05t03Help">
         <item>The figure, now mid air is about to explode into a high kick.</item>
         <item>The arms are balancing the figure out.</item>
@@ -1281,27 +803,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t04Pages">
-        <item>@drawable/midynamickicka0401</item>
-        <item>@drawable/midynamickicka0402</item>
-        <item>@drawable/midynamickicka0403</item>
-        <item>@drawable/midynamickicka0404</item>
-        <item>@drawable/midynamickicka0405</item>
-        <item>@drawable/midynamickicka0406</item>
-        <item>@drawable/midynamickicka0407</item>
-        <item>@drawable/midynamickicka0408</item>
-        <item>@drawable/midynamickicka0409</item>
-        <item>@drawable/midynamickicka0410</item>
-        <item>@drawable/midynamickicka0411</item>
-        <item>@drawable/midynamickicka0412</item>
-        <item>@drawable/midynamickicka0413</item>
-        <item>@drawable/midynamickicka0414</item>
-        <item>@drawable/midynamickicka0415</item>
-        <item>@drawable/midynamickicka0416</item>
-        <item>@drawable/midynamickicka0417</item>
-        <item>@drawable/midynamickicka0418</item>
-        <item>@drawable/midynamickicka0419</item>
-    </integer-array>
+
     <string-array name="b05t04Help">
         <item>The shoulders and hips alternate as the figure is about to kick.</item>
         <item>As always, build up the forms over the simple skeletal structure.</item>
@@ -1322,24 +824,6 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t05Pages">
-        <item>@drawable/midynamickicka0501</item>
-        <item>@drawable/midynamickicka0502</item>
-        <item>@drawable/midynamickicka0503</item>
-        <item>@drawable/midynamickicka0504</item>
-        <item>@drawable/midynamickicka0505</item>
-        <item>@drawable/midynamickicka0506</item>
-        <item>@drawable/midynamickicka0507</item>
-        <item>@drawable/midynamickicka0508</item>
-        <item>@drawable/midynamickicka0509</item>
-        <item>@drawable/midynamickicka0510</item>
-        <item>@drawable/midynamickicka0511</item>
-        <item>@drawable/midynamickicka0512</item>
-        <item>@drawable/midynamickicka0513</item>
-        <item>@drawable/midynamickicka0514</item>
-        <item>@drawable/midynamickicka0515</item>
-        <item>@drawable/midynamickicka0516</item>
-    </integer-array>
     <string-array name="b05t05Help">
         <item>This will be the point of impact for the kick.</item>
         <item>The right leg fully extends as it kicks out.</item>
@@ -1358,26 +842,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t06Pages">
-        <item>@drawable/midynamickicka0601</item>
-        <item>@drawable/midynamickicka0602</item>
-        <item>@drawable/midynamickicka0603</item>
-        <item>@drawable/midynamickicka0604</item>
-        <item>@drawable/midynamickicka0605</item>
-        <item>@drawable/midynamickicka0606</item>
-        <item>@drawable/midynamickicka0607</item>
-        <item>@drawable/midynamickicka0608</item>
-        <item>@drawable/midynamickicka0609</item>
-        <item>@drawable/midynamickicka0610</item>
-        <item>@drawable/midynamickicka0611</item>
-        <item>@drawable/midynamickicka0612</item>
-        <item>@drawable/midynamickicka0613</item>
-        <item>@drawable/midynamickicka0614</item>
-        <item>@drawable/midynamickicka0615</item>
-        <item>@drawable/midynamickicka0616</item>
-        <item>@drawable/midynamickicka0617</item>
-        <item>@drawable/midynamickicka0618</item>
-    </integer-array>
+
     <string-array name="b05t06Help">
         <item>The foot will now swing around in front of the figure.</item>
         <item>The shoulders and hips are still alternated, an important gesture to show motion.</item>
@@ -1398,25 +863,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t07Pages">
-        <item>@drawable/midynamickicka0701</item>
-        <item>@drawable/midynamickicka0702</item>
-        <item>@drawable/midynamickicka0703</item>
-        <item>@drawable/midynamickicka0704</item>
-        <item>@drawable/midynamickicka0705</item>
-        <item>@drawable/midynamickicka0706</item>
-        <item>@drawable/midynamickicka0707</item>
-        <item>@drawable/midynamickicka0708</item>
-        <item>@drawable/midynamickicka0709</item>
-        <item>@drawable/midynamickicka0710</item>
-        <item>@drawable/midynamickicka0711</item>
-        <item>@drawable/midynamickicka0712</item>
-        <item>@drawable/midynamickicka0713</item>
-        <item>@drawable/midynamickicka0714</item>
-        <item>@drawable/midynamickicka0715</item>
-        <item>@drawable/midynamickicka0716</item>
-        <item>@drawable/midynamickicka0717</item>
-    </integer-array>
+
     <string-array name="b05t07Help">
         <item>The figure begins to land.</item>
         <item>The shoulders and hips are still alternated.</item>
@@ -1437,26 +884,7 @@
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-    <integer-array name="b05t08Pages">
-        <item>@drawable/midynamickicka0801</item>
-        <item>@drawable/midynamickicka0802</item>
-        <item>@drawable/midynamickicka0803</item>
-        <item>@drawable/midynamickicka0804</item>
-        <item>@drawable/midynamickicka0805</item>
-        <item>@drawable/midynamickicka0806</item>
-        <item>@drawable/midynamickicka0807</item>
-        <item>@drawable/midynamickicka0808</item>
-        <item>@drawable/midynamickicka0809</item>
-        <item>@drawable/midynamickicka0810</item>
-        <item>@drawable/midynamickicka0811</item>
-        <item>@drawable/midynamickicka0812</item>
-        <item>@drawable/midynamickicka0813</item>
-        <item>@drawable/midynamickicka0814</item>
-        <item>@drawable/midynamickicka0815</item>
-        <item>@drawable/midynamickicka0816</item>
-        <item>@drawable/midynamickicka0817</item>
-        <item>@drawable/midynamickicka0818</item>
-    </integer-array>
+
     <string-array name="b05t08Help">
         <item>The figure fully lands on the ground.</item>
         <item>The shoulders and torso begin to rest level with each other.</item>

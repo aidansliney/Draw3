@@ -1,4 +1,4 @@
-package com.learn.howtodraw.draw;
+package layout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.learn.howtodraw.draw.BaseFragment;
+import com.learn.howtodraw.draw.LinkBooks;
+import com.learn.howtodraw.draw.PageActivity;
+import com.learn.howtodraw.draw.R;
+
 //A placeholder fragment containing a simple view.
-public class firstFragment extends BaseFragment  {
+public class firstFragment extends BaseFragment {
     //The fragment argument representing the section number for this fragment.
     private static final String ARG_SECTION_NUMBER = "section_number";
     public int willyCounter;
@@ -85,7 +90,7 @@ public class firstFragment extends BaseFragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", R.array.b03t02Pages);
+
                 intent.putExtra("tutorialId", "b03t02");
                 intent.putExtra("bookHelp", R.array.b03t02Help);
 
@@ -99,7 +104,7 @@ public class firstFragment extends BaseFragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("bookSlides", R.array.b02t03Pages);
+
                 intent.putExtra("bookHelp", R.array.b02t03Help);
                 intent.putExtra("tutorialId", "b02t03");
                 intent.putExtra("bookName", "book02");
