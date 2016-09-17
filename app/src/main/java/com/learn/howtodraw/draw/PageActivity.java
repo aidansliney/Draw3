@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -80,19 +81,32 @@ public class PageActivity extends AppCompatActivity {
                 Picasso.with(PageActivity.this).load(directDownloadLinks[0]).fetch( new com.squareup.picasso.Callback() {
                     @Override
                     public void onSuccess() {
-                        Picasso.with(PageActivity.this).load(directDownloadLinks[0]).into(imageView);
+                        Picasso.with(PageActivity.this).load(directDownloadLinks[0]).networkPolicy(NetworkPolicy.OFFLINE).into(imageView);
                     }
                     @Override
                     public void onError() {
-
+                        Picasso.with(PageActivity.this)
+                                .load(directDownloadLinks[0])
+                                .fetch();
                     }
                 });
 
             }
-            else
-            Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch();
+            else {
+                Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch(new com.squareup.picasso.Callback() {
+                    String link = directDownloadLinks[i];
+                    @Override
+                    public void onSuccess() {
+                    }
 
-
+                    @Override
+                    public void onError() {
+                        Picasso.with(PageActivity.this)
+                                .load(link)
+                                .fetch();
+                    }
+                });
+            }
 
 /*           spaceRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
@@ -138,7 +152,17 @@ public class PageActivity extends AppCompatActivity {
                     else
                         helpText.setVisibility(View.VISIBLE);
                    // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                        @Override
+                        public void onSuccess() {
+                        }
+                        @Override
+                        public void onError() {
+                            Picasso.with(PageActivity.this)
+                                    .load(directDownloadLinks[pageCounter])
+                                    .noFade().into(imageView);
+                        }
+                    });
                     helpText.setText(bookHelpStrings[pageCounter]);
                     pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
@@ -160,7 +184,17 @@ public class PageActivity extends AppCompatActivity {
                     else
                         helpText.setVisibility(View.VISIBLE);
                   //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                        @Override
+                        public void onSuccess() {
+                        }
+                        @Override
+                        public void onError() {
+                            Picasso.with(PageActivity.this)
+                                    .load(directDownloadLinks[pageCounter])
+                                    .noFade().into(imageView);
+                        }
+                    });
                     helpText.setText(bookHelpStrings[pageCounter]);
                     pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
@@ -197,7 +231,17 @@ public class PageActivity extends AppCompatActivity {
                     else
                         helpText.setVisibility(View.VISIBLE);
                     //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                        @Override
+                        public void onSuccess() {
+                        }
+                        @Override
+                        public void onError() {
+                            Picasso.with(PageActivity.this)
+                                    .load(directDownloadLinks[pageCounter])
+                                    .noFade().into(imageView);
+                        }
+                    });
                     helpText.setText(bookHelpStrings[pageCounter]);
                     pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
@@ -222,7 +266,17 @@ public class PageActivity extends AppCompatActivity {
                     else
                         helpText.setVisibility(View.VISIBLE);
                     // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                        @Override
+                        public void onSuccess() {
+                        }
+                        @Override
+                        public void onError() {
+                            Picasso.with(PageActivity.this)
+                                    .load(directDownloadLinks[pageCounter])
+                                    .noFade().into(imageView);
+                        }
+                    });
                     helpText.setText(bookHelpStrings[pageCounter]);
                     pageNumber.setText(String.valueOf(pageCounter + 1));
                 }

@@ -49,22 +49,6 @@ public class firstFragment extends BaseFragment {
 
 
 
-
-/*        final VideoView vidView = (VideoView) rootView.findViewById(R.id.myVideoA);
-        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-        Uri vidUri = Uri.parse(vidAddress);
-        vidView.setVideoURI(vidUri);
-
-        final View vV =  rootView.findViewById(R.id.video);
-
-        vV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("log taht","as");
-                vidView.start();
-            }
-        });*/
-
         TextView tv = (TextView) rootView.findViewById(R.id.removeBook5);
         assert tv != null;
         tv.setOnClickListener(new View.OnClickListener() {
@@ -107,10 +91,8 @@ public class firstFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-
                 intent.putExtra("tutorialId", "b03t02");
                 intent.putExtra("bookHelp", R.array.b03t02Help);
-
                 intent.putExtra("bookName", "book03");
                 startActivity(intent);
             }
@@ -121,13 +103,25 @@ public class firstFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-
-                intent.putExtra("bookHelp", R.array.b02t03Help);
                 intent.putExtra("tutorialId", "b02t03");
+                intent.putExtra("bookHelp", R.array.b02t03Help);
                 intent.putExtra("bookName", "book02");
                 startActivity(intent);
             }
         });
+
+        View helpCard3 = rootView.findViewById(com.learn.howtodraw.draw.R.id.layout_0);
+        helpCard3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PageActivity.class);
+                intent.putExtra("bookHelp", R.array.b00t01Help);
+                intent.putExtra("tutorialId", "b00t01");
+                intent.putExtra("bookName", "book00");
+                startActivity(intent);
+            }
+        });
+
 
         View artist = rootView.findViewById(R.id.layout_4);
         artist.setOnClickListener(new View.OnClickListener() {

@@ -16,6 +16,27 @@
     <string name="share_draw">Share Draw</string>
     <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel\'s Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O\'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland.</string>
 
+    <string-array name="b00t01Help">
+        <item>Welcome to Draw. An app designed to help artists of all levels improve their drawing skills. \n \n
+            The more you draw, the better you get. It’s not a talent, it’s a skill and we are here to help you learn.\n
+            How it works.\n
+            Each book will contain several tutorials focusing on different areas of illustration.\n
+            The pages of each book will follow every part of the drawing, with the key points described in detail.</item>
+        <item>The books are broken up into several levels. \n \n
+            Level 1 is the easiest. \n
+            These books will focus on the basic forms needed to draw anything. They are great for beginners but also good those a bit more practiced to help brush up on the basics \n \n
+            Level 2 looks at the forms in more detail.  \n \n
+            These books are great for the composition of anatomy and will help you draw at a high level with good anatomy and dynamic posing./n
+        Level 3 /n
+These books examine what is beneath the outer layer of our drawing. It analyses the muscles of anatomy first, then looks at the planes these features create. </item>
+        <item>Our artist Will Sliney uses different colour pencils throughout the tutorials, but you can use any tools you like. /n
+The blue lines should indicate light pencil that you will erase /n
+The red lines indicate the muscular structure. /n
+The purple lines are the sculptural planes. /n
+The black lines are the final artwork, those lines that will not be erased. </item>
+    </string-array>
+
+
     <string-array name="b01t01Help">
         <item>Start by laying down the basic shape of the head</item>
         <item>Using the size of the head, we can lay out markers for proportions</item>

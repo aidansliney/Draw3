@@ -4,6 +4,7 @@
     package="com.learn.howtodraw.draw">
 
     <application
+        android:name=".Global"
         android:debuggable="true"
         tools:ignore="HardcodedDebugMode"
         android:allowBackup="true"
@@ -42,6 +43,7 @@
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-feature android:name="android.hardware.camera" android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
 
 </manifest>
