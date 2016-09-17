@@ -77,7 +77,6 @@ public class firstFragment extends BaseFragment {
             }
         });
 
-
         final ImageView iV = (ImageView) rootView.findViewById(R.id.willy);
         final TextView tV = (TextView) rootView.findViewById(R.id.will_header);
         final TextView tV2 = (TextView) rootView.findViewById(R.id.will_text);

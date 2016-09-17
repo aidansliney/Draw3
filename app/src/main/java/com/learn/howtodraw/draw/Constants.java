@@ -1,16 +1,9 @@
 package com.learn.howtodraw.draw;
 
-
-
-
 /**
  * A class that defines constants used throughout the app.
  */
 public class Constants {
-
-
-// In-app billing constants
-
     // Does the user have an active subscription to the infinite gas plan?
     public static boolean mSubscribed = false;
 
@@ -27,9 +20,6 @@ public class Constants {
     public static final int IAB_PURCHASE_FAILED = 101;
     public static final int IAB_PURCHASE_FAILED_PAYLOAD_PROBLEM = 102;
     public static final String LOG_IAB = "IAB";
-
-
-
 
 }
 

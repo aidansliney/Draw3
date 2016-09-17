@@ -73,9 +73,26 @@ public class PageActivity extends AppCompatActivity {
         for (i= 0; i < bookHelpStrings.length; i++) {
             String page =  getPaddedNumber(i+1);
             directDownloadLinks[i] ="https://firebasestorage.googleapis.com/v0/b/draw-891c7.appspot.com/o/"+tabletOrPhone2+"%2F"+bookName+"%2F"+tutorialId+"p"+page+".png?alt=media";
-            Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch();
+
             if (i  == 0)
-                Picasso.with(PageActivity.this).load(directDownloadLinks[i]).noFade().into(imageView);
+
+            {
+                Picasso.with(PageActivity.this).load(directDownloadLinks[0]).fetch( new com.squareup.picasso.Callback() {
+                    @Override
+                    public void onSuccess() {
+                        Picasso.with(PageActivity.this).load(directDownloadLinks[0]).into(imageView);
+                    }
+                    @Override
+                    public void onError() {
+
+                    }
+                });
+
+            }
+            else
+            Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch();
+
+
 
 /*           spaceRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
