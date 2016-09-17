@@ -14,6 +14,9 @@ import com.learn.howtodraw.draw.LinkBooks;
 import com.learn.howtodraw.draw.PageActivity;
 import com.learn.howtodraw.draw.R;
 
+import static com.learn.howtodraw.draw.Constants.SKU_BOOK_NAME_ARRAY;
+import static com.learn.howtodraw.draw.Constants.mPurchasedBooksArray;
+
 //A placeholder fragment containing a simple view.
 public class firstFragment extends BaseFragment {
     //The fragment argument representing the section number for this fragment.
@@ -45,6 +48,8 @@ public class firstFragment extends BaseFragment {
 
 
 
+
+
 /*        final VideoView vidView = (VideoView) rootView.findViewById(R.id.myVideoA);
         String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
         Uri vidUri = Uri.parse(vidAddress);
@@ -60,12 +65,23 @@ public class firstFragment extends BaseFragment {
             }
         });*/
 
+        TextView tv = (TextView) rootView.findViewById(R.id.removeBook5);
+        assert tv != null;
+        tv.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[4]);
+                mPurchasedBooksArray[4] = false;
+
+            }
+        });
 
 
         final ImageView iV = (ImageView) rootView.findViewById(R.id.willy);
         final TextView tV = (TextView) rootView.findViewById(R.id.will_header);
         final TextView tV2 = (TextView) rootView.findViewById(R.id.will_text);
+        final TextView tV3 = (TextView) rootView.findViewById(R.id.removeBook5);
 
         iV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +94,8 @@ public class firstFragment extends BaseFragment {
                     iV.setImageResource(R.drawable.mario);
                     tV.setText("Aidan Sliney is a legend");
                     tV2.setText("What a legend");
+                    tV3.setText("Unpurchase Book 5");
+
                     Log.d("Clicked", "Willy");
                 }
             }

@@ -26,11 +26,13 @@ public class BookActivity extends MainActivity {
     public String bookName;
     public Boolean isUnlocked(){
 
-        /*if (mSubscribed)
-            return true;*/
-
         //check what page we are on and if it is purchased
-        if (bookName.equals("book01"))
+        for( int i =0; i < mPurchasedBooksArray.length; i++) {
+            if (bookName.equals(SKU_BOOK_NAME_ARRAY[i]))
+                  bookPurchasedLock = mPurchasedBooksArray[i];
+        }
+
+/*        if (bookName.equals("book01"))
             bookPurchasedLock = mPurchasedBooksArray[0];
           //  bookPurchasedLock = mPurchasedBook1;
         if (bookName.equals("book02"))
@@ -40,7 +42,7 @@ public class BookActivity extends MainActivity {
         if (bookName.equals("book04"))
             bookPurchasedLock = mPurchasedBooksArray[3];
         if (bookName.equals("book05"))
-            bookPurchasedLock = mPurchasedBooksArray[4];
+            bookPurchasedLock = mPurchasedBooksArray[4];*/
         assert bookPurchasedLock != null;
 
         if (bookPurchasedLock == null){
@@ -53,8 +55,6 @@ public class BookActivity extends MainActivity {
         else
             return false;
     }
-
-
     public void buildTheGrid(){
         //send content in the grid
         final String[] cardText1 = getResources().getStringArray(getIntent().getIntExtra("cardText1Id", 0));
@@ -68,19 +68,20 @@ public class BookActivity extends MainActivity {
 
         if (bookLevel.equals("Level 1")) {
             CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
-            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelOne)));
-            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelOne)));
+            collapsingToolbarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.levelOne));
+            collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.levelOne));
+            Log.d("log1","level 1");
         }
 
         if (bookLevel.equals("Level 2")) {
             CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
-            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelTwo)));
-            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelTwo)));
+            collapsingToolbarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.levelTwo));
+            collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.levelTwo));
         }
         if (bookLevel.equals("Level 3")) {
             CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
-            collapsingToolbarLayout.setBackgroundColor((getResources().getColor(R.color.levelThree)));
-            collapsingToolbarLayout.setContentScrimColor((getResources().getColor(R.color.levelThree)));
+            collapsingToolbarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.levelThree));
+            collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.levelThree));
         }
 
         for (int i = 0; i < cardImageDrawables.length(); i++) {
@@ -144,6 +145,8 @@ public class BookActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_book);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.getMenu().clear();
+
         setSupportActionBar(toolbar);
 
         //Create floating action button

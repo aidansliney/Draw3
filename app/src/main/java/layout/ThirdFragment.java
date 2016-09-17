@@ -117,9 +117,16 @@ public class ThirdFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pageId = (String) adapter.getItem(position);
 
-                Log.d("this is the page id",pageId);
+                for( int i =0; i < mPurchasedBooksArray.length; i++) {
 
+                    if (bookNames[position].equals(SKU_BOOK_NAME_ARRAY[i])) {
+                        hasPurchased = mPurchasedBooksArray[i];
+                        bookName =  SKU_BOOK_NAME_POINTER_ARRAY[i];
+                    }
 
+                }
+
+/*
                 if (bookNames[position].equals("book01"))
                 {
                     hasPurchased =  mPurchasedBooksArray[0];
@@ -149,7 +156,7 @@ public class ThirdFragment extends BaseFragment {
                     hasPurchased =  mPurchasedBooksArray[4];
                     bookThumb = R.drawable.book5cover;
                     bookName = R.string.book05;
-                }
+                }*/
 
                 if(hasPurchased || mSubscribed)
                 {
@@ -162,17 +169,17 @@ public class ThirdFragment extends BaseFragment {
                     intent.putExtra("bookName",bookNames[position]);
                     startActivity(intent);
                 }
-                else
+                else//send to subscribe page
                 {
                     Bundle bundle = new Bundle();
-                    bundle.putInt("bookThumb", bookThumb);
+                    bundle.putInt("bookThumb", SKU_BOOK_COVER_ARRAY[position]);
                     bundle.putInt("bookName", bookName);
 
                     FragmentManager fm = getFragmentManager();
                     MyDialogFragment dialogFragment = new MyDialogFragment();
                     dialogFragment.setArguments(bundle);
                     dialogFragment.show(fm, getString(R.string.menu_subscribe));
-                }
+              }
 
 
             }

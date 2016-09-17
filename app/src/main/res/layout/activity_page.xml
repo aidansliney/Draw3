@@ -62,7 +62,7 @@
     </LinearLayout>
 
     <com.learn.howtodraw.draw.FontA.TextAwesome
-        android:id="@+id/previousImage2"
+        android:id="@+id/previousImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -151,7 +151,7 @@
     </LinearLayout>
 
     <com.learn.howtodraw.draw.FontA.TextAwesome
-        android:id="@+id/nextImage2"
+        android:id="@+id/nextImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

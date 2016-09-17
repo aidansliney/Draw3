@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -23,9 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-
 
 public class PageActivity extends AppCompatActivity {
 
@@ -34,18 +31,21 @@ public class PageActivity extends AppCompatActivity {
 
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReferenceFromUrl("gs://draw-891c7.appspot.com");
-    StorageReference imagesRef;
+    StorageReference tabletOrPhone; //from storage
+    String tabletOrPhone2; // direct
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.learn.howtodraw.draw.R.layout.activity_page);
 
-        boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
-        if (tabletSize) {
-            imagesRef = storageRef.child("tablet");
+        boolean istabletOrPhone = getResources().getBoolean(R.bool.isTablet); //checks sw600
+        if (istabletOrPhone) {
+            tabletOrPhone = storageRef.child("tablet");
+            tabletOrPhone2 = "tablet";
         } else {
-            imagesRef = storageRef.child("phone");
+            tabletOrPhone = storageRef.child("phone");
+            tabletOrPhone2 = "phone";
         }
 
         final TextView helpText = (TextView) findViewById(R.id.help_text);
@@ -53,67 +53,58 @@ public class PageActivity extends AppCompatActivity {
         final View shareText = findViewById(R.id.share_text);
         final TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
         final ImageView imageView = (ImageView) findViewById(R.id.slideImage);
-        final TextView rightArrow = (TextView) findViewById(R.id.nextImage2);
-        final TextView leftArrow = (TextView) findViewById(R.id.previousImage2);
+        final TextView rightArrow = (TextView) findViewById(R.id.nextImage);
+        final TextView leftArrow = (TextView) findViewById(R.id.previousImage);
 
         //bookSlides come from intents (BookActivity or Third Fragment as these are the only entry points)
         final String bookHelpStrings[] = getResources().getStringArray(getIntent().getIntExtra("bookHelp", 0));
         final String tutorialId = getIntent().getStringExtra("tutorialId");
         final String bookName = getIntent().getStringExtra("bookName");
-        final StorageReference imagesRef2 = imagesRef.child(bookName);
+        final StorageReference imagesRef2 = this.tabletOrPhone.child(bookName);
 
         final String[] downloadLinks = new String[bookHelpStrings.length];
+        //no need to hit storage for these links
+        final String[] directDownloadLinks = new String[bookHelpStrings.length];
 
-        if(downloadLinks[0] == null) {
+/*        if(downloadLinks[0] == null) {
             Arrays.fill(downloadLinks, "http://www.laminex.com.au/uploads/products/white.jpg");
-        }
+        }*/
 
-        //needs to start with 1 as the first image is 01
-        for (i= 1; i < bookHelpStrings.length+1; i++) {
-            String page =  getPaddedNumber(i);
-            StorageReference spaceRef = imagesRef2.child(tutorialId+"p"+page+".png");
-            Log.d("The page we are looking",tutorialId+"p"+page+".png");
+        for (i= 0; i < bookHelpStrings.length; i++) {
+            String page =  getPaddedNumber(i+1);
+            directDownloadLinks[i] ="https://firebasestorage.googleapis.com/v0/b/draw-891c7.appspot.com/o/"+tabletOrPhone2+"%2F"+bookName+"%2F"+tutorialId+"p"+page+".png?alt=media";
+            Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch();
+            if (i  == 0)
+                Picasso.with(PageActivity.this).load(directDownloadLinks[i]).noFade().into(imageView);
 
-            spaceRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+/*           spaceRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
-
                     String s=uri.toString();
-
-                    Log.d("URL",s);
                     String requiredString = s.substring(s.indexOf(tutorialId+"p") + 7, s.indexOf(".png"));
                     int result = Integer.parseInt(requiredString);
-                    Log.d("String to int",""+result);
-
                     downloadLinks[result -1] = uri.toString();
                     Picasso.with(PageActivity.this).load(downloadLinks[result -1]).fetch();
                     if (result  == 1){
                         Picasso.with(PageActivity.this).load(downloadLinks[result -1]).noFade().into(imageView);
                     }
                 }
-            });
+            });*/
         }
 
-        if (bookHelpStrings[pageCounter].equals(""))
-            helpText.setVisibility(View.INVISIBLE);
-        else
-            helpText.setText(bookHelpStrings[0]);
+        //prepare first page
+        helpText.setText(bookHelpStrings[0]);
         leftArrow.setVisibility(View.INVISIBLE);
         shareLayout.setVisibility(View.INVISIBLE);
         shareText.setVisibility(View.INVISIBLE);
-        int lastPic = bookHelpStrings.length - 1;
-        // Picasso.with(PageActivity.this).load(downloadLinks[downloadLinks.length-1]).noFade().into(imageView);
-        View nextImage2 = findViewById(R.id.nextImage2);
-        TextView endPage = (TextView) findViewById(R.id.endPage);
-        String endPageString = String.valueOf(lastPic + 1);
-        endPage.setText(endPageString);
-
-        assert nextImage2 != null;
-        nextImage2.setOnClickListener(new View.OnClickListener() {
+        View nextImage = findViewById(R.id.nextImage);
+        TextView endPageNumber = (TextView) findViewById(R.id.endPage);
+        endPageNumber.setText(String.valueOf(bookHelpStrings.length));
+        assert nextImage != null;
+        nextImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 leftArrow.setVisibility(View.VISIBLE);
-
                 if (pageCounter == bookHelpStrings.length - 1) {
                     shareLayout.setVisibility(View.VISIBLE);
                     shareText.setVisibility(View.VISIBLE);
@@ -129,37 +120,32 @@ public class PageActivity extends AppCompatActivity {
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    // Picasso.with(PageActivity.this).load("https://www.eff.org/files/tor-https-1.png").noFade().into(imageView);
-                    // Log.d("downlaod link",downloadLinks[pageCounter+1]);
-
+                   // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
                     helpText.setText(bookHelpStrings[pageCounter]);
-                    String pNumber = String.valueOf(pageCounter + 1);
-                    pageNumber.setText(pNumber);
+                    pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
             }
         });
 
-        View previousImage2 = findViewById(com.learn.howtodraw.draw.R.id.previousImage2);
-        assert previousImage2 != null;
-        previousImage2.setOnClickListener(new View.OnClickListener() {
+        View previousImage = findViewById(com.learn.howtodraw.draw.R.id.previousImage);
+        assert previousImage != null;
+        previousImage.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
                 rightArrow.setVisibility(View.VISIBLE);
                 if (pageCounter != 0) {
                     pageCounter--;
-                    Log.d("this is the counter", "" + pageCounter);
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
                     if (bookHelpStrings[pageCounter].equals(""))
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                  //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
                     helpText.setText(bookHelpStrings[pageCounter]);
-                    TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
-                    String pNumber = String.valueOf(pageCounter + 1);
-                    pageNumber.setText(pNumber);
+                    pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
             }
         });
@@ -168,7 +154,6 @@ public class PageActivity extends AppCompatActivity {
         camera.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-
                 dispatchTakePictureIntent();
             }
         });
@@ -184,33 +169,26 @@ public class PageActivity extends AppCompatActivity {
 
         assert imageView != null;
         imageView.setOnTouchListener(new OnSwipeTouchListener(PageActivity.this) {
-            public void onSwipeTop() {
-                // Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
-            }
-
             public void onSwipeRight() {
                 rightArrow.setVisibility(View.VISIBLE);
                 if (pageCounter != 0) {
                     pageCounter--;
-                    Log.d("this is the counter", "" + pageCounter);
                     shareLayout.setVisibility(View.INVISIBLE);
                     shareText.setVisibility(View.INVISIBLE);
                     if (bookHelpStrings[pageCounter].equals(""))
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
                     helpText.setText(bookHelpStrings[pageCounter]);
-                    TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
-                    String pNumber = String.valueOf(pageCounter + 1);
-                    pageNumber.setText(pNumber);
+                    pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
             }
 
 
             public void onSwipeLeft() {
                 leftArrow.setVisibility(View.VISIBLE);
-
                 if (pageCounter == bookHelpStrings.length - 1) {
                     shareLayout.setVisibility(View.VISIBLE);
                     shareText.setVisibility(View.VISIBLE);
@@ -226,20 +204,18 @@ public class PageActivity extends AppCompatActivity {
                         helpText.setVisibility(View.INVISIBLE);
                     else
                         helpText.setVisibility(View.VISIBLE);
-                    Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    // Picasso.with(PageActivity.this).load("https://www.eff.org/files/tor-https-1.png").noFade().into(imageView);
-                    // Log.d("downlaod link",downloadLinks[pageCounter+1]);
-
+                    // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
                     helpText.setText(bookHelpStrings[pageCounter]);
-                    String pNumber = String.valueOf(pageCounter + 1);
-                    pageNumber.setText(pNumber);
+                    pageNumber.setText(String.valueOf(pageCounter + 1));
                 }
             }
 
-
-
             public void onSwipeBottom() {
                 //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeTop() {
+                // Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -311,8 +287,5 @@ public class PageActivity extends AppCompatActivity {
         return String.format("%02d", number);
     }
 
-    public void run(){
 
-
-    }
 }

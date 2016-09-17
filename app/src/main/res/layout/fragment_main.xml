@@ -312,6 +312,15 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="#c0b9b9" />
+
+            <TextView
+                android:id="@+id/removeBook5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="10dp"
+                android:textColor="#c0b9b9"
+                />
         </LinearLayout>
 
         <View

@@ -119,6 +119,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         mFirebaseAnalytics.logEvent("share_image", params);
 
 
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -138,17 +140,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         tabLayout.setupWithViewPager(mViewPager);
 
 
-        TextView tv = (TextView) findViewById(R.id.removeBook);
-        assert tv != null;
-        tv.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                consumeBook(SKU_BOOK_NAME_ARRAY[4]);
-                mPurchasedBooksArray[1] = false;
-
-            }
-        });
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -182,7 +174,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);*/
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

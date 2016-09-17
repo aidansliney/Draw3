@@ -20,12 +20,10 @@
             app:contentScrim="@color/levelOne"
             app:expandedTitleMarginStart="10dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-           app:expandedTitleMargin="10dp"
+            app:expandedTitleMargin="10dp"
             app:expandedTitleMarginEnd="40dp"
             app:expandedTitleMarginBottom="10dp"
             app:expandedTitleTextAppearance="@style/ExpandedAppBar">
-
-
 
             <ImageView
                 android:id="@+id/background"
@@ -33,9 +31,7 @@
                 android:layout_height="240dp"
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
-                android:src="@drawable/head1_cover" />
-
-
+                />
 
             <!--<android.support.v7.widget.Toolbar-->
                 <!--android:id="@+id/toolbar"-->

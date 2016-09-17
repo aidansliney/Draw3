@@ -20,7 +20,6 @@ public class MyDialogFragment extends BaseFragment {
     public Integer bookThumb;
     public Integer bookName;
     public String bookNameString;
-    static TextView tv;
 
 
     @Override
