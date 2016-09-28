@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.learn.howtodraw.draw.util.AppConfig;
 import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;

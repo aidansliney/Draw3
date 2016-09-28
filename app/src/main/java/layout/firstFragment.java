@@ -40,14 +40,8 @@ public class firstFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
-
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         LinkBooks.linkBook(R.id.layout_1, R.array.book1Build, rootView, false, getActivity());
-
-
-
 
         TextView tv = (TextView) rootView.findViewById(R.id.removeBook5);
         assert tv != null;

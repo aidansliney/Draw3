@@ -278,12 +278,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         setWaitScreen(true);
 
         launchSubscriptionPurchaseFlow(this, SKU_SUBSCRIPTION);
-    /* (original code)
-    Log.d(TAG, "Launching purchase flow for infinite gas subscription.");
-    mHelper.launchPurchaseFlow(this,
-            SKU_SUBSCRIPTION, IabHelper.ITEM_TYPE_SUBS,
-            RC_PURCHASE_REQUEST, mPurchaseFinishedListener, payload);
-    */
+
     }
 
     @Override

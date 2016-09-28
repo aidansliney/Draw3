@@ -25,31 +25,15 @@ public class BookActivity extends MainActivity {
     public Boolean bookPurchasedLock;
     public String bookName;
     public Boolean isUnlocked(){
-
         //check what page we are on and if it is purchased
         for( int i =0; i < mPurchasedBooksArray.length; i++) {
             if (bookName.equals(SKU_BOOK_NAME_ARRAY[i]))
                   bookPurchasedLock = mPurchasedBooksArray[i];
         }
-
-/*        if (bookName.equals("book01"))
-            bookPurchasedLock = mPurchasedBooksArray[0];
-          //  bookPurchasedLock = mPurchasedBook1;
-        if (bookName.equals("book02"))
-            bookPurchasedLock = mPurchasedBooksArray[1];
-        if (bookName.equals("book03"))
-            bookPurchasedLock = mPurchasedBooksArray[2];
-        if (bookName.equals("book04"))
-            bookPurchasedLock = mPurchasedBooksArray[3];
-        if (bookName.equals("book05"))
-            bookPurchasedLock = mPurchasedBooksArray[4];*/
-        assert bookPurchasedLock != null;
-
         if (bookPurchasedLock == null){
-            toast("bpl is equal to null :(");
+            toast("Unknown if books should be locked");
             return false;
         }
-
         if (bookPurchasedLock)
             return true;
         else
@@ -66,11 +50,11 @@ public class BookActivity extends MainActivity {
         final int[] tickIcon = new int[cardImageDrawables.length()];
 
 
+        //Set the color of the top bar
         if (bookLevel.equals("Level 1")) {
             CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapse_commonview_header);
             collapsingToolbarLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.levelOne));
             collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.levelOne));
-            Log.d("log1","level 1");
         }
 
         if (bookLevel.equals("Level 2")) {
@@ -84,6 +68,7 @@ public class BookActivity extends MainActivity {
             collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this, R.color.levelThree));
         }
 
+        //Set the locks
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
             if(isUnlocked()) // Set the tick icon
@@ -107,18 +92,15 @@ public class BookActivity extends MainActivity {
                 if (isUnlocked())  { // this  works
 
                     String pageId =  bookPageIds[position];
-                    Log.d("paged",pageId);
-                    //String pageId = (String) adapter.getItem(position);
                     int helpID = getResources().getIdentifier(pageId + "Help", "array", getClass().getPackage().getName());
-                    // showToast(20000, cardText1[+position] );
-                    // Toast.makeText(BookActivity.this, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(BookActivity.this, PageActivity.class);
 
+                    Intent intent = new Intent(BookActivity.this, PageActivity.class);
                     intent.putExtra("bookHelp", helpID);
                     intent.putExtra("tutorialId", pageId);
                     intent.putExtra("bookName", bookName);
                     startActivity(intent);
-                } else {
+                }
+                else {
                     Bundle bundle = new Bundle();
                     bundle.putInt("bookThumb", getIntent().getIntExtra("bookCoverImageInsideId", 0));
                     bundle.putInt("bookName", getIntent().getIntExtra("bookName", 0));
@@ -127,11 +109,9 @@ public class BookActivity extends MainActivity {
                     MyDialogFragment dialogFragment = new MyDialogFragment();
                     dialogFragment.setArguments(bundle);
                     dialogFragment.show(fm, getString(R.string.menu_subscribe));
-
                 }
             }
         });
-
     }
 
     @Override
@@ -150,16 +130,16 @@ public class BookActivity extends MainActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/html");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is where we will share the app</p>"));
-                startActivity(Intent.createChooser(sharingIntent, "Share using"));
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share));
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+
             }
         });
 
         //set the top of the page (not the grid)
-        TextView textView = (TextView) findViewById(R.id.primary);
-        TextView textView2 = (TextView) findViewById(R.id.secondary);
         ImageView imageView = (ImageView) findViewById(R.id.background);
         //textView.setText(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         getSupportActionBar().setTitle(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
@@ -172,7 +152,5 @@ public class BookActivity extends MainActivity {
 
         if (isUnlocked())
             toast("You own this book");
-        else
-            Log.d("PING", "This page is  not locked");
     }
 }

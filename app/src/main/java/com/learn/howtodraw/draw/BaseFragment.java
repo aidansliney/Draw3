@@ -26,7 +26,4 @@ public class BaseFragment extends DialogFragment {
         return (MainActivity) getActivity();
     }
 
-
-
-
 }
