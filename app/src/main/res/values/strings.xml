@@ -2,10 +2,10 @@
     <string name="app_name">Learn how to draw</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_book2" translatable="false">BookActivity2</string>
+    <string name="title_activity_book2" translatable="false">Learn to Draw</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="menu_subscribe">Subscribe Settings</string>
-    <string name="share">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
+    <string name="share">This message has been sent from the Android app Draw. Download the app from https://play.google.com/store/apps/details?id=com.learn.howtodraw.draw</string>
     <string name="pagetitlenew">New</string>
     <string name="pagetitlebooks">Books</string>
     <string name="page_title_tutorials">Tutorials</string>
@@ -16,26 +16,70 @@
     <string name="share_draw">Share Draw</string>
     <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel\'s Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O\'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland.</string>
 
-    <string-array name="b00t01Help">
-        <item>Welcome to Draw. An app designed to help artists of all levels improve their drawing skills. \n \n
-            The more you draw, the better you get. It’s not a talent, it’s a skill and we are here to help you learn.\n
-            How it works.\n
-            Each book will contain several tutorials focusing on different areas of illustration.\n
-            The pages of each book will follow every part of the drawing, with the key points described in detail.</item>
-        <item>The books are broken up into several levels. \n \n
-            Level 1 is the easiest. \n
-            These books will focus on the basic forms needed to draw anything. They are great for beginners but also good those a bit more practiced to help brush up on the basics \n \n
-            Level 2 looks at the forms in more detail.  \n \n
-            These books are great for the composition of anatomy and will help you draw at a high level with good anatomy and dynamic posing./n
-        Level 3 /n
-These books examine what is beneath the outer layer of our drawing. It analyses the muscles of anatomy first, then looks at the planes these features create. </item>
-        <item>Our artist Will Sliney uses different colour pencils throughout the tutorials, but you can use any tools you like. /n
-The blue lines should indicate light pencil that you will erase /n
-The red lines indicate the muscular structure. /n
-The purple lines are the sculptural planes. /n
-The black lines are the final artwork, those lines that will not be erased. </item>
+    <!--The Titles on the Book Tab-->
+    <string-array name="allBooksHeadings">
+        <item>Book 1 Title</item>
+        <item>Book 2 Title</item>
+        <item>Book 3 Title</item>
+        <item>Book 4 Title</item>
+        <item>Book 5 Title</item>
     </string-array>
 
+    <!--The Titles on the Page Tab-->
+    <string-array name="pagesAllHeadings">
+        <item>Full Figure</item> <!--b01t01-->
+        <item>Basic Head</item> <!--b01t02-->
+        <item>Basic Hand</item> <!--b01t03-->
+        <item>Full Figure</item> <!--b02t01-->
+        <item>The Head</item> <!--b02t02-->
+        <item>The Torso</item> <!--b02t03-->
+        <item>The Arms</item> <!--b02t04-->
+        <item>The Hands</item> <!--b02t05-->
+        <item>The Legs</item> <!--b02t06-->
+        <item>The Feet</item> <!--b02t07-->
+        <item>Full figure</item> <!--b03t01-->
+        <item>Torso</item> <!--b03t02-->
+        <item>Legs</item> <!--b03t03-->
+        <item>Head</item> <!--b03t04-->
+        <item>Hands</item> <!--b03t05-->
+        <item>Foot</item> <!--b03t06-->
+        <item>Arms</item> <!--b03t07-->
+        <item>Flex up</item> <!--b04t01-->
+        <item>Flex down</item> <!--b04t02-->
+        <item>Side Flex</item> <!--b04t03-->
+        <item>Begin Flex</item> <!--b04t04-->
+        <item>Air Flex</item> <!--b04t05-->
+        <item>Arm Cross</item> <!--b04t06-->
+        <item>Side View Flex</item> <!--b04t07-->
+        <item>Dynamic Kick 1</item> <!--b05t01-->
+        <item>Dynamic Kick 2</item> <!--b05t02-->
+        <item>Dynamic Kick 3</item> <!--b05t03-->
+        <item>Dynamic Kick 4</item> <!--b05t04-->
+        <item>Dynamic Kick 5</item> <!--b05t05-->
+        <item>Dynamic Kick 6</item> <!--b05t06-->
+        <item>Dynamic Kick 7</item> <!--b05t07-->
+        <item>Dynamic Kick 8</item> <!--b05t08-->
+    </string-array>
+
+    <string-array name="b00t01Help">
+        <item>Welcome to Draw.\n An app designed to help artists of all levels improve their drawing skills. </item>
+        <item>The more you draw, the better you get. It’s not a talent, it’s a skill and we are here to help you learn.</item>
+         <item>  How it works. \n
+        Each book will contain several tutorials focusing on different areas of illustration.</item>
+        <item> The pages of each book will follow every part of the drawing, with the key points described in detail.</item>
+        <item>The books are broken up into several levels.</item>
+        <item> Level 1 is the easiest. \n
+            These books will focus on the basic forms needed to draw anything. They are great for beginners but also good those a bit more practiced to help brush up on the basics </item>
+           <item> Level 2 looks at the forms in more detail.  \n
+            These books are great for the composition of anatomy and will help you draw at a high level with good anatomy and dynamic posing.</item>
+       <item> Level 3 \n
+            These books examine what is beneath the outer layer of our drawing. It analyses the muscles of anatomy first, then looks at the planes these features create. </item>
+        <item>Our artist Will Sliney uses different colour pencils throughout the tutorials, but you can use any tools you like. </item>
+         <item>The blue lines should indicate light pencil that you will erase </item>
+        <item>The red lines indicate the muscular structure.</item>
+        <item>The purple lines are the sculptural planes. </item>
+        <item>The black lines are the final artwork, those lines that will not be erased. </item>
+    </string-array>
 
     <string-array name="b01t01Help">
         <item>Start by laying down the basic shape of the head</item>
@@ -62,13 +106,12 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Use the head tutorial and draw in what is often the most important part of your figure</item>
         <item>Draw in the neck and whatever neckline you want depending on what clothes your figure is wearing</item>
         <item>Now outline the shoulder and arms. Note the trapezius muscle will make the line from his shoulder go up around his neck</item>
-        <item>Most tops will go down the the belt line, which is at the top of your cylinder</item>
+        <item>Most tops will go down the belt line, which is at the top of your cylinder</item>
         <item>Then outline those chest muscles</item>
         <item>Use a lot of straight lines to draw in the legs. Most important is to outline the difference in shapes between the thighs and the calves</item>
         <item>Keep the foot nice and simple</item>
         <item>And there you have it.  You can fully erase the basic forms now to show off your character</item>
     </string-array>
-
 
     <string-array name="b01t02Help">
         <item>Let’s start with an oval shape to represent the head</item>
@@ -148,7 +191,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Take a look at Level 3 of the full figure to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-
     <string-array name="b02t02Help">
         <item>Start with a simple spherical shape for the head.</item>
         <item>Take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle.</item>
@@ -171,12 +213,11 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>The eyebrows.</item>
         <item>The mouth.</item>
         <item>And the ears.</item>
-        <item>We can use our layout lines to draw the shape of the face. Depending on the the face you are drawing, you can add in a slight protrusion for the cheek bones.</item>
+        <item>We can use our layout lines to draw the shape of the face. Depending on the face you are drawing, you can add in a slight protrusion for the cheek bones.</item>
         <item>Follow the lines around and mark in the hairline to complete the basic head shape.</item>
         <item>And there you have it.  You can fully erase the basic forms now.</item>
         <item>Take a look at Level 3 of the head to fully understand how the muscles and plains work. Or why not share your drawing with us.</item>
     </string-array>
-
 
     <string-array name="b02t03Help">
         <item>Start by laying out the lines that will represent the shoulders, and hips.</item>
@@ -200,7 +241,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Take a look at Level 3 of the torso to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
-
     <string-array name="b02t04Help">
         <item>Start by laying out the lines that will represent the shoulders, elbows and hands.</item>
         <item>Draw in a basic shape of the shoulders.</item>
@@ -215,7 +255,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final arm over it. Add in some extra details like the veins.</item>
         <item>Take a look at level 3 of the arm to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
-
 
     <string-array name="b02t05Help">
         <item>Start by laying out the lines that will represent the hips, knees, limbs and feet.</item>
@@ -247,7 +286,7 @@ The black lines are the final artwork, those lines that will not be erased. </it
 
     <string-array name="b02t07Help">
         <item>The basic shape of the foot is a wedge. Make sure it has a flat face where the toes will extrude from.</item>
-        <item>It connects the the leg with a cylinder, with the ankle bones on either side.</item>
+        <item>It connects the leg with a cylinder, with the ankle bones on either side.</item>
         <item>Draw in a large cylinder at the front of the wedge for the big toe.</item>
         <item>The rest of the toes you can do as one block. Sculptors usually treat this area as one form.</item>
         <item>Add in the fleshy area of the foot that is behind the toes. This is what creates the arch in your foot.</item>
@@ -348,7 +387,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Fantastic, that is it. With the knowledge of the muscle structure, and the planes they, along with the bone and skin create, you should be able to master drawing the legs.</item>
     </string-array>
 
-
     <string-array name="b03t06Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
         <item>The lumbricals run  long with the metacarpus bones from the exterior retinaculum down to the knuckles.</item>
@@ -358,7 +396,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>The fingers break into three individual parts. Look at the shape the fingertips can make, with the forward plane of each at an angle to make the tip the biggest part.</item>
         <item>Each break in the finger has a knuckle, but the forward one is not as noticeable.</item>
     </string-array>
-
 
     <string-array name="b03t07Help">
         <item>We will start with the basic forms that we sketched from the level 2 tutorial.</item>
@@ -375,24 +412,23 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
         <item>Use these forms as basic guidelines.</item>
         <item>Rough out the basic shapes of the muscles</item>
-        <item> </item>
-        <item> </item>
+        <item></item>
+        <item></item>
         <item></item>
         <item>Now let us erase these lines and draw in the muscles to examine how they work together</item>
         <item>The chest muscles all originate at a point towards the deltoid and biceps muscles.</item>
         <item>They work in harmony together.</item>
-        <item> </item>
+        <item></item>
         <item>As the biceps contracts, pulling up the forearm, it grows in size.</item>
-        <item> </item>
+        <item></item>
         <item>The triceps relaxes as the biceps contracts.</item>
         <item></item>
-        <item> </item>
+        <item></item>
         <item>The forearm will bulge as it compresses against the upper arm.</item>
         <item> </item>
         <item>Lightly erase the construction lines and draw over them.</item>
         <item>The biceps is often the defining muscle of the arm.</item>
     </string-array>
-
 
     <string-array name="b04t02Help">
         <item>Let’s rotate the wrist to watch how the lower arm muscles can pop.</item>
@@ -414,7 +450,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item> Lightly erase the construction lines and draw over them.</item>
         <item>The forearm muscles will pop the more you rotate the wrist.</item>
     </string-array>
-
 
     <string-array name="b04t03Help">
         <item>Let us rotate the arm to watch how the tricep muscles can pop.</item>
@@ -438,7 +473,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>The defined triceps can cast a shadow as it cuts in to meet the elbow.</item>
     </string-array>
 
-
     <string-array name="b04t04Help">
         <item>Let us draw the arm as it naturally falls.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -457,7 +491,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item></item>
         <item></item>
     </string-array>
-
 
     <string-array name="b04t05Help">
         <item>Let us look at the deltoid muscles as they raise up the arm.</item>
@@ -479,7 +512,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item></item>
         <item></item>
     </string-array>
-
 
     <string-array name="b04t06Help">
         <item>Let us look at the deltoid muscles as they raise up the arm.</item>
@@ -503,8 +535,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item></item>
     </string-array>
 
-
-
     <string-array name="b04t07Help">
         <item>Let us draw the arm as it naturally falls.</item>
         <item>Build up the drawing like you would always, starting with the simple forms.</item>
@@ -522,6 +552,7 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item></item>
         <item></item>
     </string-array>
+    
     <string-array name="b05t01Help">
         <item>Let us study the body as it is in motion.</item>
         <item>Every image here is referenced with a UFC fighter filmed with a HD high speed camera.</item>
@@ -541,7 +572,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>The right foot is firmly planted on the ground as it is about to take off.</item>
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
-
 
     <string-array name="b05t02Help">
         <item>As the head turns, we can clearly see the front and side planes of the face.</item>
@@ -563,7 +593,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-
     <string-array name="b05t03Help">
         <item>The figure, now mid air is about to explode into a high kick.</item>
         <item>The arms are balancing the figure out.</item>
@@ -582,7 +611,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item> </item>
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
-
 
     <string-array name="b05t04Help">
         <item>The shoulders and hips alternate as the figure is about to kick.</item>
@@ -622,7 +650,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-
     <string-array name="b05t06Help">
         <item>The foot will now swing around in front of the figure.</item>
         <item>The shoulders and hips are still alternated, an important gesture to show motion.</item>
@@ -642,7 +669,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item> </item>
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
-
 
     <string-array name="b05t07Help">
         <item>The figure begins to land.</item>
@@ -664,7 +690,6 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
 
-
     <string-array name="b05t08Help">
         <item>The figure fully lands on the ground.</item>
         <item>The shoulders and torso begin to rest level with each other.</item>
@@ -684,10 +709,4 @@ The black lines are the final artwork, those lines that will not be erased. </it
         <item> </item>
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
-
-
-
-
-
-
 </resources>

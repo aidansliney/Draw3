@@ -254,44 +254,6 @@
     </string-array>
 
 
-    <!--all pages fragment-->
-    <string-array name="pagesAllHeadings">
-        <item>Full Figure</item> <!--b01t01-->
-        <item>Basic Head</item> <!--b01t02-->
-        <item>Basic Hand</item> <!--b01t03-->
-        <item>Full Figure</item>
-        <item>The Head</item>
-        <item>The Torso</item>
-        <item>The Arms</item>
-        <item>The Hands</item>
-        <item>The Legs</item>
-        <item>The Feet</item>
-        <item>Full figure</item>
-        <item>Torso</item>
-        <item>Legs</item>
-        <item>Head</item>
-        <item>Hands</item>
-        <item>Foot</item>
-        <item>Arms</item>
-        <item>Flex up</item>
-        <item>Flex down</item>
-        <item>Side Flex</item>
-        <item>Begin Flex</item>
-        <item>Air Flex</item>
-        <item>Arm Cross</item>
-        <item>Side View Flex</item>
-        <item>Dynamic Kick 1</item>
-        <item>Dynamic Kick 2</item>
-        <item>Dynamic Kick 3</item>
-        <item>Dynamic Kick 4</item>
-        <item>Dynamic Kick 5</item>
-        <item>Dynamic Kick 6</item>
-        <item>Dynamic Kick 7</item>
-        <item>Dynamic Kick 8</item>
-    </string-array>
-
-
-
     <!--all pages level-->
     <string-array name="pagesAllLevels">
         <item>Level 1</item> <!--b01t01-->
@@ -448,13 +410,7 @@
         <item>@drawable/b05isocover</item>
     </integer-array>
 
-    <string-array name="allBooksHeadings">
-    <item>Full Figure</item>
-    <item>Basic Head</item>
-    <item>Basic Hand</item>
-    <item>Full Figure</item>
-    <item>The Head</item>
-    </string-array>
+
 
     <string-array name="allBooksIds">
     <item>b01t01</item>

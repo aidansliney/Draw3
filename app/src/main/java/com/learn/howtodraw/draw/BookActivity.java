@@ -132,11 +132,7 @@ public class BookActivity extends MainActivity {
             }
         });
 
-
-
-
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

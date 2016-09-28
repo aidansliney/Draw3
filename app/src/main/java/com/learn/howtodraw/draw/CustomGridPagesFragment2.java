@@ -62,7 +62,8 @@ public class CustomGridPagesFragment2 extends BaseAdapter {
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             textView.setText(text[position]);
             imageView.setImageResource(Imageid[position]);
-            LinkBooks.linkBook(R.id.grid_image,SKU_BOOK_ARRAY_ARRAY[position], grid, false, mActivity);
+            // plus One to skip the tutorial pages
+            LinkBooks.linkBook(R.id.grid_image,SKU_BOOK_ARRAY_ARRAY[position+1], grid, false, mActivity);
 
         } else {
             grid = convertView;

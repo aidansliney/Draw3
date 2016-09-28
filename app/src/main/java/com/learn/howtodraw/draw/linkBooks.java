@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.view.View;
 
+import com.learn.howtodraw.draw.BookActivity;
+
 /**
  * Created by aidansliney on 23/08/2016.
  */

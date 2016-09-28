@@ -31,20 +31,11 @@ public class BrowseFragment extends BaseFragment {
 
 
     boolean hasPurchased;
-    int bookThumb;
-    int bookName;
 
     public BrowseFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment BrowseFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static BrowseFragment newInstance(int param1, int param2, int param3, int param4, int param5) {
         BrowseFragment fragment = new BrowseFragment();
         Bundle args = new Bundle();
@@ -53,8 +44,6 @@ public class BrowseFragment extends BaseFragment {
         args.putInt("cardImageId", param3);
         args.putInt("booksBooks", param4); //the book the page belongs to
         args.putInt("bookLevel", param5); //the book the page belongs to
-
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -111,10 +100,8 @@ public class BrowseFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
             }
         });
-
 
     }
 

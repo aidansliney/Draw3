@@ -1,21 +1,5 @@
 package com.learn.howtodraw.draw;
 
-/* Copyright (c) 2012-2013 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -365,7 +349,7 @@ public abstract class IabActivity extends AppCompatActivity {
         // It is very important to destroy the IAB Helper. It holds onto to other stuff.
         if (pIabHelper != null) {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Destroying IabHelper.");
-            pIabHelper.dispose();
+ //            pIabHelper.dispose();
             pIabHelper = null;
         }
         mDestroyed = true;
@@ -494,7 +478,7 @@ public abstract class IabActivity extends AppCompatActivity {
 
                     if (!result.isSuccess()) {
                         if (pShowIabErrors)
-                            complain ("Problem setting up in-app billing: " + result);
+                            //complain ("Problem setting up in-app billing: " + result);
                         onIabSetupFailed (getIabHelper ());
                         return;
                     }
@@ -604,36 +588,38 @@ public abstract class IabActivity extends AppCompatActivity {
 
 //TODO AS:::: put mPs into and Array and cut this down to one while loop
 
+        for(int i =1; i< SKU_BOOK_NAME_ARRAY.length; i++)
 
+        {
+            // Have we purchased books
+            Purchase bookPurchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[i]);
+            mPurchasedBooksArray[i] = (bookPurchase != null && verifyDeveloperPayload(bookPurchase));
+            if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[i] ? SKU_BOOK_NAME_ARRAY[i]+ " OWNER" : "NOT A " +SKU_BOOK_NAME_ARRAY[i] + "OWNER"));
+        }
 
-        // Have we purchased book 1
-        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[0]);
-
-        mPurchasedBooksArray[0] = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
-
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[0] ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
-
+/*        // Have we purchased book 1
+        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);
+        mPurchasedBooksArray[1] = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[1] ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
         // Have we purchased book 2
-        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);
-        mPurchasedBooksArray[1] = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
-
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[1] ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
+        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[2]);
+        mPurchasedBooksArray[2] = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[2] ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
 
         // Have we purchased book 3
-        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[2]);
-        mPurchasedBooksArray[2] = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[2] ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
+        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[3]);
+        mPurchasedBooksArray[3] = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[3] ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
 
         // Have we purchased book 4
-        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[3]);
-        mPurchasedBooksArray[3] = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[3] ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
+        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[4]);
+        mPurchasedBooksArray[4] = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[4] ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
 
         // Have we purchased book 5
-        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[4]);
-        mPurchasedBooksArray[4] = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
-
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[4] ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));
+        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[5]);
+        mPurchasedBooksArray[5] = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
+        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[5] ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));*/
 
 
         // Do we have the infinite gas plan?
@@ -642,16 +628,7 @@ public abstract class IabActivity extends AppCompatActivity {
                 verifyDeveloperPayload(subscriptionPurchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribed ? "HAS" : "DOES NOT HAVE")
                 + " subscription.");
-
-
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "IabActivity.onIabSetupSucceeded completed. Subclass should update UI.");
-
-
-
     }
-
-
-
-
 } // end class
 

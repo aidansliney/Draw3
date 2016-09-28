@@ -92,7 +92,6 @@ public class ThirdFragment extends BaseFragment {
             int counter = 0;
             while(counter < mPurchasedBooksArray.length)
             {
-
                 if (bookNames[i].equals(SKU_BOOK_NAME_ARRAY[counter]))
                 {
                     hasPurchased =  mPurchasedBooksArray[counter];
@@ -104,7 +103,6 @@ public class ThirdFragment extends BaseFragment {
                 tickIcon[i] = R.string.fa_check;
             else
                 tickIcon[i] = R.string.fa_lock;
-
         }
         final CustomGridPagesFragment adapter = new CustomGridPagesFragment(getActivity(), cardText1, cardImage, bookPageIds, tickIcon, bookNames, bookLevels);
         //set the grid

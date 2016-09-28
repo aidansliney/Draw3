@@ -25,15 +25,21 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import static com.learn.howtodraw.draw.R.id.bookName;
+
 public class PageActivity extends AppCompatActivity {
 
-    public int pageCounter = 0;
-    public int i;
+    int pageCounter = 0;
+    int i;
 
-    FirebaseStorage storage = FirebaseStorage.getInstance();
-    StorageReference storageRef = storage.getReferenceFromUrl("gs://draw-891c7.appspot.com");
-    StorageReference tabletOrPhone; //from storage
-    String tabletOrPhone2; // direct
+    String tabletOrPhone; // direct
+    String bookName;
+    String[] directDownloadLinks, bookHelpStrings; // array of links + help text
+
+    TextView leftArrow,rightArrow, helpText, pageNumber;
+    View shareText, shareLayout;
+    ImageView imageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,42 +47,30 @@ public class PageActivity extends AppCompatActivity {
         setContentView(com.learn.howtodraw.draw.R.layout.activity_page);
 
         boolean istabletOrPhone = getResources().getBoolean(R.bool.isTablet); //checks sw600
-        if (istabletOrPhone) {
-            tabletOrPhone = storageRef.child("tablet");
-            tabletOrPhone2 = "tablet";
-        } else {
-            tabletOrPhone = storageRef.child("phone");
-            tabletOrPhone2 = "phone";
-        }
+        if (istabletOrPhone)
+            tabletOrPhone = "tablet";
+        else
+            tabletOrPhone = "phone";
 
-        final TextView helpText = (TextView) findViewById(R.id.help_text);
-        final View shareLayout = findViewById(R.id.shareLayout);
-        final View shareText = findViewById(R.id.share_text);
-        final TextView pageNumber = (TextView) findViewById(R.id.pageNumber);
-        final ImageView imageView = (ImageView) findViewById(R.id.slideImage);
-        final TextView rightArrow = (TextView) findViewById(R.id.nextImage);
-        final TextView leftArrow = (TextView) findViewById(R.id.previousImage);
-
+        helpText = (TextView) findViewById(R.id.help_text);
+        shareLayout = findViewById(R.id.shareLayout);
+        shareText = findViewById(R.id.share_text);
+        pageNumber = (TextView) findViewById(R.id.pageNumber);
+        imageView = (ImageView) findViewById(R.id.slideImage);
+        rightArrow = (TextView) findViewById(R.id.nextImage);
+        leftArrow = (TextView) findViewById(R.id.previousImage);
         //bookSlides come from intents (BookActivity or Third Fragment as these are the only entry points)
-        final String bookHelpStrings[] = getResources().getStringArray(getIntent().getIntExtra("bookHelp", 0));
+        bookHelpStrings = getResources().getStringArray(getIntent().getIntExtra("bookHelp", 0));
+        directDownloadLinks = new String[bookHelpStrings.length];
+
         final String tutorialId = getIntent().getStringExtra("tutorialId");
-        final String bookName = getIntent().getStringExtra("bookName");
-        final StorageReference imagesRef2 = this.tabletOrPhone.child(bookName);
-
-        final String[] downloadLinks = new String[bookHelpStrings.length];
-        //no need to hit storage for these links
-        final String[] directDownloadLinks = new String[bookHelpStrings.length];
-
-/*        if(downloadLinks[0] == null) {
-            Arrays.fill(downloadLinks, "http://www.laminex.com.au/uploads/products/white.jpg");
-        }*/
+        bookName = getIntent().getStringExtra("bookName");
 
         for (i= 0; i < bookHelpStrings.length; i++) {
             String page =  getPaddedNumber(i+1);
-            directDownloadLinks[i] ="https://firebasestorage.googleapis.com/v0/b/draw-891c7.appspot.com/o/"+tabletOrPhone2+"%2F"+bookName+"%2F"+tutorialId+"p"+page+".png?alt=media";
+            directDownloadLinks[i] ="https://firebasestorage.googleapis.com/v0/b/draw-891c7.appspot.com/o/"+tabletOrPhone+"%2F"+bookName+"%2F"+tutorialId+"p"+page+".png?alt=media";
 
-            if (i  == 0)
-
+            if (i == 0)
             {
                 Picasso.with(PageActivity.this).load(directDownloadLinks[0]).fetch( new com.squareup.picasso.Callback() {
                     @Override
@@ -85,9 +79,7 @@ public class PageActivity extends AppCompatActivity {
                     }
                     @Override
                     public void onError() {
-                        Picasso.with(PageActivity.this)
-                                .load(directDownloadLinks[0])
-                                .fetch();
+                        Picasso.with(PageActivity.this).load(directDownloadLinks[0]).fetch();
                     }
                 });
 
@@ -96,31 +88,14 @@ public class PageActivity extends AppCompatActivity {
                 Picasso.with(PageActivity.this).load(directDownloadLinks[i]).fetch(new com.squareup.picasso.Callback() {
                     String link = directDownloadLinks[i];
                     @Override
-                    public void onSuccess() {
-                    }
+                    public void onSuccess() {}
 
                     @Override
                     public void onError() {
-                        Picasso.with(PageActivity.this)
-                                .load(link)
-                                .fetch();
+                        Picasso.with(PageActivity.this).load(link).fetch();
                     }
                 });
             }
-
-/*           spaceRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                @Override
-                public void onSuccess(Uri uri) {
-                    String s=uri.toString();
-                    String requiredString = s.substring(s.indexOf(tutorialId+"p") + 7, s.indexOf(".png"));
-                    int result = Integer.parseInt(requiredString);
-                    downloadLinks[result -1] = uri.toString();
-                    Picasso.with(PageActivity.this).load(downloadLinks[result -1]).fetch();
-                    if (result  == 1){
-                        Picasso.with(PageActivity.this).load(downloadLinks[result -1]).noFade().into(imageView);
-                    }
-                }
-            });*/
         }
 
         //prepare first page
@@ -128,167 +103,114 @@ public class PageActivity extends AppCompatActivity {
         leftArrow.setVisibility(View.INVISIBLE);
         shareLayout.setVisibility(View.INVISIBLE);
         shareText.setVisibility(View.INVISIBLE);
-        View nextImage = findViewById(R.id.nextImage);
+        View camera = findViewById(R.id.camera);
+
         TextView endPageNumber = (TextView) findViewById(R.id.endPage);
         endPageNumber.setText(String.valueOf(bookHelpStrings.length));
-        assert nextImage != null;
-        nextImage.setOnClickListener(new View.OnClickListener() {
+        assert rightArrow != null;
+        // if tutorial book
+        if (bookName.equals("book00")) {
+            TextView slash = (TextView) findViewById(R.id.slash);
+            endPageNumber.setVisibility(View.INVISIBLE);
+            endPageNumber.setVisibility(View.INVISIBLE);
+            pageNumber.setVisibility(View.INVISIBLE);
+            slash.setVisibility(View.INVISIBLE);
+        }
+
+        rightArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                leftArrow.setVisibility(View.VISIBLE);
-                if (pageCounter == bookHelpStrings.length - 1) {
-                    shareLayout.setVisibility(View.VISIBLE);
-                    shareText.setVisibility(View.VISIBLE);
-                    helpText.setVisibility(View.INVISIBLE);
-                    rightArrow.setVisibility(View.INVISIBLE);
-                } else {
-                    pageCounter++;
-                    Log.d("this is the counter", "" + pageCounter);
-                    shareLayout.setVisibility(View.INVISIBLE);
-                    shareText.setVisibility(View.INVISIBLE);
-
-                    if (bookHelpStrings[pageCounter].equals(""))
-                        helpText.setVisibility(View.INVISIBLE);
-                    else
-                        helpText.setVisibility(View.VISIBLE);
-                   // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
-                        @Override
-                        public void onSuccess() {
-                        }
-                        @Override
-                        public void onError() {
-                            Picasso.with(PageActivity.this)
-                                    .load(directDownloadLinks[pageCounter])
-                                    .noFade().into(imageView);
-                        }
-                    });
-                    helpText.setText(bookHelpStrings[pageCounter]);
-                    pageNumber.setText(String.valueOf(pageCounter + 1));
-                }
+                turnPageNext();
             }
         });
-
-        View previousImage = findViewById(com.learn.howtodraw.draw.R.id.previousImage);
-        assert previousImage != null;
-        previousImage.setOnClickListener(new View.OnClickListener() {
+        leftArrow.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                rightArrow.setVisibility(View.VISIBLE);
-                if (pageCounter != 0) {
-                    pageCounter--;
-                    shareLayout.setVisibility(View.INVISIBLE);
-                    shareText.setVisibility(View.INVISIBLE);
-                    if (bookHelpStrings[pageCounter].equals(""))
-                        helpText.setVisibility(View.INVISIBLE);
-                    else
-                        helpText.setVisibility(View.VISIBLE);
-                  //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
-                        @Override
-                        public void onSuccess() {
-                        }
-                        @Override
-                        public void onError() {
-                            Picasso.with(PageActivity.this)
-                                    .load(directDownloadLinks[pageCounter])
-                                    .noFade().into(imageView);
-                        }
-                    });
-                    helpText.setText(bookHelpStrings[pageCounter]);
-                    pageNumber.setText(String.valueOf(pageCounter + 1));
-                }
+                turnPagePrevious();
             }
         });
-
-        View camera = findViewById(R.id.camera);
         camera.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
                 dispatchTakePictureIntent();
             }
         });
-
-        View twitter = findViewById(R.id.twitter);
-        twitter.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                shareTo = "twitter";
-                dispatchTakePictureIntent();
-            }
-        });
-
-        assert imageView != null;
         imageView.setOnTouchListener(new OnSwipeTouchListener(PageActivity.this) {
             public void onSwipeRight() {
-                rightArrow.setVisibility(View.VISIBLE);
-                if (pageCounter != 0) {
-                    pageCounter--;
-                    shareLayout.setVisibility(View.INVISIBLE);
-                    shareText.setVisibility(View.INVISIBLE);
-                    if (bookHelpStrings[pageCounter].equals(""))
-                        helpText.setVisibility(View.INVISIBLE);
-                    else
-                        helpText.setVisibility(View.VISIBLE);
-                    //  Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
-                        @Override
-                        public void onSuccess() {
-                        }
-                        @Override
-                        public void onError() {
-                            Picasso.with(PageActivity.this)
-                                    .load(directDownloadLinks[pageCounter])
-                                    .noFade().into(imageView);
-                        }
-                    });
-                    helpText.setText(bookHelpStrings[pageCounter]);
-                    pageNumber.setText(String.valueOf(pageCounter + 1));
-                }
+                turnPagePrevious();
             }
-
-
             public void onSwipeLeft() {
-                leftArrow.setVisibility(View.VISIBLE);
-                if (pageCounter == bookHelpStrings.length - 1) {
-                    shareLayout.setVisibility(View.VISIBLE);
-                    shareText.setVisibility(View.VISIBLE);
-                    helpText.setVisibility(View.INVISIBLE);
-                    rightArrow.setVisibility(View.INVISIBLE);
-                } else {
-                    pageCounter++;
-                    Log.d("this is the counter", "" + pageCounter);
-                    shareLayout.setVisibility(View.INVISIBLE);
-                    shareText.setVisibility(View.INVISIBLE);
-
-                    if (bookHelpStrings[pageCounter].equals(""))
-                        helpText.setVisibility(View.INVISIBLE);
-                    else
-                        helpText.setVisibility(View.VISIBLE);
-                    // Picasso.with(PageActivity.this).load(downloadLinks[pageCounter]).noFade().into(imageView);
-                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
-                        @Override
-                        public void onSuccess() {
-                        }
-                        @Override
-                        public void onError() {
-                            Picasso.with(PageActivity.this)
-                                    .load(directDownloadLinks[pageCounter])
-                                    .noFade().into(imageView);
-                        }
-                    });
-                    helpText.setText(bookHelpStrings[pageCounter]);
-                    pageNumber.setText(String.valueOf(pageCounter + 1));
-                }
+                turnPageNext();
             }
-
             public void onSwipeBottom() {
-                //  Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PageActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
-            public void onSwipeTop() {
-                // Toast.makeText(PageActivity.this, "top", Toast.LENGTH_SHORT).show();
-            }
+            public void onSwipeTop() {}
         });
+    }
+
+    public void turnPageNext(){
+        leftArrow.setVisibility(View.VISIBLE);
+        if (pageCounter == bookHelpStrings.length - 1) {
+            shareLayout.setVisibility(View.VISIBLE);
+            shareText.setVisibility(View.VISIBLE);
+            helpText.setVisibility(View.INVISIBLE);
+            rightArrow.setVisibility(View.INVISIBLE);
+        } else {
+            pageCounter++;
+            shareLayout.setVisibility(View.INVISIBLE);
+            shareText.setVisibility(View.INVISIBLE);
+
+            if (bookHelpStrings[pageCounter].equals(""))
+                helpText.setVisibility(View.INVISIBLE);
+            else
+                helpText.setVisibility(View.VISIBLE);
+            Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                @Override
+                public void onSuccess() {
+                }
+                @Override
+                public void onError() {
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).into(imageView);
+                }
+            });
+            helpText.setText(bookHelpStrings[pageCounter]);
+            pageNumber.setText(String.valueOf(pageCounter + 1));
+        }
+
+        if (bookName.equals("book00")){
+            shareLayout.setVisibility(View.INVISIBLE);
+            shareText.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void turnPagePrevious(){
+        rightArrow.setVisibility(View.VISIBLE);
+        if (pageCounter != 0) {
+            pageCounter--;
+            shareLayout.setVisibility(View.INVISIBLE);
+            shareText.setVisibility(View.INVISIBLE);
+            if (bookHelpStrings[pageCounter].equals(""))
+                helpText.setVisibility(View.INVISIBLE);
+            else
+                helpText.setVisibility(View.VISIBLE);
+            Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).networkPolicy(NetworkPolicy.OFFLINE).noFade().into(imageView, new com.squareup.picasso.Callback() {
+                @Override
+                public void onSuccess() {
+                }
+                @Override
+                public void onError() {
+                    Picasso.with(PageActivity.this).load(directDownloadLinks[pageCounter]).noFade().into(imageView);
+                }
+            });
+            helpText.setText(bookHelpStrings[pageCounter]);
+            pageNumber.setText(String.valueOf(pageCounter + 1));
+        }
+        //no left arrow on page 1
+        if(pageCounter == 0){
+            leftArrow.setVisibility(View.INVISIBLE);
+        }
+
     }
 
     static final int REQUEST_TAKE_PHOTO = 1;
