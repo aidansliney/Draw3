@@ -34,7 +34,7 @@ public class BookActivity extends MainActivity {
             toast("Unknown if books should be locked");
             return false;
         }
-        if (bookPurchasedLock)
+        if (bookPurchasedLock  || mSubscribed)
             return true;
         else
             return false;

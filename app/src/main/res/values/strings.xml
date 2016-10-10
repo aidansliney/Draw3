@@ -34,8 +34,8 @@
         <item>The Head</item> <!--b02t02-->
         <item>The Torso</item> <!--b02t03-->
         <item>The Arms</item> <!--b02t04-->
-        <item>The Hands</item> <!--b02t05-->
         <item>The Legs</item> <!--b02t06-->
+        <item>The Hands</item> <!--b02t05-->
         <item>The Feet</item> <!--b02t07-->
         <item>Full figure</item> <!--b03t01-->
         <item>The Head</item> <!--b03t02-->
@@ -190,8 +190,8 @@
         <item>The Head</item>
         <item>The Torso</item>
         <item>The Arms</item>
-        <item>The Hands</item>
         <item>The Legs</item>
+        <item>The Hands</item>
         <item>The Feet</item>
     </string-array>
 

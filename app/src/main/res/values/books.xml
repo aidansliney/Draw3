@@ -55,8 +55,8 @@
         <item>@drawable/mi3_4head19</item>
         <item>@drawable/mi3_4torso18</item>
         <item>@drawable/mi3_4arm11</item>
-        <item>@drawable/mi3_4hand11</item>
         <item>@drawable/mi3_4leg10</item>
+        <item>@drawable/mi3_4hand11</item>
         <item>@drawable/mi3_4foot08</item>
     </integer-array>
 
@@ -334,8 +334,8 @@
         <item>@drawable/mi3_4head19</item>
         <item>@drawable/mi3_4torso18</item>
         <item>@drawable/mi3_4arm11</item>
-        <item>@drawable/mi3_4hand11</item>
         <item>@drawable/mi3_4leg10</item>
+        <item>@drawable/mi3_4hand11</item>
         <item>@drawable/mi3_4foot08</item>
         <item>@drawable/ma3_4figure13</item> <!--b03t01-->
         <item>@drawable/ma3_4torso13</item>
