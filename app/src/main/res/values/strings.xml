@@ -1,28 +1,28 @@
 <resources>
     <string name="app_name">Learn how to draw</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_book2" translatable="false">Learn to Draw</string>
+    <string name="title_activity_book2" translatable="false">Learn To Draw</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="menu_subscribe">Subscribe Settings</string>
-    <string name="share">This message has been sent from the Android app Draw. Download the app from https://play.google.com/store/apps/details?id=com.learn.howtodraw.draw</string>
+    <string name="share">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
     <string name="pagetitlenew">New</string>
     <string name="pagetitlebooks">Books</string>
     <string name="page_title_tutorials">Tutorials</string>
     <string name="subscriptionerror">Subscriptions not supported on your device yet. Sorry!</string>
     <string name="shareimage">Share images to..</string>
-    <string name="new_content">New content every Monday</string>
+    <string name="new_content">New content coming soon</string>
     <string name="rate_draw">Rate Draw</string>
     <string name="share_draw">Share Draw</string>
-    <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. He is currently the artist for Marvel\'s Spiderman 2099, and his graphic novel Celtic Warrior: The Legend of Cú Chulainn, published by The O\'Brien Press in 2013, made the Irish Times bestseller list and is also the fastest selling graphic novel in Ireland.</string>
+    <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. Will is best known for his work on Marvel’s Spider-Man 2099, Fearless Defenders and Star Wars.</string>
 
     <!--The Titles on the Book Tab-->
     <string-array name="allBooksHeadings">
-        <item>Book 1 Title</item>
-        <item>Book 2 Title</item>
-        <item>Book 3 Title</item>
-        <item>Book 4 Title</item>
-        <item>Book 5 Title</item>
+        <item>Heroic Male Beginners ¾ View</item>
+        <item>Heroic Male Intermediate ¾ View</item>
+        <item>Heroic Male Advanced ¾ View</item>
+        <item>Arm Muscles</item>
+        <item>Dynamic Kicking </item>
+        <item>Heroic Male Beginners Front View</item>
+        <item>Heroic Male Intermediate Front View</item>
     </string-array>
 
     <!--The Titles on the Page Tab-->
@@ -38,19 +38,19 @@
         <item>The Legs</item> <!--b02t06-->
         <item>The Feet</item> <!--b02t07-->
         <item>Full figure</item> <!--b03t01-->
-        <item>Torso</item> <!--b03t02-->
-        <item>Legs</item> <!--b03t03-->
-        <item>Head</item> <!--b03t04-->
-        <item>Hands</item> <!--b03t05-->
-        <item>Foot</item> <!--b03t06-->
-        <item>Arms</item> <!--b03t07-->
-        <item>Flex up</item> <!--b04t01-->
-        <item>Flex down</item> <!--b04t02-->
-        <item>Side Flex</item> <!--b04t03-->
-        <item>Begin Flex</item> <!--b04t04-->
-        <item>Air Flex</item> <!--b04t05-->
-        <item>Arm Cross</item> <!--b04t06-->
-        <item>Side View Flex</item> <!--b04t07-->
+        <item>The Head</item> <!--b03t02-->
+        <item>The Torso</item> <!--b03t03-->
+        <item>The Arms</item> <!--b03t04-->
+        <item>The Legs</item> <!--b03t05-->
+        <item>The Hands</item> <!--b03t06-->
+        <item>The Feet</item> <!--b03t07-->
+        <item>Arm Muscle 1</item> <!--b04t01-->
+        <item>Arm Muscle 2</item> <!--b04t02-->
+        <item>Arm Muscle 3</item> <!--b04t03-->
+        <item>Arm Muscle 4</item> <!--b04t04-->
+        <item>Arm Muscle 5</item> <!--b04t05-->
+        <item>Arm Muscle 6</item> <!--b04t06-->
+        <item>Arm Muscle 7</item> <!--b04t07-->
         <item>Dynamic Kick 1</item> <!--b05t01-->
         <item>Dynamic Kick 2</item> <!--b05t02-->
         <item>Dynamic Kick 3</item> <!--b05t03-->
@@ -59,23 +59,38 @@
         <item>Dynamic Kick 6</item> <!--b05t06-->
         <item>Dynamic Kick 7</item> <!--b05t07-->
         <item>Dynamic Kick 8</item> <!--b05t08-->
+        <item>Full Figure</item> <!--b06t01-->
+        <item>Basic Head</item> <!--b06t02-->
+        <item>Basic Hand</item> <!--b06t03-->
+        <item>Full Figure</item> <!--b07t01-->
+        <item>The Face</item> <!--b07t02-->
+        <item>The Torso</item> <!--b07t03-->
+        <item>The Arm</item> <!--b07t04-->
+        <item>The Leg</item> <!--b07t05-->
+        <item>The Hand</item> <!--b07t06-->
+        <item>The Foot</item> <!--b07t07-->
+
     </string-array>
+
+    <string-array name="book1tutorialnames">
+        <item>Full Figure</item>
+        <item>Basic Head</item>
+        <item>Basic Hands</item>
+    </string-array>
+    <string name="book1heading1">HEROIC MALE 3/4 VIEW</string>
+    <string name="book1heading2">Learn how to draw the full figure</string>
 
     <string-array name="b00t01Help">
         <item>Welcome to Draw.\n An app designed to help artists of all levels improve their drawing skills. </item>
         <item>The more you draw, the better you get. It’s not a talent, it’s a skill and we are here to help you learn.</item>
-         <item>  How it works. \n
-        Each book will contain several tutorials focusing on different areas of illustration.</item>
-        <item> The pages of each book will follow every part of the drawing, with the key points described in detail.</item>
+        <item>How it works. \n Each book will contain several tutorials focusing on different areas of illustration.</item>
+        <item>The pages of each book will follow every part of the drawing, with the key points described in detail.</item>
         <item>The books are broken up into several levels.</item>
-        <item> Level 1 is the easiest. \n
-            These books will focus on the basic forms needed to draw anything. They are great for beginners but also good those a bit more practiced to help brush up on the basics </item>
-           <item> Level 2 looks at the forms in more detail.  \n
-            These books are great for the composition of anatomy and will help you draw at a high level with good anatomy and dynamic posing.</item>
-       <item> Level 3 \n
-            These books examine what is beneath the outer layer of our drawing. It analyses the muscles of anatomy first, then looks at the planes these features create. </item>
+        <item>Level 1 is the easiest. \n These books will focus on the basic forms needed to draw anything. They are great for beginners but also good those a bit more practiced to help brush up on the basics </item>
+        <item>Level 2 looks at the forms in more detail.  \n These books are great for the composition of anatomy and will help you draw at a high level with good anatomy and dynamic posing.</item>
+        <item>Level 3 \n These books examine what is beneath the outer layer of our drawing. It analyses the muscles of anatomy first, then looks at the planes these features create. </item>
         <item>Our artist Will Sliney uses different colour pencils throughout the tutorials, but you can use any tools you like. </item>
-         <item>The blue lines should indicate light pencil that you will erase </item>
+        <item>The blue lines should indicate light pencil that you will erase </item>
         <item>The red lines indicate the muscular structure.</item>
         <item>The purple lines are the sculptural planes. </item>
         <item>The black lines are the final artwork, those lines that will not be erased. </item>
@@ -114,7 +129,7 @@
     </string-array>
 
     <string-array name="b01t02Help">
-        <item>Let’s start with an oval shape to represent the head</item>
+        <item>Lets start with an oval shape to represent the head</item>
         <item>Draw two lines across to split it up into thirds</item>
         <item>Our drawing will be looking at the head at an angle. This line will be the centre line of our face</item>
         <item>Let’s take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle</item>
@@ -165,6 +180,19 @@
         <item>Where the finger lines end, draw a small curve to indicate the knuckles where they should be seen</item>
         <item>And there you have it.  You can fully erase the basic forms now</item>
         <item>Take a look at Level 2 of the hand to take your drawing up to the next stage. Or why not share your drawing with us</item>
+    </string-array>
+
+
+    <string name="book2heading1">Heroic Male 3/4 View</string>
+    <string name="book2heading2">Learn how to draw the full figure</string>
+    <string-array name="book2cardtext1">
+        <item>Full Figure</item>
+        <item>The Head</item>
+        <item>The Torso</item>
+        <item>The Arms</item>
+        <item>The Hands</item>
+        <item>The Legs</item>
+        <item>The Feet</item>
     </string-array>
 
     <string-array name="b02t01Help">
@@ -296,6 +324,19 @@
         <item>Take a look at Level 3 of the feet to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
 
+
+    <string name="book3heading1">Heroic Male 3/4 View</string>
+    <string name="book3heading2">Let’s study the muscles and plains of the male figure</string>
+    <string-array name="book3cardtext1">
+        <item>Full figure</item>
+        <item>The Head</item>
+        <item>The Torso</item>
+        <item>The Arms</item>
+        <item>The Legs</item>
+        <item>The Hands</item>
+        <item>The Feet</item>
+    </string-array>
+
     <string-array name="b03t01Help">
         <item>We will start with the basic forms that we sketch in for the level 2 tutorial.</item>
         <item>Take a look at the individual tutorials which looks in detail at each muscle.</item>
@@ -405,6 +446,19 @@
         <item>The back of the boot squashes down onto the ground.</item>
         <item>Treat the tips of the toes similarly to the tips of the fingers.</item>
         <item>Then the rest of the toes act as arched cylinders connecting the toes to the foot. </item>
+    </string-array>
+
+
+    <string name="book4heading1">The Arm Muscles</string>
+    <string name="book4heading2">Let’s study how the muscles work together</string>
+    <string-array name="book4cardtext1">
+        <item>Arm Muscles 1</item>
+        <item>Arm Muscles 2</item>
+        <item>Arm Muscles 3</item>
+        <item>Arm Muscles 4</item>
+        <item>Arm Muscles 5</item>
+        <item>Arm Muscles 6</item>
+        <item>Arm Muscles 7</item>
     </string-array>
 
     <string-array name="b04t01Help">
@@ -552,7 +606,19 @@
         <item></item>
         <item></item>
     </string-array>
-    
+
+    <string name="book5heading1">Dymanic Kick</string>
+    <string name="book5heading2">Learn how to draw the dynamic kick</string>
+    <string-array name="book5cardtext1">
+        <item>Dynamic Kick 1</item>
+        <item>Dynamic Kick 2</item>
+        <item>Dynamic Kick 3</item>
+        <item>Dynamic Kick 4</item>
+        <item>Dynamic Kick 5</item>
+        <item>Dynamic Kick 6</item>
+        <item>Dynamic Kick 7</item>
+        <item>Dynamic Kick 8</item>
+    </string-array>
     <string-array name="b05t01Help">
         <item>Let us study the body as it is in motion.</item>
         <item>Every image here is referenced with a UFC fighter filmed with a HD high speed camera.</item>
@@ -709,4 +775,246 @@
         <item> </item>
         <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
     </string-array>
+
+    <string name="book6heading1">Heroic Male Front View</string>
+    <string name="book6heading2">Learn how to the male figure from the front</string>
+    <string-array name="book6cardtext1">
+        <item>Full Figure</item>
+        <item>Basic Head</item>
+        <item>Basic Hand</item>
+    </string-array>
+
+    <string-array name="b06t01Help">
+        <item>Start by laying down the basic shape of the head</item>
+        <item>Using the size of the head, we can lay out markers for proportions</item>
+        <item>Your hero is 8 heads high</item>
+        <item>Lay out the figure as simply as this. With circles as the joints and lines to indicate the limbs and torso</item>
+        <item>Note the shoulders should be half a head down</item>
+        <item>The Hands reach down at the bottom of the 4th head alongside the hips</item>
+        <item>The legs reach down to 8 heads down. With these indicators, we can lay more solid down forms on top</item>
+        <item>Two three dimensional shapes, the Top and bottom forms are cylinders, and the middle one is a sphere</item>
+        <item>Draw in the larger top cylinder to represent the chest</item>
+        <item>A sphere for the stomach, which can help us visualise how the torso can bend and rotate if we were twisting the body</item>
+        <item>And the small cylinder for the waist</item>
+        <item>These spheres will represent the ball and socket joints that our arms and legs rotate from. Namely the shoulder and the hips</item>
+        <item>Some more three dimensional shapes we will use for the arms and the legs</item>
+        <item>Start off the arms and legs with a long cylinder that reaches the ball we drew to mark the elbow</item>
+        <item>Then use a tapered cylinder for the lower half of each limb</item>
+        <item>The hands are covered in more detail in their own tutorial. Draw in the shapes for the legs, and connect the forms together</item>
+        <item>Finally, draw in a cylinder to represent the neck</item>
+        <item>Using the head tutorial, draw in where the facial features will go</item>
+        <item>The chest line will go from the point where your arm meets the Shoulder, down to the line that is two heads down</item>
+        <item>I like to connect the major cylinders together</item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it.</item>
+        <item>Use the head tutorial and draw in what is often the most important part of your figure</item>
+        <item>Draw in the neck and whatever neckline you want depending on what clothes your figure is wearing</item>
+        <item>Now outline the shoulder and arms. Note the trapezius muscle will make the line from his shoulder go up around his neck</item>
+        <item>Most tops will go down the belt line, which is at the top of your cylinder</item>
+        <item>Then outline those chest muscles</item>
+        <item>Use a lot of straight lines to draw in the legs. Most important is to outline the difference in shapes between the thighs and the calves</item>
+        <item>Keep the foot nice and simple</item>
+        <item>And there you have it.  You can fully erase the basic forms now to show off your character</item>
+    </string-array>
+
+    <string-array name="b06t02Help">
+        <item>Let’s start with an oval shape to represent the head</item>
+        <item>Draw two lines across to split it up into thirds</item>
+        <item>Our face will look straight ahead, so draw a line down the middle to represent the middle of the face.</item>
+        <item>Let’s take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle</item>
+        <item>Now, to help us lay out where the features go, let us add some more lines. Take the middle and bottom segment, and draw a line 1/3rd down in each segment</item>
+        <item>We now know where to put the facial features. Let us add in ovals for the eyes along this line</item>
+        <item>Draw a line from the centre of the eyes straight down the head. This will tell us exactly where to draw the mouth</item>
+        <item>The top line is where we draw the eyebrows. You can draw the basics shapes of a rectangle joined to a triangle</item>
+        <item>Where the centre line meets our third line, is where to put the nose. Remember, check the facial features book that outlines how to draw the nose</item>
+        <item>The the mouth goes on the bottom line, and its width goes from the two centre lines drawn from our eyes</item>
+        <item>We know where to put the ear thanks to the lines from our nose and eyes</item>
+        <item>Let’s sharpen up the jaw line. Bring it to meet the chin, which is directly under the mouth, using the same lines from the eye</item>
+        <item>Add in the hair line</item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it</item>
+        <item>Remember, the facial features are important, and we have a whole book dedicated to them.  Use it to learn how to draw them from each angle</item>
+        <item>Everybodys features are different. Feel free to experiment with different facial shapes and sizes.</item>
+        <item>Use the forms we laid out as guides where to draw in the detailed versions of each feature</item>
+        <item>We look at the ear in the features book too</item>
+        <item>Now draw in the crown of the head, or use the outline to draw whatever hairstyle you like</item>
+        <item>Draw in the jaw line, ignoring the curve of the initial oval</item>
+        <item>Now the hairline.</item>
+        <item>Add in a few features. A line from the chin up towards the ear can indicate a strong jawline</item>
+        <item>I like to indicate the bottom lip with a small line which helps tell us that the lip protrudes from the face. </item>
+        <item>A small curve can show the “ala” area around the nostril</item>
+        <item>And a curve here can help define the planes of the face.</item>
+        <item>And there you have it.  You can fully erase the basic forms now</item>
+        <item>Take a look at Level 2 of this figure to take your drawing up to the next stage. Or why not share your drawing with us.</item>
+    </string-array>
+
+    <string-array name="b06t03Help">
+        <item>Drawing the hands at an angle can be difficult. So always take a look at your own hands for reference. Draw in two rectangles as the palms of your hand </item>
+        <item> Break the finger joints down into rectangles that extend from the top of your palm of your hand</item>
+        <item> The tops of these rectangles curve down to indicate middle finger being the longest and the pinky being the smallest</item>
+        <item>Your fingers have three joints and there for three bendable areas.  </item>
+        <item>Extending from the palm, I like to draw a cylinder, almost representing the first bone of your thumb as a ball joint </item>
+        <item>The second bone of the thumb extends from this like the fingers </item>
+        <item>And the third follows. </item>
+        <item>Break the rectangles used to outline the fingers into their own parts</item>
+        <item>Separate them out.</item>
+        <item></item>
+        <item>Great. That’s the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final hand over it</item>
+        <item>Each finger joins your sectioned off rectangles together.</item>
+        <item>Remember, the middle finger is the longest</item>
+        <item>The ring finger is slightly longer than the index finger</item>
+        <item>The pinky is the smallest</item>
+        <item>Lets draw the thumb, but note, we only indicate a small part of the ball joint, as the flesh surrounding it blends into the hand</item>
+        <item>We can outline the hands going into the palms using the rectangle we drew in stage one</item>
+        <item>Draw in the extra details like the fingernails.</item>
+        <item>And there you have it.  You can fully erase the basic forms now</item>
+        <item>Take a look at Level 2 of the hand to take your drawing up to the next stage. Or why not share your drawing with us</item>
+    </string-array>
+
+
+    <string name="book7heading1">Heroic Male Front View</string>
+    <string name="book7heading2">Learn how to draw the male face from the front</string>
+    <string-array name="book7cardtext1">
+        <item>Full Figure</item>
+        <item>The Head</item>
+        <item>The Torso</item>
+        <item>The Arms</item>
+        <item>The Legs</item>
+        <item>The Hand</item>
+        <item>The Foot</item>
+    </string-array>
+
+    <string-array name="b07t01Help">
+        <item>Start by laying down the basic shape of the head.</item>
+        <item>Using the size of the head, we can lay out markers for proportions. .Our figure is 8 heads high.</item>
+        <item>Lay out the figure as simply as this. With circles as the joints and lines to indicate the limbs and torso. Use the level 1 tutorial if you need help here.</item>
+        <item>Now we can draw in the basic forms starting with the chest.</item>
+        <item>Remember, each section is individually covered in more detail in this book.</item>
+        <item>Always reference the grid of 8 heads to know where to line up the features. The belly button should be 3 heads down.</item>
+        <item>The hips should be around 4 heads down. </item>
+        <item>At this stage, the legs and the arms can be treated similarly.</item>
+        <item>The bottom half of the leg and hand get thinner as they reach towards the wrist and foot.</item>
+        <item>Use the tutorials for the hand and the foot when you are drawing them in.</item>
+        <item>Outline the hands and the feet. Reference their individual tutorials. </item>
+        <item>Lastly connect the head to the neck.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and let us take the definition of the forms to the next level.</item>
+        <item>Here is where the individual tutorials really come into play. Make sure you look at them.</item>
+        <item>Continue refining the forms.</item>
+        <item>Look at how the body parts interconnect. The chest muscle connects strongly to the shoulder, which the arm muscle emerges from.</item>
+        <item>Similarly, the legs emerge from the hips.</item>
+        <item>Draw in the feet.</item>
+        <item>And the hands, referring the their tutorials.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final figure over it</item>
+        <item>Take a look at Level 3 of the full figure to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
+    <string-array name="b07t02Help">
+        <item>Start with a simple spherical shape for the head.</item>
+        <item>Take a look at this form represented by a 3D shape. This should help you visualise how the centre line rotates around the form as we look at it from a different angle.</item>
+        <item>Draw in a horizontal and vertical line through the sphere. With the vertical one at an angle in the direction that the head will look towards.</item>
+        <item>The head is not fully round, in fact it is important to create the planes of the face that are the side of the head and the front of the face. </item>
+        <item>We can create those planes by taking a vertical slice off the sphere. </item>
+        <item> From these four points we can draw in the bottom half of the face. </item>
+        <item>Take the point where the jaw line meets the chopped sphere as a halfway marker from the spheres midline, in order to find out how far down the chin should go. </item>
+        <item>Now we can clearly see the planes of the face.  </item>
+        <item>Lightly erase some lines to give us a better view. </item>
+        <item>Now draw a line horizontally half ways down our skull shape. This will be the eye line. Divide the front plane in half too.</item>
+        <item> Draw some more horizontal lines down. One that is 1/3rd down from the eyes to the jaw. The other just slightly lower, marked by the bottom of our original sphere.</item>
+        <item>Now, like in the level 1 tutorial, we can mark in where the facial features go.</item>
+        <item>Draw a line from the centre of the eyes down to mark out where the chin and mouth should go.</item>
+        <item>Remember, the facial features are covered in depth in their own book.</item>
+        <item>The ear should go from the bottom of the nose, up to the eyebrows.</item>
+        <item>Draw in your characters hairline, which can help define the planes of the face.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final head over it.</item>
+        <item>I like to start with the eyes as they are often the first feature we look at. </item>
+        <item>Add in the nose.</item>
+        <item>The eyebrows.</item>
+        <item>The mouth.</item>
+        <item>And the ears.</item>
+        <item>We can use our layout lines to draw the shape of the face. Depending on the face you are drawing, you can add in a slight protrusion for the cheek bones.</item>
+        <item>Follow the lines around and mark in the hairline to complete the basic head shape.</item>
+        <item>And there you have it.  You can fully erase the basic forms now.</item>
+        <item>Take a look at Level 3 of the head to fully understand how the muscles and plains work. Or why not share your drawing with us.</item>
+    </string-array>
+
+    <string-array name="b07t03Help">
+        <item>Start by laying out the lines that will represent the shoulders, and hips.</item>
+        <item>The chest should stretch from shoulder to shoulder.</item>
+        <item>The rib cage and the back is a large form that takes up most of the volume of the torso.</item>
+        <item>The bottom half of the torso is shaped like a cylinder, down to the waist.</item>
+        <item>The shoulders connect into the chest. They rise up higher following there the collarbone will go</item>
+        <item>The neck then emerges from the chest, it will connected to the face by a group of muscles.</item>
+        <item>The area that will be the abs comes down from the ribcage. It goes right down passed the waist towards the groin area.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>The pecs are two separate large muscles.</item>
+        <item>Define the collarbone as it goes from the top of the chest over the shoulder.</item>
+        <item>The shoulders will connect to the arms through the deltoid.</item>
+        <item>Draw in the ribcage at the front and then the lats which wrap around from under the shoulder to the back.</item>
+        <item>Now the abs. Note how one the belly button is in a gap between four abs.</item>
+        <item>The oblique muscles emerge from the side of the abs at an angle up towards the lats.</item>
+        <item>Draw in four small muscles which will connect the lats to the obliques. </item>
+        <item>Then define the hips.</item>
+        <item>Finally, the neck muscles. The most important two at the front, connect from the ears, down to the middle point of the collarbone.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final torso over it.</item>
+        <item>Take a look at Level 3 of the torso to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
+    <string-array name="b07t04Help">
+        <item>Start by laying out the lines that will represent the shoulders, elbows and hands.</item>
+        <item>Draw in a basic shape of the shoulders.</item>
+        <item>The limbs can be represented as cylinders for now.</item>
+        <item>Similar to the level 1 tutorial, draw a tapered cylinder for bottom half of the arm as it thins as it goes down towards the wrist.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>First, let us draw in the shoulder. </item>
+        <item>The main muscle of the arm comes out from below the lowest point of the deltoid. It stretches like this when the arm is flat</item>
+        <item>The triceps wrap around the back of the arm, framing the shoulder. We can only see a small part of them from this angle.</item>
+        <item>It is important to have a visual break in between where the lower half of the arm meets the top half.</item>
+        <item>I will outline the hand here, but it has its own separate tutorial in this book.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final arm over it. Add in some extra details like the veins.</item>
+        <item>Take a look at level 3 of the arm to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
+    <string-array name="b07t05Help">
+        <item>Start by laying out the lines that will represent the hips, knees, limbs and feet.</item>
+        <item>The limbs can be represented as cylinders for now.</item>
+        <item>Similar to the level 1 tutorial, draw a tapered cylinder for bottom half of the leg as it thins as it goes down towards the foot.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>The groin and the glutes act similar to the shoulder in the arm. The limbs will emerge from here.</item>
+        <item>The top half of the leg is mainly built of three muscles. The bottom two reach down to the knees.</item>
+        <item>The knees are similar to the elbows, but its much larger and more prominent.</item>
+        <item>The calve muscles will form the large mass at the top of this part of the leg, it thins out as we drop towards the foot.</item>
+        <item>I will outline the foot here, but it has its own separate tutorial in this book.</item>
+        <item>Great. That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final legs over it.</item>
+        <item>Take a look at level 3 of the leg to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
+    <string-array name="b07t06Help">
+        <item>Start by drawing in a rectangle which will block out the shape of the palm.</item>
+        <item>The fingers are broken up into three cylinders each.</item>
+        <item>Block them in, remembering that different size of each finger.</item>
+        <item>The bottom bone of the thumb is surrounded by a large area of flesh. So I draw it as a large cone rather than a cylinder. </item>
+        <item>The rest of the thumb is similar to the fingers.</item>
+        <item>That is the basic proportions mapped out. Lightly erase the lines and so we can bring the definition of the forms to the next level.</item>
+        <item>We can add in bumps for each knuckles.</item>
+        <item>That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final hand over it.</item>
+        <item>I like to draw the tips of the fingers a little thicker than the rest of the finger.</item>
+        <item>Take the definition up a level drawing in the fingernails, breaking up the sections of the finger, outlining the bones, and even adding in some veins. </item>
+        <item>Take a look at Level 3 of the hands to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
+    <string-array name="b07t07Help">
+        <item>The basic shape of the foot is a wedge. Make sure it has a flat face where the toes will extrude from.</item>
+        <item>It connects the leg with a cylinder, with the ankle bones on either side.</item>
+        <item>Draw in a large cylinder at the front of the wedge for the big toe.</item>
+        <item>The rest of the toes you can do as one block. Sculptors usually treat this area as one form.</item>
+        <item>Add in the fleshy area of the foot that is behind the toes. This is what creates the arch in your foot.</item>
+        <item>Then you can indicate the separate toes.</item>
+        <item>That is the hard work done, you have laid out the important forms. Go ahead and lightly erase those lines to draw your final foot over it.</item>
+        <item>Take the definition up a level drawing in the toenails.</item>
+        <item>Take a look at Level 3 of the feet to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
+    </string-array>
+
 </resources>
+
+
+
+
+

@@ -115,48 +115,59 @@ public class ThirdFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pageId = (String) adapter.getItem(position);
 
-                for( int i =0; i < mPurchasedBooksArray.length; i++) {
+               for( int i =1; i < mPurchasedBooksArray.length; i++) {
 
                     if (bookNames[position].equals(SKU_BOOK_NAME_ARRAY[i])) {
                         hasPurchased = mPurchasedBooksArray[i];
                         bookName =  SKU_BOOK_NAME_POINTER_ARRAY[i];
+                        bookThumb =  SKU_BOOK_COVER_ARRAY[i];
                     }
-
                 }
-
 /*
                 if (bookNames[position].equals("book01"))
                 {
-                    hasPurchased =  mPurchasedBooksArray[0];
+                    hasPurchased =  mPurchasedBooksArray[1];
                     bookThumb = R.drawable.book1cover;
                     bookName = R.string.book01;
                 }
                 if (bookNames[position].equals("book02"))
                 {
-                    hasPurchased =  mPurchasedBooksArray[1];
+                    hasPurchased =  mPurchasedBooksArray[2];
                     bookThumb = R.drawable.book2cover;
                     bookName = R.string.book02;
                 }
                 if (bookNames[position].equals("book03"))
                 {
-                    hasPurchased =  mPurchasedBooksArray[2];
+                    hasPurchased =  mPurchasedBooksArray[3];
                     bookThumb = R.drawable.book3cover;
                     bookName = R.string.book03;
                 }
                 if (bookNames[position].equals("book04"))
                 {
-                    hasPurchased =  mPurchasedBooksArray[3];
+                    hasPurchased =  mPurchasedBooksArray[4];
                     bookThumb = R.drawable.book4cover;
                     bookName = R.string.book04;
                 }
                 if (bookNames[position].equals("book05"))
                 {
-                    hasPurchased =  mPurchasedBooksArray[4];
+                    hasPurchased =  mPurchasedBooksArray[5];
                     bookThumb = R.drawable.book5cover;
                     bookName = R.string.book05;
+                }
+                if (bookNames[position].equals("book06"))
+                {
+                    hasPurchased =  mPurchasedBooksArray[6];
+                    bookThumb = R.drawable.book6cover;
+                    bookName = R.string.book06;
+                }
+                if (bookNames[position].equals("book07"))
+                {
+                    hasPurchased =  mPurchasedBooksArray[7];
+                    bookThumb = R.drawable.book7cover;
+                    bookName = R.string.book07;
                 }*/
 
-                if(hasPurchased || mSubscribed)
+                if(hasPurchased)
                 {
                     //int slidesID = getActivity().getResources().getIdentifier(pageId + "Pages", "array", getContext().getPackageName());
 
@@ -170,7 +181,7 @@ public class ThirdFragment extends BaseFragment {
                 else//send to subscribe page
                 {
                     Bundle bundle = new Bundle();
-                    bundle.putInt("bookThumb", SKU_BOOK_COVER_ARRAY[position]);
+                    bundle.putInt("bookThumb", bookThumb);
                     bundle.putInt("bookName", bookName);
 
                     FragmentManager fm = getFragmentManager();

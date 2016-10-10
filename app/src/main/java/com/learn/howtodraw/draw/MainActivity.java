@@ -17,7 +17,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -464,7 +466,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             }
             return null;
         }
+
+
     }
+
+
 
 
 } // end class MainActivity

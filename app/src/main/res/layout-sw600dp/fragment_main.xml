@@ -35,7 +35,7 @@
             <ImageView
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/book1cover"
+                android:src="@drawable/book2cover"
                 android:adjustViewBounds="true" />
 
             <LinearLayout
@@ -313,11 +313,63 @@
                 android:textColor="#c0b9b9" />
 
             <TextView
+                android:id="@+id/removeBook1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 1"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 2"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 3"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 4"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+            <TextView
                 android:id="@+id/removeBook5"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text=""
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 5"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+            <TextView
+                android:id="@+id/removeBook6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 6"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+            <TextView
+                android:id="@+id/removeBook7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 7"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
                 />
         </LinearLayout>
 
@@ -327,6 +379,56 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/layout_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/zeroImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b00isocover"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn how to use this app here"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#3c3c3c"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#bababa" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Tap here to send feedback on the Beta"
+            android:background="#fe4f53"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="sendEmail"/>
+
 
     </LinearLayout>
 

@@ -579,9 +579,6 @@ public abstract class IabActivity extends AppCompatActivity {
      */
 
     void onIabSetupSucceeded (IabHelper h, IabResult result, Inventory inventory) {
-        // Check to see which upgrades we have?
-
-        //
         // Check for the in-app purchases of items.
         // (Do this here in the superclass of all the other classes so it is done only once.
         //  Note that several global variables are set here.)
@@ -597,6 +594,13 @@ public abstract class IabActivity extends AppCompatActivity {
             mPurchasedBooksArray[i] = (bookPurchase != null && verifyDeveloperPayload(bookPurchase));
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[i] ? SKU_BOOK_NAME_ARRAY[i]+ " OWNER" : "NOT A " +SKU_BOOK_NAME_ARRAY[i] + "OWNER"));
         }
+
+        // Making books free
+        mPurchasedBooksArray[1] = true;
+        mPurchasedBooksArray[2] = true;
+        mPurchasedBooksArray[3] = true;
+        mPurchasedBooksArray[6] = true;
+        mPurchasedBooksArray[7] = true;
 
 /*        // Have we purchased book 1
         Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);

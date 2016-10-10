@@ -1,6 +1,9 @@
 <resources>
+    <!-- BOOK 0 -->
+    <string name="book00">book00</string>
+
     <!-- BOOK 1 -->
-    <array  name="book1Build">
+    <array name="book1Build">
         <item>@string/book1heading1</item>
         <item>@string/book1heading2</item>
         <item>@drawable/book1cover</item>
@@ -16,14 +19,7 @@
     <string name="book1level">Level 1</string>
     <drawable name="book1cover">@drawable/b01isocover</drawable>
     <drawable name="book1coverinside">@drawable/b01banner</drawable>
-    <string name="book1heading1">HEROIC MALE 3/4 VIEW</string>
-    <string name="book1heading2">Learn how to draw the full figure</string>
 
-    <string-array name="book1tutorialnames">
-        <item>Full Figure</item>
-        <item>Basic Head</item>
-        <item>The Hands</item>
-    </string-array>
     <integer-array name="book1cardimages">
         <item>@drawable/b01t01p29</item>
         <item>@drawable/b01t02p28</item>
@@ -37,7 +33,7 @@
 
     <!-- BOOK 2 -->
 
-    <array  name="book2Build">
+    <array name="book2Build">
         <item>@string/book2heading1</item>
         <item>@string/book2heading2</item>
         <item>@drawable/book2cover</item>
@@ -52,17 +48,7 @@
     <string name="book2level">Level 2</string>
     <drawable name="book2cover">@drawable/b02isocover</drawable>
     <drawable name="book2coverinside">@drawable/b02banner</drawable>
-    <string name="book2heading1">Heroic Male 3/4 View</string>
-    <string name="book2heading2">Learn how to draw the full figure</string>
-    <string-array name="book2cardtext1">
-        <item>Full Figure</item>
-        <item>The Head</item>
-        <item>The Torso</item>
-        <item>The Arms</item>
-        <item>The Hands</item>
-        <item>The Legs</item>
-        <item>The Feet</item>
-    </string-array>
+
 
     <integer-array name="book2cardimages">
         <item>@drawable/mi3_4figure21</item>
@@ -83,7 +69,6 @@
         <item>b02t06</item>
         <item>b02t07</item>
     </string-array>
-
 
 
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
@@ -108,17 +93,6 @@
     <string name="book3level">Level 3</string>
     <drawable name="book3cover">@drawable/b03isocover</drawable>
     <drawable name="book3coverinside">@drawable/b03banner</drawable>
-    <string name="book3heading1">Heroic Male 3/4 View</string>
-    <string name="book3heading2">How to draw a full male figure</string>
-    <string-array name="book3cardtext1">
-        <item>Full figure</item>
-        <item>Torso</item>
-        <item>Legs</item>
-        <item>Head</item>
-        <item>Hands</item>
-        <item>Foot</item>
-        <item>Arms</item>
-    </string-array>
 
     <integer-array name="book3cardimages">
         <item>@drawable/ma3_4figure13</item>
@@ -141,8 +115,6 @@
     </string-array>
 
 
-
-
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
     <!-- *** *** *** *** BOOK 4 *** *** *** *** *** -->
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
@@ -163,17 +135,6 @@
     <string name="book4level">Level 3</string>
     <drawable name="book4cover">@drawable/b04isocover</drawable>
     <drawable name="book4coverinside">@drawable/b04banner</drawable>
-    <string name="book4heading1">Flex</string>
-    <string name="book4heading2">Learn how to draw the flex</string>
-    <string-array name="book4cardtext1">
-        <item>Flex Up</item>
-        <item>Flex Down</item>
-        <item>Side Flex</item>
-        <item>Begin Flex</item>
-        <item>Air Flex</item>
-        <item>Arm Cross</item>
-        <item>Side View Flex</item>
-    </string-array>
 
     <integer-array name="book4cardimages">
         <item>@drawable/maflexa21</item>
@@ -196,8 +157,6 @@
 
     </string-array>
 
-
-
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
     <!-- *** *** *** *** BOOK 5 *** *** *** *** *** -->
     <!-- *** *** *** *** ****** *** *** *** *** *** -->
@@ -218,18 +177,6 @@
     <string name="book5level">Level 2</string>
     <drawable name="book5cover">@drawable/b05banner</drawable>
     <drawable name="book5coverinside">@drawable/b05isocover</drawable>
-    <string name="book5heading1">Dymanic Kick</string>
-    <string name="book5heading2">Learn how to draw the dynamic kick</string>
-    <string-array name="book5cardtext1">
-        <item>Dynamic Kick 1</item>
-        <item>Dynamic Kick 2</item>
-        <item>Dynamic Kick 3</item>
-        <item>Dynamic Kick 4</item>
-        <item>Dynamic Kick 5</item>
-        <item>Dynamic Kick 6</item>
-        <item>Dynamic Kick 7</item>
-        <item>Dynamic Kick 8</item>
-    </string-array>
 
     <integer-array name="book5cardimages">
         <item>@drawable/midynamickicka0118</item>
@@ -250,15 +197,113 @@
         <item>b05t06</item>
         <item>b05t07</item>
         <item>b05t08</item>
+    </string-array>
 
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 6 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+
+    <array name="book6Build">
+        <item>@string/book6heading1</item>
+        <item>@string/book6heading2</item>
+        <item>@drawable/book6cover</item>
+        <item>@array/book6cardtext1</item>
+        <item>@array/book6cardimages</item>
+        <item>@array/book6PageIds</item>
+        <item>@drawable/b06banner</item>
+        <item>@string/book06</item>
+        <item>@string/book6level</item>
+    </array>
+
+    <string name="book06">book06</string>
+    <string name="book6level">Level 1</string>
+    <drawable name="book6cover">@drawable/b06banner</drawable>
+    <drawable name="book6coverinside">@drawable/b06isocover</drawable>
+
+    <integer-array name="book6cardimages">
+        <item>@drawable/b06t01p28</item>
+        <item>@drawable/b06t02p14</item>
+        <item>@drawable/b06t03p16</item>
+    </integer-array>
+
+    <string-array name="book6PageIds">
+        <item>b06t01</item>
+        <item>b06t02</item>
+        <item>b06t03</item>
+    </string-array>
+
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 7 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+
+    <array name="book7Build">
+        <item>@string/book7heading1</item>
+        <item>@string/book7heading2</item>
+        <item>@drawable/book7cover</item>
+        <item>@array/book7cardtext1</item>
+        <item>@array/book7cardimages</item>
+        <item>@array/book7PageIds</item>
+        <item>@drawable/b07banner</item>
+        <item>@string/book07</item>
+        <item>@string/book7level</item>
+    </array>
+
+    <string name="book07">book07</string>
+    <string name="book7level">Level 2</string>
+    <drawable name="book7cover">@drawable/b07banner</drawable>
+    <drawable name="book7coverinside">@drawable/b07isocover</drawable>
+
+    <integer-array name="book7cardimages">
+        <item>@drawable/b07t01p19</item>
+        <item>@drawable/b07t02p22</item>
+        <item>@drawable/b07t03p18</item>
+        <item>@drawable/b07t04p10</item>
+        <item>@drawable/b07t05p09</item>
+        <item>@drawable/b07t06p11</item>
+        <item>@drawable/b07t07p07</item>
+
+    </integer-array>
+    <string-array name="book7PageIds">
+        <item>b07t01</item>
+        <item>b07t02</item>
+        <item>b07t03</item>
+        <item>b07t04</item>
+        <item>b07t05</item>
+        <item>b07t06</item>
+        <item>b07t07</item>
     </string-array>
 
 
     <!--all pages level-->
+    <!--all pages level-->
+    <!--all pages level-->
+
     <string-array name="pagesAllLevels">
         <item>Level 1</item> <!--b01t01-->
-        <item>Level 1</item> <!--b01t02-->
-        <item>Level 1</item> <!--b01t03-->
+        <item>Level 1</item>
+        <item>Level 1</item>
+        <item>Level 2</item> <!--b02t01-->
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 3</item>
+        <item>Level 2</item> <!--b05t01-->
         <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
@@ -266,22 +311,12 @@
         <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 3</item>
-        <item>Level 2</item>
-        <item>Level 2</item>
+
+        <item>Level 1</item> <!--b06t01-->
+        <item>Level 1</item>
+        <item>Level 1</item>
+
+        <item>Level 2</item> <!--b07t01-->
         <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
@@ -293,30 +328,30 @@
 
     <integer-array name="pagesAllImages">
         <item>@drawable/b01t01p29</item> <!--b01t01-->
-        <item>@drawable/b01t02p28</item> <!--b01t02-->
-        <item>@drawable/b01t03p18</item> <!--b01t03-->
-        <item>@drawable/mi3_4figure21</item>
+        <item>@drawable/b01t02p28</item>
+        <item>@drawable/b01t03p18</item>
+        <item>@drawable/mi3_4figure21</item> <!--b02t01-->
         <item>@drawable/mi3_4head19</item>
         <item>@drawable/mi3_4torso18</item>
         <item>@drawable/mi3_4arm11</item>
         <item>@drawable/mi3_4hand11</item>
         <item>@drawable/mi3_4leg10</item>
         <item>@drawable/mi3_4foot08</item>
-        <item>@drawable/ma3_4figure13</item>
+        <item>@drawable/ma3_4figure13</item> <!--b03t01-->
         <item>@drawable/ma3_4torso13</item>
         <item>@drawable/ma3_4legs12</item>
         <item>@drawable/ma3_4head17</item>
         <item>@drawable/ma3_4hands07</item>
         <item>@drawable/ma3_4foot07</item>
         <item>@drawable/ma3_4arms12</item>
-        <item>@drawable/maflexa21</item>
+        <item>@drawable/maflexa21</item>  <!--b04t01-->
         <item>@drawable/maflexb16</item>
         <item>@drawable/maflexc16</item>
         <item>@drawable/maflexd18</item>
         <item>@drawable/maflexe12</item>
         <item>@drawable/maflexf18</item>
         <item>@drawable/maflexg16</item>
-        <item>@drawable/midynamickicka0117</item>
+        <item>@drawable/midynamickicka0117</item> <!--b05t01-->
         <item>@drawable/midynamickicka0217</item>
         <item>@drawable/midynamickicka0317</item>
         <item>@drawable/midynamickicka0417</item>
@@ -324,6 +359,16 @@
         <item>@drawable/midynamickicka0617</item>
         <item>@drawable/midynamickicka0717</item>
         <item>@drawable/midynamickicka0817</item>
+        <item>@drawable/b06t01p28</item> <!--b06t01-->
+        <item>@drawable/b06t02p14</item> <!--b06t02-->
+        <item>@drawable/b06t03p16</item> <!--b06t03-->
+        <item>@drawable/b07t01p19</item> <!--b07t01-->
+        <item>@drawable/b07t02p22</item> <!--b07t02-->
+        <item>@drawable/b07t03p18</item> <!--b07t03-->
+        <item>@drawable/b07t04p10</item> <!--b07t04-->
+        <item>@drawable/b07t05p09</item> <!--b07t05-->
+        <item>@drawable/b07t06p11</item> <!--b07t06-->
+        <item>@drawable/b07t07p07</item> <!--b07t07-->
     </integer-array>
 
     <!--for third Fragment-->
@@ -360,6 +405,16 @@
         <item>b05t06</item>
         <item>b05t07</item>
         <item>b05t08</item>
+        <item>b06t01</item>
+        <item>b06t02</item>
+        <item>b06t03</item>
+        <item>b07t01</item>
+        <item>b07t02</item>
+        <item>b07t03</item>
+        <item>b07t04</item>
+        <item>b07t05</item>
+        <item>b07t06</item>
+        <item>b07t07</item>
     </string-array>
 
     <string-array name="pagesAllbooks">
@@ -399,6 +454,18 @@
         <item>book05</item>
         <item>book05</item>
         <item>book05</item>
+
+        <item>book06</item>
+        <item>book06</item>
+        <item>book06</item>
+
+        <item>book07</item>
+        <item>book07</item>
+        <item>book07</item>
+        <item>book07</item>
+        <item>book07</item>
+        <item>book07</item>
+        <item>book07</item>
     </string-array>
 
 
@@ -408,24 +475,28 @@
         <item>@drawable/b03isocover</item>
         <item>@drawable/b04isocover</item>
         <item>@drawable/b05isocover</item>
+        <item>@drawable/b06isocover</item>
+        <item>@drawable/b07isocover</item>
     </integer-array>
 
-
-
     <string-array name="allBooksIds">
-    <item>b01t01</item>
-    <item>b01t02</item>
-    <item>b01t03</item>
-    <item>b02t01</item>
-    <item>b02t02</item>
+        <item>b01t01</item>
+        <item>b01t02</item>
+        <item>b01t03</item>
+        <item>b02t01</item>
+        <item>b02t02</item>
+        <item>b02t01</item>
+        <item>b02t02</item>
     </string-array>
 
     <string-array name="allBooksBooks">
-    <item>book01</item>
-    <item>book02</item>
-    <item>book03</item>
-    <item>book04</item>
-    <item>book05</item>
+        <item>book01</item>
+        <item>book02</item>
+        <item>book03</item>
+        <item>book04</item>
+        <item>book05</item>
+        <item>book06</item>
+        <item>book07</item>
     </string-array>
 
 </resources>

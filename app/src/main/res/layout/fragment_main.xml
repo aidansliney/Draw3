@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="70dp">
 
 
         <TextView
@@ -29,7 +30,7 @@
             android:id="@+id/layout_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="15dp"
+            android:paddingBottom="0dp"
             android:orientation="vertical"
             android:background="#ffffff">
 
@@ -37,7 +38,7 @@
                 android:id="@+id/firstImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/b01isocover"
+                android:src="@drawable/b02isocover"
                 android:adjustViewBounds="true" />
 
             <LinearLayout
@@ -314,13 +315,66 @@
                 android:textColor="#c0b9b9" />
 
             <TextView
+                android:id="@+id/removeBook1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 1"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 2"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 3"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+            <TextView
+                android:id="@+id/removeBook4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 4"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+            <TextView
                 android:id="@+id/removeBook5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:layout_marginTop="10dp"
+                android:text="Remove Book 5"
+                android:layout_margin="10dp"
                 android:textColor="#c0b9b9"
                 />
+            <TextView
+                android:id="@+id/removeBook6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 6"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+            <TextView
+                android:id="@+id/removeBook7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Book 7"
+                android:layout_margin="10dp"
+                android:textColor="#c0b9b9"
+                />
+
+
         </LinearLayout>
 
         <View
@@ -369,44 +423,15 @@
 
         </LinearLayout>
 
-
-
-
-  <!--      <LinearLayout
-            android:id="@+id/video"
+        <TextView
+            android:id="@+id/feedback"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="15dp"
-            android:orientation="vertical"
-            android:background="#ffffff"
-            android:layout_marginBottom="15dp">
-
-            <VideoView
-                android:id="@+id/myVideoA"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_centerInParent="true" />
-
-            <TextView
-                android:id="@+id/video_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Video"
-                android:paddingLeft="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#3c3c3c" />
-
-
-
-            <TextView
-                android:id="@+id/video_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Watch this video to learn how to use 'Learn how to draw'"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="#c0b9b9" />
-        </LinearLayout>-->
+            android:layout_height="50dp"
+            android:text="Tap here to send feedback on the Beta"
+            android:background="#fe4f53"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="sendEmail"/>
 
     </LinearLayout>
 

@@ -1,6 +1,7 @@
 package layout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.learn.howtodraw.draw.BaseFragment;
 import com.learn.howtodraw.draw.LinkBooks;
+import com.learn.howtodraw.draw.MainActivity;
 import com.learn.howtodraw.draw.PageActivity;
 import com.learn.howtodraw.draw.R;
 
@@ -41,24 +44,85 @@ public class firstFragment extends BaseFragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        LinkBooks.linkBook(R.id.layout_1, R.array.book1Build, rootView, false, getActivity());
+        LinkBooks.linkBook(R.id.layout_1, R.array.book2Build, rootView, false, getActivity());
 
-        TextView tv = (TextView) rootView.findViewById(R.id.removeBook5);
-        assert tv != null;
-        tv.setOnClickListener(new View.OnClickListener() {
+        final TextView rb1 = (TextView) rootView.findViewById(R.id.removeBook1);
+        final TextView rb2 = (TextView) rootView.findViewById(R.id.removeBook2);
+        final TextView rb3 = (TextView) rootView.findViewById(R.id.removeBook3);
+        final TextView rb4 = (TextView) rootView.findViewById(R.id.removeBook4);
+        final TextView rb5 = (TextView) rootView.findViewById(R.id.removeBook5);
+        final TextView rb6 = (TextView) rootView.findViewById(R.id.removeBook6);
+        final TextView rb7 = (TextView) rootView.findViewById(R.id.removeBook7);
+        rb1.setVisibility(View.GONE);
+        rb2.setVisibility(View.GONE);
+        rb3.setVisibility(View.GONE);
+        rb4.setVisibility(View.GONE);
+        rb5.setVisibility(View.GONE);
+        rb6.setVisibility(View.GONE);
+        rb7.setVisibility(View.GONE);
+
+        rb1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[1]);
+                mPurchasedBooksArray[1] = false;
+            }
+        });
+        rb2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[2]);
+                mPurchasedBooksArray[2] = false;
+            }
+        });
+        rb3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[3]);
+                mPurchasedBooksArray[3] = false;
+            }
+        });
+        rb4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[4]);
                 mPurchasedBooksArray[4] = false;
+            }
+        });
+        rb5.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[5]);
+                mPurchasedBooksArray[5] = false;
+            }
+        });
+
+        rb6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[6]);
+                mPurchasedBooksArray[6] = false;
+            }
+        });
+
+        rb7.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                getMainActivity().consumeBook(SKU_BOOK_NAME_ARRAY[7]);
+                mPurchasedBooksArray[7] = false;
             }
         });
 
         final ImageView iV = (ImageView) rootView.findViewById(R.id.willy);
         final TextView tV = (TextView) rootView.findViewById(R.id.will_header);
         final TextView tV2 = (TextView) rootView.findViewById(R.id.will_text);
-        final TextView tV3 = (TextView) rootView.findViewById(R.id.removeBook5);
 
         iV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,11 +131,16 @@ public class firstFragment extends BaseFragment {
                 willyCounter ++;
                 if (willyCounter == 5)
                 {
-
                     iV.setImageResource(R.drawable.mario);
                     tV.setText("Aidan Sliney is a legend");
                     tV2.setText("What a legend");
-                    tV3.setText("Unpurchase Book 5");
+                    rb1.setVisibility(View.VISIBLE);
+                    rb2.setVisibility(View.VISIBLE);
+                    rb3.setVisibility(View.VISIBLE);
+                    rb4.setVisibility(View.VISIBLE);
+                    rb5.setVisibility(View.VISIBLE);
+                    rb6.setVisibility(View.VISIBLE);
+                    rb7.setVisibility(View.VISIBLE);
 
                     Log.d("Clicked", "Willy");
                 }
@@ -124,9 +193,36 @@ public class firstFragment extends BaseFragment {
             }
         });
 
+        View feedback = rootView.findViewById(R.id.feedback);
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendEmail();
+            }
+        });
+
         return rootView;
     }
 
 
+    public void sendEmail() {
+        Log.i("Send email", "");
 
+        String[] TO = {"aidansliney@gmail.com"};
+        String[] CC = {"wsliney@gmail.com"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Draw Feedback");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Please write your feedback here. The more info the better");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            //finish();
+        } catch (android.content.ActivityNotFoundException ex) {
+
+        }
+    }
 }
