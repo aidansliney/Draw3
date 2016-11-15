@@ -79,11 +79,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
+        //Not used
         Book[] arr = new Book[100];  // new stands for create an array object
         arr[0] = new Book("Peter", 100); // new stands for create a book object
         arr[1] = new Book("Mary", 90);
-
         Log.d("arr name" , arr[0].getBookname());
 
 
