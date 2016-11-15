@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.learn.howtodraw.draw.util.AppConfig;
 import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
@@ -47,12 +46,8 @@ public abstract class IabActivity extends AppCompatActivity {
 // Constants and variables
 
     final String LOG_TAG = Constants.LOG_IAB;
-
     static final int RC_PURCHASE_REQUEST = Constants.RC_PURCHASE_REQUEST;
-
     boolean mDestroyed = false;
-
-
 
     /**
      * mGotInventoryListener - Listener that's called when we finish querying the items and subscriptions we own.
@@ -257,6 +252,9 @@ public abstract class IabActivity extends AppCompatActivity {
      */
 
     protected void launchInAppPurchaseFlow (Activity a, String sku) {
+
+       if ( pIabHelper != null)  pIabHelper.flagEndAsync(); //Added by Aidan
+
         launchInAppPurchaseFlow (a, sku, IabHelper.ITEM_TYPE_INAPP);
     }
 
@@ -350,7 +348,8 @@ public abstract class IabActivity extends AppCompatActivity {
         // It is very important to destroy the IAB Helper. It holds onto to other stuff.
         if (pIabHelper != null) {
             if (AppConfig.DEBUG) Log.d (LOG_TAG, "Destroying IabHelper.");
- //            pIabHelper.dispose();
+             pIabHelper.dispose();  //this is the one i had removed
+            Log.d("dispose","disposed");
             pIabHelper = null;
         }
         mDestroyed = true;
@@ -494,18 +493,13 @@ public abstract class IabActivity extends AppCompatActivity {
                     ArrayList<String> skusToBeListed = null;
                     if (showListedSkus) {
                         skusToBeListed = new ArrayList<String> ();
-
-
                        int counter = 0;
                         while (counter < SKU_BOOK_NAME_ARRAY.length) {
 
                             skusToBeListed.add(SKU_BOOK_NAME_ARRAY[counter]);
                             counter++;
                         }
-
                             skusToBeListed.add(SKU_SUBSCRIPTION);
-
-
                     }
                     pIabHelper.queryInventoryAsync (true, skusToBeListed, mGotInventoryListener);
                 }
@@ -601,6 +595,7 @@ public abstract class IabActivity extends AppCompatActivity {
         mPurchasedBooksArray[3] = true;
         mPurchasedBooksArray[6] = true;
         mPurchasedBooksArray[7] = true;
+        mPurchasedBooksArray[8] = true;
 
 /*        // Have we purchased book 1
         Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);

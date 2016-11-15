@@ -20,12 +20,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import com.learn.howtodraw.draw.util.Book;
 import com.learn.howtodraw.draw.util.IabHelper;
 import com.learn.howtodraw.draw.util.IabResult;
 import com.learn.howtodraw.draw.util.Inventory;
@@ -77,6 +79,14 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
+        Book[] arr = new Book[100];  // new stands for create an array object
+        arr[0] = new Book("Peter", 100); // new stands for create a book object
+        arr[1] = new Book("Mary", 90);
+
+        Log.d("arr name" , arr[0].getBookname());
+
+
         // FirebaseCrash.report(new Exception("My first Android non-fatal error"));
 
 
@@ -121,10 +131,10 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         mFirebaseAnalytics.logEvent("share_image", params);
 
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -248,6 +258,8 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
     public void onBookPurchaseButtonClicked(View arg0, String book) {
         Log.d(TAG, "Purchase button clicked; launching purchase flow for a book.");
         setWaitScreen(true);
+
+        if ( mHelper != null)  mHelper.flagEndAsync();
 
         launchInAppPurchaseFlow(this, book);
 

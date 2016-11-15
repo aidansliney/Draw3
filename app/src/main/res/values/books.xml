@@ -273,6 +273,92 @@
         <item>b07t07</item>
     </string-array>
 
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 8 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+
+    <array name="book8Build">
+        <item>@string/book8heading1</item>
+        <item>@string/book8heading2</item>
+        <item>@drawable/book8cover</item>
+        <item>@array/book8cardtext1</item>
+        <item>@array/book8cardimages</item>
+        <item>@array/book8PageIds</item>
+        <item>@drawable/b08banner</item>
+        <item>@string/book08</item>
+        <item>@string/book8level</item>
+    </array>
+
+    <string name="book08">book08</string>
+    <string name="book8level">Level 2</string>
+    <drawable name="book8cover">@drawable/b07banner</drawable>
+    <drawable name="book8coverinside">@drawable/b08isocover</drawable>
+
+    <integer-array name="book8cardimages">
+        <item>@drawable/b08t01p05</item>
+        <item>@drawable/b08t02p05</item>
+        <item>@drawable/b08t03p05</item>
+        <item>@drawable/b08t04p05</item>
+        <item>@drawable/b08t05p05</item>
+        <item>@drawable/b08t06p05</item>
+        <item>@drawable/b08t07p05</item>
+        <item>@drawable/b08t08p05</item>
+
+    </integer-array>
+    <string-array name="book8PageIds">
+        <item>b08t01</item>
+        <item>b08t02</item>
+        <item>b08t03</item>
+        <item>b08t04</item>
+        <item>b08t05</item>
+        <item>b08t06</item>
+        <item>b08t07</item>
+        <item>b08t08</item>
+    </string-array>
+
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+    <!-- *** *** *** *** BOOK 10 *** *** *** *** *** -->
+    <!-- *** *** *** *** ****** *** *** *** *** *** -->
+
+    <array name="book10Build">
+        <item>@string/book10heading1</item>
+        <item>@string/book10heading2</item>
+        <item>@drawable/book10cover</item>
+        <item>@array/book10cardtext1</item>
+        <item>@array/book10cardimages</item>
+        <item>@array/book10PageIds</item>
+        <item>@drawable/b10banner</item>
+        <item>@string/book10</item>
+        <item>@string/book10level</item>
+    </array>
+
+    <string name="book10">book10</string>
+    <string name="book10level">Level 2</string>
+    <drawable name="book10cover">@drawable/b10banner</drawable>
+    <drawable name="book10coverinside">@drawable/b10isocover</drawable>
+
+    <integer-array name="book10cardimages">
+        <item>@drawable/b10t01p19</item>
+        <item>@drawable/b10t02p20</item>
+        <item>@drawable/b10t03p21</item>
+        <item>@drawable/b10t04p20</item>
+        <item>@drawable/b10t05p20</item>
+        <item>@drawable/b10t06p20</item>
+        <item>@drawable/b10t07p20</item>
+        <item>@drawable/b10t08p20</item>
+
+    </integer-array>
+    <string-array name="book10PageIds">
+        <item>b10t01</item>
+        <item>b10t02</item>
+        <item>b10t03</item>
+        <item>b10t04</item>
+        <item>b10t05</item>
+        <item>b10t06</item>
+        <item>b10t07</item>
+        <item>b10t08</item>
+    </string-array>
+
 
     <!--all pages level-->
     <!--all pages level-->
@@ -317,6 +403,24 @@
         <item>Level 1</item>
 
         <item>Level 2</item> <!--b07t01-->
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+        <item>Level 2</item>
+
+        <item>Level 1+2</item> <!--b08t01-->
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+        <item>Level 1+2</item>
+
+        <item>Level 2</item> <!--b10t01-->
+        <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
         <item>Level 2</item>
@@ -369,6 +473,22 @@
         <item>@drawable/b07t05p09</item> <!--b07t05-->
         <item>@drawable/b07t06p11</item> <!--b07t06-->
         <item>@drawable/b07t07p07</item> <!--b07t07-->
+        <item>@drawable/b08t01p05</item> <!--b08t01-->
+        <item>@drawable/b08t02p05</item>
+        <item>@drawable/b08t03p05</item>
+        <item>@drawable/b08t04p05</item>
+        <item>@drawable/b08t05p05</item>
+        <item>@drawable/b08t06p05</item>
+        <item>@drawable/b08t07p05</item>
+        <item>@drawable/b08t08p05</item>
+        <item>@drawable/b10t01p19</item> <!--b10t01--> Copy these for above
+        <item>@drawable/b10t02p20</item>
+        <item>@drawable/b10t03p21</item>
+        <item>@drawable/b10t04p20</item>
+        <item>@drawable/b10t05p20</item>
+        <item>@drawable/b10t06p20</item>
+        <item>@drawable/b10t07p20</item>
+        <item>@drawable/b10t08p20</item>
     </integer-array>
 
     <!--for third Fragment-->
@@ -415,6 +535,22 @@
         <item>b07t05</item>
         <item>b07t06</item>
         <item>b07t07</item>
+        <item>b08t01</item>
+        <item>b08t02</item>
+        <item>b08t03</item>
+        <item>b08t04</item>
+        <item>b08t05</item>
+        <item>b08t06</item>
+        <item>b08t07</item>
+        <item>b08t08</item>
+        <item>b10t01</item>
+        <item>b10t02</item>
+        <item>b10t03</item>
+        <item>b10t04</item>
+        <item>b10t05</item>
+        <item>b10t06</item>
+        <item>b10t07</item>
+        <item>b10t08</item>
     </string-array>
 
     <string-array name="pagesAllbooks">
@@ -466,6 +602,24 @@
         <item>book07</item>
         <item>book07</item>
         <item>book07</item>
+
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+        <item>book08</item>
+
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
+        <item>book10</item>
     </string-array>
 
 
@@ -477,6 +631,8 @@
         <item>@drawable/b05isocover</item>
         <item>@drawable/b06isocover</item>
         <item>@drawable/b07isocover</item>
+        <item>@drawable/b08isocover</item>
+        <item>@drawable/b10isocover</item>
     </integer-array>
 
     <string-array name="allBooksIds">
@@ -497,6 +653,8 @@
         <item>book05</item>
         <item>book06</item>
         <item>book07</item>
+        <item>book08</item>
+        <item>book10</item>
     </string-array>
 
 </resources>

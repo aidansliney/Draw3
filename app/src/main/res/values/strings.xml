@@ -1,18 +1,38 @@
 <resources>
-    <string name="app_name">Learn how to draw</string>
-    <string name="title_activity_book2" translatable="false">Learn To Draw</string>
+    <string name="store">Learn how to draw with simple drawing tutorials from professional illustrators.</string>
+    <string name="store_long">Learn How to Draw is the best mobile collection of tutorials designed to help people improve their drawing skills. The lessons focus not just on the final drawing, but on the skills and shapes you need to build up your characters and figure work. The classes range in ability from beginners through to experts.
+App features.
+A growing collection of tutorials with new content every Monday.
+Beginner (Level 1) lessons focus on the simple shapes needed to draw figures.
+Intermediate (Level 2) lessons will highlight the anatomy of the figures and how the masses work together.
+Advanced (Level 3) lessons study the individual muscles and and the sculptural planes the figure makes.
+Tutorials are created by Will Sliney, professional comic book artist.
+100s of pages of content with in depth advice. </string>
+    <string name="app_name">Learn How to Draw</string>
+    <string name="title_activity_book2" >Learn To Draw</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="menu_subscribe">Subscribe Settings</string>
-    <string name="share">This message has been sent from the Android app Draw. Download the app from http://www.google.com</string>
+    <string name="share">I am learning how to draw. Download the app from https://play.google.com/store/apps/details?id=com.learn.howtodraw.draw</string>
     <string name="pagetitlenew">New</string>
     <string name="pagetitlebooks">Books</string>
     <string name="page_title_tutorials">Tutorials</string>
     <string name="subscriptionerror">Subscriptions not supported on your device yet. Sorry!</string>
     <string name="shareimage">Share images to..</string>
-    <string name="new_content">New content coming soon</string>
+    <string name="subinfo">This book contains multiples pages that will train you in the art of drawing. This book you full access to all the tutorial pages it contains.  Buy now. Own forever.
+</string>
+
+
+
+    <string name="new_content">"Welcome to Learn How to Draw
+        Check out the Books tab to find our classes
+        Or the Tutorials tab for individual lessons"</string>
+    <string name="new_content2">New content every few weeks</string>
+    <string name="new_content3">"Upcoming books include:
+        Superhero Poses - It's here :)
+        Female Heroic Figure - Nearly done"</string>
     <string name="rate_draw">Rate Draw</string>
     <string name="share_draw">Share Draw</string>
-    <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. Will is best known for his work on Marvel’s Spider-Man 2099, Fearless Defenders and Star Wars.</string>
+    <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. Will is best known for his work on Marvels Spider-Man 2099, Fearless Defenders and Star Wars.</string>
 
     <!--The Titles on the Book Tab-->
     <string-array name="allBooksHeadings">
@@ -20,9 +40,11 @@
         <item>Heroic Male Intermediate ¾ View</item>
         <item>Heroic Male Advanced ¾ View</item>
         <item>Arm Muscles</item>
-        <item>Dynamic Kicking </item>
+        <item>Dynamic Kicking</item>
         <item>Heroic Male Beginners Front View</item>
         <item>Heroic Male Intermediate Front View</item>
+        <item>Face Front View</item>
+        <item>8 Awesome Heroic Poses</item>
     </string-array>
 
     <!--The Titles on the Page Tab-->
@@ -69,8 +91,24 @@
         <item>The Leg</item> <!--b07t05-->
         <item>The Hand</item> <!--b07t06-->
         <item>The Foot</item> <!--b07t07-->
-
+        <item>The Eyes Front</item><!--b08t01-->
+        <item>The Eyes 3/4</item> <!--b08t02-->
+        <item>The Nose Front</item> <!--b08t03-->
+        <item>The Nose 3/4</item> <!--b08t04-->
+        <item>The Mouth Front</item>
+        <item>The Mouth 3/4</item>
+        <item>The Ears Front</item>
+        <item>The Ears 3/4</item>
+        <item>Heroic Pose 1</item>
+        <item>Heroic Pose 2</item>
+        <item>Heroic Pose 3</item>
+        <item>Heroic Pose 4</item>
+        <item>Heroic Pose 5</item>
+        <item>Heroic Pose 6</item>
+        <item>Heroic Pose 7</item>
+        <item>Heroic Pose 8</item>
     </string-array>
+
 
     <string-array name="book1tutorialnames">
         <item>Full Figure</item>
@@ -140,7 +178,7 @@
         <item>Where the centre line meets our third line, is where to put the nose. Remember, check the facial features book that outlines how to draw the nose</item>
         <item>The the mouth goes on the bottom line, and its width goes from the two centre lines drawn from our eyes</item>
         <item>We know where to put the ear thanks to the lines from our nose and eyes</item>
-        <item>Let’s sharpen up the jaw line. Bring it to meet the chin, which is directly under the mouth, using the same lines from the eye</item>
+        <item>Lets sharpen up the jaw line. Bring it to meet the chin, which is directly under the mouth, using the same lines from the eye</item>
         <item>Continue the jawline and chin line around to the other side of the face</item>
         <item>Add in the hair line</item>
         <item>And extent the back of the head. Our skull goes out slightly further than the initial oval shape we draw</item>
@@ -326,15 +364,15 @@
 
 
     <string name="book3heading1">Heroic Male 3/4 View</string>
-    <string name="book3heading2">Let’s study the muscles and plains of the male figure</string>
+    <string name="book3heading2">Let us study the muscles and plains of the male figure</string>
     <string-array name="book3cardtext1">
         <item>Full figure</item>
-        <item>The Head</item>
         <item>The Torso</item>
-        <item>The Arms</item>
         <item>The Legs</item>
+        <item>The Head</item>
         <item>The Hands</item>
         <item>The Feet</item>
+        <item>The Arms</item>
     </string-array>
 
     <string-array name="b03t01Help">
@@ -872,6 +910,13 @@
 
     <string name="book7heading1">Heroic Male Front View</string>
     <string name="book7heading2">Learn how to draw the male face from the front</string>
+    <string name="feedback">Tap here to send us feedback</string>
+
+    <string name="tweet">Tap here to tweet Will your Drawing</string>
+
+
+    <string name="free_this_week">Free this week</string>
+    <string name="learn">Learn how to use this app here</string>
     <string-array name="book7cardtext1">
         <item>Full Figure</item>
         <item>The Head</item>
@@ -1011,6 +1056,378 @@
         <item>Take the definition up a level drawing in the toenails.</item>
         <item>Take a look at Level 3 of the feet to fully understand how the muscles and plains work. Or why not share your drawing with us. </item>
     </string-array>
+
+
+
+    <string name="book8heading1">Facial Features</string>
+    <string name="book8heading2">Learn how to draw the eyes, nose, mouth and ears.</string>
+    <string-array name="book8cardtext1">
+        <item>The Eyes Front</item>
+        <item>The Eyes 3/4</item>
+        <item>The Nose Front</item>
+        <item>The Nose 3/4</item>
+        <item>The Mouth Front</item>
+        <item>The Mouth 3/4</item>
+        <item>The Ears Front</item>
+        <item>The Ears 3/4</item>
+    </string-array>
+
+
+
+    <string-array name="b08t01Help">
+        <item>Let us start with the basic head outline we drew in the Full Figure books</item>
+        <item>I’m going to draw in the full eyeball for this tutorial. We should know exactly where to place them thanks to the earlier lessons</item>
+        <item>The head is approximately 5 eyes wide. The distance between our own eyes is usually one eyeball</item>
+        <item>Let us imagine where the skull is. Visualising this can help us picture the size the eyeballs need to be the fill up the eye sockets</item>
+        <item>Draw in the pupil and the iris</item>
+        <item>Time to draw in the eyelids to hide the majority of the eyeball</item>
+        <item>A simple way to draw the eye is to draw two semicircles, from one end of the eyeball to the other.</item>
+        <item>Draw in the final eye over this then erase your construction lines</item>
+        <item>That is how a simply drawn eye can look. But let us take it up a level</item>
+        <item>Go back a few steps</item>
+        <item>I like to break the top eyelid into three sections. First, coming up from the corner of the eye, draw a short line.</item>
+        <item>Next, draw the top of the eyelid, making sure it goes through the outer iris, unless you want the eyes to be very open.</item>
+        <item>Then, at less of an angle than the first eyelid line, bring down the end of the eyelid to meet the centre line.</item>
+        <item>Now draw in the bottom eyelid, using only a slight curve.</item>
+        <item>Add in an area for the caruncle.</item>
+        <item>The top of the eyelid is almost as important. Lightly draw in the shapes created by them here</item>
+        <item>Draw in the final line for the top eyelid, making it thick as it contains the eyelashes.</item>
+        <item>The bottom eyelid is thinner.</item>
+        <item>The eyes are wet, so they tend to reflect a lot of light. Draw in a few highlights like so</item>
+        <item>Then draw in the iris and pupil.</item>
+        <item>Finally, add the fine details like the caruncle</item>
+        <item>And the top of the eyelid with a thin line</item>
+        <item>There you go, that’s how the eye will look with your finished head.</item>
+           </string-array>
+
+
+    <string-array name="b08t02Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>I’m going to draw in the full eyeball for this tutorial. We should know exactly where to place them thanks to the earlier lessons</item>
+        <item>The head is approximately 5 eyes wide. The distance between our own eyes is usually one eyeball. But that is hard to tell when we are at an angle. So use your construction lines to tell where to put the eye</item>
+        <item>Let’s imagine where the skull is. Visualising this can help us picture the size the eyeballs need to be the fill up the eye sockets</item>
+        <item>Draw in the pupil and the iris</item>
+        <item>Time to draw in the eyelids to hide the majority of the eyeball</item>
+        <item>A simple way to draw the eye is to draw two semicircles, from one end of the eyeball to the other.</item>
+        <item>Draw in the final eye over this then erase your construction lines</item>
+        <item>That is how a simply drawn eye can look. But let us take it up a level</item>
+        <item>Go back a few steps</item>
+        <item>I like to break the top eyelid into three sections. First, coming up from the corner of the eye, draw a short line.</item>
+        <item>Next, draw the top of the eyelid, making sure it goes through the outer iris, unless you want the eyes to be very open.</item>
+        <item>Then, at less of an angle than the first eyelid line, bring down the end of the eyelid to meet the centre line.</item>
+        <item>Now draw in the bottom eyelid, using only a slight curve.</item>
+        <item>Add in an area for the caruncle.</item>
+        <item>The top of the eyelid is almost as important. Lightly draw in the shapes created by them here</item>
+        <item>Draw in the final line for the top eyelid, making it thick as it contains the eyelashes.</item>
+        <item>The bottom eyelid is thinner.</item>
+        <item>The eyes are wet, so they tend to reflect a lot of light. Draw in a few highlights like so</item>
+        <item>Then draw in the iris and pupil.</item>
+        <item>Finally, add the fine details like the caruncle</item>
+        <item>And the top of the eyelid with a thin line</item>
+        <item>There you go, that’s how the eye will look with your finished head.</item>
+            </string-array>
+
+
+    <string-array name="b08t03Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>The simple shape we need for the nose is a wedge. Remember use the construction lines so you know where to put each part.</item>
+        <item>Complete the wedge by connecting the edge of the triangle representing the tip of our nose, and bring it up to the top of the bridge.</item>
+        <item>Let’s add in a new construction line, from the eyebrow line, and directly above the corner of the eye, draw in two connecting lines down into the center of the top of our nose.</item>
+        <item>Now for the actual nose parts. The tip of the nose is a bulbous part, that comes to an edge in its centre</item>
+        <item>The two fleshy parts which surround our nostrils are a little complicated in shape, but just use the construction lines to know where they go when you draw them in.</item>
+        <item>Draw in the nostrils, and connect up the top part of the tip of our nose. It’s starting to look good.</item>
+        <item>The bridge of our nose will curve all the ways around to the eyebrow.</item>
+        <item>And we already know where the side of our nose is</item>
+        <item>Even though it’s important to know where all the individual parts are, when drawing the final nose though we actually don’t need to show them all. </item>
+        <item>I usually draw one side of the nose, and the two nostrils.</item>
+        <item>As well as indicating the sides of the tip of the nose.</item>
+        <item>There you go, that’s how the nose will look with your finished head.</item>
+            </string-array>
+
+
+
+
+    <string-array name="b08t04Help">
+        <item>Let us start with the basic head outline we drew in the Full Figure books</item>
+        <item>The simple shape we need for the nose is a wedge. Remember use the construction lines so you know where to put each part.</item>
+        <item>Complete the wedge by connecting the edge of the triangle representing the tip of our nose, and bring it up to the top of the bridge.</item>
+        <item>Let’s add in a new construction line, from the eyebrow line, and directly above the corner of the eye, draw in two connecting lines down into the center of the top of our nose.</item>
+        <item>Now for the actual nose parts. The tip of the nose is a bulbous part, that comes to an edge in its centre</item>
+        <item>The two fleshy parts which surround our nostrils are a little complicated in shape, but just use the construction lines to know where they go when you draw them in.</item>
+        <item>Draw in the nostrils, and connect up the top part of the tip of our nose. It’s starting to look good.</item>
+        <item>The bridge of our nose will curve all the ways around to the eyebrow.</item>
+        <item>And we already know where the side of our nose is</item>
+        <item>Even though it’s important to know where all the individual parts are, when drawing the final nose though we actually don’t need to show them all. </item>
+        <item>I usually draw one side of the nose, and the two nostrils.</item>
+        <item>As well as indicating the sides of the tip of the nose.</item>
+        <item>There you go, that is how the nose will look with your finished head.</item>
+            </string-array>
+
+
+
+
+    <string-array name="b08t05Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>Draw two lines coming down from the tip of the nose</item>
+        <item>Then two lines coming down from the edge of the nose</item>
+        <item>Let’s build up the shapes that make the mouth. Draw in a triangle slightly above the centre point of our construction lines. Make it as wide as our first two lines that come down from the nose</item>
+        <item>The draw in a rectangle below it, as wide as the second set of lines that we just drew in.</item>
+        <item>Connect the top of the triangle to this point of our construction lines</item>
+        <item>Do the same with the bottom rectangle</item>
+        <item>Now to show the lips on a male, we only need a few lines. Start with the most important, the centre line where the lips meet. Use the construction lines, bearing in mind the triangle.</item>
+        <item>I draw in a small part to indicate the lower lip, as it protrudes quite a bit from the face.</item>
+        <item>Above the lips, there is a cavity formed by the philtrum.</item>
+        <item>There you go, that’s how the mouth will look with your finished head.</item>
+            </string-array>
+
+
+    <string-array name="b08t06Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>Draw two lines coming down from the tip of the nose</item>
+        <item>Then two lines coming down from the edge of the nose</item>
+        <item>Let’s build up the shapes that make the mouth. Draw in a triangle slightly above the centre point of our construction lines. Make it as wide as our first two lines that come down from the nose</item>
+        <item>The draw in a rectangle below it, as wide as the second set of lines that we just drew in.</item>
+        <item>Connect the top of the triangle to this point of our construction lines</item>
+        <item>Do the same with the bottom rectangle</item>
+        <item>Now to show the lips on a male, we only need a few lines. Start with the most important, the centre line where the lips meet. Use the construction lines, bearing in mind the triangle.</item>
+        <item>I draw in a small part to indicate the lower lip, as it protrudes quite a bit from the face.</item>
+        <item>Above the lips, there is a cavity formed by the philtrum.</item>
+        <item>There you go, that’s how the mouth will look with your finished head.</item>
+            </string-array>
+
+
+    <string-array name="b08t07Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>Draw in an oval shape based on the construction lines.</item>
+        <item>For the earlobe, draw in a second, much smaller oval.</item>
+        <item>The ear has a ridge around its edge.</item>
+        <item>Add in a drak area for the ear canal.</item>
+        <item>Draw in a Y shape to add in more details for the ear.</item>
+        <item>Now draw in the edge of the ear, going around the two oval shapes</item>
+        <item>Define the inner ridge of the ear with a thin line.</item>
+        <item>Draw in the ear canal</item>
+        <item>Now outline the “Y” shape with a very thin line</item>
+        <item>There you go, that’s how the ear will look with your finished head.</item>
+           </string-array>
+
+
+    <string-array name="b08t08Help">
+        <item>Let’s start with the basic head outline we drew in the Full Figure books</item>
+        <item>Draw in an oval shape based on the construction lines.</item>
+        <item>For the earlobe, draw in a second, much smaller oval.</item>
+        <item>The ear has a ridge around its edge.</item>
+        <item>Add in a drak area for the ear canal.</item>
+        <item>Draw in a Y shape to add in more details for the ear.</item>
+        <item>Now draw in the edge of the ear, going around the two oval shapes</item>
+        <item>Define the inner ridge of the ear with a thin line.</item>
+        <item>Draw in the ear canal</item>
+        <item>Now outline the “Y” shape with a very thin line</item>
+        <item>There you go, that’s how the ear will look with your finished head.</item>
+            </string-array>
+
+
+    // Book 10
+    <string name="book10heading1">8 Awesome Heroic Poses</string>
+    <string name="book10heading2">Learn how to draw 8 heroic poses</string>
+    <string name="tweetWill">Hey @WillSliney, Check out the drawing i did with the help https://play.google.com/store/apps/details?id=com.learn.howtodraw.draw</string>
+    <string-array name="book10cardtext1">
+        <item>Awesome Heroic Pose 1</item>
+        <item>Awesome Heroic Pose 2</item>
+        <item>Awesome Heroic Pose 3</item>
+        <item>Awesome Heroic Pose 4</item>
+        <item>Awesome Heroic Pose 5</item>
+        <item>Awesome Heroic Pose 6</item>
+        <item>Awesome Heroic Pose 7</item>
+        <item>Awesome Heroic Pose 8</item>
+    </string-array>
+
+
+
+    <string-array name="b10t01Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t02Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t03Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t04Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t05Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="b10t06Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t07Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b10t08Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+
 
 </resources>
 

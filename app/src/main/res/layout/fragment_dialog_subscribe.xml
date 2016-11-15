@@ -32,7 +32,7 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             android:paddingBottom="5dp"
-            android:text="This book contains multiples pages that will train you in the art of drawing. This book you full access to all the tutorial pages it contains."
+            android:text="@string/subinfo"
             android:textColor="#282828"
             android:textSize="15dp" />
 
@@ -53,6 +53,7 @@
 
 
 
+<!--
         <TextView
             android:id="@+id/textabout"
             android:layout_width="wrap_content"
@@ -79,6 +80,7 @@
             android:layout_marginBottom="30dp"
             android:textColor="#84c380"
             android:textSize="12dp" />
+-->
 
     </LinearLayout>
 

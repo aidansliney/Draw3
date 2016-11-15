@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
 
         <TextView
             android:id="@+id/monday3"
@@ -21,7 +22,39 @@
             android:text="@string/new_content"
             android:background="#60beef"
             android:gravity="center"
-            android:layout_margin="10dp"/>
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vc"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="440dp"
+                android:layout_height="390dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/videoContainer"
+                android:gravity="center">
+                <VideoView
+                    android:id="@+id/myVideo"
+                    android:layout_width="440dp"
+                    android:layout_height="390dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"/>
+
+                <ImageView
+                    android:id="@+id/videoCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="390dp"
+                    android:src="@drawable/videothumb"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="10dp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
 
         <LinearLayout
             android:id="@+id/layout_1"
@@ -34,8 +67,8 @@
 
             <ImageView
                 android:layout_width="500dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/book2cover"
+                android:layout_height="600dp"
+                android:src="@drawable/book3cover"
                 android:adjustViewBounds="true" />
 
             <LinearLayout
@@ -51,20 +84,11 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textColor="#3c3c3c" />
             </LinearLayout>
 
 
-
-            <TextView
-                android:id="@+id/secondary"
-                android:layout_width="500dp"
-                android:layout_height="wrap_content"
-                android:text="@string/book1heading2"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="1dp"
-                android:textColor="#c0b9b9" />
         </LinearLayout>
 
         <View
@@ -73,6 +97,30 @@
             android:background="#bababa"
             android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/monday2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_content2"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"/>
+
+        <TextView
+            android:id="@+id/monday3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_content3"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"/>
 
         <LinearLayout
 
@@ -270,16 +318,11 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
-        // vertical
-
-
-
-
 
         <LinearLayout
             android:id="@+id/layout_4"
             android:layout_width="500dp"
-            android:layout_height="wrap_content"
+            android:layout_height="380dp"
             android:paddingBottom="15dp"
             android:orientation="vertical"
             android:background="#ffffff"
@@ -289,7 +332,7 @@
             <ImageView
                 android:id="@+id/willy"
                 android:layout_width="500dp"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:src="@drawable/sliney"
                 android:adjustViewBounds="true" />
 
@@ -380,19 +423,25 @@
             android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal"/>
 
+
+
+
+
+
         <LinearLayout
             android:id="@+id/layout_0"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
             android:layout_marginBottom="30dp"
             android:orientation="vertical"
-            android:background="#ffffff">
+            android:background="#ffffff"
+            android:layout_gravity="center_horizontal">
 
             <ImageView
                 android:id="@+id/zeroImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="500dp"
+                android:layout_height="400dp"
                 android:src="@drawable/b00isocover"
                 android:adjustViewBounds="true" />
 
@@ -405,16 +454,13 @@
                     android:id="@+id/primary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Learn how to use this app here"
+                    android:text="@string/learn"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp"
                     android:textColor="#3c3c3c"
                     />
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="#bababa" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -423,12 +469,21 @@
             android:id="@+id/feedback"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Tap here to send feedback on the Beta"
+            android:text="Tap here to send feedback"
             android:background="#fe4f53"
             android:gravity="center"
             android:layout_margin="10dp"
             android:onClick="sendEmail"/>
 
+        <TextView
+            android:id="@+id/tweet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/tweet"
+            android:background="#4d9ffb"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="sendTweet"/>
 
     </LinearLayout>
 

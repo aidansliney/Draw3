@@ -19,11 +19,32 @@
         <TextView
             android:id="@+id/monday"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/new_content"
             android:background="#60beef"
             android:gravity="center"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoContainer">
+            <VideoView
+                android:id="@+id/myVideo"
+                android:layout_width="340dp"
+                android:layout_height="190dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"/>
+
+            <ImageView
+                android:id="@+id/videoCover"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/videothumb"
+                android:adjustViewBounds="true"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
 
 
         <LinearLayout
@@ -38,7 +59,7 @@
                 android:id="@+id/firstImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/b02isocover"
+                android:src="@drawable/b03isocover"
                 android:adjustViewBounds="true" />
 
             <LinearLayout
@@ -47,27 +68,19 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
                 <TextView
-                    android:id="@+id/primary"
+                    android:id="@+id/h1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/book1heading1"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textColor="#3c3c3c"
                     android:layout_weight="0.9
                     "/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/secondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/book1heading2"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="1dp"
-                android:textColor="#c0b9b9" />
         </LinearLayout>
 
         <View
@@ -75,6 +88,26 @@
             android:layout_height="1dp"
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/monday2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_content2"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/monday3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_content3"
+            android:background="#60beef"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
 
         <LinearLayout
 
@@ -105,7 +138,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="270dp"
-                            android:src="@drawable/ma3_4head17" />
+                            android:src="@drawable/b08t02p05" />
 
 
 
@@ -125,7 +158,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:text="Free this week"
+                            android:text="@string/free_this_week"
 
                             android:background="#60beef"
                             android:layout_marginTop="245dp"
@@ -382,7 +415,16 @@
             android:layout_height="1dp"
             android:background="#bababa"
             android:layout_marginBottom="20dp" />
-
+        <TextView
+            android:id="@+id/tweet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/tweet"
+            android:background="#4d9ffb"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="sendTweet"
+            android:layout_marginBottom="30dp"/>
 
         <LinearLayout
             android:id="@+id/layout_0"
@@ -427,11 +469,14 @@
             android:id="@+id/feedback"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Tap here to send feedback on the Beta"
+            android:text="@string/feedback"
             android:background="#fe4f53"
             android:gravity="center"
             android:layout_margin="10dp"
             android:onClick="sendEmail"/>
+
+
+
 
     </LinearLayout>
 

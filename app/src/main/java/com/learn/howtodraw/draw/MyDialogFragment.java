@@ -37,13 +37,13 @@ public class MyDialogFragment extends BaseFragment {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.bookThumb);
         imageView.setImageResource(bookThumb);
 
-        Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
+        /*Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
         subscribebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getMainActivity().onSubscribedButtonClicked(getView());
             }
-        });
+        });*/
 
         bookNameString = getString(bookName);
         Log.d("BBook name",bookNameString);

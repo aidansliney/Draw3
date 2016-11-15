@@ -191,9 +191,6 @@ public class IabHelper {
     }
 
 
-    public void consumeit(){
-
-    }
 
     /**
      * Callback for setup process. This listener's {@link #onIabSetupFinished} method is called
@@ -625,6 +622,7 @@ public class IabHelper {
         checkNotDisposed();
         checkSetupDone("queryInventory");
         flagStartAsync("refresh inventory");
+        Log.d("refresh Inventory", "true");
         (new Thread(new Runnable() {
             public void run() {
                 IabResult result = new IabResult(BILLING_RESPONSE_RESULT_OK, "Inventory refresh successful.");
@@ -839,7 +837,7 @@ public class IabHelper {
         logDebug("Starting async operation: " + operation);
     }
 
-    void flagEndAsync() {
+    public void flagEndAsync() {
         logDebug("Ending async operation: " + mAsyncOperation);
         mAsyncOperation = "";
         mAsyncInProgress = false;
@@ -1014,11 +1012,6 @@ public class IabHelper {
     void logWarn(String msg) {
         Log.w(mDebugTag, "In-app billing warning: " + msg);
     }
-
-
-
-
-
 
 
 
