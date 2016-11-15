@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.learn.howtodraw.draw.util.IabHelper;
 
+import static com.learn.howtodraw.draw.R.id.textabout;
+
 /**
  * Created by aidansliney on 21/08/2016.
  */
@@ -19,6 +21,7 @@ public class MyDialogFragment extends BaseFragment {
 
     public Integer bookThumb;
     public Integer bookName;
+    public Integer earlyAccess;
     public String bookNameString;
 
 
@@ -27,9 +30,10 @@ public class MyDialogFragment extends BaseFragment {
 
         bookThumb = getArguments().getInt("bookThumb");
         bookName = getArguments().getInt("bookName");
+        earlyAccess = getArguments().getInt("early");
 
 
-        Log.d("This is the book Thumb", "" + bookThumb);
+
         //create Subscription fragment
         View rootView = inflater.inflate(R.layout.fragment_dialog_subscribe, container, false);
 
@@ -37,16 +41,8 @@ public class MyDialogFragment extends BaseFragment {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.bookThumb);
         imageView.setImageResource(bookThumb);
 
-        /*Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
-        subscribebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getMainActivity().onSubscribedButtonClicked(getView());
-            }
-        });*/
 
         bookNameString = getString(bookName);
-        Log.d("BBook name",bookNameString);
         Button buyBookbtn = (Button) rootView.findViewById(R.id.buyBookButton);
         buyBookbtn.setText(IabHelper.map.get(bookNameString));
         buyBookbtn.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +51,27 @@ public class MyDialogFragment extends BaseFragment {
                 getMainActivity().onBookPurchaseButtonClicked(getView(), bookNameString);
             }
         });
+
+
+        Button subscribebtn = (Button) rootView.findViewById(R.id.subscribeButton);
+        subscribebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getMainActivity().onSubscribedButtonClicked(getView());
+            }
+        });
+
+        if (earlyAccess == 1)
+        {
+            final TextView textabout = (TextView) rootView.findViewById(R.id.textabout);
+            textabout.setVisibility(View.GONE);
+            buyBookbtn.setVisibility(View.GONE);
+
+            final TextView earlyText = (TextView) rootView.findViewById(R.id.earlyText);
+            earlyText.setText("To have early access to this book you can subscribe. Subscribing also gives you access to all the back catalogue and all upcoming new content");
+
+        }
+
 
  /*     TextView textView = (TextView) rootView.findViewById(R.id.subscribedQuestion);
         if (isSubscribed()) {

@@ -258,7 +258,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         Log.d(TAG, "Purchase button clicked; launching purchase flow for a book.");
         setWaitScreen(true);
 
-        if ( mHelper != null)  mHelper.flagEndAsync();
+       // if ( mHelper != null)  mHelper.flagEndAsync(); Added and removed by Aidan
 
         launchInAppPurchaseFlow(this, book);
 
@@ -319,11 +319,11 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         super.onDestroy();
 
         // very important:
-/*        Log.d(TAG, "Destroying helper.");
+        Log.d(TAG, "Destroying helper.");
         if (mHelper != null) {
             mHelper.dispose();
             mHelper = null;
-        }*/
+        }
     }
 
     // updates UI to reflect model

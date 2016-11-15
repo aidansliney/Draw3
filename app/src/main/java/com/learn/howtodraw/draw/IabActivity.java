@@ -252,20 +252,13 @@ public abstract class IabActivity extends AppCompatActivity {
      */
 
     protected void launchInAppPurchaseFlow (Activity a, String sku) {
-
-       if ( pIabHelper != null)  pIabHelper.flagEndAsync(); //Added by Aidan
-
+       //if ( pIabHelper != null)  pIabHelper.flagEndAsync(); //Added by Aidan
         launchInAppPurchaseFlow (a, sku, IabHelper.ITEM_TYPE_INAPP);
     }
 
     /**
      * Initiate the sequence of events needed to make a subscription purchase.
-     *
-     * @param a Activity
-     * @param sku String
-     * @return void
      */
-
     protected void launchSubscriptionPurchaseFlow (Activity a, String sku) {
         launchInAppPurchaseFlow (a, sku, IabHelper.ITEM_TYPE_SUBS);
     }

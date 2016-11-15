@@ -99,6 +99,52 @@
             android:layout_margin="10dp"
             android:padding="10dp"/>
 
+        <LinearLayout
+            android:id="@+id/layout_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/subImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b03isocover"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_this_week"
+                android:background="#e27cde"
+                android:layout_marginTop="-40dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                />
+
+
+                <TextView
+                    android:id="@+id/h1sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book1heading1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#3c3c3c"
+                    android:layout_marginTop="5dp"
+                    />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#bababa"
+            android:layout_marginBottom="20dp" />
+
         <TextView
             android:id="@+id/monday3"
             android:layout_width="match_parent"
@@ -159,7 +205,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:text="@string/free_this_week"
-
                             android:background="#60beef"
                             android:layout_marginTop="245dp"
                             android:paddingLeft="5dp"

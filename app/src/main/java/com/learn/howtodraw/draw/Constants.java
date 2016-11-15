@@ -29,6 +29,12 @@ public class Constants {
     public static final int frontBookImage = R.drawable.book10coverinside;
     public static final int frontBookH1 = R.string.book10heading1;
 
+    // early access Content
+
+    public static final int subBookLink = R.array.book4Build;
+    public static final int subBookImage = R.drawable.book4cover;
+    public static final int subBookH1 = R.string.book4heading1;
+
 
 
     Book[] arr = new Book[100];  // new stands for create an array object

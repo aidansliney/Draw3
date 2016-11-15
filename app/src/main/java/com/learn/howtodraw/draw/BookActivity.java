@@ -75,21 +75,19 @@ public class BookActivity extends AppCompatActivity  {
         ImageView imageView = (ImageView) findViewById(R.id.background);
         getSupportActionBar().setTitle(getString(getIntent().getIntExtra("bookCoverH1Id", 0)));
         imageView.setImageResource(getIntent().getIntExtra("bookCoverImageInsideId", 0));
-
         bookName = getString(getIntent().getIntExtra("bookName", 0));
 
+        //now build the grid
+        buildTheGrid();
 
         if (isUnlocked())
             toast("You own this book");
-
-        buildTheGrid();
     }
 
     @Override
     public void onResume(){
         super.onResume();
         buildTheGrid();
-
     }
 
     public void buildTheGrid(){
@@ -139,6 +137,7 @@ public class BookActivity extends AppCompatActivity  {
                     Bundle bundle = new Bundle();
                     bundle.putInt("bookThumb", getIntent().getIntExtra("bookCoverImageInsideId", 0));
                     bundle.putInt("bookName", getIntent().getIntExtra("bookName", 0));
+                    bundle.putInt("early", 0);
 
                     FragmentManager fm = getSupportFragmentManager();
                     MyDialogFragment dialogFragment = new MyDialogFragment();

@@ -183,6 +183,7 @@ public class ThirdFragment extends BaseFragment {
                     Bundle bundle = new Bundle();
                     bundle.putInt("bookThumb", bookThumb);
                     bundle.putInt("bookName", bookName);
+                    bundle.putInt("early", 0);
 
                     FragmentManager fm = getFragmentManager();
                     MyDialogFragment dialogFragment = new MyDialogFragment();

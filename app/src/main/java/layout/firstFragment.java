@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.VideoView;
 import com.learn.howtodraw.draw.BaseFragment;
 import com.learn.howtodraw.draw.LinkBooks;
 import com.learn.howtodraw.draw.MainActivity;
+import com.learn.howtodraw.draw.MyDialogFragment;
 import com.learn.howtodraw.draw.PageActivity;
 import com.learn.howtodraw.draw.R;
 
@@ -32,6 +34,10 @@ import static com.learn.howtodraw.draw.Constants.frontBookH1;
 import static com.learn.howtodraw.draw.Constants.frontBookImage;
 import static com.learn.howtodraw.draw.Constants.frontBookLink;
 import static com.learn.howtodraw.draw.Constants.mPurchasedBooksArray;
+import static com.learn.howtodraw.draw.Constants.mSubscribed;
+import static com.learn.howtodraw.draw.Constants.subBookH1;
+import static com.learn.howtodraw.draw.Constants.subBookImage;
+import static com.learn.howtodraw.draw.Constants.subBookLink;
 
 
 //A placeholder fragment containing a simple view.
@@ -76,6 +82,39 @@ public class firstFragment extends BaseFragment {
         final TextView h1 = (TextView) rootView.findViewById(R.id.h1);
         frontBook.setImageResource(frontBookImage);
         h1.setText(frontBookH1);
+
+        //Setting the sub book on new page
+        LinkBooks.linkBook(R.id.layout_sub, subBookLink, rootView, false, getActivity());
+        final ImageView subBook = (ImageView) rootView.findViewById(R.id.subImage);
+        final TextView h1sub = (TextView) rootView.findViewById(R.id.h1sub);
+        subBook.setImageResource(subBookImage);
+        h1sub.setText(subBookH1);
+
+
+        if (mSubscribed)
+        {
+            Log.d("You", "are subscribed");
+        }
+
+        else
+        {
+            subBook.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Bundle bundle = new Bundle();
+                     bundle.putInt("bookThumb", subBookImage);
+                    bundle.putInt("bookName", subBookH1);
+                    bundle.putInt("early", 1);
+                    FragmentManager fm = getFragmentManager();
+                    MyDialogFragment dialogFragment = new MyDialogFragment();
+                    dialogFragment.setArguments(bundle);
+                    dialogFragment.show(fm, getString(R.string.menu_subscribe));
+                }
+            });
+        }
+
+
 
 
         final TextView rb1 = (TextView) rootView.findViewById(R.id.removeBook1);

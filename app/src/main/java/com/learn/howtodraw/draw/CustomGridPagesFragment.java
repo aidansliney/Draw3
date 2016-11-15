@@ -27,7 +27,6 @@ public class CustomGridPagesFragment extends BaseAdapter {
         this.bookNames = bookNames;
         this.bookLevels = bookLevels;
         this.tickIcon = tickIcon;
-
     }
 
     @Override
@@ -56,7 +55,6 @@ public class CustomGridPagesFragment extends BaseAdapter {
 
         if (convertView == null) {
 
-            grid = new View(mContext);
             grid = inflater.inflate(R.layout.grid_of_tutorials, null);
             TextView textView = (TextView) grid.findViewById(R.id.grid_text);
 
@@ -81,8 +79,6 @@ public class CustomGridPagesFragment extends BaseAdapter {
             ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
             textView.setText(web[position]);
 
-
-          //  textView3.setId(web3[position]);
             imageView.setImageResource(Imageid[position]);
         } else {
             grid = convertView;

@@ -916,6 +916,7 @@ Tutorials are created by Will Sliney, professional comic book artist.
 
 
     <string name="free_this_week">Free this week</string>
+    <string name="sub_this_week">Subscribers get early access to this book</string>
     <string name="learn">Learn how to use this app here</string>
     <string-array name="book7cardtext1">
         <item>Full Figure</item>
