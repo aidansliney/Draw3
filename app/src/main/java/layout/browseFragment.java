@@ -60,24 +60,21 @@ public class BrowseFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         //send content in the grid. The data is sent to the third fragment from ...Main Activity
         final String[] cardText1 = getResources().getStringArray(getArguments().getInt("cardText1Id"));
         final String[] bookPageIds = getResources().getStringArray(getArguments().getInt("bookPageIds"));
         final String[] bookNames = getResources().getStringArray(getArguments().getInt("booksBooks"));
-        final String[] bookLevels = getResources().getStringArray(getArguments().getInt("bookLevel"));
         final TypedArray cardImageDrawables = getResources().obtainTypedArray(getArguments().getInt("cardImageId"));
 
         final int[] cardImage = new int[cardImageDrawables.length()];
         final int[] tickIcon = new int[cardImageDrawables.length()];
         for (int i = 0; i < cardImageDrawables.length(); i++) {
             cardImage[i] = cardImageDrawables.getResourceId(i, 0);
-
             int counter = 0;
             while(counter < mPurchasedBooksArray.length)
             {
 
-                if (bookNames[i].equals(SKU_BOOK_NAME_ARRAY[counter]))
+                 if (bookNames[i].equals(SKU_BOOK_NAME_ARRAY[counter]))
                 {
                     hasPurchased =  mPurchasedBooksArray[counter];
                 }

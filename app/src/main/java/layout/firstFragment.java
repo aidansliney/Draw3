@@ -30,6 +30,11 @@ import java.util.List;
 import static android.R.id.message;
 import static com.google.android.gms.internal.zzs.TAG;
 import static com.learn.howtodraw.draw.Constants.SKU_BOOK_NAME_ARRAY;
+import static com.learn.howtodraw.draw.Constants.freeBookA;
+import static com.learn.howtodraw.draw.Constants.freeH1A;
+import static com.learn.howtodraw.draw.Constants.freeHelpA;
+import static com.learn.howtodraw.draw.Constants.freeIDA;
+import static com.learn.howtodraw.draw.Constants.freeImageA;
 import static com.learn.howtodraw.draw.Constants.frontBookH1;
 import static com.learn.howtodraw.draw.Constants.frontBookImage;
 import static com.learn.howtodraw.draw.Constants.frontBookLink;
@@ -218,16 +223,20 @@ public class firstFragment extends BaseFragment {
             }
         });
 
-        Log.d("subscribed?", "" + isSubscribed());
+
 
         View homeCard1 = rootView.findViewById(R.id.home_card_1);
+        final TextView fh1 = (TextView) rootView.findViewById(R.id.freeH1);
+        fh1.setText(freeH1A);
+        final ImageView freeImage1 = (ImageView) rootView.findViewById(R.id.freeImage1);
+        freeImage1.setImageResource(freeImageA);
         homeCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
-                intent.putExtra("tutorialId", "b08t01");
-                intent.putExtra("bookHelp", R.array.b08t01Help);
-                intent.putExtra("bookName", "book08");
+                intent.putExtra("tutorialId", freeIDA);
+                intent.putExtra("bookHelp", freeHelpA);
+                intent.putExtra("bookName", freeBookA);
                 startActivity(intent);
             }
         });

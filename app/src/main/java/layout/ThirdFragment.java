@@ -123,51 +123,9 @@ public class ThirdFragment extends BaseFragment {
                         bookThumb =  SKU_BOOK_COVER_ARRAY[i];
                     }
                 }
-/*
-                if (bookNames[position].equals("book01"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[1];
-                    bookThumb = R.drawable.book1cover;
-                    bookName = R.string.book01;
-                }
-                if (bookNames[position].equals("book02"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[2];
-                    bookThumb = R.drawable.book2cover;
-                    bookName = R.string.book02;
-                }
-                if (bookNames[position].equals("book03"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[3];
-                    bookThumb = R.drawable.book3cover;
-                    bookName = R.string.book03;
-                }
-                if (bookNames[position].equals("book04"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[4];
-                    bookThumb = R.drawable.book4cover;
-                    bookName = R.string.book04;
-                }
-                if (bookNames[position].equals("book05"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[5];
-                    bookThumb = R.drawable.book5cover;
-                    bookName = R.string.book05;
-                }
-                if (bookNames[position].equals("book06"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[6];
-                    bookThumb = R.drawable.book6cover;
-                    bookName = R.string.book06;
-                }
-                if (bookNames[position].equals("book07"))
-                {
-                    hasPurchased =  mPurchasedBooksArray[7];
-                    bookThumb = R.drawable.book7cover;
-                    bookName = R.string.book07;
-                }*/
 
-                if(hasPurchased)
+
+                if(hasPurchased || mSubscribed)
                 {
                     //int slidesID = getActivity().getResources().getIdentifier(pageId + "Pages", "array", getContext().getPackageName());
 

@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 
 import static com.learn.howtodraw.draw.Constants.*;
 
-public class BookActivity extends AppCompatActivity  {
+public class BookActivity extends MainActivity  {
 
     public Boolean bookPurchasedLock;
     public String bookName;
@@ -149,6 +149,9 @@ public class BookActivity extends AppCompatActivity  {
     }
 
     public Boolean isUnlocked(){
+
+        if (mSubscribed)
+            return true;
         //check what page we are on and if it is purchased
         for( int i =0; i < mPurchasedBooksArray.length; i++) {
             if (bookName.equals(SKU_BOOK_NAME_ARRAY[i]))
@@ -156,11 +159,17 @@ public class BookActivity extends AppCompatActivity  {
         }
         if (bookPurchasedLock == null){
             return false;
+
         }
-        if (bookPurchasedLock  || mSubscribed)
+        if (bookPurchasedLock  || mSubscribed) {
             return true;
+
+
+        }
+
         else
             return false;
+
     }
 
     public void toast (String msg)

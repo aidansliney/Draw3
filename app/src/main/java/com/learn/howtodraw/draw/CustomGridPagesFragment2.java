@@ -33,7 +33,7 @@ public class CustomGridPagesFragment2 extends BaseAdapter {
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return text.length;
+        return text.length;  // - 1 removes the last book
     }
 
     @Override

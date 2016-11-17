@@ -23,6 +23,8 @@ public class BaseFragment extends DialogFragment {
 
     public MainActivity getMainActivity(){
 
+
+
         return (MainActivity) getActivity();
     }
 

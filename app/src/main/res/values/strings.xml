@@ -29,7 +29,7 @@ Tutorials are created by Will Sliney, professional comic book artist.
     <string name="new_content2">New content every few weeks</string>
     <string name="new_content3">"Upcoming books include:
         Superhero Poses - It's here :)
-        Female Heroic Figure - Nearly done"</string>
+        Female Heroic Figure - Early Access now available"</string>
     <string name="rate_draw">Rate Draw</string>
     <string name="share_draw">Share Draw</string>
     <string name="will">Will Sliney is an award winning and best selling comics artist and writer from Cork. Will is best known for his work on Marvels Spider-Man 2099, Fearless Defenders and Star Wars.</string>
@@ -45,6 +45,7 @@ Tutorials are created by Will Sliney, professional comic book artist.
         <item>Heroic Male Intermediate Front View</item>
         <item>Face Front View</item>
         <item>8 Awesome Heroic Poses</item>
+        <item>Female Beginners 3/4 </item>
     </string-array>
 
     <!--The Titles on the Page Tab-->
@@ -107,6 +108,9 @@ Tutorials are created by Will Sliney, professional comic book artist.
         <item>Heroic Pose 6</item>
         <item>Heroic Pose 7</item>
         <item>Heroic Pose 8</item>
+
+        <item>Female Character</item>
+        <item>Female Face</item>
     </string-array>
 
 
@@ -1426,6 +1430,78 @@ Tutorials are created by Will Sliney, professional comic book artist.
         <item></item>
         <item></item>
     </string-array>
+
+    // Book 11 This is all in Strings
+    <string name="book11heading1">Beginners Female</string>
+    <string name="book11heading2">Learn how to draw a female character</string>
+    <string-array name="book11cardtext1">
+        <item>Female figure</item>
+        <item>Female Face</item>
+
+    </string-array>
+
+
+
+    <string-array name="b11t01Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="b11t02Help">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
 
 
 

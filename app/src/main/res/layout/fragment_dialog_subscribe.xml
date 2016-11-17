@@ -52,8 +52,6 @@
             />
 
 
-
-
         <TextView
             android:id="@+id/earlyText"
             android:layout_width="wrap_content"

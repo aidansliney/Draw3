@@ -589,39 +589,18 @@ public abstract class IabActivity extends AppCompatActivity {
         mPurchasedBooksArray[6] = true;
         mPurchasedBooksArray[7] = true;
         mPurchasedBooksArray[8] = true;
-
-/*        // Have we purchased book 1
-        Purchase book1Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[1]);
-        mPurchasedBooksArray[1] = (book1Purchase != null && verifyDeveloperPayload(book1Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[1] ? "BOOK1 OWNER" : "NOT A BOOK1 OWNER"));
-        // Have we purchased book 2
-        Purchase book2Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[2]);
-        mPurchasedBooksArray[2] = (book2Purchase != null && verifyDeveloperPayload(book2Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + (mPurchasedBooksArray[2] ? "BOOK2 OWNER" : "NOT A BOOK2 OWNER"));
-
-        // Have we purchased book 3
-        Purchase book3Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[3]);
-        mPurchasedBooksArray[3] = (book3Purchase != null && verifyDeveloperPayload(book3Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[3] ? "BOOK3 OWNER" : "NOT A BOOK3 OWNER"));
-
-        // Have we purchased book 4
-        Purchase book4Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[4]);
-        mPurchasedBooksArray[4] = (book4Purchase != null && verifyDeveloperPayload(book4Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[4] ? "BOOK4 OWNER" : "NOT A BOOK4 OWNER"));
-
-        // Have we purchased book 5
-        Purchase book5Purchase = inventory.getPurchase(SKU_BOOK_NAME_ARRAY[5]);
-        mPurchasedBooksArray[5] = (book5Purchase != null && verifyDeveloperPayload(book5Purchase));
-        if (AppConfig.DEBUG) Log.d (LOG_TAG, "User is " + ( mPurchasedBooksArray[5] ? "BOOK5 OWNER" : "NOT A BOOK5 OWNER"));*/
+        mPurchasedBooksArray[10] = true; // Book 11
 
 
-        // Do we have the infinite gas plan?
+        // Do we have a subscription
         Purchase subscriptionPurchase = inventory.getPurchase(SKU_SUBSCRIPTION);
         mSubscribed = (subscriptionPurchase != null &&
                 verifyDeveloperPayload(subscriptionPurchase));
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "User " + (mSubscribed ? "HAS" : "DOES NOT HAVE")
                 + " subscription.");
         if (AppConfig.DEBUG) Log.d (LOG_TAG, "IabActivity.onIabSetupSucceeded completed. Subclass should update UI.");
+
+        //mSubscribed = true;
     }
 } // end class
 

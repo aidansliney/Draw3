@@ -88,7 +88,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         // FirebaseCrash.report(new Exception("My first Android non-fatal error"));
 
-
         // Start setup of in-app billing.
         // (Note that the work is done using methods in superclass
         // IabActivity. The original code had all the code here.)
@@ -97,7 +96,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         // Set a variable for convenient access
         // to the iab helper object.
         mHelper = getIabHelper();
-
 
         // enable debug logging
         // (For a production application, you would set this to false).
@@ -129,30 +127,19 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
         params.putString("full_text", "string");
         mFirebaseAnalytics.logEvent("share_image", params);
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         Log.d("subscribed?", "" + mSubscribed);
-
 
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(com.learn.howtodraw.draw.R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
         TabLayout tabLayout = (TabLayout) findViewById(com.learn.howtodraw.draw.R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {
@@ -175,8 +162,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
                 }
             });
         }
-
-
 
 
 /*        //Add mobile ads
@@ -209,8 +194,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
             rateApp();
             return true;
         }
-
-
 
 /*        if (id == R.id.subscribe_settings) {
             FragmentManager fm = getSupportFragmentManager();
@@ -262,7 +245,6 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
 
         launchInAppPurchaseFlow(this, book);
 
-        //launchInAppPurchaseFlow(this, SKU_PREMIUM);
 
     /* TODO: for security, generate your payload here for verification. See the comments on
      *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
@@ -287,9 +269,7 @@ public class MainActivity extends IabActivity implements BrowseFragment.OnFragme
      *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
      *        an empty string, but on a production app you should carefully generate this. */
         String payload = "";
-
         setWaitScreen(true);
-
         launchSubscriptionPurchaseFlow(this, SKU_SUBSCRIPTION);
 
     }
